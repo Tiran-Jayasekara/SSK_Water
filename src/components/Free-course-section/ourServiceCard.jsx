@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ourServiceCard = (props) => {
   const { imgUrl, title } = props.item;
@@ -6,8 +7,9 @@ const ourServiceCard = (props) => {
   return (
     <div className="single__free__course">
       <div className="free__course__img mb-5">
-        <img src={imgUrl} alt="" className="w-100" />
-        {/* <button className="btn free__btn">Free</button> */}
+        
+        <Link to="/store"><img src={imgUrl} alt="" className="w-100" /></Link>
+        
       </div>
 
       <div className="free__course__details">

@@ -10,7 +10,7 @@ const About = () => {
     <section>
       <Container>
         <Row>
-          <Col lg="5" md="6">
+          <Col lg="5" md="10">
             <div className="about__img">
               <img src={aboutImg} alt="" className="w-100" />
             </div>
@@ -29,37 +29,37 @@ const About = () => {
                 <div className=" d-flex gap-5 align-items-center">
                   <div className="single__counter">
                     <span className="counter">
-                      <CountUp start={0} end={25} duration={2} suffix="K" />
+                      <CountUp start={0} end={120} duration={2} suffix="" />
                     </span>
 
-                    <p className="counter__title">Completed Projects</p>
+                    <p className="counter__title">Installed Filters</p>
                   </div>
 
                   <div className="single__counter">
                     <span className="counter">
-                      <CountUp start={0} end={12} duration={2} suffix="M" />
+                      <CountUp start={0} end={100} duration={2} suffix="" />
                     </span>
 
-                    <p className="counter__title">Patient Around World</p>
+                    <p className="counter__title">Repaired Filters</p>
                   </div>
                 </div>
 
                 <div className=" d-flex gap-5 align-items-center">
-                  <div className="single__counter">
+                  {/* <div className="single__counter">
                     <span className="counter">
                       <CountUp start={0} end={95} duration={2} suffix="M" />
                     </span>
 
-                    <p className="counter__title">Ideas Raised Funds</p>
-                  </div>
+                    <p className="counter__title"></p>
+                  </div> */}
 
-                  <div className="single__counter">
+                  {/* <div className="single__counter">
                     <span className="counter">
                       <CountUp start={0} end={5} duration={2} suffix="K" />
                     </span>
 
                     <p className="counter__title">Categories Served</p>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
