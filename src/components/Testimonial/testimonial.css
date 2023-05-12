@@ -2,5 +2,9 @@
   font-weight: 600;
 }
 .testimonial__img {
-  margin-right: 40px;
+  margin-right: 10px;
+  width: 1000px;
+}
+.testimonial__content {
+  margin-left: 80px;
 }

@@ -12,7 +12,6 @@ function App() {
     <>
     
     <BrowserRouter>
-    {/* <Header/> */}
     <NavBar/>
       <Routes>
         <Route path="/" element={<Home />} />

@@ -10,27 +10,27 @@ const coursesData = [
   {
     id: "01",
     title: "World’s Best RO Water Purifiers Protect your Family with the Purest Drinking Water",
-    Price: 12,
-    customer: 12.5,
-    rating: 5.9,
+    Price: 78000,
+    customer: 132,
+    rating: 98,
     imgUrl: courseImg1,
   },
 
   {
     id: "02",
-    title: "Best Water Purifiers in Sri Lanka (2023) , High storage capacity , Low maintenance Free pre-filter ",
-    Price: 12,
-    customer: 12.5,
-    rating: 5.9,
+    title: "Best Water Purifiers in Sri Lanka (2023) , High storage capacity ",
+    Price: 80000,
+    customer: 75,
+    rating: 60,
     imgUrl: courseImg2,
   },
 
   {
     id: "03",
     title: "Vikas Pollution is highly acclaimed in the industry for manufacturing",
-    Price: 12,
-    customer: 12.5,
-    rating: 5.9,
+    Price: 200000,
+    customer: 40,
+    rating: 38,
     imgUrl: courseImg3,
   },
 ];
@@ -43,7 +43,7 @@ const Services = () => {
           <Col lg="12" className="mb-5">
             <div className="course__top d-flex justify-content-between align-items-center">
               <div className="course__top__left w-50">
-                <h2>Our Popular Filters</h2>
+                <h2>Our Filters</h2>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
                   consequatur libero quod voluptatibus ullam quia quas, vitae

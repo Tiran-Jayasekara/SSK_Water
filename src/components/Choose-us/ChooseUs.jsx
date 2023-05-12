@@ -9,7 +9,7 @@ import ReactPlayer from "react-player";
 const ChooseUs = () => {
   const [showVideo, setShowVideo] = useState(false);
   return (
-    <section>
+    <section  style={{ backgroundColor: "rgba(18, 81, 255, 0.24)" }}>
       <Container>
         <Row>
           <Col lg="6" md="6">
@@ -37,7 +37,7 @@ const ChooseUs = () => {
                   height="350px"
                 />
               ) : (
-                <img src={chooseImg} alt="" className="w-100" />
+                <img src={chooseImg} alt="" className="video_image" />
               )}
 
               {!showVideo && (

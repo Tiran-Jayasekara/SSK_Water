@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 function HeroSection() {
   return (
     <div className='hero-container'>
-      {/* <video src='/videos/Water2.mp4' autoPlay loop muted /> */}
+      {/* <video src='/videos/water3.mp4' autoPlay loop muted className='hero-video' /> */}
       <h1>Drinking Clean Water </h1>
       <p>is essential for maintaining good health.</p>
       <div className='hero-btns'>
@@ -17,7 +17,7 @@ function HeroSection() {
           buttonStyle='btn--outline'
           buttonSize='btn--large'
         >
-        <Link to='/store' className='btns'>
+        <Link to='/store' className='hero-btns'>
         PLACE ORDER
         </Link>
           
@@ -28,7 +28,7 @@ function HeroSection() {
           buttonSize='btn--large'
           onClick={console.log('hey')}
         >
-        <Link to='/about' className='btns'>
+        <Link to='/about' className='hero-btns'>
         WHAT WE DO <i className='far fa-play-circle' />
         </Link>
           

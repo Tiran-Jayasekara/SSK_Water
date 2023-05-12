@@ -1,13 +1,13 @@
 import React from "react";
 import "./about.css";
 import { Container, Row, Col } from "reactstrap";
-import aboutImg from "../../assests/images/logo.jpg";
+import aboutImg from "../../assests/images/logo3.png";
 import CountUp from "react-countup";
 import "./about.css";
 
 const About = () => {
   return (
-    <section>
+    <section style={{ backgroundColor: "rgba(18, 81, 255, 0.24)" }}>
       <Container>
         <Row>
           <Col lg="5" md="10">
@@ -18,7 +18,7 @@ const About = () => {
 
           <Col lg="6" md="6">
             <div className="about__content">
-              <h2>About Us</h2>
+              <h2>ABOUT US</h2>
               <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Excepturi cupiditate animi deserunt libero nesciunt corporis

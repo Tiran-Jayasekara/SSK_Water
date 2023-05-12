@@ -22,16 +22,15 @@ function Home() {
   return (
     <>
       <HeroSection />
-      {/* <About /> */}
       <Cards/>
+      <About />
       <Services />
       <ChooseUs />
       <Features />
       <Testimonials /> 
-      <Newsletter />
-       <Footer />
-      {/* <Cards />
-      <Footer /> */}
+      {/* <Newsletter /> */}
+      <Footer />
+    
     </>
   );
 }

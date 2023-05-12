@@ -6,52 +6,88 @@ video {
   z-index: -1;
 }
 
-
 .hero-container {
-  background: url('../../../public/images/img-home.jpg') center center/cover no-repeat;
-  height: 100vh;
-  width: 100%;
+  background-image: url('../../assests/images/banner.jpg');
+  background-size: cover;
+  background-position:center;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
-  object-fit: contain;
+  height: 90vh;
+  padding: 0 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-video {
+  
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  filter: blur(3px);
 }
 
 .hero-container > h1 {
-  color: #fff;
-  font-size: 100px;
-  margin-top: 0px;
+  font-size: 5rem;
+  font-weight: bold;
   text-align: center;
+  color: #ffffff;
+  margin-top: 2rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  line-height: 1.2;
+  font-family: 'Montserrat', sans-serif;
 }
 
+/* Style the subheading */
 .hero-container > p {
   color: #fff;
   margin-top: 8px; 
-  font-size: 32px;
+  font-size: 40px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
     'Lucida Sans', Arial, sans-serif;
 }
 
+/* Style the button container */
 .hero-btns {
-  margin-top: 32px;
+  margin-top: 50px;
+  text-decoration: none;
+  color: #fff;
   
 }
 
+/* Style the buttons */
 .hero-btns .btns {
   margin: 6px;
- 
   color: #fff;
   text-decoration: none;
+  background-color: #42b2df;
+  /* padding: 16px 32px; */
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
+/* Add hover effect to buttons */
+.hero-btns .btns:hover {
+  background-color: #2e9b77;
+  color: red;
   
 }
 
-
+/* Style the play icon */
 .fa-play-circle {
   margin-left: 4px;
+  font-size: 24px;
 }
+
 
 @media screen and (max-width: 960px) {
   .hero-container > h1 {
