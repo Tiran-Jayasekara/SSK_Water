@@ -1,0 +1,119 @@
+.Product_NavBar {
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .Product_NavBar ul {
+    list-style-type: none;
+    margin: 10;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+ 
+  .Product_NavBar li {
+    display: block;
+  }
+  
+  .Product_NavBar .nav-link {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .Product_NavBar .nav-link:hover {
+    background-color: #786fe2;
+    color: white;
+  }
+  
+  .Product_NavBar ul li:hover {
+    cursor: pointer;
+  }
+
+
+
+
+
+
+
+
+
+  .Products_List {
+    width: 80%;
+  }
+
+  /* CSS */
+  .ProductsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+.Products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+  }
+  .Products div {
+    background-color: #99b5de;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .Products h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .Products img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .Products p {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .Products button {
+    display: inline-block;
+    background-color: #222bc9;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+  }
+
+  
+  .Product_NavBar button:hover {
+    background-color: #007bff;
+  }
+
+  .Product_NavBar button {
+    width: 60%;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .Product_NavBar button:hover {
+    background-color: #0062cc;
+  }
+  
+  

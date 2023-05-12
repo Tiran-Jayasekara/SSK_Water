@@ -34,6 +34,7 @@
   height: auto;
   margin-left: 40px;
   margin-top: 0px;
+  margin-top: -10px;
 }
 
 /* .about__content h2 {
@@ -44,9 +45,11 @@
 .about__content {
   padding-left: 50px;
   margin-top: 50px;
+  margin-top: 10px;
   margin-left: 40px;
   font-family: 'Montserrat', sans-serif;
   color: #333;
+  background-color: #f2f2f2;
 }
 
 .about__content h2 {
@@ -54,6 +57,36 @@
   font-size: 2.5rem;
   margin-bottom: 20px;
 }
+.about-container_head {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 50px;
+  text-align: center;
+  margin-top: -50px;
+  
+}
+
+.about-container_head h1 {
+  font-size: 48px;
+  margin-bottom: 30px;
+}
+
+.about-container_head p {
+  font-size: 24px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.about-container a {
+  color: #007bff;
+}
+
+.container_Display {
+  background-color: #f2f2f2;
+  padding: 60px;
+  width: auto;
+}
+
 
 @media screen and (max-width: 960px) {
   

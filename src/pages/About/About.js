@@ -7,7 +7,7 @@ import "./about.css";
 
 const About = () => {
   return (
-    <section style={{ backgroundColor: "rgba(18, 81, 255, 0.24)" }}>
+    <section>
       <Container>
         <Row>
           <Col lg="5" md="10">
@@ -18,7 +18,7 @@ const About = () => {
 
           <Col lg="6" md="6">
             <div className="about__content">
-              <h2>ABOUT US</h2>
+              <h2>About Us</h2>
               <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Excepturi cupiditate animi deserunt libero nesciunt corporis

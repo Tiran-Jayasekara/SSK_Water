@@ -40,7 +40,13 @@
   font-weight: 600;
   font-size: 50px;
   margin-top: 40px;
+  margin-left: 60px;
 }
+
+.course__top__left p {
+  margin-left: 60px;
+}
+
 .btn {
   margin-right: 40px;
 }

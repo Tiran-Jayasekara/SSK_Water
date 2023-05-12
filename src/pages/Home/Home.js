@@ -8,12 +8,8 @@ import ChooseUs from "../../components/Choose-us/ChooseUs";
 import Features from "../../components/Feature-section/Features";
 
 import Testimonials from "../../components/Testimonial/Testimonials";
-
-import Newsletter from "../../components/Newsletter/Newsletter";
 import Footer from "../../components/Footer/Footer";
-import About from "../About/About";
 import Services from "../../components/Courses-section/Courses";
-import OurService from "../../components/Free-course-section/ourService";
 import Cards from '../../components/Card/Cards';
 
 //import Footer from '../Footer';
@@ -23,7 +19,7 @@ function Home() {
     <>
       <HeroSection />
       <Cards/>
-      <About />
+      {/* <About /> */}
       <Services />
       <ChooseUs />
       <Features />
