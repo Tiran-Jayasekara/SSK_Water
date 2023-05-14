@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Container, Row, Col, Button } from "reactstrap";
 import ProductList from './ProductList';
 import './Store.css'
@@ -8,10 +8,17 @@ function Store() {
   const [data , SetData] = useState([
     <ProductList Category={'Osmosis'}/>
 ]);
+const containerRef = useRef(null);
+
+useEffect(() => {
+  if (containerRef.current) {
+    containerRef.current.scrollTop = 0;
+  }
+}, [data]);
 
   return (
     <section>
-      <Container>
+      <Container style={{height: "60vh"}}>
         <Row>
           <Col lg="6" md="6" style={{width: "20%"}}>
             <div className='Product_NavBar'>
@@ -56,7 +63,7 @@ function Store() {
             </div>
         </Col>
 
-        <Col lg="10" md="10" style={{width: "80%" , height: '550px', overflowY: 'scroll'}} >
+        <Col lg="10" md="10" style={{width: "80%" , height: '550px', overflowY: 'scroll'}} ref={containerRef} >
           <div className='Products_List'>
           {data}
           </div>
