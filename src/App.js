@@ -14,7 +14,6 @@ function App() {
     <BrowserRouter>
     <div className="Header_container">
           <NavBar />
-        
         <div className="content">
           <Routes>
             <Route path="/" element={<Home />} />
@@ -24,7 +23,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </div>
-      </div>
+    </div>
     </BrowserRouter>
     </>
 
