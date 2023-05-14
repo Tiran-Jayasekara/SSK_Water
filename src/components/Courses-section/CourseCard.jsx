@@ -24,7 +24,7 @@ const CourseCard = (props) => {
 
         <div className=" d-flex justify-content-between align-items-center">
           <p className="rating d-flex align-items-center gap-1">
-            <i class="ri-star-fill"></i> {rating} K
+            <i class="ri-star-fill"></i> {rating}
           </p>
 
           <p className="enroll d-flex align-items-center gap-1">

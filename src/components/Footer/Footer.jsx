@@ -50,7 +50,7 @@ const Footer = () => {
     <footer className="footer">
       <Container>
         <Row>
-          <Col lg="3" md="6" className="mb-4">
+          <Col lg="3" md="8" className="mb-4">
             <h2 className=" d-flex align-items-center gap-1">
               <i class="ri-pantone-line"></i> SSK Water Filters.
             </h2>
