@@ -28,17 +28,22 @@ const Blog = () => {
   ];
 
   return (
-    <div className="blog">
-      {blogPosts.map(post => (
-        <BlogPost
-          key={post.id}
-          title={post.title}
-          date={post.date}
-          author={post.author}
-          content={post.content}
-        />
-      ))}
+  <div className="blog-container">
+  <div className="post-container">
+    {blogPosts.map(post => (
+      <BlogPost
+        key={post.id}
+        title={post.title}
+        date={post.date}
+        author={post.author}
+        content={post.content}
+      />
+    ))}
+  </div>
+  <div className="image-container">
+    <img src='https://media.springernature.com/full/springer-static/image/art%3A10.1186%2Fs12882-019-1501-0/MediaObjects/12882_2019_1501_Fig2_HTML.png?as=webp' className="image"></img>
     </div>
+</div>
   );
 };
 

@@ -39,28 +39,28 @@ function ProductList(props) {
   
     const Ionizers = [
         {
-          id: 1,
+          id: 5,
           title: "Ionizers 1",
           author: "Douglas Adams",
           price: 10.99,
           image:"https://waterionizer.org/wp-content/uploads/best-water-filters1.jpg"
         },
         {
-          id: 2,
+          id: 6,
           title: "Ionizers 2",
           author: "Harper Lee",
           price: 7.99,
           image:"https://m.media-amazon.com/images/I/61XP6k4LhJL._AC_UF1000,1000_QL80_.jpg"
         },
         {
-          id: 3,
+          id: 7,
           title: "Ionizers 3",
           author: "F. Scott Fitzgerald",
           price: 12.99,
           image:"https://m.media-amazon.com/images/I/81dXerYATVL.jpg"
         },
         {
-          id: 4,
+          id: 8,
           title: "Ionizers 4",
           author: "F. Scott Fitzgerald",
           price: 12.99,
@@ -70,28 +70,28 @@ function ProductList(props) {
 
       const Distillation = [
         {
-          id: 1,
+          id: 9,
           title: "Distillation 1",
           author: "Douglas Adams",
           price: 10.99,
           image:"https://sc04.alicdn.com/kf/H2122d137337946e9a5bd403ddc9a97cdv/251009102/H2122d137337946e9a5bd403ddc9a97cdv.jpg"
         },
         {
-          id: 2,
+          id: 10,
           title: "Distillation 2",
           author: "Harper Lee",
           price: 7.99,
           image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTziXyCe6M7AuhpZ4CEUk3n9RDXBIGRSDnLi2hiuyKONddba1QaOPbsddDLHHSxLVqoW8s&usqp=CAU"
         },
         {
-          id: 3,
+          id: 11,
           title: "Distillation 3",
           author: "F. Scott Fitzgerald",
           price: 12.99,
           image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2shXuR1ZhPZgqjVTxI3F9JFoFZyOyhCGh9mpviIVSOcgOz7NGHk_x-ZpXtcfY3XJo1zE&usqp=CAU"
         },
         {
-          id: 4,
+          id: 12,
           title: "Distillation 4",
           author: "F. Scott Fitzgerald",
           price: 12.99,
@@ -101,28 +101,28 @@ function ProductList(props) {
 
       const Ceramic = [
         {
-          id: 1,
+          id: 13,
           title: "Ceramic 1",
           author: "Douglas Adams",
           price: 10.99,
           image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhy-3G8I6RCqLIQOqv1NzSUbe4O2NxyPTZwQ&usqp=CAU"
         },
         {
-          id: 2,
+          id: 14,
           title: "Ceramic 2",
           author: "Harper Lee",
           price: 7.99,
           image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPcXCHl7VsM9ogGXSy9cFQKHgTCFY7bwqnVUB3fBiHchl1OkRMS8DDi9fu12lfbNXrWPM&usqp=CAU"
         },
         {
-          id: 3,
+          id: 15,
           title: "Ceramic 3",
           author: "F. Scott Fitzgerald",
           price: 12.99,
           image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkA25k_qXXxSjY70j77YHjjCjKiZ88rcMtjrfg1gdjeHfnr06nTnJcq7QE-gyhqlCBUUU&usqp=CAU"
         },
         {
-          id: 4,
+          id: 16,
           title: "Charger 4",
           author: "F. Scott Fitzgerald",
           price: 12.99,
