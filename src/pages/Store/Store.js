@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { Container, Row, Col, Button } from "reactstrap";
+import { Container, Row, Col } from "reactstrap";
+import { Button } from '@material-ui/core';
 import ProductList from './ProductList';
 import './Store.css'
 
@@ -18,10 +19,10 @@ useEffect(() => {
 
   return (
     <section>
-      <Container style={{height: "60vh"}}>
+      <Container className="Container-custom">
         <Row>
-          <Col lg="6" md="6" style={{width: "20%"}}>
-            <div className='Product_NavBar'>
+          <Col lg="2" md="4" className="my-col">
+          <div className='Product_NavBar'>
             <ul>
             <li>
             <Button onClick={()=>{
@@ -63,7 +64,7 @@ useEffect(() => {
             </div>
         </Col>
 
-        <Col lg="10" md="10" style={{width: "80%" , height: '550px', overflowY: 'scroll'}} ref={containerRef} >
+        <Col xs="12" sm="6" lg="10" md="8" className="product-list-col" ref={containerRef} >
           <div className='Products_List'>
           {data}
           </div>

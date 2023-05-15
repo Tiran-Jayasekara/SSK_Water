@@ -1,9 +1,12 @@
 import { Container, Row, Col} from "reactstrap";
 import './Store.css'
 
-
 function ProductList(props) {
     // Example array of books
+
+    const imageClick = ()=>{
+      console.log("Image Click")
+    }
 
 
     let productList;
@@ -27,7 +30,7 @@ function ProductList(props) {
   
     return (
     <div>
-    <Container >
+  <Container >
   {productList
     .reduce((rows, product, index) => (index % 4 === 0 ? rows.concat([[product]]) : (rows[rows.length - 1].push(product), rows)), [])
     .map((row, rowIndex) => (
@@ -36,9 +39,10 @@ function ProductList(props) {
           <Col key={product.id} md="3" className="Product_container">
             <div className="Products">
               <h3>{product.title}</h3>
-              <img src={product.image} alt={product.title} />
-              <p>Brand: {product.author}</p>
-              <p>Price: ${product.price}</p>
+              <img className="store_image" src={product.image} alt={product.title} onClick={imageClick} />
+              <p>Brand: {product.author}<br/>
+              Price: ${product.price}
+              </p>
             </div>
           </Col>
         ))}
@@ -68,14 +72,14 @@ function ProductList(props) {
     {
       id: 3,
       title: "Osmosis 3 ",
-      author: "F. Scott Fitzgerald",
+      author: "F. Scott ",
       price: 12.99,
       image: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg"
     },
     {
       id: 4,
       title: "Osmosis 4 ",
-      author: "F. Scott Fitzgerald",
+      author: "F. Scott ",
       price: 12.99,
       image: "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg"
     },{
@@ -95,14 +99,14 @@ function ProductList(props) {
     {
       id: 7,
       title: "Osmosis 3 ",
-      author: "F. Scott Fitzgerald",
+      author: "F. Scott ",
       price: 12.99,
       image: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg"
     },
     {
       id: 8,
       title: "Osmosis 4 ",
-      author: "F. Scott Fitzgerald",
+      author: "F. Scott ",
       price: 12.99,
       image: "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg"
     },

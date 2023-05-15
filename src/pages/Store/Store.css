@@ -1,114 +1,71 @@
-.Product_NavBar {
-    padding: 0px;
-    margin-bottom: 10px;
-    width: 100%;
-  }
+.Container-custom {
+  height: 70vh;
+  margin-top: -40px;
   
+}
+
   .Product_NavBar ul { 
     padding: 0;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    display: flex;
-    flex-direction: column;
     gap: 30px;
-  }
- 
-  .Product_NavBar li {
-    display: block;
-  }
-  
-  .Product_NavBar .nav-link {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  .Product_NavBar .nav-link:hover {
-    background-color: #786fe2;
-    color: white;
-  }
-  
-  .Product_NavBar ul li:hover {
-    cursor: pointer;
+    
   }
 
-
-  .Products_List {
+  .my-col {
+    width: 12%;
+    border-right: 1px solid #ccc;
+    margin-left: -50px;
+  }
+  
+  .product-list-col {
     width: 100%;
-  }
-
-  /* CSS */
-  .ProductsContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 1000px;
-    margin: 0 auto;
+    height: 600px;
+    overflow-y: scroll;
+    
   }
   
+
+  /* Product List */
+
 .Products {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 20px;
     margin-bottom: 100px;
-  }
-  .Products div {
-    background-color: #99b5de;
-    padding: 20px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    text-align: center;
+    background-color: #eaeef3;
+    border: 1px solid black;
+    border-radius: 20px;
   }
   
   .Products h3 {
     font-size: 24px;
+    margin-left: 25%;
+    margin-top: 10px;
+
   }
   
   .Products img {
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
     margin-bottom: 10px;
+    margin-left: 10%;
+    border-radius: 20px;
+  }
+  .store_image:hover {
+    transform: scale(1.1);
+    cursor: pointer;
   }
   
   .Products p {
     font-size: 16px;
-    margin-bottom: -30px;
-  }
-  
-  .Products button {
-    display: inline-block;
-    background-color: #222bc9;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 10px;
-  }
-
-  
-  .Product_NavBar button:hover {
-    background-color: #007bff;
-  }
-
-  .Product_NavBar button {
-    width: 60%;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
+    margin-left: 25%;
   }
   
   .Product_NavBar button:hover {
-    background-color: #0062cc;
+    background-color: #4187d3;
   }
+ 
   
-  .my-container {
-    margin-top: 0px;
-  }
   
