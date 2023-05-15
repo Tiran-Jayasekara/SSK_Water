@@ -2,17 +2,15 @@ import React from 'react';
 import '../../App.css';
 
 import './heroSection.css';
-import { Button } from 'reactstrap';
-import { Link } from 'react-router-dom';
 
 function HeroSection() {
   return (
     <div className='hero-container'>
       {/* <video src='/videos/water3.mp4' autoPlay loop muted className='hero-video' /> */}
-      <h1>Drinking Clean Water </h1>
-      <p>is essential for maintaining good health.</p>
+      {/* <h1>Drinking Clean Water </h1>
+      <p>is essential for maintaining good health.</p> */}
       <div className='hero-btns'>
-        <Button
+        {/* <Button
           className='btns'
           buttonStyle='btn--outline'
           buttonSize='btn--large'
@@ -32,7 +30,7 @@ function HeroSection() {
         WHAT WE DO <i className='far fa-play-circle' />
         </Link>
           
-        </Button>
+        </Button> */}
       </div>
     </div>
   );
