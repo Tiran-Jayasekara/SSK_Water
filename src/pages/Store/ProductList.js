@@ -1,14 +1,60 @@
 import { Container, Row, Col} from "reactstrap";
 import './Store.css'
+import { Modal, Button,Space} from "antd";
+import { useState } from "react";
 
 function ProductList(props) {
     // Example array of books
 
-    const imageClick = ()=>{
-      console.log("Image Click")
+    const imageClick = (product)=>{
+      console.log(product);
+      setDisplay({
+        id: product.id,
+        title: product.title,
+        author: product.author,
+        price: product.price,
+        image: product.image,
+        describe:product.describe
+      });
+      setIsModalVisible(true);
     }
 
+    const [isModalVisible, setIsModalVisible] = useState(false);
+    const [isModalVisible1, setIsModalVisible1] = useState(false);
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
 
+  const handleNameChange = (event) => {
+    setName(event.target.value);
+  };
+
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+  };
+
+  const handleMessageChange = (event) => {
+    setMessage(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
+    // Send data to backend or email
+  };
+
+
+    const handleCancel = () => {
+      setIsModalVisible(false);
+    };
+
+    const handleCancel1 = () => {
+      setIsModalVisible1(false);
+    };
+
+    const [display,setDisplay] = useState({})
+    
+  
     let productList;
 
     switch (props.Category) {
@@ -39,7 +85,7 @@ function ProductList(props) {
           <Col key={product.id} md="3" className="Product_container">
             <div className="Products">
               <h3>{product.title}</h3>
-              <img className="store_image" src={product.image} alt={product.title} onClick={imageClick} />
+              <img className="store_image" src={product.image} alt={product.title} onClick={() => imageClick(product)} />
               <p>Brand: {product.author}<br/>
               Price: ${product.price}
               </p>
@@ -49,10 +95,137 @@ function ProductList(props) {
       </Row>
     ))}
 </Container>
-        
-      </div>
+
+    <Modal
+        // eslint-disable-next-line no-useless-concat
+        visible={isModalVisible}
+        onCancel={handleCancel}
+        destroyOnClose
+        width={1000}
+        style={{
+          textAlign: "center"
+        }}
+        footer={[
+          <Button key="order" onClick={() => setIsModalVisible1(true)} >
+            Order
+          </Button>,
+          <Button key="back" onClick={handleCancel}>
+            Cancel
+          </Button>,
+        ]}
+      >
+        <Row gutter={[16, 16]}>
+          <Col md={12} xs={24}>
+            <h1>{display.title}</h1>
+          </Col>
+          <Col md={12} xs={24}>
+            <Space direction="vertical">
+              <div key={0}>
+                &nbsp;&nbsp;<b><img className="model_image" src={display.image} alt={display.title}/></b>
+              </div>
+              <div key={1}>
+                About <br></br> &nbsp;&nbsp;<b>{display.describe}</b>
+              </div>
+              <div key={2}>
+                Filter No : &nbsp;&nbsp;
+                <b>{productList.title}</b>
+              </div>
+              <div key={3}>
+              Filter Register No : &nbsp;&nbsp;<b>{display.title}</b>
+              </div>
+              <div key={4}>
+              Filter ID : &nbsp;&nbsp;<b>{display.title}</b>
+              </div>
+              {/* <div key={5}>landOwner Name : &nbsp;&nbsp;<b>{landOwnerName}</b></div> */}
+              <div key={6}>
+              Filter Name : &nbsp;&nbsp;<b>{display.title}</b>
+              </div>
+              {/* <div key={7}>Auditor ID : &nbsp;&nbsp;<b>{getAuditorById(creatorID)}</b></div> */}
+              <div key={8}>
+              Filter Brand : &nbsp;&nbsp;<b>{display.title}</b>
+              </div>
+              <div key={9}>
+              Filter Created : &nbsp;&nbsp;<b>{display.title}</b>
+              </div>
+            </Space>
+          </Col>
+        </Row>
+      </Modal>
+
+
+      <Modal
+        // eslint-disable-next-line no-useless-concat
+        visible={isModalVisible1}
+        onCancel={handleCancel1}
+        destroyOnClose
+        width={1000}
+        style={{
+          textAlign: "center"
+        }}
+        footer={[
+          <Button key="send" onClick={handleCancel1}>
+            Send
+          </Button>,
+          <Button key="back" onClick={handleCancel1}>
+            Cancel
+          </Button>,
+        ]}
+      >
+        <div className="modal-content">
+    <Row gutter={[16, 16]}>
+      <Col md={12} xs={24}>
+        {/* <h1 className="modal-title">{display.title}</h1> */}
+      </Col>
+      <Col md={12} xs={24}>
+        <Space direction="vertical" className="contact-form">
+          <h2 className="form-title">Place Order</h2>
+          <form onSubmit={handleSubmit}>
+            <label htmlFor="name" className="form-label">
+              Name:
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={name}
+              onChange={handleNameChange}
+              required
+              className="form-input"
+            />
+            <label htmlFor="email" className="form-label">
+              Number:
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={email}
+              onChange={handleEmailChange}
+              required
+              className="form-input"
+            />
+            <label htmlFor="message" className="form-label">
+              Message:
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              value={message}
+              onChange={handleMessageChange}
+              required
+              className="form-input"
+            ></textarea>
+          </form>
+        </Space>
+      </Col>
+    </Row>
+  </div>
+      </Modal>
+    </div>
     );
   }
+
+
 
   const Osmosis = [
     {
@@ -60,7 +233,8 @@ function ProductList(props) {
       title: "Osmosis 1 ",
       author: "Douglas Adams",
       price: 10.99,
-      image: "https://m.media-amazon.com/images/I/71Iq1Ihu4fL._SL1500_.jpg"
+      image: "https://m.media-amazon.com/images/I/71Iq1Ihu4fL._SL1500_.jpg",
+      describe:"A water filter is a device that removes impurities and contaminants from water by means of a physical barrier, a chemical process, or a biological process. The purpose of a water filter is to improve the quality of the water by removing unwanted substances such as sediment, chlorine, bacteria, viruses, heavy metals, and other harmful chemicals."
     },
     {
       id: 2,

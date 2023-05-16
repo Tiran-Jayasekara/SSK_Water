@@ -57,3 +57,36 @@
 .students , .enroll {
   margin-right: 40px;
 }
+
+@media screen and (max-width: 960px) {
+  .course__top h2 {
+    font-size: 30px;
+    margin-top: -50px;
+  } 
+}
+@media screen and (max-width: 768px) {}
+@media (max-width: 768px) {
+  .course__top h2 {
+    font-size: 30px;
+    margin-top: -50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -50px;
+  } 
+  .course__img {
+    width: 300px;
+    margin-left: 10px;
+  }
+  
+  .course__top {
+    width: 400px;
+  }
+  .course__title {
+    font-size: 12px;
+  }
+  .students , .rating ,.enroll ,.lesson{
+    font-size: 12px;
+    margin-top: -30px;
+  }
+  
+}
