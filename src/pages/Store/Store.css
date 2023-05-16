@@ -7,14 +7,14 @@
   .Product_NavBar ul { 
     padding: 0;
     overflow: hidden;
-    display: flex;
     flex-direction: column;
     gap: 30px;
+    margin-left: 30px;
     
   }
 
   .my-col {
-    width: 12%;
+    width: 100%;
     border-right: 1px solid #ccc;
     margin-left: -50px;
   }
@@ -115,5 +115,79 @@
   .form-input:focus {
     outline: none;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  }
+    @media screen and (max-width: 760px) {
+    
+      .Product_NavBar ul { 
+        font-size: 0px;
+        flex-direction: row;
+        gap: 0px;
+        margin-left: 0px;
+        
+      }
+      .Product_NavBar button {
+        width: auto;
+        height: auto;
+        font-size: 10px;
+      }
+      .my-col {
+        width: 100%;
+        border-right: none;
+        margin-left: -50px;
+      }
+        .product-buttons-row {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+        }
+      
+        .my-col {
+          width: 100%;
+          margin-bottom: 1rem;
+        }  
+        .Product_NavBar{
+          width: 480px;
+          margin-left: 100px;
+          
+        }    
+      
+    }
+  
+  @media screen and (max-width: 460px) {
+    
+    .Product_NavBar ul { 
+      font-size: 0px;
+      flex-direction: row;
+      gap: 0px;
+      margin-left: 0px;
+      
+    }
+    .Product_NavBar button {
+      width: auto;
+      height: auto;
+      font-size: 8px;
+    }
+    .my-col {
+      width: 100%;
+      border-right: none;
+      margin-left: -50px;
+    }
+      .product-buttons-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+    
+      .my-col {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+      .Product_NavBar{
+        width: 480px;
+        margin-left: 60px;
+        
+      }
+    
+    
   }
   

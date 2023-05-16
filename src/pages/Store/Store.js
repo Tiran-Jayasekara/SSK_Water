@@ -20,57 +20,36 @@ useEffect(() => {
   return (
     <section>
       <Container className="Container-custom">
-        <Row>
-          <Col lg="2" md="4" className="my-col">
-          <div className='Product_NavBar'>
-            <ul>
-            <li>
-            <Button onClick={()=>{
-              SetData(<ProductList Category={'Osmosis'}/>)
-            }}>Osmosis</Button>
-            </li>
-            <li>
-            <Button onClick={()=>{
-              SetData(<ProductList Category={'Ionizers'}/>)
-            }}>Ionizers</Button>
-            </li>
-            <li>
-            <Button onClick={()=>{
-              SetData(<ProductList Category={'Distillation'}/>)
-            }}>Distillation</Button>
-            </li>
-            <li>
-            <Button onClick={()=>{
-              SetData(<ProductList Category={'Ceramic'}/>)
-            }}>Ceramic
-            </Button>
-            </li>
-            <li>
-            <Button onClick={()=>{
-              SetData(<ProductList Category={'Osmosis'}/>)
-            }}>Osmosis</Button>
-            </li>
-            <li>
-            <Button onClick={()=>{
-              SetData(<ProductList Category={'Ionizers'}/>)
-            }}>Ionizers</Button>
-            </li>
-            <li>
-            <Button onClick={()=>{
-              SetData(<ProductList Category={'Distillation'}/>)
-            }}>Distillation</Button>
-            </li>
-            </ul>
-            </div>
-        </Col>
+  <Row className="product-buttons-row">
+    <Col xs="12" md="6" lg="2" className="my-col">
+      <div className="Product_NavBar">
+        <ul className="d-flex">
+          <li>
+            <Button onClick={() => { SetData(<ProductList Category={'Osmosis'} />) }}>Home</Button>
+          </li>
+          <li>
+            <Button onClick={() => { SetData(<ProductList Category={'Ionizers'} />) }}>Ionizers</Button>
+          </li>
+          <li>
+            <Button onClick={() => { SetData(<ProductList Category={'Distillation'} />) }}>Ro Filter</Button>
+          </li>
+          <li>
+            <Button onClick={() => { SetData(<ProductList Category={'Ceramic'} />) }}>Industrial</Button>
+          </li>
+          <li>
+            <Button onClick={() => { SetData(<ProductList Category={'Osmosis'} />) }}>Spare Parts</Button>
+          </li>
+        </ul>
+      </div>
+    </Col>
+    <Col xs="12" md="6" lg="10" className="product-list-col" ref={containerRef}>
+      <div className="Products_List">
+        {data}
+      </div>
+    </Col>
+  </Row>
+</Container>
 
-        <Col xs="12" sm="6" lg="10" md="8" className="product-list-col" ref={containerRef} >
-          <div className='Products_List'>
-          {data}
-          </div>
-        </Col>
-        </Row>
-      </Container>
     </section>
     
   )

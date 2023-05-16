@@ -2,7 +2,7 @@ import React from 'react';
 import BlogPost from './BlogPost';
 import './Blog.css';
 import { Row } from 'reactstrap';
-import { Container, Col } from "reactstrap";
+import { Col } from "reactstrap";
 
 const Blog = () => {
   const blogPosts = [
