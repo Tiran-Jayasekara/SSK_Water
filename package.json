@@ -1,5 +1,5 @@
 {
-  "homepage":"http://TCM-Software.github.io/SSK_water_filter_backend",
+  "homepage": "http://TCM-Software.github.io/SSk_Front_End",
   "name": "ssk-water-filter",
   "version": "0.1.0",
   "private": true,
@@ -26,10 +26,10 @@
     "slick-carousel": "^1.8.1",
     "web-vitals": "^2.1.4"
   },
-  "scripts": { 
+  "scripts": {
     "start": "react-scripts start",
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -51,5 +51,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }
