@@ -18,7 +18,7 @@ function HeroSection() {
           buttonSize='btn--large'
         >
         <Link to='/store' className='hero-btns1'>
-        PLACE ORDER
+        Place Order
         </Link>
           
         </Button>
