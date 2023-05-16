@@ -17,7 +17,7 @@ import Cards from '../../components/Card/Cards';
 function Home() {
   return (
     <>
-      <HeroSection />
+      <HeroSection/>
       <Cards/>
       {/* <About /> */}
       <Services />
