@@ -1,22 +1,155 @@
-.footer {
-  background: rgba(18, 81, 255, 0.24);
-  margin-top: 80px;
-}
 
 .follows span a {
   text-decoration: none;
 }
 
 .follows span {
-  margin-right: 15px;
+  margin-right: 25px;
+  
 }
 
-.link__list .link__item {
-  background: transparent;
+.follows span a i{
+  color: black;
+  font-size: 1em;
+  border: 1px solid black;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  margin-right: 11px;
+
 }
 
-.link__list a {
-  text-decoration: none;
-  color: #0a2b1e;
-  font-weight: 500;
+.follows span a i:hover{
+  color: white;
+}
+
+
+.footer{
+	position: relative;
+	width: 100%;
+	background: #3586ff;
+	min-height: 80px;
+	padding: 20px 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  margin-top: 100px;
+}
+
+footer .wave{
+	position: absolute;
+	top: -100px;
+	left: 0;
+	width: 100%;
+	height: 100px;
+	background: url(wave.png);
+	background-size: 1000px 100px;
+}
+
+footer .wave#wave1{
+	z-index: 1000;
+	opacity: 1;
+	bottom: 0;
+	animation: animateWave 4s linear infinite;
+
+}
+footer .wave#wave2{
+	z-index: 999;
+	opacity: 0.5;
+	bottom: 10px;
+	animation: animateWave_02 4s linear infinite;
+
+}
+footer .wave#wave3{
+	z-index: 1000;
+	opacity: 0.2;
+	bottom: 15px;
+	animation: animateWave_03 3s linear infinite;
+
+}
+footer .wave#wave4{
+	z-index: 999;
+	opacity: 0.7;
+	bottom: 20px;
+	animation: animateWave_04 3s linear infinite;
+
+}
+
+
+@keyframes animateWave{
+	0%
+	{
+		background-position-x: 1000px;
+	}
+
+	100%
+	{
+		background-position-x: 0px;
+
+	}
+		
+}
+@keyframes animateWave_02{
+	0%
+	{
+		background-position-x: 0px;
+	}
+
+	100%
+	{
+		background-position-x: 1000px;
+	}
+}
+@keyframes animateWave_03{
+	0%
+	{
+		background-position-x: 0px;
+	}
+
+	100%
+	{
+		background-position-x: 1000px;
+	}
+}
+@keyframes animateWave_04{
+	0%
+	{
+		background-position-x: 0px;
+	}
+
+	100%
+	{
+		background-position-x: 1000px;
+	}
+}
+
+.follows h5{
+  color: black;
+  font-weight: bold;
+}
+
+.footer-content {
+  line-height: 1.5;
+  color: black;
+  font-size: 12px;
+
+  
+}
+
+.ssk-hight{
+  color: black;
+  font-size: 12px;
+}
+
+.main-ssk{
+  color: black;
+  font-weight: bold;
+}
+
+.get-in{
+  color: black;
+  font-weight: bold;
 }

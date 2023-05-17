@@ -1,122 +1,84 @@
 import React from "react";
-import { Container, Row, Col, ListGroup, ListGroupItem } from "reactstrap";
+import { Container, Row, Col } from "reactstrap";
+import contactImg from "../../assests/images/logo4.png";
 
 import "./footer.css";
-
-const footerQuickLinks = [
-  {
-    display: "Home",
-    url: "#",
-  },
-  {
-    display: "About US",
-    url: "#",
-  },
-
-  {
-    display: "Courses",
-    url: "#",
-  },
-
-  {
-    display: "Blog",
-    url: "#",
-  },
-];
-
-const footerInfoLinks = [
-  {
-    display: "Privacy Policy",
-    url: "#",
-  },
-  {
-    display: "Membership",
-    url: "#",
-  },
-
-  {
-    display: "Purchases Guide",
-    url: "#",
-  },
-
-  {
-    display: "Terms of Service",
-    url: "#",
-  },
-];
 
 const Footer = () => {
   return (
     <footer className="footer">
+      <div className="waves">
+        <div className="wave" id="wave1"></div>
+        <div className="wave" id="wave2"></div>
+        <div className="wave" id="wave3"></div>
+        <div className="wave" id="wave4"></div>
+      </div>
+
+      <div className="water-wave"></div>
       <Container>
-        <Row>
-          <Col lg="3" md="8" className="mb-4">
-            <h2 className=" d-flex align-items-center gap-1">
-              <i class="ri-pantone-line"></i> SSK Water Filters.
-            </h2>
-
-            <div className="follows">
-              <p className="mb-0">Follow us on social media</p>
-              <span>
-                {" "}
-                <a href="facebook.com">
-                  <i class="ri-facebook-line"></i>
-                </a>
-              </span>
-
-              <span>
-                {" "}
-                <a href="facebook.com">
-                  <i class="ri-instagram-line"></i>
-                </a>
-              </span>
-
-              <span>
-                {" "}
-                <a href="facebook.com">
-                  <i class="ri-linkedin-line"></i>
-                </a>
-              </span>
-
-              <span>
-                {" "}
-                <a href="facebook.com">
-                  <i class="ri-twitter-line"></i>
-                </a>
-              </span>
-            </div>
-          </Col>
-
+        <Row className="justify-content-center">
           <Col lg="3" md="6" className="mb-4">
-            <h6 className="fw-bold">Explore</h6>
-            <ListGroup className="link__list">
-              {footerQuickLinks.map((item, index) => (
-                <ListGroupItem key={index} className="border-0 ps-0 link__item">
-                  {" "}
-                  <a href={item.url}>{item.display}</a>
-                </ListGroupItem>
-              ))}
-            </ListGroup>
-          </Col>
-
-          <Col lg="3" md="6" className="mb-4">
-            <h6 className="fw-bold">Information</h6>
-            <ListGroup className="link__list">
-              {footerInfoLinks.map((item, index) => (
-                <ListGroupItem key={index} className="border-0 ps-0 link__item">
-                  {" "}
-                  <a href={item.url}>{item.display}</a>
-                </ListGroupItem>
-              ))}
-            </ListGroup>
+            <h5 className="main-ssk">
+              SSK WATER FILTERS
+            </h5>
+            <h6 className="ssk-hight">
+              SSK Water Technology is an innovative water filter company that provides advanced, sustainable solutions for clean and safe water.
+            </h6>
           </Col>
 
           <Col lg="3" md="6">
-            <h6 className="fw-bold">Get in Touch</h6>
+            <h5 className="get-in">GET IN TOUCH</h5>
+            <h6 className="footer-content">
+              SSK water Filter Technology
+              <br />
+              New Town,
+              <br />
+              Thambuththegama,
+              <br />
+              Anuradhapura,
+              <br />
+              Srilanka.
+              <br />
+              5000
+            </h6>
+          </Col>
 
-            <p>Address: Anuradapura , Thabuththegama</p>
-            <p> Phone: +11 123456789 </p>
-            <p>Email: example@gmail.com</p>
+          <Col lg="3" md="6" className="mb-4">
+            <img
+              src={contactImg}
+              alt=""
+              style={{ width: "200px", height: "auto" }}
+              
+            />
+          </Col>
+          <Col lg="3" md="6">
+          <div className="follows">
+              <h5>FOLLOW US ON SOCIAL MEDIA</h5>
+              <span>
+                <a href="facebook.com">
+                <i className="fab fa-facebook"></i>
+
+                </a>
+              </span>
+              <span>
+                <a href="facebook.com">
+                <i className="fab fa-instagram"></i>
+
+
+                </a>
+              </span>
+              <span>
+                <a href="https://www.tiktok.com/@sskwaterfiltertec?_t=8cN2W8W6PFi&_r=1">
+                <i className="fab fa-tiktok"></i>
+                </a>
+              </span>
+              <span>
+                <a href="https://www.youtube.com/channel/UCIYdZcGWvOtlYNLZJYm9eVA">
+                <i className="fab fa-youtube"></i>
+
+                </a>
+              </span>
+            </div>
           </Col>
         </Row>
       </Container>
