@@ -26,7 +26,7 @@ const Footer = () => {
             </h6>
           </Col>
 
-          <Col lg="3" md="6">
+          <Col>
             <h5 className="get-in">GET IN TOUCH</h5>
             <h6 className="footer-content">
               SSK water Filter Technology
@@ -51,20 +51,17 @@ const Footer = () => {
               
             />
           </Col>
-          <Col lg="3" md="6">
+          <Col xs={12} md={6} lg={3}>
           <div className="follows">
               <h5>FOLLOW US ON SOCIAL MEDIA</h5>
               <span>
                 <a href="facebook.com">
                 <i className="fab fa-facebook"></i>
-
                 </a>
               </span>
               <span>
                 <a href="facebook.com">
                 <i className="fab fa-instagram"></i>
-
-
                 </a>
               </span>
               <span>

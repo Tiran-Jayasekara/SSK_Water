@@ -4,6 +4,7 @@ import { Button } from '@material-ui/core';
 import ProductList from './ProductList';
 import './Store.css'
 
+
 function Store() {
 
   const [data , SetData] = useState([
@@ -18,6 +19,7 @@ useEffect(() => {
 }, [data]);
 
   return (
+    <>
     <section>
       <Container className="Container-custom">
   <Row className="product-buttons-row">
@@ -51,7 +53,8 @@ useEffect(() => {
 </Container>
 
     </section>
-    
+   
+    </>
   )
 }
 

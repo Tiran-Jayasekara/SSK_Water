@@ -8,23 +8,22 @@
   
 }
 
-.follows span a i{
-  color: black;
-  font-size: 1em;
-  border: 1px solid black;
-  width: 40px;
-  height: 40px;
-  display: inline-block;
-  text-align: center;
-  line-height: 40px;
-  border-radius: 50%;
-  margin-right: 11px;
-
-}
-
-.follows span a i:hover{
-  color: white;
-}
+.follows span a i {
+	color: black;
+	font-size: 1.5em;
+	border: 1px solid black;
+	width: 40px;
+	height: 40px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	transition: color 0.3s ease;
+  }
+  
+  .follows span a i:hover {
+	color: white;
+  }
 
 
 .footer{
