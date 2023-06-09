@@ -76,25 +76,26 @@ function ProductList(props) {
   
     return (
     <div>
-  <Container >
+  <Container>
   {productList
     .reduce((rows, product, index) => (index % 4 === 0 ? rows.concat([[product]]) : (rows[rows.length - 1].push(product), rows)), [])
     .map((row, rowIndex) => (
-      <Row key={rowIndex}>
+      <Row key={rowIndex} className="product-row">
         {row.map((product) => (
-          <Col key={product.id} md="3" className="Product_container">
-            <div className="Products">
-              <h3>{product.title}</h3>
-              <img className="store_image" src={product.image} alt={product.title} onClick={() => imageClick(product)} />
-              <p>Brand: {product.author}<br/>
-              Price: ${product.price}
-              </p>
+          <Col key={product.id} md="3" className="product-col">
+            <div className="product-container">
+              <img className="product-image" src={product.image} alt={product.title} onClick={() => imageClick(product)} />
+              <h5 className="product-title">{product.title}</h5>
+              <div className="product-details">
+                <p className="product-price">${product.price}</p>
+              </div>
             </div>
           </Col>
         ))}
       </Row>
     ))}
 </Container>
+
 
     <Modal
         // eslint-disable-next-line no-useless-concat

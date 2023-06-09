@@ -32,7 +32,7 @@ function Navbar() {
         <div className='navbar-container'>
           <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
           <img src={logo} alt="Logo" />
-          <h6>SSK Water Filters </h6> 
+          <h6>SSK WATER FILTERS </h6> 
           </Link>
           <div className='menu-icon' onClick={handleClick}>
             <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
@@ -40,7 +40,7 @@ function Navbar() {
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li className='nav-item'>
               <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-                Home
+                HOME
               </Link>
             </li>
             <li className='nav-item'>
@@ -49,7 +49,7 @@ function Navbar() {
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
-                Store
+                STORE
               </Link>
             </li>
             <li className='nav-item'>
@@ -58,7 +58,7 @@ function Navbar() {
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
-                About
+                ABOUT
               </Link>
             </li>
             <li className='nav-item'>
@@ -67,7 +67,7 @@ function Navbar() {
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
-                Blog
+                BLOG
               </Link>
             </li>
             <li className='nav-item'>
@@ -76,7 +76,7 @@ function Navbar() {
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
-                Contact
+                CONTACT
               </Link>
             </li>
           </ul>

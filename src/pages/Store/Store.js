@@ -4,6 +4,7 @@ import { Button } from '@material-ui/core';
 import ProductList from './ProductList';
 import './Store.css'
 
+
 function Store() {
 
   const [data , SetData] = useState([
@@ -18,61 +19,41 @@ useEffect(() => {
 }, [data]);
 
   return (
+    <>
     <section>
-      <Container className="Container-custom">
-        <Row>
-          <Col lg="2" md="4" className="my-col">
-          <div className='Product_NavBar'>
-            <ul>
-            <li>
-            <Button onClick={()=>{
-              SetData(<ProductList Category={'Osmosis'}/>)
-            }}>Osmosis</Button>
-            </li>
-            <li>
-            <Button onClick={()=>{
-              SetData(<ProductList Category={'Ionizers'}/>)
-            }}>Ionizers</Button>
-            </li>
-            <li>
-            <Button onClick={()=>{
-              SetData(<ProductList Category={'Distillation'}/>)
-            }}>Distillation</Button>
-            </li>
-            <li>
-            <Button onClick={()=>{
-              SetData(<ProductList Category={'Ceramic'}/>)
-            }}>Ceramic
-            </Button>
-            </li>
-            <li>
-            <Button onClick={()=>{
-              SetData(<ProductList Category={'Osmosis'}/>)
-            }}>Osmosis</Button>
-            </li>
-            <li>
-            <Button onClick={()=>{
-              SetData(<ProductList Category={'Ionizers'}/>)
-            }}>Ionizers</Button>
-            </li>
-            <li>
-            <Button onClick={()=>{
-              SetData(<ProductList Category={'Distillation'}/>)
-            }}>Distillation</Button>
-            </li>
-            </ul>
-            </div>
-        </Col>
-
-        <Col xs="12" sm="6" lg="10" md="8" className="product-list-col" ref={containerRef} >
-          <div className='Products_List'>
-          {data}
-          </div>
-        </Col>
-        </Row>
-      </Container>
+    <Container className="Container-custom">
+  <Row className="product-buttons-row">
+    <Col lg="3" sm ="12" xs="12" className="my-col">
+      <div className="Product_NavBar">
+        <ul className="d-flex">
+          <li>
+            <Button onClick={() => { SetData(<ProductList Category={'Osmosis'} />) }}>Osmosis</Button>
+          </li>
+          <li>
+            <Button onClick={() => { SetData(<ProductList Category={'Ionizers'} />) }}>Ionizers</Button>
+          </li>
+          <li>
+            <Button onClick={() => { SetData(<ProductList Category={'Distillation'} />) }}>Ro Filter</Button>
+          </li>
+          <li>
+            <Button onClick={() => { SetData(<ProductList Category={'Ceramic'} />) }}>Industrial</Button>
+          </li>
+          <li>
+            <Button onClick={() => { SetData(<ProductList Category={'Osmosis'} />) }}>Spare Parts</Button>
+          </li>
+        </ul>
+      </div>
+    </Col>
+    <Col lg="9">
+      <div className="Products_List">
+        {data}
+      </div>
+    </Col>
+  </Row>
+</Container>
     </section>
-    
+   
+    </>
   )
 }
 
