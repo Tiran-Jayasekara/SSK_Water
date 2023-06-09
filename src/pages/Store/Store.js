@@ -21,13 +21,13 @@ useEffect(() => {
   return (
     <>
     <section>
-      <Container className="Container-custom">
+    <Container className="Container-custom">
   <Row className="product-buttons-row">
-    <Col xs="12" md="6" lg="2" className="my-col">
+    <Col lg="3" sm ="12" xs="12" className="my-col">
       <div className="Product_NavBar">
         <ul className="d-flex">
           <li>
-            <Button onClick={() => { SetData(<ProductList Category={'Osmosis'} />) }}>Home</Button>
+            <Button onClick={() => { SetData(<ProductList Category={'Osmosis'} />) }}>Osmosis</Button>
           </li>
           <li>
             <Button onClick={() => { SetData(<ProductList Category={'Ionizers'} />) }}>Ionizers</Button>
@@ -44,14 +44,13 @@ useEffect(() => {
         </ul>
       </div>
     </Col>
-    <Col xs="12" md="6" lg="10" className="product-list-col" ref={containerRef}>
+    <Col lg="9">
       <div className="Products_List">
         {data}
       </div>
     </Col>
   </Row>
 </Container>
-
     </section>
    
     </>
