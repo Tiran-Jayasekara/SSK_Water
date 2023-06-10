@@ -134,7 +134,7 @@
       
   
     .nav-menu.active {
-      background: #c9e1eb;
+      background: #ce8e16;
       left: 0;
       z-index: 1;
       padding-bottom: 40px;
@@ -190,7 +190,7 @@
     }
 
     .nav-menu.active {
-      background: #c9e1eb;
+      background: #f1efef;
       z-index: 1;
       margin-top: 40px;
       height: 500px;

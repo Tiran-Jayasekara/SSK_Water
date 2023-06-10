@@ -82,12 +82,12 @@ function ProductList(props) {
     .map((row, rowIndex) => (
       <Row key={rowIndex} className="product-row">
         {row.map((product) => (
-          <Col key={product.id} md="3" className="product-col">
+          <Col key={product.id} md="3" sm="6" className="product-col"> {/* Adjust column size for medium (md) and small (sm) screens */}
             <div className="product-container">
               <img className="product-image" src={product.image} alt={product.title} onClick={() => imageClick(product)} />
               <h5 className="product-title">{product.title}</h5>
               <div className="product-details">
-                <p className="product-price">RS : {product.price}</p>
+              <p className="product-price">RS : {product.price}</p>
               </div>
             </div>
           </Col>
@@ -257,7 +257,8 @@ function ProductList(props) {
       author: "F. Scott ",
       price: 85000,
       image: "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg"
-    },{
+    },
+    {
       id: 5,
       title: "Domestic 1 ",
       author: "Douglas Adams",
@@ -285,6 +286,34 @@ function ProductList(props) {
       price: 85000,
       image: "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg"
     },
+    {
+      id: 9,
+      title: "Domestic 1 ",
+      author: "Douglas Adams",
+      price: 85000,
+      image: "https://m.media-amazon.com/images/I/71Iq1Ihu4fL._SL1500_.jpg"
+    },
+    {
+      id: 10,
+      title: "Domestic 2 ",
+      author: "Harper Lee",
+      price: 85000,
+      image: "https://cdn11.bigcommerce.com/s-mpfo2gcqca/images/stencil/1280x1280/products/476/2363/brondell-capella-RC250-reverse-osmosis-water-filtration-system-white__88084.1660687393.jpg?c=1"
+    },
+    {
+      id: 11,
+      title: "Domestic 3 ",
+      author: "F. Scott ",
+      price: 85000,
+      image: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg"
+    },
+    {
+      id: 12,
+      title: "Domestic 4 ",
+      author: "F. Scott ",
+      price: 85000,
+      image: "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg"
+    },
   ];
 
   const Commercial = [
@@ -292,55 +321,55 @@ function ProductList(props) {
         id: 1,
         title: "Commercial 1",
         author: "Douglas Adams",
-        price: 10.99,
+        price: 85000,
         image:"https://waterionizer.org/wp-content/uploads/best-water-filters1.jpg"
       },
       {
         id: 2,
         title: "Commercial 2",
         author: "Harper Lee",
-        price: 7.99,
+        price: 85000,
         image:"https://m.media-amazon.com/images/I/61XP6k4LhJL._AC_UF1000,1000_QL80_.jpg"
       },
       {
         id: 3,
         title: "Commercial 3",
         author: "F. Scott Fitzgerald",
-        price: 12.99,
+        price: 85000,
         image:"https://m.media-amazon.com/images/I/81dXerYATVL.jpg"
       },
       {
         id: 4,
         title: "Commercial 4",
         author: "F. Scott Fitzgerald",
-        price: 12.99,
+        price: 85000,
         image:"https://i5.walmartimages.com/asr/b20d86f4-a146-4e9c-a5ce-ae1743ab468b.5562a4a4c06e9fed73187456ae5ab223.jpeg?odnHeight=580&odnWidth=580&odnBg=FFFFFF"
       },{
         id: 5,
         title: "Commercial 1",
         author: "Douglas Adams",
-        price: 10.99,
+        price: 85000,
         image:"https://waterionizer.org/wp-content/uploads/best-water-filters1.jpg"
       },
       {
         id: 6,
         title: "Commercial 2",
         author: "Harper Lee",
-        price: 7.99,
+        price: 85000,
         image:"https://m.media-amazon.com/images/I/61XP6k4LhJL._AC_UF1000,1000_QL80_.jpg"
       },
       {
         id: 7,
         title: "Commercial 3",
         author: "F. Scott Fitzgerald",
-        price: 12.99,
+        price: 85000,
         image:"https://m.media-amazon.com/images/I/81dXerYATVL.jpg"
       },
       {
         id: 8,
         title: "Commercial 4",
         author: "F. Scott Fitzgerald",
-        price: 12.99,
+        price: 85000,
         image:"https://i5.walmartimages.com/asr/b20d86f4-a146-4e9c-a5ce-ae1743ab468b.5562a4a4c06e9fed73187456ae5ab223.jpeg?odnHeight=580&odnWidth=580&odnBg=FFFFFF"
       },
     ];
@@ -350,56 +379,56 @@ function ProductList(props) {
         id: 1,
         title: "Ionizer 1",
         author: "Douglas Adams",
-        price: 10.99,
+        price: 85000,
         image:"https://sc04.alicdn.com/kf/H2122d137337946e9a5bd403ddc9a97cdv/251009102/H2122d137337946e9a5bd403ddc9a97cdv.jpg"
       },
       {
         id: 2,
         title: "Ionizer 2",
         author: "Harper Lee",
-        price: 7.99,
+        price: 85000,
         image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTziXyCe6M7AuhpZ4CEUk3n9RDXBIGRSDnLi2hiuyKONddba1QaOPbsddDLHHSxLVqoW8s&usqp=CAU"
       },
       {
         id: 3,
         title: "Ionizer 3",
         author: "F. Scott Fitzgerald",
-        price: 12.99,
+        price: 85000,
         image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2shXuR1ZhPZgqjVTxI3F9JFoFZyOyhCGh9mpviIVSOcgOz7NGHk_x-ZpXtcfY3XJo1zE&usqp=CAU"
       },
       {
         id: 4,
         title: "Ionizer 4",
         author: "F. Scott Fitzgerald",
-        price: 12.99,
+        price: 85000,
         image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9TM-Sy373RU5_BRlBm33btVfiuqGDg6Ze35Cj1_bSo9WFvH9-A1xzsJdNKuZ2xEmT9-k&usqp=CAU"
       },
       {
         id: 5,
         title: "Ionizer 1",
         author: "Douglas Adams",
-        price: 10.99,
+        price: 85000,
         image:"https://sc04.alicdn.com/kf/H2122d137337946e9a5bd403ddc9a97cdv/251009102/H2122d137337946e9a5bd403ddc9a97cdv.jpg"
       },
       {
         id: 6,
         title: "Ionizer 2",
         author: "Harper Lee",
-        price: 7.99,
+        price: 85000,
         image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTziXyCe6M7AuhpZ4CEUk3n9RDXBIGRSDnLi2hiuyKONddba1QaOPbsddDLHHSxLVqoW8s&usqp=CAU"
       },
       {
         id: 7,
         title: "Ionizer 3",
         author: "F. Scott Fitzgerald",
-        price: 12.99,
+        price: 85000,
         image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2shXuR1ZhPZgqjVTxI3F9JFoFZyOyhCGh9mpviIVSOcgOz7NGHk_x-ZpXtcfY3XJo1zE&usqp=CAU"
       },
       {
         id: 8,
         title: "Ionizer 4",
         author: "F. Scott Fitzgerald",
-        price: 12.99,
+        price: 85000,
         image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9TM-Sy373RU5_BRlBm33btVfiuqGDg6Ze35Cj1_bSo9WFvH9-A1xzsJdNKuZ2xEmT9-k&usqp=CAU"
       },
     ];
@@ -409,28 +438,28 @@ function ProductList(props) {
         id: 13,
         title: "Spare 1",
         author: "Douglas Adams",
-        price: 10.99,
+        price: 1099,
         image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhy-3G8I6RCqLIQOqv1NzSUbe4O2NxyPTZwQ&usqp=CAU"
       },
       {
         id: 14,
         title: "Spare 2",
         author: "Harper Lee",
-        price: 7.99,
+        price: 799,
         image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPcXCHl7VsM9ogGXSy9cFQKHgTCFY7bwqnVUB3fBiHchl1OkRMS8DDi9fu12lfbNXrWPM&usqp=CAU"
       },
       {
         id: 15,
         title: "Spare 3",
         author: "F. Scott Fitzgerald",
-        price: 12.99,
+        price: 1299,
         image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkA25k_qXXxSjY70j77YHjjCjKiZ88rcMtjrfg1gdjeHfnr06nTnJcq7QE-gyhqlCBUUU&usqp=CAU"
       },
       {
         id: 16,
         title: "Spare 4",
         author: "F. Scott Fitzgerald",
-        price: 12.99,
+        price: 1299,
         image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRcenTO2gmA-QsPMO6xJn4mznzVzfRsndQak9eGegYY_yp1sC15dxdB13kqBLPefhyz7g&usqp=CAU"
       },
     ];
@@ -440,28 +469,28 @@ function ProductList(props) {
         id: 13,
         title: "Industrial 1",
         author: "Douglas Adams",
-        price: 10.99,
+        price: 1099,
         image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhy-3G8I6RCqLIQOqv1NzSUbe4O2NxyPTZwQ&usqp=CAU"
       },
       {
         id: 14,
         title: "Industrial 2",
         author: "Harper Lee",
-        price: 7.99,
+        price: 7099,
         image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPcXCHl7VsM9ogGXSy9cFQKHgTCFY7bwqnVUB3fBiHchl1OkRMS8DDi9fu12lfbNXrWPM&usqp=CAU"
       },
       {
         id: 15,
         title: "Industrial 3",
         author: "F. Scott Fitzgerald",
-        price: 12.99,
+        price: 12099,
         image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkA25k_qXXxSjY70j77YHjjCjKiZ88rcMtjrfg1gdjeHfnr06nTnJcq7QE-gyhqlCBUUU&usqp=CAU"
       },
       {
         id: 16,
         title: "Industrial 4",
         author: "F. Scott Fitzgerald",
-        price: 12.99,
+        price: 12399,
         image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRcenTO2gmA-QsPMO6xJn4mznzVzfRsndQak9eGegYY_yp1sC15dxdB13kqBLPefhyz7g&usqp=CAU"
       },
     ];

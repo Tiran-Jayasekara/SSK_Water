@@ -1,9 +1,38 @@
-.Container-custom {
-  margin-top: -40px;
-  width: 100%;
-  background-color: rgb(255, 255, 255);
+
+.Container-custom2 {
+  margin-top: 20px;
+  border-radius: 5px;
+  padding: 0px;
+  margin-bottom: 0px;
+}
+
+.container-divider {
+  border-top: 1px solid #ccc;
+  margin-top: 0px;
+  margin-bottom: 40px;
+}
+
+.product-buttons-row {
+  margin-bottom: 20px;
+}
+
+.my-col {
+  position: relative;
   
 }
+
+.my-col::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background-color: #ccc;
+  margin-right: 100px;
+  
+}
+
  /* Buttons */
   .Product_NavBar ul { 
     padding: 0;
@@ -11,37 +40,12 @@
     flex-direction: column;
     gap: 30px;
     margin-left: 0px;
-    margin-top: 100px;
-    
-    
-    
+    margin-top: 30px;
   }
-  .Product_NavBar button:hover {
-    background-color: #000b4b;
-    color: #dae6e7;
-  }
-
-  .Product_NavBar button {
-  background-color: #dae6e7;
-  border: none;
-  border-radius: 50px;
-  color: rgb(1, 0, 12);
-  width: 200px;
-  }
-
-
-  .my-col {
-    width: 100%;
-    margin-left: -50px;
-  }
-
   .product-row {
   background-color: #ffffff;
 }
 
-.product-container {
-  position: relative;
-}
 
 .product-container:hover::before {
   content: "";
@@ -50,28 +54,33 @@
   left: 0;
   width: 100%;
   height: 100%;
-  border: 2px solid #333;
-  border-radius: 5px;
+  border: 2px solid #e9e9e9;
+  border-radius: 20px;
   pointer-events: none;
+  box-shadow: 0 0 10px rgba(1, 0, 2, 0.2); /* Add box shadow */
 }
 
-.product-buttons-row {
-  position: relative;
+
+.button-icon{
+  width: 70px;
+  height: 70px;
+  margin-right: 0px;
+  margin-left: 20px;
+  margin-right: auto;
+  border: 1px solid whitesmoke;
+  border-radius: 30px;
   
 }
 
-.product-buttons-row::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  border-left: 1px solid #ccc;
-  margin-left: -400px;
+.button-icon:hover {
+  transform: scale(1.10);
+  cursor: pointer;
 }
-
+.Product_NavBar h5 { 
+  margin-left: 10px;
+  font-size: 14px;
+}
   
-
   /* Product List */
   .product-row {
     margin-bottom: 0px;
@@ -90,6 +99,7 @@
     border-radius: 5px;
     background-color: #fff;
     text-align: center;
+    position: relative;
   }
   
   .product-title {
@@ -182,6 +192,9 @@
     
   
 @media screen and (max-width: 760px) {
+  .my-col::after {
+    display: none;
+  }
     
       .Product_NavBar ul { 
         font-size: 0px;
@@ -224,6 +237,9 @@
     }
   
   @media screen and (max-width: 460px) {
+    .product-col {
+      flex-basis: 50%; /* Display two columns per row */
+    }
     
     .Product_NavBar button {
      
@@ -250,6 +266,54 @@
         width: 480px;
         margin-left: 60px;
         
+      }
+      .product-image {
+        max-width: 100px;
+        max-height: 100px;
+        height: auto;
+        margin-top: 10px;
+       
+      }
+      .product-title {
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-size: 12px;
+      }
+
+
+
+      .button-icon {
+        width: 30px;
+        height: 30px;
+        margin-right: 0;
+        margin-left: 20px;
+        margin-right: auto;
+        border: 1px solid whitesmoke;
+        border-radius: 30px;
+        transition: transform 0.3s, margin-bottom 0.3s; /* Add transition for smooth scaling and movement */
+        cursor: pointer;
+      
+        /* Add the following styles to adjust the position when clicked */
+        position: relative;
+        z-index: 1;
+      }
+      
+      .button-icon:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+      
+        /* Add the following styles to move the h5 element down */
+        margin-bottom: 10px;
+      }
+      
+      .Product_NavBar h5 {
+        margin-left: 10px;
+        font-size: 8px;
+        transition: margin-bottom 0.3s; /* Add transition for smooth movement */
+      }
+      
+      .image-text-wrapper:hover h5 {
+        margin-bottom: 15px; /* Increase the margin-bottom to move the h5 element down */
       }
   }
   
