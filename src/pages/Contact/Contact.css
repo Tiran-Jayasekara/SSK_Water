@@ -21,6 +21,47 @@
   border-radius: 20px;
  
 }
+.Contact_main{
+  margin-top: 100px;
+}
+
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  resize: none;
+  font-size: 14px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.error-message {
+  color: red;
+  margin-bottom: 10px;
+}
+
 
 .contact-header h1:first-child {
   font-size: 50px;
@@ -57,12 +98,6 @@
   padding: 20px;
 }
 
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
-}
 
 .contact-form .form-field {
   margin-bottom: 15px;
@@ -112,7 +147,7 @@
 }
 
 .contact-details h1 {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .contact-email {
@@ -137,6 +172,14 @@
   align-items: center;
   max-width: 400px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-left: 80px;
 }
 
 .form-field {
@@ -157,7 +200,7 @@
 .form-field textarea {
   width: 350px;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 10px;
   border: 1px solid #ccc;
 }
 
@@ -191,6 +234,44 @@ button[type='submit']:hover {
     padding: 20px;
   }
 
+  .contact-form{
+    margin-left: 0px;
+  }
+
+  .contact-main{
+    margin-top: 0px;
+  }
+
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  .form-field label {
+    
+    font-size: 10px;
+    
+  }
+  
+  .form-field input,
+  .form-field textarea {
+    width: 270px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .form-field textarea {
+    height: 150px; /* Adjust the height as desired */
+  }
+  
+
+  .contact-details h1{
+    font-size: 20px;
+  }
+
   /* .contact-form {
     max-width: 100%;
   } */
@@ -215,4 +296,42 @@ button[type='submit']:hover {
   button[type='submit'] {
     width: 100%;
   }
+
+  .contact-header {
+    background-image: url(../../assests/images/contactus-banner.jpg);
+    width: 500px;
+    margin-left: -100px;
+    height: 200px;
+    margin-top: -20px;
+  }
+
+  .contact-header h1:first-child {
+   color: #ffffff;
+   font-size: 40px;
+   margin-left: 140px;
+   
+  }
+  
+  .contact-header h1:last-child {
+    display: none;
+  }
+  
+  .card_main{
+    width: '100%';
+    height: 350px;
+    margin-bottom: 20px;
+   
+  }
+
+  .contact-email h1{
+    text-align: center;
+    font-size: 24px;
+    padding: 20px;
+  }
+
+  .contact-email p{
+    font-size: 14px;
+    text-align: justify;
+  }
+
 }

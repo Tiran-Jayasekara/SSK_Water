@@ -115,7 +115,6 @@ const Contact = () => {
           <Col xs={24} sm={12} md={8}>
             <Card className='card_main'
               hoverable
-              
               cover={<img alt="example" src={service2} style={{ borderRadius: '20px' }} />}
             >
               <Meta
@@ -129,51 +128,65 @@ const Contact = () => {
             </Card>
           </Col>
         </Row>
-      </div>
-      <div className="contact-email">
-        <h2>GET IN TOUCH</h2>
-        <p>
+
+
+      <div className='Contact_main'>
+        <Row justify="center" align="middle" gutter={12}>
+          <Col xs={24} sm={12} md={8}>
+          <h1>CONTACT US</h1>
+          <p>
           SSK Water Filter Technology is always here to assist with your queries and solve your problems. Contact us through this short form, and we are committed to your service.
         </p>
-        <form ref={formRef} onSubmit={handleSubmit} className='contact-form'>
-          <div className='form-field'>
-            <label htmlFor='name'>Your Name</label>
-            <input
-              type='text'
-              id='name'
-              name='name'
-              value={form.name}
-              onChange={handleChange}
-              placeholder="What's your good name?"
-            />
-          </div>
-          <div className='form-field'>
-            <label htmlFor='email'>Your Email</label>
-            <input
-              type='email'
-              id='email'
-              name='email'
-              value={form.email}
-              onChange={handleChange}
-              placeholder="What's your web address?"
-            />
-          </div>
-          <div className='form-field'>
-            <label htmlFor='message'>Your Message</label>
-            <textarea
-              id='message'
-              rows={7}
-              name='message'
-              value={form.message}
-              onChange={handleChange}
-              placeholder='What do you want to say?'
-            />
-          </div>
-          {errorMessage && (
-            <div className="error-message">{errorMessage}</div>
-          )}
-          <button type='submit'>{loading ? "Sending..." : "Send"}</button>
-        </form>
+          </Col>
+          <Col xs={24} sm={12} md={8}>
+          <form ref={formRef} onSubmit={handleSubmit} className='contact-form'>
+  <div className='form-field'>
+    <label htmlFor='name'>Your Name</label>
+    <input
+      type='text'
+      id='name'
+      name='name'
+      value={form.name}
+      onChange={handleChange}
+      placeholder="What's your good name?"
+    />
+  </div>
+  <div className='form-field'>
+    <label htmlFor='email'>Your Email</label>
+    <input
+      type='email'
+      id='email'
+      name='email'
+      value={form.email}
+      onChange={handleChange}
+      placeholder="What's your web address?"
+    />
+  </div>
+  <div className='form-field'>
+    <label htmlFor='message'>Your Message</label>
+    <textarea
+      id='message'
+      rows={7}
+      name='message'
+      value={form.message}
+      onChange={handleChange}
+      placeholder='What do you want to say?'
+    />
+  </div>
+  {errorMessage && (
+    <div className="error-message">{errorMessage}</div>
+  )}
+  <button type='submit'>{loading ? "Sending..." : "Send"}</button>
+</form>
+
+          </Col>
+        </Row>
+        </div>
+      </div>
+      <div className="contact-email">
+        
+        
+       
       </div>
       <Footer />
     </>
