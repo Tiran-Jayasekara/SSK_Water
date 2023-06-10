@@ -3,6 +3,7 @@ import BlogPost from './BlogPost';
 import './Blog.css';
 import { Row } from 'reactstrap';
 import { Col } from "reactstrap";
+import Footer from '../../components/Footer/Footer';
 
 const Blog = () => {
   const blogPosts = [
@@ -30,6 +31,7 @@ const Blog = () => {
   ];
 
   return (
+    <>
   <div className="blog-container">
   <div className="post-container">
   <Row>
@@ -49,6 +51,8 @@ const Blog = () => {
   </Row>  
   </div>
 </div>
+<Footer/>
+</>
   );
 };
 

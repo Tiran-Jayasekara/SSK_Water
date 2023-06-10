@@ -3,6 +3,7 @@ import { Container, Row, Col } from "reactstrap";
 import { Button } from '@material-ui/core';
 import ProductList from './ProductList';
 import './Store.css'
+import Footer from '../../components/Footer/Footer';
 
 
 function Store() {
@@ -52,7 +53,7 @@ useEffect(() => {
   </Row>
 </Container>
     </section>
-   
+    <Footer />
     </>
   )
 }

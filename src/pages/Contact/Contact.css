@@ -1,3 +1,7 @@
+.contact-page {
+  position: relative;
+}
+
 .contact-header {
   background-image: url(../../assests/images/banner1.jpg);
   background-size: cover;
@@ -11,6 +15,16 @@
   padding: 0 1rem;
   position: relative;
   z-index: 1;
+}
+
+.contact-details {
+  margin-top: 0px;
+  padding: 50px;
+  text-align: center;
+}
+
+.contact-details h1 {
+  margin-bottom: 20px;
 }
 
 .contact-email {
@@ -27,51 +41,6 @@
 
 .contact-email p {
   margin-bottom: 20px;
-}
-
-.contact-details {
-  margin-top: 0px;
-  padding: 50px;
-  text-align: center;
-}
-
-.contact-details h1 {
-  margin-bottom: 20px;
-}
-
-form {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  width: 100%;
-  font-size: 16px;
-}
-
-input,
-textarea {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-button {
-  padding: 8px 16px;
-  background-color: #23527c;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #13171b;
-}
-
-label {
-  display: block;
-  margin-bottom: 5px;
 }
 
 .contact-form {
@@ -98,7 +67,7 @@ label {
 
 .form-field input,
 .form-field textarea {
-  width: 380px;
+  width: 350px;
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
@@ -106,7 +75,6 @@ label {
 
 .form-field textarea {
   height: 150px; /* Adjust the height as desired */
-  width: 380px;
 }
 
 .error-message {
@@ -126,5 +94,37 @@ button[type='submit'] {
 }
 
 button[type='submit']:hover {
-  background-color: #3586ff;
+  background-color: #23527c;
+}
+
+/* Media queries for mobile responsiveness */
+@media (max-width: 768px) {
+  .contact-details {
+    padding: 20px;
+  }
+
+  /* .contact-form {
+    max-width: 100%;
+  } */
+
+  .contact-header {
+    height: 400px;
+  }
+
+  .contact-header h1 {
+    font-size: 24px;
+  }
+
+  /* .contact-email {
+    max-width: 100%;
+  } */
+
+  /* .form-field input,
+  .form-field textarea {
+    width: 100%;
+  } */
+
+  button[type='submit'] {
+    width: 100%;
+  }
 }
