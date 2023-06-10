@@ -156,6 +156,14 @@
   .modal-content h4{
     margin-top: 20px;
   }
+
+  .modal-content h5{
+    margin-top: 20px;
+    text-align: justify;
+    margin-bottom: 40px;
+    width: 800px;
+    margin-left: 70px;
+  }
   
   .justify-text {
     text-align: justify;
@@ -334,6 +342,15 @@
       
       .justify-text {
         text-align: justify;
+      }
+
+      .modal-content h5{
+        margin-top: 20px;
+        text-align: justify;
+        margin-bottom: 40px;
+        width: 300px;
+        margin-left: 0px;
+        font-size: 16px;
       }
   }
   

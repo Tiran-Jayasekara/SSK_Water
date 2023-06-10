@@ -7,8 +7,6 @@ import com from '../../assests/images/Filter/com.png';
 import ind from '../../assests/images/Filter/ind.png';
 import ion from '../../assests/images/Filter/ion.png';
 import spare from '../../assests/images/Filter/spare.png';
-import Footer from "../../components/Footer/Footer";
-import ChooseUs from '../../components/Choose-us/ChooseUs';
 import Testimonials from '../../components/Testimonial/Testimonials';
 
 
@@ -26,7 +24,7 @@ useEffect(() => {
 }, [data]);
 
   return (
-  <>
+  <div>
   <Container className="Container-custom2">
   <Row className="product-buttons-row">
     <Col lg="3" sm ="12" xs="12" className="my-col">
@@ -76,7 +74,7 @@ useEffect(() => {
   <Testimonials/>
 </Container>
    
-</>
+</div>
   )
 }
 

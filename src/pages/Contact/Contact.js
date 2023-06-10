@@ -85,19 +85,18 @@ const Contact = () => {
   return (
     <>
       <div className="contact-page">
-        <header className="contact-header"></header>
+        <header className="contact-header">
+        <h1>Contact Us</h1>
+        <h1>SSK Water Filter Service</h1>
+        </header>
       </div>
       <div className='contact-details'>
         <h1>GET IN TOUCH WITH US</h1>
         <Row justify="center" align="middle" gutter={12}>
           <Col xs={24} sm={12} md={8}>
-            <Card
+            <Card className='card_main'
               hoverable
-              style={{
-                width: '100%',
-                height: 500,
-              }}
-              cover={<img alt="example" src={service1} />}
+              cover={<img alt="example" src={service1} style={{ borderRadius: '20px' }} />}
               actions={[
                 <a href="tel:YOUR_PHONE_NUMBER">
                   <PhoneOutlined style={{ fontSize: '34px' }}/>
@@ -114,13 +113,10 @@ const Contact = () => {
             </Card>
           </Col>
           <Col xs={24} sm={12} md={8}>
-            <Card
+            <Card className='card_main'
               hoverable
-              style={{
-                width: '100%',
-                height: 500,
-              }}
-              cover={<img alt="example" src={service2} />}
+              
+              cover={<img alt="example" src={service2} style={{ borderRadius: '20px' }} />}
             >
               <Meta
                 title="CUSTOMER SERVICES"

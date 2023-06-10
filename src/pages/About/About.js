@@ -7,13 +7,13 @@ import "./about.css";
 
 const About = () => {
   return (
-    <section>
+    <div>
       <Container>
         <Row>
         
         <iframe 
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.307539947541!2d80.3361678749926!3d8.17173980181844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afcefc8b6f2e8f9%3A0x960b61f4ad847d81!2sSSK%20Water%20Filter%20Technology!5e0!3m2!1sen!2slk!4v1683954770123!5m2!1sen!2slk" 
-          width="600" 
+          width="100vh" 
           height="450" 
           style={{ border:"0"}} 
           allowfullscreen="" 
@@ -78,7 +78,7 @@ const About = () => {
           </Col>
         </Row>
       </Container>
-    </section>
+    </div>
   );
 };
 
