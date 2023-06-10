@@ -145,9 +145,20 @@
   }
 
   .modal-content {
+    border: 1px solid #ccc;
     padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
+  }
+
+  .modal-content h3{
+    margin-top: 20px;
+  }
+
+  .modal-content h4{
+    margin-top: 20px;
+  }
+  
+  .justify-text {
+    text-align: justify;
   }
   
   .modal-title {
@@ -280,8 +291,6 @@
         font-size: 12px;
       }
 
-
-
       .button-icon {
         width: 30px;
         height: 30px;
@@ -314,6 +323,17 @@
       
       .image-text-wrapper:hover h5 {
         margin-bottom: 15px; /* Increase the margin-bottom to move the h5 element down */
+      }
+
+
+      .modal-content {
+        border: 1px solid #aa1e1e;
+        padding: 0px;
+        
+      }
+      
+      .justify-text {
+        text-align: justify;
       }
   }
   

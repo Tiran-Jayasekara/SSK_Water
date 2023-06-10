@@ -14,7 +14,8 @@ function ProductList(props) {
         author: product.author,
         price: product.price,
         image: product.image,
-        describe:product.describe
+        Sinhala_describe:product.Sinhala_describe,
+        English_describe:product.English_describe
       });
       setIsModalVisible(true);
     }
@@ -97,61 +98,55 @@ function ProductList(props) {
 </Container>
 
 
-    <Modal
-        // eslint-disable-next-line no-useless-concat
-        visible={isModalVisible}
-        onCancel={handleCancel}
-        destroyOnClose
-        width={1000}
-        style={{
-          textAlign: "center"
-        }}
-        footer={[
-          <Button key="order" onClick={() => setIsModalVisible1(true)} >
-            Order
-          </Button>,
-          <Button key="back" onClick={handleCancel}>
-            Cancel
-          </Button>,
-        ]}
-      >
-        <Row gutter={[16, 16]}>
-          <Col md={12} xs={24}>
-            <h1>{display.title}</h1>
-          </Col>
-          <Col md={12} xs={24}>
-            <Space direction="vertical">
-              <div key={0}>
-                &nbsp;&nbsp;<b><img className="model_image" src={display.image} alt={display.title}/></b>
-              </div>
-              <div key={1}>
-                About <br></br> &nbsp;&nbsp;<b>{display.describe}</b>
-              </div>
-              <div key={2}>
-                Filter No : &nbsp;&nbsp;
-                <b>{productList.title}</b>
-              </div>
-              <div key={3}>
-              Filter Register No : &nbsp;&nbsp;<b>{display.title}</b>
-              </div>
-              <div key={4}>
-              Filter ID : &nbsp;&nbsp;<b>{display.title}</b>
-              </div>
-              {/* <div key={5}>landOwner Name : &nbsp;&nbsp;<b>{landOwnerName}</b></div> */}
-              <div key={6}>
-              Filter Name : &nbsp;&nbsp;<b>{display.title}</b>
-              </div>
-              {/* <div key={7}>Auditor ID : &nbsp;&nbsp;<b>{getAuditorById(creatorID)}</b></div> */}
-              <div key={8}>
-              Filter Brand : &nbsp;&nbsp;<b>{display.title}</b>
-              </div>
-              <div key={9}>
-              Filter Created : &nbsp;&nbsp;<b>{display.title}</b>
-              </div>
-            </Space>
-          </Col>
-        </Row>
-      </Modal>
+<Modal
+  visible={isModalVisible}
+  onCancel={handleCancel}
+  destroyOnClose
+  width={1000}
+  style={{
+    textAlign: "center"
+  }}
+  footer={[
+    <Button key="order" onClick={() => setIsModalVisible1(true)}>
+      Order
+    </Button>,
+    <Button key="back" onClick={handleCancel}>
+      Cancel
+    </Button>,
+  ]}
+>
+  <div className="modal-content">
+    <Row gutter={[16, 16]}>
+      <Col md={12} xs={24}>
+        <h1>{display.title}</h1>
+      </Col>
+      <Col md={12} xs={24}>
+        <Space direction="vertical">
+          <div key={0}>
+            &nbsp;&nbsp;<b><img className="model_image" src={display.image} alt={display.title}/></b>
+          </div>
+          <div key={1}>
+            <h3>ABOUT</h3>
+            <br />
+            <span className="justify-text">{display.Sinhala_describe}</span>
+            <br />
+            <br />
+            <span className="justify-text">{display.English_describe}</span>
+            <br />
+          </div>
+          
+          <div key={8}>
+            <h4>Brand : {display.author}</h4>
+          </div>
+          <div key={9}>
+            <h4>Created : {display.title}</h4>
+          </div>
+        </Space>
+      </Col>
+    </Row>
+  </div>
+</Modal>
+
 
 
       <Modal
@@ -231,11 +226,12 @@ function ProductList(props) {
   const Domestic = [
     {
       id: 1,
-      title: "Domestic 1 ",
+      title: "Domestic",
       author: "Douglas Adams",
       price: 85000,
       image: "https://m.media-amazon.com/images/I/71Iq1Ihu4fL._SL1500_.jpg",
-      describe:"A water filter is a device that removes impurities and contaminants from water by means of a physical barrier, a chemical process, or a biological process. The purpose of a water filter is to improve the quality of the water by removing unwanted substances such as sediment, chlorine, bacteria, viruses, heavy metals, and other harmful chemicals."
+      Sinhala_describe:"ජල පෙරහන යනු භෞතික බාධකයක්, රසායනික ක්‍රියාවලියක් හෝ ජීව විද්‍යාත්මක ක්‍රියාවලියක් මගින් ජලයෙන් අපද්‍රව්‍ය සහ අපවිත්‍ර ද්‍රව්‍ය ඉවත් කරන උපකරණයකි. ජල පෙරණයක පරමාර්ථය වන්නේ අවසාදිත, ක්ලෝරීන්, බැක්ටීරියා, වෛරස්, බැර ලෝහ සහ වෙනත් හානිකර රසායනික ද්‍රව්‍ය වැනි අනවශ්‍ය ද්‍රව්‍ය ඉවත් කිරීමෙන් ජලයේ ගුණාත්මකභාවය වැඩි දියුණු කිරීමයි.",
+      English_describe:"A water filter is a device that removes impurities and contaminants from water by means of a physical barrier, a chemical process, or a biological process. The purpose of a water filter is to improve the quality of the water by removing unwanted substances such as sediment, chlorine, bacteria, viruses, heavy metals, and other harmful chemicals."
     },
     {
       id: 2,
