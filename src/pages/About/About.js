@@ -4,10 +4,11 @@ import { Container, Row, Col } from "reactstrap";
 import aboutImg from "../../assests/images/logo3.png";
 import CountUp from "react-countup";
 import "./about.css";
+import Footer from "../../components/Footer/Footer";
 
 const About = () => {
   return (
-    <div>
+    <section>
       <Container>
         <Row>
         
@@ -78,7 +79,7 @@ const About = () => {
           </Col>
         </Row>
       </Container>
-    </div>
+    </section>
   );
 };
 
