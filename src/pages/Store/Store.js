@@ -16,15 +16,8 @@ function Store() {
   const [data , SetData] = useState([
     <ProductList Category={'Domestic'}/>
 ]);
-const containerRef = useRef(null);
 
-useEffect(() => {
-  if (containerRef.current) {
-    containerRef.current.scrollTop = 0;
-  }
-}, [data]);
-
-  return (
+return (
   <div>
   <h1 className='Store_Header'>Our Store</h1>
   <Container className="Container-custom2">

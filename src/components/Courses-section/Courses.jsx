@@ -42,7 +42,7 @@ const Services = () => {
         <Row>
         <Col lg="12" className="mb-5">
   <div className="course__top d-flex flex-column flex-md-row justify-content-between align-items-center">
-    <div className="course__top__left w-100 mb-3 mb-md-0">
+    <div className="our_filters">
       <h2>Our Filters</h2>
     </div>
     <div className="w-100 text-md-end mb-3 mb-md-0">   

@@ -167,13 +167,13 @@ function ProductList(props) {
           </Button>,
         ]}
       >
-    <div className="modal-content">
+    <div className="modal-content2">
     <Row gutter={[16, 16]}>
       <Col md={12} xs={24}>
         <h1 className="modal-title">{display.title}</h1>
         <h5>...........ඔබට මෙය මිලදී ගැනීමට හො වැඩි විස්තර දැන ගැනීමට අවශ්‍යනම් ඔබගේ නම, දුරකතනය අංකය ඔබගේ අවශ්‍යතාවය (මිලදී ගැනීමට ,විස්තර දැන ගැනීමට) සදහන් කර අප වෙත පනිවිඩයක් යොමු කරන්න. හැකි ඉක්මනින් අප ආයතනයෙන් ඔබ වෙතට ඇමතුමක් ලබා දෙනු ඇත...........</h5>
       </Col>
-      <Col md={12} xs={24}>
+      <Col md={12} xs={24} className="form_col">
         <Space direction="vertical" className="contact-form">
           <h2 className="form-title">Place Order</h2>
           <form onSubmit={handleSubmit}>

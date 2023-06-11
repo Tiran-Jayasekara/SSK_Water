@@ -1,13 +1,7 @@
 .Store_Header {
-  text-align: center; /* Align the heading at the center */
-  font-family: "Helvetica Neue", Arial, sans-serif; /* Apply a font style */
-  font-size: 40px; /* Set the font size */
-  font-weight: bold; /* Set the font weight */
-  color: #333; /* Set the text color */
-  margin-top: 20px;
-  /* Add any additional styles you want for the heading */
+  margin-left: 720px;
+  margin-top: 50px;
 }
-
 .Container-custom2 {
   margin-top: 20px;
   border-radius: 5px;
@@ -166,7 +160,11 @@
     margin-top: 20px;
   }
 
-  .modal-content h5{
+  .form_col{
+    margin-left: 200px;
+  }
+
+  .modal-content2 h5{
     margin-top: 20px;
     text-align: justify;
     margin-bottom: 40px;
@@ -204,13 +202,13 @@
   }
   
   .form-input {
-    width: 100%;
-    padding: 10px;
+    padding: 0px;
     font-size: 16px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
+    
   }
   
   .form-input:focus {
@@ -363,13 +361,22 @@
       }
 
       .Store_Header {
-        text-align: center; /* Align the heading at the center */
-        font-family: "Helvetica Neue", Arial, sans-serif; /* Apply a font style */
-        font-size: 20px; /* Set the font size */
-        font-weight: bold; /* Set the font weight */
-        color: #333; /* Set the text color */
+        margin-left: 130px;
         margin-top: 20px;
-        /* Add any additional styles you want for the heading */
       }
+
+      .modal-content2 h5{
+        margin-top: 20px;
+        text-align: justify;
+        margin-bottom: 40px;
+        width: 300px;
+        margin-left: 0px;
+        font-size: 14px;
+      }
+
+      .form_col{
+        margin-left: 0px;
+      }
+    
   }
   

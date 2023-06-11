@@ -19,13 +19,13 @@ function Cards() {
               src={service1}
               text='Our Whole Home Water Filtration System helps to remove some of the impurities in the water your family drinks, washes and cooks with'
               label='Purifier'
-              path='/services'
+              path='/store'
             />
             <CardItem
               src={service2}
               text='Our Whole Home Water Filtration System helps to remove some of the impurities in the water your family drinks, washes and cooks with'
               label='Filter cartridges Installation'
-              path='/services'
+              path='/store'
             />
           </ul>
           <ul className='cards__items'>
@@ -33,19 +33,19 @@ function Cards() {
               src={service3}
               text='Our Whole Home Water Filtration System helps '
               label='Water purification Reverse'
-              path='/services'
+              path='/store'
             />
             <CardItem
               src={service4}
               text='Our Whole Home Water Filtration System helps '
               label='Home Filters'
-              path='/products'
+              path='/store'
             />
             <CardItem
               src={service5}
               text='Our Whole Home Water Filtration System helps '
               label='Industrial'
-              path='/sign-up'
+              path='/store'
             />
           </ul>
         </div>

@@ -9,7 +9,7 @@ function HeroSection() {
   return (
     <div className='hero-container'>
       {/* <video src='/videos/water3.mp4' autoPlay loop muted className='hero-video' /> */}
-      <h1>Drinking Clean Water </h1>
+      {/* <h1>Drinking Clean Water </h1>
       <p>is essential for maintaining good health.</p>
       <div className='hero-btns'>
         <Button
@@ -33,7 +33,7 @@ function HeroSection() {
         </Link>
           
         </Button>
-      </div>
+      </div> */}
     </div>
   );
 }
