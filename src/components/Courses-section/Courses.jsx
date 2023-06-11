@@ -8,7 +8,7 @@ import CourseCard from "./CourseCard";
 
 const coursesData = [
   {
-    id: "01",
+    id:1,
     title: "World’s Best RO Water Purifiers Protect your Family with the Purest Drinking Water",
     Price: 78000,
     customer: 132,
@@ -17,7 +17,7 @@ const coursesData = [
   },
 
   {
-    id: "02",
+    id:2,
     title: "Best Water Purifiers in Sri Lanka (2023) , High storage capacity ",
     Price: 80000,
     customer: 75,
@@ -26,7 +26,7 @@ const coursesData = [
   },
 
   {
-    id: "03",
+    id:3,
     title: "Vikas Pollution is highly acclaimed in the industry for manufacturing",
     Price: 200000,
     customer: 40,
@@ -35,25 +35,25 @@ const coursesData = [
   },
 ];
 
-const Services = () => {
+function Services() {
   return (
     <section>
       <Container>
         <Row>
-        <Col lg="12" className="mb-5">
-  <div className="course__top d-flex flex-column flex-md-row justify-content-between align-items-center">
-    <div className="our_filters">
-      <h2>Our Filters</h2>
-    </div>
-    <div className="w-100 text-md-end mb-3 mb-md-0">   
-    </div>
-    {/* <div className="w-100 text-md-end">
-      <button className="btn">See All</button>
-    </div> */}
-  </div>
-</Col>
+          <Col lg="12" className="mb-5">
+            <div className="course__top d-flex flex-column flex-md-row justify-content-between align-items-center">
+              <div className="our_filters">
+                <h2>Our Filters</h2>
+              </div>
+              <div className="w-100 text-md-end mb-3 mb-md-0">
+              </div>
+              {/* <div className="w-100 text-md-end">
+              <button className="btn">See All</button>
+            </div> */}
+            </div>
+          </Col>
           {coursesData.map((item) => (
-            <Col lg="4" md="6" sm="6">
+            <Col key={item.id} lg="4" md="6" sm="6">
               <CourseCard key={item.id} item={item} />
             </Col>
           ))}
@@ -61,6 +61,6 @@ const Services = () => {
       </Container>
     </section>
   );
-};
+}
 
 export default Services;

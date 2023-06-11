@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Container, Row, Col } from "reactstrap";
 import ProductList from './ProductList';
 import './Store.css';
@@ -11,11 +11,31 @@ import Testimonials from '../../components/Testimonial/Testimonials';
 import Footer from '../../components/Footer/Footer';
 
 
+
 function Store() {
 
-  const [data , SetData] = useState([
-    <ProductList Category={'Domestic'}/>
-]);
+  const [data, SetData] = useState([]);
+
+  useEffect(() => {
+    // Fetch or initialize the data here
+    // For example:
+    fetchData('Domestic'); // Fetch data for the initial category
+  }, []);
+
+  const fetchData = (category) => {
+    // Perform the necessary logic to fetch data for the given category
+    // Replace the setTimeout with your actual data fetching logic
+
+    // Simulating a data fetch
+    setTimeout(() => {
+      // Set the fetched data with a unique key for each child component
+      const fetchedData = [
+        <ProductList key={category} Category={category} />
+      ];
+
+      SetData(fetchedData);
+    },); // Adjust the delay to match your actual data fetching time
+  };
 
 return (
   <div>

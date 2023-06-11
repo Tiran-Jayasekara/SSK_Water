@@ -78,29 +78,29 @@ function ProductList(props) {
     return (
     <div>
   <Container>
-  {productList
-    .reduce((rows, product, index) => (index % 4 === 0 ? rows.concat([[product]]) : (rows[rows.length - 1].push(product), rows)), [])
-    .map((row, rowIndex) => (
-      <Row key={rowIndex} className="product-row">
-        {row.map((product) => (
-          <Col key={product.id} md="3" sm="6" className="product-col"> {/* Adjust column size for medium (md) and small (sm) screens */}
-            <div className="product-container">
-              <img className="product-image" src={product.image} alt={product.title} onClick={() => imageClick(product)} />
-              <h5 className="product-title">{product.title}</h5>
-              <div className="product-details">
-              <p className="product-price">RS : {product.price}</p>
-              </div>
-            </div>
-          </Col>
+      {productList
+        .reduce((rows, product, index) => (index % 4 === 0 ? rows.concat([[product]]) : (rows[rows.length - 1].push(product), rows)), [])
+        .map((row, rowIndex) => (
+          <Row key={rowIndex} className="product-row">
+            {row.map((product) => (
+              <Col key={product.id} md="3" sm="6" className="product-col">
+                <div className="product-container">
+                  <img className="product-image" src={product.image} alt={product.title} onClick={() => imageClick(product)} />
+                  <h5 className="product-title">{product.title}</h5>
+                  <div className="product-details">
+                    <p className="product-price">RS : {product.price}</p>
+                  </div>
+                </div>
+              </Col>
+            ))}
+          </Row>
         ))}
-      </Row>
-    ))}
-</Container>
+    </Container>
 
 
 <Modal
-  visible={isModalVisible}
-  onCancel={handleCancel}
+  open={isModalVisible}
+  onClose={handleCancel}
   destroyOnClose
   width={1000}
   style={{
@@ -151,8 +151,8 @@ function ProductList(props) {
 
   <Modal
         // eslint-disable-next-line no-useless-concat
-        visible={isModalVisible1}
-        onCancel={handleCancel1}
+        open={isModalVisible1}
+        onClose={handleCancel1}
         destroyOnClose
         width={1000}
         style={{
@@ -226,7 +226,7 @@ function ProductList(props) {
 
   const Domestic = [
     {
-      id: 1,
+      id:1,
       title: "Domestic",
       author: "Douglas Adams",
       price: 85000,
@@ -235,77 +235,77 @@ function ProductList(props) {
       English_describe:"A water filter is a device that removes impurities and contaminants from water by means of a physical barrier, a chemical process, or a biological process. The purpose of a water filter is to improve the quality of the water by removing unwanted substances such as sediment, chlorine, bacteria, viruses, heavy metals, and other harmful chemicals."
     },
     {
-      id: 2,
+      id:2,
       title: "Domestic 2 ",
       author: "Harper Lee",
       price: 85000,
       image: "https://cdn11.bigcommerce.com/s-mpfo2gcqca/images/stencil/1280x1280/products/476/2363/brondell-capella-RC250-reverse-osmosis-water-filtration-system-white__88084.1660687393.jpg?c=1"
     },
     {
-      id: 3,
+      id:3,
       title: "Domestic 3 ",
       author: "F. Scott ",
       price: 85000,
       image: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg"
     },
     {
-      id: 4,
+      id:4,
       title: "Domestic 4 ",
       author: "F. Scott ",
       price: 85000,
       image: "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg"
     },
     {
-      id: 5,
+      id:5,
       title: "Domestic 1 ",
       author: "Douglas Adams",
       price: 85000,
       image: "https://m.media-amazon.com/images/I/71Iq1Ihu4fL._SL1500_.jpg"
     },
     {
-      id: 6,
+      id:6,
       title: "Domestic 2 ",
       author: "Harper Lee",
       price: 85000,
       image: "https://cdn11.bigcommerce.com/s-mpfo2gcqca/images/stencil/1280x1280/products/476/2363/brondell-capella-RC250-reverse-osmosis-water-filtration-system-white__88084.1660687393.jpg?c=1"
     },
     {
-      id: 7,
+      id:7,
       title: "Domestic 3 ",
       author: "F. Scott ",
       price: 85000,
       image: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg"
     },
     {
-      id: 8,
+      id:8,
       title: "Domestic 4 ",
       author: "F. Scott ",
       price: 85000,
       image: "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg"
     },
     {
-      id: 9,
+      id:9,
       title: "Domestic 1 ",
       author: "Douglas Adams",
       price: 85000,
       image: "https://m.media-amazon.com/images/I/71Iq1Ihu4fL._SL1500_.jpg"
     },
     {
-      id: 10,
+      id:10,
       title: "Domestic 2 ",
       author: "Harper Lee",
       price: 85000,
       image: "https://cdn11.bigcommerce.com/s-mpfo2gcqca/images/stencil/1280x1280/products/476/2363/brondell-capella-RC250-reverse-osmosis-water-filtration-system-white__88084.1660687393.jpg?c=1"
     },
     {
-      id: 11,
+      id:11,
       title: "Domestic 3 ",
       author: "F. Scott ",
       price: 85000,
       image: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg"
     },
     {
-      id: 12,
+      id:12,
       title: "Domestic 4 ",
       author: "F. Scott ",
       price: 85000,
@@ -315,55 +315,55 @@ function ProductList(props) {
 
   const Commercial = [
       {
-        id: 1,
+        id:13,
         title: "Commercial 1",
         author: "Douglas Adams",
         price: 85000,
         image:"https://waterionizer.org/wp-content/uploads/best-water-filters1.jpg"
       },
       {
-        id: 2,
+        id:14,
         title: "Commercial 2",
         author: "Harper Lee",
         price: 85000,
         image:"https://m.media-amazon.com/images/I/61XP6k4LhJL._AC_UF1000,1000_QL80_.jpg"
       },
       {
-        id: 3,
+        id:15,
         title: "Commercial 3",
         author: "F. Scott Fitzgerald",
         price: 85000,
         image:"https://m.media-amazon.com/images/I/81dXerYATVL.jpg"
       },
       {
-        id: 4,
+        id:16,
         title: "Commercial 4",
         author: "F. Scott Fitzgerald",
         price: 85000,
         image:"https://i5.walmartimages.com/asr/b20d86f4-a146-4e9c-a5ce-ae1743ab468b.5562a4a4c06e9fed73187456ae5ab223.jpeg?odnHeight=580&odnWidth=580&odnBg=FFFFFF"
       },{
-        id: 5,
+        id:17,
         title: "Commercial 1",
         author: "Douglas Adams",
         price: 85000,
         image:"https://waterionizer.org/wp-content/uploads/best-water-filters1.jpg"
       },
       {
-        id: 6,
+        id:18,
         title: "Commercial 2",
         author: "Harper Lee",
         price: 85000,
         image:"https://m.media-amazon.com/images/I/61XP6k4LhJL._AC_UF1000,1000_QL80_.jpg"
       },
       {
-        id: 7,
+        id:19,
         title: "Commercial 3",
         author: "F. Scott Fitzgerald",
         price: 85000,
         image:"https://m.media-amazon.com/images/I/81dXerYATVL.jpg"
       },
       {
-        id: 8,
+        id:20,
         title: "Commercial 4",
         author: "F. Scott Fitzgerald",
         price: 85000,
@@ -373,56 +373,56 @@ function ProductList(props) {
 
     const Ionizer = [
       {
-        id: 1,
+        id:21,
         title: "Ionizer 1",
         author: "Douglas Adams",
         price: 85000,
         image:"https://sc04.alicdn.com/kf/H2122d137337946e9a5bd403ddc9a97cdv/251009102/H2122d137337946e9a5bd403ddc9a97cdv.jpg"
       },
       {
-        id: 2,
+        id:22,
         title: "Ionizer 2",
         author: "Harper Lee",
         price: 85000,
         image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTziXyCe6M7AuhpZ4CEUk3n9RDXBIGRSDnLi2hiuyKONddba1QaOPbsddDLHHSxLVqoW8s&usqp=CAU"
       },
       {
-        id: 3,
+        id:23,
         title: "Ionizer 3",
         author: "F. Scott Fitzgerald",
         price: 85000,
         image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2shXuR1ZhPZgqjVTxI3F9JFoFZyOyhCGh9mpviIVSOcgOz7NGHk_x-ZpXtcfY3XJo1zE&usqp=CAU"
       },
       {
-        id: 4,
+        id:24,
         title: "Ionizer 4",
         author: "F. Scott Fitzgerald",
         price: 85000,
         image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9TM-Sy373RU5_BRlBm33btVfiuqGDg6Ze35Cj1_bSo9WFvH9-A1xzsJdNKuZ2xEmT9-k&usqp=CAU"
       },
       {
-        id: 5,
+        id:25,
         title: "Ionizer 1",
         author: "Douglas Adams",
         price: 85000,
         image:"https://sc04.alicdn.com/kf/H2122d137337946e9a5bd403ddc9a97cdv/251009102/H2122d137337946e9a5bd403ddc9a97cdv.jpg"
       },
       {
-        id: 6,
+        id:26,
         title: "Ionizer 2",
         author: "Harper Lee",
         price: 85000,
         image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTziXyCe6M7AuhpZ4CEUk3n9RDXBIGRSDnLi2hiuyKONddba1QaOPbsddDLHHSxLVqoW8s&usqp=CAU"
       },
       {
-        id: 7,
+        id:27,
         title: "Ionizer 3",
         author: "F. Scott Fitzgerald",
         price: 85000,
         image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2shXuR1ZhPZgqjVTxI3F9JFoFZyOyhCGh9mpviIVSOcgOz7NGHk_x-ZpXtcfY3XJo1zE&usqp=CAU"
       },
       {
-        id: 8,
+        id:28,
         title: "Ionizer 4",
         author: "F. Scott Fitzgerald",
         price: 85000,
@@ -432,28 +432,28 @@ function ProductList(props) {
 
     const Spare = [
       {
-        id: 13,
+        id:29,
         title: "Spare 1",
         author: "Douglas Adams",
         price: 1099,
         image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhy-3G8I6RCqLIQOqv1NzSUbe4O2NxyPTZwQ&usqp=CAU"
       },
       {
-        id: 14,
+        id:30,
         title: "Spare 2",
         author: "Harper Lee",
         price: 799,
         image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPcXCHl7VsM9ogGXSy9cFQKHgTCFY7bwqnVUB3fBiHchl1OkRMS8DDi9fu12lfbNXrWPM&usqp=CAU"
       },
       {
-        id: 15,
+        id:31,
         title: "Spare 3",
         author: "F. Scott Fitzgerald",
         price: 1299,
         image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkA25k_qXXxSjY70j77YHjjCjKiZ88rcMtjrfg1gdjeHfnr06nTnJcq7QE-gyhqlCBUUU&usqp=CAU"
       },
       {
-        id: 16,
+        id:32,
         title: "Spare 4",
         author: "F. Scott Fitzgerald",
         price: 1299,
@@ -463,28 +463,28 @@ function ProductList(props) {
 
     const Industrial = [
       {
-        id: 13,
+        id:33,
         title: "Industrial 1",
         author: "Douglas Adams",
         price: 1099,
         image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhy-3G8I6RCqLIQOqv1NzSUbe4O2NxyPTZwQ&usqp=CAU"
       },
       {
-        id: 14,
+        id:34,
         title: "Industrial 2",
         author: "Harper Lee",
         price: 7099,
         image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPcXCHl7VsM9ogGXSy9cFQKHgTCFY7bwqnVUB3fBiHchl1OkRMS8DDi9fu12lfbNXrWPM&usqp=CAU"
       },
       {
-        id: 15,
+        id:35,
         title: "Industrial 3",
         author: "F. Scott Fitzgerald",
         price: 12099,
         image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkA25k_qXXxSjY70j77YHjjCjKiZ88rcMtjrfg1gdjeHfnr06nTnJcq7QE-gyhqlCBUUU&usqp=CAU"
       },
       {
-        id: 16,
+        id:36,
         title: "Industrial 4",
         author: "F. Scott Fitzgerald",
         price: 12399,
