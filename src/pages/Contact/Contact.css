@@ -15,7 +15,13 @@
   position: relative;
   z-index: 1;
 }
-.card_main{
+.card_main1{
+  width: '100%';
+  height: 450px;
+  border-radius: 20px;
+ 
+}
+.card_main2{
   width: '100%';
   height: 450px;
   border-radius: 20px;
@@ -238,8 +244,8 @@ button[type='submit']:hover {
     margin-left: 0px;
   }
 
-  .contact-main{
-    margin-top: 0px;
+  .contact_sinhala p{
+    font-size: 12px;
   }
 
   .form-field {
@@ -316,11 +322,16 @@ button[type='submit']:hover {
     display: none;
   }
   
-  .card_main{
+  .card_main1{
     width: '100%';
     height: 350px;
-    margin-bottom: 20px;
-   
+    margin-bottom: 40px;
+  }
+
+  .card_main2{
+    width: '100%';
+    height: 350px;
+    margin-bottom: -30px;
   }
 
   .contact-email h1{

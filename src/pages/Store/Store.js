@@ -8,6 +8,7 @@ import ind from '../../assests/images/Filter/ind.png';
 import ion from '../../assests/images/Filter/ion.png';
 import spare from '../../assests/images/Filter/spare.png';
 import Testimonials from '../../components/Testimonial/Testimonials';
+import Footer from '../../components/Footer/Footer';
 
 
 function Store() {
@@ -25,6 +26,7 @@ useEffect(() => {
 
   return (
   <div>
+  <h1 className='Store_Header'>Our Store</h1>
   <Container className="Container-custom2">
   <Row className="product-buttons-row">
     <Col lg="3" sm ="12" xs="12" className="my-col">
@@ -73,6 +75,7 @@ useEffect(() => {
 <Container>
   <Testimonials/>
 </Container>
+<Footer/>
    
 </div>
   )

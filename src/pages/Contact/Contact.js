@@ -94,7 +94,7 @@ const Contact = () => {
         <h1>GET IN TOUCH WITH US</h1>
         <Row justify="center" align="middle" gutter={12}>
           <Col xs={24} sm={12} md={8}>
-            <Card className='card_main'
+            <Card className='card_main1'
               hoverable
               cover={<img alt="example" src={service1} style={{ borderRadius: '20px' }} />}
               actions={[
@@ -113,7 +113,7 @@ const Contact = () => {
             </Card>
           </Col>
           <Col xs={24} sm={12} md={8}>
-            <Card className='card_main'
+            <Card className='card_main2'
               hoverable
               cover={<img alt="example" src={service2} style={{ borderRadius: '20px' }} />}
             >
@@ -132,10 +132,11 @@ const Contact = () => {
 
       <div className='Contact_main'>
         <Row justify="center" align="middle" gutter={12}>
-          <Col xs={24} sm={12} md={8}>
+          <Col xs={24} sm={12} md={8} className='contact_sinhala'>
           <h1>CONTACT US</h1>
           <p>
-          SSK Water Filter Technology is always here to assist with your queries and solve your problems. Contact us through this short form, and we are committed to your service.
+          SSK Water Filter Technology is always here to assist with your queries and solve your problems. Contact us through this short form, and we are committed to your service. <br></br>
+          වැඩි විස්තර දැන ගැනීමට අවශ්‍යනම් ඔබගේ නම, දුරකතනය අංකය ඔබගේ අවශ්‍යතාවය (මිලදී ගැනීමට ,විස්තර දැන ගැනීමට) සදහන් කර අප වෙත පනිවිඩයක් යොමු කරන්න. හැකි ඉක්මනින් අප ආයතනයෙන් ඔබ වෙතට ඇමතුමක් ලබා දෙනු ඇත
         </p>
           </Col>
           <Col xs={24} sm={12} md={8}>

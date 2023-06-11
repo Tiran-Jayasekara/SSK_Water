@@ -1,3 +1,12 @@
+.Store_Header {
+  text-align: center; /* Align the heading at the center */
+  font-family: "Helvetica Neue", Arial, sans-serif; /* Apply a font style */
+  font-size: 40px; /* Set the font size */
+  font-weight: bold; /* Set the font weight */
+  color: #333; /* Set the text color */
+  margin-top: 20px;
+  /* Add any additional styles you want for the heading */
+}
 
 .Container-custom2 {
   margin-top: 20px;
@@ -351,6 +360,16 @@
         width: 300px;
         margin-left: 0px;
         font-size: 16px;
+      }
+
+      .Store_Header {
+        text-align: center; /* Align the heading at the center */
+        font-family: "Helvetica Neue", Arial, sans-serif; /* Apply a font style */
+        font-size: 20px; /* Set the font size */
+        font-weight: bold; /* Set the font weight */
+        color: #333; /* Set the text color */
+        margin-top: 20px;
+        /* Add any additional styles you want for the heading */
       }
   }
   
