@@ -1,14 +1,12 @@
-
 .follows span a {
-  text-decoration: none;
-}
-
-.follows span {
-  margin-right: 25px;
+	text-decoration: none;
+  }
   
-}
-
-.follows span a i {
+  .follows span {
+	margin-right: 25px;
+  }
+  
+  .follows span a i {
 	color: black;
 	font-size: 1.5em;
 	border: 1px solid black;
@@ -24,131 +22,204 @@
   .follows span a i:hover {
 	color: white;
   }
-
-
-.footer{
+  
+  .footer {
 	position: relative;
 	width: 100%;
-	background: #3586ff;
-	min-height: 80px;
-	padding: 20px 50px;
+	max-width: 100%;
+	background: rgb(13, 136, 252);
+	min-height: 60px;
+	padding: 10px 30px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-  margin-top: 100px;
-}
-
-footer .wave{
+	margin-top: 100px;
+  }
+  
+  .footer .wave {
+	content: "";
 	position: absolute;
-	top: -100px;
+	top: -80px;
 	left: 0;
 	width: 100%;
-	height: 100px;
-	background: url(wave.png);
+	height: 80px;
+	background-image: url(wave.png); /* Set the background image */
 	background-size: 1000px 100px;
-}
-
-footer .wave#wave1{
+	z-index: -1;
+  }
+  
+  
+  footer .wave#wave1 {
 	z-index: 1000;
 	opacity: 1;
 	bottom: 0;
 	animation: animateWave 4s linear infinite;
-
-}
-footer .wave#wave2{
+	z-index: -1;
+  }
+  
+  footer .wave#wave2 {
 	z-index: 999;
 	opacity: 0.5;
 	bottom: 10px;
 	animation: animateWave_02 4s linear infinite;
-
-}
-footer .wave#wave3{
+	z-index: -1;
+  }
+  
+  footer .wave#wave3 {
 	z-index: 1000;
 	opacity: 0.2;
 	bottom: 15px;
 	animation: animateWave_03 3s linear infinite;
-
-}
-footer .wave#wave4{
+	z-index: -1;
+  }
+  
+  footer .wave#wave4 {
 	z-index: 999;
 	opacity: 0.7;
 	bottom: 20px;
 	animation: animateWave_04 3s linear infinite;
-
-}
-
-
-@keyframes animateWave{
-	0%
-	{
-		background-position-x: 1000px;
-	}
-
-	100%
-	{
-		background-position-x: 0px;
-
-	}
-		
-}
-@keyframes animateWave_02{
-	0%
-	{
-		background-position-x: 0px;
-	}
-
-	100%
-	{
-		background-position-x: 1000px;
-	}
-}
-@keyframes animateWave_03{
-	0%
-	{
-		background-position-x: 0px;
-	}
-
-	100%
-	{
-		background-position-x: 1000px;
-	}
-}
-@keyframes animateWave_04{
-	0%
-	{
-		background-position-x: 0px;
-	}
-
-	100%
-	{
-		background-position-x: 1000px;
-	}
-}
-
-.follows h5{
-  color: black;
-  font-weight: bold;
-}
-
-.footer-content {
-  line-height: 1.5;
-  color: black;
-  font-size: 12px;
-
+	z-index: -1;
+  }
+  .footer_image {
+	width: 200px; /* Set the desired width */
+	height: auto; /* Let the height adjust proportionally */
+	/* Add any additional styles you want for the image */
+  }
   
-}
+  
+  @keyframes animateWave {
+	0% {
+	  background-position-x: 1000px;
+	}
+  
+	100% {
+	  background-position-x: 0px;
+	}
+  }
+  
+  @keyframes animateWave_02 {
+	0% {
+	  background-position-x: 0px;
+	}
+  
+	100% {
+	  background-position-x: 1000px;
+	}
+  }
+  
+  @keyframes animateWave_03 {
+	0% {
+	  background-position-x: 0px;
+	}
+  
+	100% {
+	  background-position-x: 1000px;
+	}
+  }
+  
+  @keyframes animateWave_04 {
+	0% {
+	  background-position-x: 0px;
+	}
+  
+	100% {
+	  background-position-x: 1000px;
+	}
+  }
 
-.ssk-hight{
-  color: black;
-  font-size: 12px;
-}
+  .follows {
+	margin-top: 30px;
+  }
+  
+  .follows h5 {
+	color: black;
+	font-weight: bold;
+  }
+  .secound_col {
+	width: 100%;
+	
+  }
+  .secound_col h6 {
+	line-height: 1.5;
+	color: black;
+	font-size: 10px;
+  }
+  
+  .main-ssk h6 {
+	color: black;
+	font-size: 10px;
+	width: 80%;
+  }
+  
+  .main-ssk h5 {
+	margin-top: 50px;
+  }
+  
+  .secound_col h5 {
+	margin-top: 30px;
+  }
+  
+  @media (max-width: 768px) {
 
-.main-ssk{
-  color: black;
-  font-weight: bold;
-}
+	.main-ssk h6 {
+		color: black;
+		font-size: 8px;
+		width: 100%;
+	  }
+	  
+	  .main-ssk h5 {
+		font-size: 12px;
+		margin-top: 50px;
+	  }
 
-.get-in{
-  color: black;
-  font-weight: bold;
-}
+	.footer_image {
+		width: 150px; /* Set the desired width */
+		height: auto; /* Let the height adjust proportionally */
+		/* Add any additional styles you want for the image */
+	}
+	.secound_col h6 {
+		line-height: 1.5;
+		color: black;
+		font-size: 8px;
+	  }
+	  
+	.secound_col h5 {
+		margin-top: 20px;
+		font-size: 10px;
+	}
+	  
+
+	.follows span a i {
+	  font-size: 1em;
+	  width: 30px;
+	  height: 30px;
+	}
+  
+	.footer {
+	  padding: 10px;
+	}
+  
+	.footer-content {
+	  font-size: 8px;
+	}
+  
+	.follows h5 {
+	  font-size: 10px;
+	}
+
+	.follows span a i {
+		color: black;
+		font-size: 1.5em;
+		border: none;
+		width: 10px;
+		height: 10px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		transition: color 0.3s ease;
+		margin-top: 10px;
+		
+	  }
+	  
+  }
+  

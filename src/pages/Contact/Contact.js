@@ -85,19 +85,18 @@ const Contact = () => {
   return (
     <>
       <div className="contact-page">
-        <header className="contact-header"></header>
+        <header className="contact-header">
+        <h1>Contact Us</h1>
+        <h1>SSK Water Filter Service</h1>
+        </header>
       </div>
       <div className='contact-details'>
         <h1>GET IN TOUCH WITH US</h1>
         <Row justify="center" align="middle" gutter={12}>
           <Col xs={24} sm={12} md={8}>
-            <Card
+            <Card className='card_main1'
               hoverable
-              style={{
-                width: '100%',
-                height: 500,
-              }}
-              cover={<img alt="example" src={service1} />}
+              cover={<img alt="example" src={service1} style={{ borderRadius: '20px' }} />}
               actions={[
                 <a href="tel:YOUR_PHONE_NUMBER">
                   <PhoneOutlined style={{ fontSize: '34px' }}/>
@@ -114,13 +113,9 @@ const Contact = () => {
             </Card>
           </Col>
           <Col xs={24} sm={12} md={8}>
-            <Card
+            <Card className='card_main2'
               hoverable
-              style={{
-                width: '100%',
-                height: 500,
-              }}
-              cover={<img alt="example" src={service2} />}
+              cover={<img alt="example" src={service2} style={{ borderRadius: '20px' }} />}
             >
               <Meta
                 title="CUSTOMER SERVICES"
@@ -133,51 +128,66 @@ const Contact = () => {
             </Card>
           </Col>
         </Row>
+
+
+      <div className='Contact_main'>
+        <Row justify="center" align="middle" gutter={12}>
+          <Col xs={24} sm={12} md={8} className='contact_sinhala'>
+          <h1>CONTACT US</h1>
+          <p>
+          SSK Water Filter Technology is always here to assist with your queries and solve your problems. Contact us through this short form, and we are committed to your service. <br></br>
+          වැඩි විස්තර දැන ගැනීමට අවශ්‍යනම් ඔබගේ නම, දුරකතනය අංකය ඔබගේ අවශ්‍යතාවය (මිලදී ගැනීමට ,විස්තර දැන ගැනීමට) සදහන් කර අප වෙත පනිවිඩයක් යොමු කරන්න. හැකි ඉක්මනින් අප ආයතනයෙන් ඔබ වෙතට ඇමතුමක් ලබා දෙනු ඇත
+        </p>
+          </Col>
+          <Col xs={24} sm={12} md={8}>
+          <form ref={formRef} onSubmit={handleSubmit} className='contact-form'>
+  <div className='form-field'>
+    <label htmlFor='name'>Your Name</label>
+    <input
+      type='text'
+      id='name'
+      name='name'
+      value={form.name}
+      onChange={handleChange}
+      placeholder="What's your good name?"
+    />
+  </div>
+  <div className='form-field'>
+    <label htmlFor='email'>Your Email</label>
+    <input
+      type='email'
+      id='email'
+      name='email'
+      value={form.email}
+      onChange={handleChange}
+      placeholder="What's your web address?"
+    />
+  </div>
+  <div className='form-field'>
+    <label htmlFor='message'>Your Message</label>
+    <textarea
+      id='message'
+      rows={7}
+      name='message'
+      value={form.message}
+      onChange={handleChange}
+      placeholder='What do you want to say?'
+    />
+  </div>
+  {errorMessage && (
+    <div className="error-message">{errorMessage}</div>
+  )}
+  <button type='submit'>{loading ? "Sending..." : "Send"}</button>
+</form>
+
+          </Col>
+        </Row>
+        </div>
       </div>
       <div className="contact-email">
-        <h2>GET IN TOUCH</h2>
-        <p>
-          SSK Water Filter Technology is always here to assist with your queries and solve your problems. Contact us through this short form, and we are committed to your service.
-        </p>
-        <form ref={formRef} onSubmit={handleSubmit} className='contact-form'>
-          <div className='form-field'>
-            <label htmlFor='name'>Your Name</label>
-            <input
-              type='text'
-              id='name'
-              name='name'
-              value={form.name}
-              onChange={handleChange}
-              placeholder="What's your good name?"
-            />
-          </div>
-          <div className='form-field'>
-            <label htmlFor='email'>Your Email</label>
-            <input
-              type='email'
-              id='email'
-              name='email'
-              value={form.email}
-              onChange={handleChange}
-              placeholder="What's your web address?"
-            />
-          </div>
-          <div className='form-field'>
-            <label htmlFor='message'>Your Message</label>
-            <textarea
-              id='message'
-              rows={7}
-              name='message'
-              value={form.message}
-              onChange={handleChange}
-              placeholder='What do you want to say?'
-            />
-          </div>
-          {errorMessage && (
-            <div className="error-message">{errorMessage}</div>
-          )}
-          <button type='submit'>{loading ? "Sending..." : "Send"}</button>
-        </form>
+        
+        
+       
       </div>
       <Footer />
     </>

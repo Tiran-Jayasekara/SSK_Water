@@ -58,6 +58,16 @@
   margin-right: 40px;
 }
 
+.our_filters h2{
+  text-align: center; /* Align the heading at the center */
+  font-family: "Helvetica Neue", Arial, sans-serif; /* Apply a font style */
+  font-size: 40px; /* Set the font size */
+  font-weight: bold; /* Set the font weight */
+  margin-left: 440px;
+  width: 400px;
+  margin-top: 0px;
+}
+
 @media screen and (max-width: 960px) {
   .course__top h2 {
     font-size: 30px;
@@ -87,6 +97,17 @@
   .students , .rating ,.enroll ,.lesson{
     font-size: 12px;
     margin-top: -30px;
+  }
+
+
+  .our_filters h2{
+    text-align: center; /* Align the heading at the center */
+    font-family: "Helvetica Neue", Arial, sans-serif; /* Apply a font style */
+    font-size: 30px; /* Set the font size */
+    font-weight: bold; /* Set the font weight */
+    margin-left: -50px;
+    width: 400px;
+    margin-top: -50px;
   }
   
 }

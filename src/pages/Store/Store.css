@@ -1,33 +1,94 @@
-.Container-custom {
-  height: 70vh;
-  margin-top: -40px;
-  width: 100%;
+.Store_Header {
+  margin-left: 720px;
+  margin-top: 50px;
+  display: none;
+}
+.Container-custom2 {
+  margin-top: 20px;
+  border-radius: 5px;
+  padding: 0px;
+  margin-bottom: 0px;
+}
+
+.container-divider {
+  border-top: 1px solid #ccc;
+  margin-top: 0px;
+  margin-bottom: 40px;
+}
+
+.product-buttons-row {
+  margin-bottom: 20px;
+}
+
+.my-col {
+  position: relative;
   
 }
+
+.my-col::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background-color: #ccc;
+  margin-right: 100px;
+  
+}
+
  /* Buttons */
   .Product_NavBar ul { 
     padding: 0;
     overflow: hidden;
     flex-direction: column;
     gap: 30px;
-    margin-left: 30px;
-    
+    margin-left: 0px;
+    margin-top: 30px;
   }
-  .Product_NavBar button:hover {
-    background-color: #4187d3;
-  }
+  .product-row {
+  background-color: #ffffff;
+}
 
 
-  .my-col {
-    width: 100%;
-    margin-left: -50px;
-  }
+.product-container:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #e9e9e9;
+  border-radius: 20px;
+  pointer-events: none;
+  box-shadow: 0 0 10px rgba(1, 0, 2, 0.2); /* Add box shadow */
+}
 
+
+.button-icon{
+  width: 70px;
+  height: 70px;
+  margin-right: 0px;
+  margin-left: 20px;
+  margin-right: auto;
+  border: 1px solid whitesmoke;
+  border-radius: 30px;
   
+}
 
+.button-icon:hover {
+  transform: scale(1.10);
+  cursor: pointer;
+}
+.Product_NavBar h5 { 
+  margin-left: 10px;
+  font-size: 14px;
+}
+  
   /* Product List */
   .product-row {
-    margin-bottom: 20px;
+    margin-bottom: 0px;
+    
   }
   
   .product-col {
@@ -38,10 +99,11 @@
   .product-container {
     width: 100%;
     height: 100%;
-    padding: 20px;
+    padding: 10px;
     border-radius: 5px;
     background-color: #fff;
     text-align: center;
+    position: relative;
   }
   
   .product-title {
@@ -64,9 +126,8 @@
     max-width: 150px;
     max-height: 150px;
     height: auto;
-    margin-bottom: 10px;
-    margin-left: 10%;
-    border-radius: 20px;
+    margin-top: 10px;
+   
   }
   .product-image:hover {
     transform: scale(1.1);
@@ -88,9 +149,32 @@
   }
 
   .modal-content {
+    border: 1px solid #ccc;
     padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
+  }
+
+  .modal-content h3{
+    margin-top: 20px;
+  }
+
+  .modal-content h4{
+    margin-top: 20px;
+  }
+
+  .form_col{
+    margin-left: 200px;
+  }
+
+  .modal-content2 h5{
+    margin-top: 20px;
+    text-align: justify;
+    margin-bottom: 40px;
+    width: 800px;
+    margin-left: 70px;
+  }
+  
+  .justify-text {
+    text-align: justify;
   }
   
   .modal-title {
@@ -119,13 +203,13 @@
   }
   
   .form-input {
-    width: 100%;
-    padding: 10px;
+    padding: 0px;
     font-size: 16px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
+    
   }
   
   .form-input:focus {
@@ -135,18 +219,26 @@
     
   
 @media screen and (max-width: 760px) {
+  .my-col::after {
+    display: none;
+  }
     
       .Product_NavBar ul { 
         font-size: 0px;
         flex-direction: row;
         gap: 0px;
         margin-left: 0px;
+        margin-top: 0
         
       }
+      .Product_NavBar li{ 
+        font-size: 0px; 
+      }
+
       .Product_NavBar button {
         width: auto;
         height: auto;
-        font-size: 10px;
+        font-size: 5px;
       }
       .my-col {
         width: 100%;
@@ -172,18 +264,15 @@
     }
   
   @media screen and (max-width: 460px) {
-    
-    .Product_NavBar ul { 
-      font-size: 0px;
-      flex-direction: row;
-      gap: 0px;
-      margin-left: 0px;
-      
+    .product-col {
+      flex-basis: 50%; /* Display two columns per row */
     }
+    
     .Product_NavBar button {
-      width: auto;
-      height: auto;
-      font-size: 8px;
+     
+      font-size: 6px;
+      margin: 2px;
+      border-radius: 10px;
     }
     .my-col {
       width: 100%;
@@ -205,7 +294,91 @@
         margin-left: 60px;
         
       }
-    
+      .product-image {
+        max-width: 100px;
+        max-height: 100px;
+        height: auto;
+        margin-top: 10px;
+       
+      }
+      .product-title {
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-size: 12px;
+      }
+
+      .button-icon {
+        width: 30px;
+        height: 30px;
+        margin-right: 0;
+        margin-left: 20px;
+        margin-right: auto;
+        border: 1px solid whitesmoke;
+        border-radius: 30px;
+        transition: transform 0.3s, margin-bottom 0.3s; /* Add transition for smooth scaling and movement */
+        cursor: pointer;
+      
+        /* Add the following styles to adjust the position when clicked */
+        position: relative;
+        z-index: 1;
+      }
+      
+      .button-icon:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+      
+        /* Add the following styles to move the h5 element down */
+        margin-bottom: 10px;
+      }
+      
+      .Product_NavBar h5 {
+        margin-left: 10px;
+        font-size: 8px;
+        transition: margin-bottom 0.3s; /* Add transition for smooth movement */
+      }
+      
+      .image-text-wrapper:hover h5 {
+        margin-bottom: 15px; /* Increase the margin-bottom to move the h5 element down */
+      }
+
+
+      .modal-content {
+        border: 1px solid #aa1e1e;
+        padding: 0px;
+        
+      }
+      
+      .justify-text {
+        text-align: justify;
+      }
+
+      .modal-content h5{
+        margin-top: 20px;
+        text-align: justify;
+        margin-bottom: 40px;
+        width: 300px;
+        margin-left: 0px;
+        font-size: 16px;
+      }
+
+      .Store_Header {
+        margin-left: 130px;
+        margin-top: 20px;
+        display: flex;
+      }
+
+      .modal-content2 h5{
+        margin-top: 20px;
+        text-align: justify;
+        margin-bottom: 40px;
+        width: 300px;
+        margin-left: 0px;
+        font-size: 14px;
+      }
+
+      .form_col{
+        margin-left: 0px;
+      }
     
   }
   
