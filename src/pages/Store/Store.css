@@ -1,6 +1,7 @@
 .Store_Header {
   margin-left: 720px;
   margin-top: 50px;
+  display: none;
 }
 .Container-custom2 {
   margin-top: 20px;
@@ -363,6 +364,7 @@
       .Store_Header {
         margin-left: 130px;
         margin-top: 20px;
+        display: flex;
       }
 
       .modal-content2 h5{
