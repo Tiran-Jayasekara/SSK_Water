@@ -1,10 +1,12 @@
 import React from "react";
-import { Container, Row, Col } from "reactstrap";
+
 import courseImg1 from "../../assests/images/Filter/home1.jpg";
 import courseImg2 from "../../assests/images/Filter/home2.jpg";
 import courseImg3 from "../../assests/images/Filter/industrial1.jpg";
 import "./courses.css";
 import CourseCard from "./CourseCard";
+import { Col, Row } from 'antd';
+
 
 const coursesData = [
   {
@@ -37,29 +39,21 @@ const coursesData = [
 
 function Services() {
   return (
-    <section>
-      <Container>
-        <Row>
-          <Col lg="12" className="mb-5">
-            <div className="course__top d-flex flex-column flex-md-row justify-content-between align-items-center">
-              <div className="our_filters">
-                <h2>Our Filters</h2>
-              </div>
-              <div className="w-100 text-md-end mb-3 mb-md-0">
-              </div>
-              {/* <div className="w-100 text-md-end">
-              <button className="btn">See All</button>
-            </div> */}
-            </div>
-          </Col>
-          {coursesData.map((item) => (
-            <Col key={item.id} lg="4" md="6" sm="6">
+    <>
+    <Row gutter={[16,16]}>
+    <Col className="service_Header" xs={{ span: 22, }} lg={{ span: 22 }}>
+    <h1>Our Filters</h1>
+    </Col>
+    
+    {coursesData.map((item) => (
+            <Col className="Our_filters" key={item.id} xs={{ span: 20 }} sm={{ span: 16 }} md={{ span: 7 }} lg={{ span: 8}}>
               <CourseCard key={item.id} item={item} />
-            </Col>
-          ))}
-        </Row>
-      </Container>
-    </section>
+        </Col>
+    ))}
+   
+    </Row>
+    </>
+   
   );
 }
 

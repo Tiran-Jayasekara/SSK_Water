@@ -1,10 +1,13 @@
 import React from "react";
+import { Col, Row } from 'antd';
 
 const CourseCard = (props) => {
   const { imgUrl, title, Price, customer, rating } = props.item;
 
   return (
-    <div className="single__course__item">
+    <>
+    <Row gutter={[16,16]}>
+      <Col className="Cards_image" xs={{ span: 22 }} sm={{ span: 22 }} lg={{ span: 20 }}>
       <div className="course__img">
         <img src={imgUrl} alt="" className="w-100" />
       </div>
@@ -32,7 +35,11 @@ const CourseCard = (props) => {
           </p>
         </div>
       </div>
-    </div>
+      </Col>
+
+    </Row>
+    </>
+
   );
 };
 
