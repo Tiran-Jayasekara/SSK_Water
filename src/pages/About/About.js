@@ -1,85 +1,232 @@
 import React from "react";
+import { useState } from 'react';
+import { Col, Row , Select , Button} from 'antd';
 import "./about.css";
-import { Container, Row, Col } from "reactstrap";
-import aboutImg from "../../assests/images/logo3.png";
-import CountUp from "react-countup";
-import "./about.css";
-import Footer from "../../components/Footer/Footer";
+import directer from '../../assests/images/man.png'
+import thanks from '../../assests/images/thanks.jpg'
+import about from '../../assests/images/contactus-banner.jpg'
+
+
+const OPTIONS = ['Apples', 'Nails', 'Bananas', 'Helicopters'];
+
 
 const About = () => {
+
+  const [selectedItems, setSelectedItems] = useState([]);
+  const filteredOptions = OPTIONS.filter((o) => !selectedItems.includes(o));
+
+
   return (
-    <section>
-      <Container>
-        <Row>
-        
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.307539947541!2d80.3361678749926!3d8.17173980181844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afcefc8b6f2e8f9%3A0x960b61f4ad847d81!2sSSK%20Water%20Filter%20Technology!5e0!3m2!1sen!2slk!4v1683954770123!5m2!1sen!2slk" 
-          width="100vh" 
-          height="450" 
-          style={{ border:"0"}} 
-          allowfullscreen="" 
-          loading="lazy" 
-          title="Google Map of SSK Water Filter Technology">
-        </iframe>
+    <>
+    <Row gutter={[16,16]}>
+    <Col xs={{ span: 24, }} lg={{ span: 24 }}>
+      <img src={about} alt="about" style={{ maxWidth: '100%', height: 'auto' }}></img>
+    </Col>
+
+    <Col className="about_h1" xs={{ span: 22,}} lg={{ span: 22,}}>
+     <h1 >THE COMPANY - A DYNAMIC PROFILE </h1>
+    </Col>
+
+    <Col className="about_p" xs={{span: 22}} lg={{span: 22}}>
+     <p><b>Lalanka Water Management (Pvt) Ltd,</b> incorporated as a specialist and a consultant to the Water Treatment Activities, was founded in Sri Lanka in 2000 with a group of well qualified and well experienced personnel to serve the growing needs of the industrial sector for water management and to improve the standard of recreation of the hard working people after work or whilst at work.</p>
+     
+     <p><b></b>Over the period of years, the changing technology and the needs of the customers induced Lalanka to expand its services to designs, manufacture and installation of water and wastewater treatment systems for a wide range of applications and laboratory services on water analysis.</p>
+     <p><b>Lalanka</b> is in the forefront of this field now and is island wide with its extensive sales network to meet customer needs better. Our customers comprise of a wide range of companies from small office to large multinational companies of various industries as well as individuals from small businessmen to chief executive of group of companies, each with its unique needs and requirements.</p>
+     <p><b>Lalanka</b> has carved a niche for itself in a distinctive market, even with a less number of years of experience in the field of business. We not only design and construct swimming pools or design and manufacture water treatment equipment tailored to meet our clients’ individual needs but also provide a fast, reliable and efficient backup service.</p>
+     <p><b>Lalanka</b> can also provide pragmatic consultation, customer oriented equipment and systems, quality products, effective chemicals, reliable laboratory and maintenance services that can help to solve environmental problems.</p>
+     <p>We at <b>Lalanka Group,</b> is probably one of the few local companies that offer a comprehensive maintenance service package to all types of needs in its field.</p>
+    </Col>
+
+    <Col className="bordofdirecter" xs={{ span: 22,}} lg={{ span: 22,}}>
+     <h1 >BOARD OF DIRECTORS</h1>
+    </Col>
+
+    <Col className="directer1" xs={{ span: 22 }} sm={{ span: 10 }} lg={{ span: 10, }}>
+      <h5>Managing Director<br></br>
+        Mr. Sagara Lunuwila<br></br>
+        B Sc. PGD in Architecture</h5>
+      <img src={directer} alt="directer" style={{ maxWidth: '100%', height: 'auto' }}></img>
+    </Col>
+    <Col className="directer2" xs={{ span: 22 }} sm={{ span: 10 }} lg={{ span: 10, }}>
+    <h5>Managing Director<br></br>
+        Mr. Sagara Lunuwila<br></br>
+        B Sc. PGD in Architecture</h5>
+      <img src={directer} alt="directer" style={{ maxWidth: '100%', height: 'auto' }}></img>
+    </Col>
+
+    <Col className="Philosophy" xs={{ span: 20 }} sm={{ span: 22 }} lg={{ span: 12}}>
+      <h1>OUR PHILOSOPHY</h1>
+      <p>We use all our resources to provide a state of peace of mind for our customers whilst
+      protecting and preserving our nature and environment.</p>
+    </Col>
+
+    <Col className="Philosophy" xs={{ span: 20 }} sm={{ span: 22 }} lg={{ span: 22}}>
+      <h1>OUR VISION</h1>
+      <p>“To be the leading contributor of providing solutions for water related
+      environmental issues in Sri Lanka”</p>
+    </Col>
+
+    <Col className="Philosophy" xs={{ span: 20 }} sm={{ span: 22 }} lg={{ span: 22}}>
+      <h1>OUR MISSION</h1>
+      <p>We use all our resources to provide a state of peace of mind for our customers whilst
+      protecting and preserving our nature and environment.</p>
+    </Col>
+
+    <Col className="Philosophy" xs={{ span: 22 }} sm={{ span: 22 }} lg={{ span: 22}}>
+      <h1>OUR COMMITMENT</h1>
+      
+    </Col>
+
+    <Col className="Message" xs={{ span: 22 }} sm={{ span: 22 }} lg={{ span: 10}}>
+    <Select
+      mode="multiple"
+      placeholder="Inserted are removed"
+      value={selectedItems}
+      onChange={setSelectedItems}
+      style={{
+        width: '100%',
+      }}
+      options={filteredOptions.map((item) => ({
+        value: item,
+        label: item,
+      }))}
+    />
+    </Col>
+    <Col className="Message" xs={{ span: 22 }} sm={{ span: 22 }} lg={{ span: 10}}>
+    <Select
+      mode="multiple"
+      placeholder="Inserted are removed"
+      value={selectedItems}
+      onChange={setSelectedItems}
+      style={{
+        width: '100%',
+      }}
+      options={filteredOptions.map((item) => ({
+        value: item,
+        label: item,
+      }))}
+    />
+    </Col>
+
+    <Col className="Message" xs={{ span: 22 }} sm={{ span: 22 }} lg={{ span: 10}}>
+    <Select
+      mode="multiple"
+      placeholder="Inserted are removed"
+      value={selectedItems}
+      onChange={setSelectedItems}
+      style={{
+        width: '100%',
+      }}
+      options={filteredOptions.map((item) => ({
+        value: item,
+        label: item,
+      }))}
+    />
+    </Col>
+
+    <Col className="Message" xs={{ span: 22 }} sm={{ span: 22 }} lg={{ span: 10}}>
+    <Select
+      mode="multiple"
+      placeholder="Inserted are removed"
+      value={selectedItems}
+      onChange={setSelectedItems}
+      style={{
+        width: '100%',
+      }}
+      options={filteredOptions.map((item) => ({
+        value: item,
+        label: item,
+      }))}
+    />
+    </Col>
+
+    <Col className="Message" xs={{ span: 22 }} sm={{ span: 22 }} lg={{ span: 10}}>
+    <Select
+      mode="multiple"
+      placeholder="Inserted are removed"
+      value={selectedItems}
+      onChange={setSelectedItems}
+      style={{
+        width: '100%',
+      }}
+      options={filteredOptions.map((item) => ({
+        value: item,
+        label: item,
+      }))}
+    />
+    </Col>
+
+    <Col className="Message" xs={{ span: 22 }} sm={{ span: 22 }} lg={{ span: 10}}>
+    <Select
+      mode="multiple"
+      placeholder="Inserted are removed"
+      value={selectedItems}
+      onChange={setSelectedItems}
+      style={{
+        width: '100%',
+      }}
+      options={filteredOptions.map((item) => ({
+        value: item,
+        label: item,
+      }))}
+    />
+    </Col>
+
+    <Col className="button" xs={{ span: 22 }} sm={{ span: 22 }} lg={{ span: 12}}>
+    <Button type="primary" block>
+      Send
+    </Button>
+    </Col>
 
 
-          <Col lg="5" md="10">
-            <div className="about__img">
-              <img src={aboutImg} alt="" className="w-100" />
-            </div>
-          </Col>
+    <Col className="Philosophy" xs={{ span: 20 }} sm={{ span: 20 }} lg={{ span: 16}}>
+      <h1>OUR CAPABILITIES</h1>
+      <p>It is not a trial or an error, but precise thought that Lalanka has build up a high level of technological expertise and experience through our successful engagements in
+      numerous projects over the years. The accumulation and consolidation of our expertise and experience is the foundation upon which our reputation and commitment is
+      finally established</p>
+    </Col>
 
-          <Col lg="6" md="6">
-            <div className="about__content">
-              <h2>About Us</h2>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Excepturi cupiditate animi deserunt libero nesciunt corporis
-                explicabo nobis ex quo molestiae!
-              </p>
+    <Col className="Philosophy" xs={{ span: 20 }} sm={{ span: 20 }} lg={{ span: 16}}>
+      <h1>RESEARCH & DEVELOPMENT</h1>
+      <p>It is not a trial or an error, but precise thought that Lalanka has build up a high level of technological expertise and experience through our successful engagements in
+      numerous projects over the years. The accumulation and consolidation of our expertise and experience is the foundation upon which our reputation and commitment is
+      finally established</p>
+    </Col>
 
-              <div className="about__counter">
-                <div className=" d-flex gap-5 align-items-center">
-                  <div className="single__counter">
-                    <span className="counter">
-                      <CountUp start={0} end={120} duration={2} suffix="" />
-                    </span>
+    <Col className="Philosophy" xs={{ span: 20 }} sm={{ span: 20 }} lg={{ span: 16}}>
+      <h1>ON SITE CONSULTATION & MANAGEMENT</h1>
+      <p>It is not a trial or an error, but precise thought that Lalanka has build up a high level of technological expertise and experience through our successful engagements in
+      numerous projects over the years. The accumulation and consolidation of our expertise and experience is the foundation upon which our reputation and commitment is
+      finally established</p>
+    </Col>
 
-                    <p className="counter__title">Installed Filters</p>
-                  </div>
+    <Col className="Philosophy" xs={{ span: 20 }} sm={{ span: 20 }} lg={{ span: 16}}>
+      <h1>DESIGN FOR COST EFFECTIVENESS</h1>
+      <p>It is not a trial or an error, but precise thought that Lalanka has build up a high level of technological expertise and experience through our successful engagements in
+      numerous projects over the years. The accumulation and consolidation of our expertise and experience is the foundation upon which our reputation and commitment is
+      finally established</p>
+    </Col>
 
-                  <div className="single__counter">
-                    <span className="counter">
-                      <CountUp start={0} end={100} duration={2} suffix="" />
-                    </span>
+    <Col className="Philosophy" xs={{ span: 20 }} sm={{ span: 20 }} lg={{ span: 16}}>
+      <h1>QUALITY CONTROL</h1>
+      <p>It is not a trial or an error, but precise thought that Lalanka has build up a high level of technological expertise and experience through our successful engagements in
+      numerous projects over the years. The accumulation and consolidation of our expertise and experience is the foundation upon which our reputation and commitment is
+      finally established</p>
+    </Col>
 
-                    <p className="counter__title">Repaired Filters</p>
-                  </div>
-                </div>
+    <Col className="Philosophy" xs={{ span: 20 }} sm={{ span: 20 }} lg={{ span: 16}}>
+      <h1>AFTER SALES SERVICE</h1>
+      <p>It is not a trial or an error, but precise thought that Lalanka has build up a high level of technological expertise and experience through our successful engagements in
+      numerous projects over the years. The accumulation and consolidation of our expertise and experience is the foundation upon which our reputation and commitment is
+      finally established</p>
+    </Col>
 
-                <div className=" d-flex gap-5 align-items-center">
-                  {/* <div className="single__counter">
-                    <span className="counter">
-                      <CountUp start={0} end={95} duration={2} suffix="M" />
-                    </span>
+    <Col xs={{ span: 24, }} lg={{ span: 24, }}>
+      <img src={thanks} alt="thanks" style={{ maxWidth: '100%', height: 'auto' }}></img>
+    </Col>
 
-                    <p className="counter__title"></p>
-                  </div> */}
-
-                  {/* <div className="single__counter">
-                    <span className="counter">
-                      <CountUp start={0} end={5} duration={2} suffix="K" />
-                    </span>
-
-                    <p className="counter__title">Categories Served</p>
-                  </div> */}
-                </div>
-              </div>
-            </div>
-          </Col>
-        </Row>
-      </Container>
-    </section>
+  </Row>
+  </>
   );
 };
 

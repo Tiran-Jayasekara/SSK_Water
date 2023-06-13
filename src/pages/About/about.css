@@ -1,93 +1,104 @@
-.counter {
-  font-size: 2rem;
-  font-weight: 600;
-  color: #0a2b1e;
-  
-}
-.about__background {
-  background-image: linear-gradient(to bottom right, #FFC107, #FF5722);
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-.about__img img:hover {
-  transform: scale(1.1);
-  transition: all 0.3s ease-in-out;
-}
-
-
-.counter__title {
-  font-size: 1rem;
-  color: #0a2b1e;
-  font-weight: 500;
-}
-
-/* .about__content {
-  padding-left: 50px;
+.about_h1 {
+  font-Size: 30px;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 50px;
-  margin-left: 40px;
-} */
-
-.about__img img {
-  border-radius: 25px;
-  width: 400px;
-  height: auto;
-  margin-left: 40px;
-  margin-top: 0px;
-  margin-top: -10px;
 }
 
-/* .about__content h2 {
-  font-weight: 600;
-
-  
-} */
-.about__content {
-  padding-left: 50px;
+.about_p {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+}
+.bordofdirecter{
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 50px;
-  margin-top: 10px;
-  margin-left: 40px;
-  font-family: 'Montserrat', sans-serif;
-  color: #333;
-  background-color: #f2f2f2;
-}
-
-.about__content h2 {
-  font-weight: 600;
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-.about-container_head {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 50px;
   text-align: center;
-  margin-top: -50px;
-  
+}
+.directer1 {
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.about-container_head h1 {
-  font-size: 48px;
+.directer1 h5{
+  text-align: center;
+  margin-left: -90px;
+  margin-top: 50px;
   margin-bottom: 30px;
 }
+.directer2 h5{
+  margin-left: -90px;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+.Philosophy{
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.Philosophy h1{
+  text-align: center;
+}
+.Philosophy p{
+  text-align: center;
 
-.about-container_head p {
-  font-size: 24px;
-  line-height: 1.5;
-  margin-bottom: 20px;
+}
+.Message {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+
+}
+.button{
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.about-container a {
-  color: #007bff;
-}
+@media (max-width: 576px) {
 
-.container_Display {
-  background-color: #f2f2f2;
-  padding: 60px;
-  width: auto;
-}
+  .directer2 {
+    margin-left: auto;
+    margin-right: auto;
+  }
 
+    .about_h1 h1{
+        font-size: 20px;
+        
+    }
 
-@media screen and (max-width: 960px) {
-  
+    .about_p p{
+      font-size: 14px;
+      text-align: justify;
+    }
+
+    .directer1 h5{
+      margin-left: 0px;
+      font-size: 16px;
+    }
+    .directer2 h5{
+      margin-left: 0px;
+      font-size: 16px;
+    }
+    .Philosophy{
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .Philosophy h1{
+      font-size: 24px;
+      text-align: center;
+    }
+    .Philosophy p{
+      font-size: 12px;
+      text-align: center;
+     
+    }
+    .button{
+      margin-bottom: 20px;
+      margin-left: auto;
+      margin-right: auto;
+    }
 }
