@@ -1,5 +1,5 @@
 .about_h1 {
-  font-Size: 30px;
+  font-size: 30px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
@@ -10,7 +10,7 @@
   margin-right: auto;
   text-align: justify;
 }
-.bordofdirecter{
+.bordofdirecter {
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
@@ -21,84 +21,79 @@
   margin-right: auto;
 }
 
-.directer1 h5{
+.directer1 h5 {
   text-align: center;
   margin-left: -90px;
   margin-top: 50px;
   margin-bottom: 30px;
 }
-.directer2 h5{
+.directer2 h5 {
   margin-left: -90px;
   text-align: center;
   margin-top: 50px;
   margin-bottom: 30px;
 }
-.Philosophy{
+.Philosophy {
   margin-top: 60px;
   margin-left: auto;
   margin-right: auto;
 }
-.Philosophy h1{
+.Philosophy h1 {
   text-align: center;
 }
-.Philosophy p{
+.Philosophy p {
   text-align: center;
-
 }
 .Message {
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
-
 }
-.button{
+.button {
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
 }
 
 @media (max-width: 576px) {
-
   .directer2 {
     margin-left: auto;
     margin-right: auto;
   }
 
-    .about_h1 h1{
-        font-size: 20px;
-        
-    }
+  .about_h1 h1 {
+    font-size: 20px;
+  }
 
-    .about_p p{
-      font-size: 14px;
-      text-align: justify;
-    }
+  .about_p p {
+    font-size: 14px;
+    text-align: justify;
+  }
 
-    .directer1 h5{
-      margin-left: 0px;
-      font-size: 16px;
-    }
-    .directer2 h5{
-      margin-left: 0px;
-      font-size: 16px;
-    }
-    .Philosophy{
-      margin-top: 20px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .Philosophy h1{
-      font-size: 24px;
-      text-align: center;
-    }
-    .Philosophy p{
-      font-size: 12px;
-      text-align: center;
-     
-    }
-    .button{
-      margin-bottom: 20px;
-      margin-left: auto;
-      margin-right: auto;
-    }
+  .directer1 h5 {
+    margin-left: 0px;
+    font-size: 16px;
+  }
+  .directer2 h5 {
+    margin-left: 0px;
+    font-size: 16px;
+  }
+  .Philosophy {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .Philosophy h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+  .Philosophy p {
+    font-size: 12px;
+    text-align: center;
+  }
+  .button {
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

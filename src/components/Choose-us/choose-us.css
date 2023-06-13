@@ -1,14 +1,12 @@
-.Choose_h1{
+.Choose_h1 {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  
 }
 
-.Choose_h1 h1{
+.Choose_h1 h1 {
   font-size: 50px;
   margin-top: 50px;
-  
 }
 
 .describe {
@@ -17,10 +15,10 @@
   margin-left: auto;
   margin-right: auto;
 }
-.describe p{
+.describe p {
   text-align: justify;
 }
-.choose_img_Header{
+.choose_img_Header {
   margin: auto;
 }
 .choose__img {
@@ -39,7 +37,6 @@
 .video_player {
   margin-bottom: 20px; /* Adjust the margin value as needed */
 }
-
 
 .play__icon {
   position: absolute;
@@ -62,7 +59,7 @@
   font-size: 2rem;
   padding: 10px;
 }
-@media screen and (max-width: 1280px){
+@media screen and (max-width: 1280px) {
   .video_image {
     width: 60%;
     height: 40%;
@@ -70,7 +67,7 @@
     margin-top: 30px;
   }
 }
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 1000px) {
   .video_image {
     width: 80%;
     height: 40%;
@@ -79,21 +76,19 @@
   }
 }
 
-@media screen and (max-width: 680px){
+@media screen and (max-width: 680px) {
   .choose__content {
     width: 100%;
     margin-left: 20px;
   }
-  .Choose_h1 h1{
+  .Choose_h1 h1 {
     font-size: 30px;
     margin-top: 50px;
-    
   }
 
-    .choose__img {
-      width: 100%;
-      z-index: 777;
-    
+  .choose__img {
+    width: 100%;
+    z-index: 777;
   }
   .video_image {
     width: 90%;
@@ -103,7 +98,5 @@
   }
   .video_player {
     width: max-content;
-  
   }
-  
 }

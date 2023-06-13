@@ -1,12 +1,10 @@
-
-.Store_Nav_Bar h3{
+.Store_Nav_Bar h3 {
   text-align: center;
   font-size: 20px;
 }
-.Store_Nav_Bar img{
+.Store_Nav_Bar img {
   align-items: center;
 }
-
 
 .product-container:hover::before {
   content: "";
@@ -20,21 +18,21 @@
   pointer-events: none;
   box-shadow: 0 0 10px rgba(1, 0, 2, 0.2); /* Add box shadow */
 }
-.Store_Header h1{
- text-align: center;
- margin-top: 20px;
+.Store_Header h1 {
+  text-align: center;
+  margin-top: 20px;
 }
 
 .Store_Nav_Bar {
   margin-left: auto;
   margin-right: auto;
 }
-.Store_product_List{
+.Store_product_List {
   margin-left: auto;
   margin-right: auto;
 }
 
-.button-icon{
+.button-icon {
   width: 70px;
   height: 70px;
   margin-right: auto;
@@ -50,260 +48,241 @@
   text-align: center;
   margin-top: 20px;
 }
-.centered h3{
+.centered h3 {
   font-size: 14px;
 }
 
-
 .button-icon:hover {
-  transform: scale(1.10);
+  transform: scale(1.1);
   cursor: pointer;
 }
-  
-  /* Product List */
-  
-  
-  .product-container {
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #fff;
+
+/* Product List */
+
+.product-container {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+.product-title {
+  margin-bottom: 10px;
+}
+
+.product-details {
+  margin-top: 10px;
+}
+
+.product-brand {
+  font-weight: bold;
+}
+
+.product-price {
+  margin-top: 5px;
+}
+
+.product-image {
+  max-width: 150px;
+  max-height: 150px;
+  height: auto;
+  margin-top: 10px;
+}
+.product-image:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.Products p {
+  font-size: 16px;
+  margin-left: 25%;
+}
+
+/* Popup Window */
+.model_contact {
+  margin: auto;
+}
+.Model_Form {
+  margin: auto;
+}
+
+.model_image {
+  width: 300px;
+}
+
+.modal-content {
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+.modal-content h3 {
+  margin-top: 20px;
+}
+
+.modal-content h4 {
+  margin-top: 20px;
+}
+
+.form_col {
+  margin-left: 200px;
+}
+
+.modal-content2 h5 {
+  margin-top: 20px;
+  text-align: justify;
+  margin-bottom: 40px;
+  width: 800px;
+  margin-left: 70px;
+}
+
+.justify-text {
+  text-align: justify;
+}
+
+.modal-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  padding: 20px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+}
+
+.form-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.form-input {
+  padding: 0px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.form-input:focus {
+  outline: none;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 1200px) {
+  .Store_Nav_Bar h3 {
     text-align: center;
-    position: relative;
-  }
-  
-  .product-title {
-    margin-bottom: 10px;
-  }
-  
-  .product-details {
-    margin-top: 10px;
-  }
-  
-  .product-brand {
-    font-weight: bold;
-  }
-  
-  .product-price {
-    margin-top: 5px;
-  }
-
-  .product-image {
-    max-width: 150px;
-    max-height: 150px;
-    height: auto;
-    margin-top: 10px;
-   
-  }
-  .product-image:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-  }
-  
-  .Products p {
     font-size: 16px;
-    margin-left: 25%;
   }
-  
-  
-
-
-  /* Popup Window */
-  .model_contact{
+  .model_contact {
     margin: auto;
   }
   .Model_Form {
     margin: auto;
   }
+}
 
-  .model_image {
-    width: 300px;
-  }
-
-  .modal-content {
-    border: 1px solid #ccc;
-    padding: 20px;
-  }
-
-  .modal-content h3{
-    margin-top: 20px;
-  }
-
-  .modal-content h4{
-    margin-top: 20px;
-  }
-
-  .form_col{
-    margin-left: 200px;
-  }
-
-  .modal-content2 h5{
-    margin-top: 20px;
-    text-align: justify;
-    margin-bottom: 40px;
-    width: 800px;
-    margin-left: 70px;
-  }
-  
-  .justify-text {
-    text-align: justify;
-  }
-  
-  .modal-title {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .contact-form {
-    padding: 20px;
-    background-color: #f1f1f1;
-    border-radius: 10px;
-  }
-  
-  .form-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .form-label {
-    display: block;
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .form-input {
-    padding: 0px;
-    font-size: 16px;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    
-  }
-  
-  .form-input:focus {
-    outline: none;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
-  }
-
-
-@media screen and (max-width: 1200px) {
-    .Store_Nav_Bar h3{
-      text-align: center;
-      font-size: 16px;
-    }
-    .model_contact{
-      margin: auto;
-    }
-    .Model_Form {
-      margin: auto;
-    }
-  }
-    
-  
 @media screen and (max-width: 760px) {
-  .Store_Nav_Bar h3{
+  .Store_Nav_Bar h3 {
     text-align: center;
     font-size: 10px;
   }
-  .model_contact{
+  .model_contact {
     margin: auto;
   }
   .Model_Form {
     margin: auto;
   }
-  .model_contact h5{
+  .model_contact h5 {
     font-size: 16px;
     text-align: justify;
   }
- 
-  
-    }
-  
-  @media screen and (max-width: 460px) {
+}
 
-    .Store_Nav_Bar h3{
-      text-align: center;
-      font-size: 10px;
-    }
-   
-      .product-image {
-        max-width: 100px;
-        max-height: 100px;
-        height: auto;
-        margin-top: 10px;
-        margin-left: auto;
-        margin-right: auto;
-       
-      }
-      .product-title {
-        margin-bottom: 10px;
-        margin-top: 10px;
-        font-size: 12px;
-      }
-
-      .button-icon {
-        width: 30px;
-        height: 30px;
-        margin-right: 0;
-        margin-left: 20px;
-        margin-right: auto;
-        border: 1px solid whitesmoke;
-        border-radius: 30px;
-        transition: transform 0.3s, margin-bottom 0.3s; /* Add transition for smooth scaling and movement */
-        cursor: pointer;
-      
-        /* Add the following styles to adjust the position when clicked */
-        position: relative;
-        z-index: 1;
-      }
-      
-      .button-icon:hover {
-        transform: scale(1.1);
-        cursor: pointer;
-      
-        /* Add the following styles to move the h5 element down */
-        margin-bottom: 10px;
-      }
-    
-      .image-text-wrapper:hover h5 {
-        margin-bottom: 15px; /* Increase the margin-bottom to move the h5 element down */
-      }
-
-
-      .modal-content {
-        border: 1px solid #aa1e1e;
-        padding: 0px;
-        
-      }
-      
-      .justify-text {
-        text-align: justify;
-      }
-
-      .modal-content h5{
-        margin-top: 20px;
-        text-align: justify;
-        margin-bottom: 40px;
-        width: 300px;
-        margin-left: 0px;
-        font-size: 16px;
-      }
-
-      
-
-      .model_contact h5{
-        font-size: 14px;
-        text-align: justify;
-      }
-
-      .form_col{
-        margin-left: 0px;
-      }
-    
+@media screen and (max-width: 460px) {
+  .Store_Nav_Bar h3 {
+    text-align: center;
+    font-size: 10px;
   }
-  
+
+  .product-image {
+    max-width: 100px;
+    max-height: 100px;
+    height: auto;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .product-title {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 12px;
+  }
+
+  .button-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 0;
+    margin-left: 20px;
+    margin-right: auto;
+    border: 1px solid whitesmoke;
+    border-radius: 30px;
+    transition: transform 0.3s, margin-bottom 0.3s; /* Add transition for smooth scaling and movement */
+    cursor: pointer;
+
+    /* Add the following styles to adjust the position when clicked */
+    position: relative;
+    z-index: 1;
+  }
+
+  .button-icon:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+
+    /* Add the following styles to move the h5 element down */
+    margin-bottom: 10px;
+  }
+
+  .image-text-wrapper:hover h5 {
+    margin-bottom: 15px; /* Increase the margin-bottom to move the h5 element down */
+  }
+
+  .modal-content {
+    border: 1px solid #aa1e1e;
+    padding: 0px;
+  }
+
+  .justify-text {
+    text-align: justify;
+  }
+
+  .modal-content h5 {
+    margin-top: 20px;
+    text-align: justify;
+    margin-bottom: 40px;
+    width: 300px;
+    margin-left: 0px;
+    font-size: 16px;
+  }
+
+  .model_contact h5 {
+    font-size: 14px;
+    text-align: justify;
+  }
+
+  .form_col {
+    margin-left: 0px;
+  }
+}

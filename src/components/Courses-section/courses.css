@@ -1,25 +1,25 @@
-.service_Header{
+.service_Header {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
 }
 
-.service_Header h1{
+.service_Header h1 {
   font-size: 50px;
 }
 
-.Our_filters{
+.Our_filters {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 80px;
 }
-.Cards_image{
+.Cards_image {
   margin-left: auto;
   margin-right: auto;
 }
 
 @media (max-width: 576px) {
-  .Our_filters{
+  .Our_filters {
     margin-bottom: 0px;
   }
 }
