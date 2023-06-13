@@ -16,6 +16,18 @@
 .customer_header{
   margin-left: 100px;
 }
+.Customer_voice{
+  margin-top: 100px;
+  margin-bottom: 150px;
+}
+.Voice_header{
+  margin: auto;
+  
+}
+.voice_text {
+  margin: auto;
+  
+}
 
 @media screen and (max-width: 1200px) {
   
@@ -73,6 +85,9 @@
   margin-left: -50px;
 
 }
+.single__testimonial{
+  margin-left: 40px;
+}
 .single__testimonial h6 {
   font-size: 14px;
   margin-top: 20px;
@@ -82,5 +97,7 @@
 }
 .customer_header{
   margin-top: 10px;
+  margin-left: 40px;
+  margin-right: auto;
 }
 }

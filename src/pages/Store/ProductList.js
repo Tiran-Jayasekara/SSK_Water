@@ -1,6 +1,6 @@
-import { Container, Row, Col} from "reactstrap";
+import { Container} from "reactstrap";
 import './Store.css'
-import { Modal, Button,Space} from "antd";
+import { Modal, Button,Space , Row, Col} from "antd";
 import { useState } from "react";
 
 function ProductList(props) {
@@ -77,13 +77,13 @@ function ProductList(props) {
   
     return (
     <div>
-  <Container>
+      <Container></Container>
       {productList
         .reduce((rows, product, index) => (index % 4 === 0 ? rows.concat([[product]]) : (rows[rows.length - 1].push(product), rows)), [])
         .map((row, rowIndex) => (
-          <Row key={rowIndex} className="product-row">
+          <Row key={rowIndex} gutter={[16,16]}>
             {row.map((product) => (
-              <Col key={product.id} md="3" sm="6" className="product-col">
+              <Col key={product.id} className="Store_product_List" xs={{ span: 12 }} sm={{ span: 10 }} lg={{ span: 5 }}>
                 <div className="product-container">
                   <img className="product-image" src={product.image} alt={product.title} onClick={() => imageClick(product)} />
                   <h5 className="product-title">{product.title}</h5>
@@ -95,14 +95,13 @@ function ProductList(props) {
             ))}
           </Row>
         ))}
-    </Container>
 
 
 <Modal
   open={isModalVisible}
   onClose={handleCancel}
   destroyOnClose
-  width={1000}
+  width={800}
   style={{
     textAlign: "center"
   }}
@@ -117,10 +116,10 @@ function ProductList(props) {
 >
   <div className="modal-content">
     <Row gutter={[16, 16]}>
-      <Col md={12} xs={24}>
+      <Col xs={{ span: 24 }} sm={{ span: 10 }} lg={{ span: 24 }}> 
         <h1>{display.title}</h1>
       </Col>
-      <Col md={12} xs={24}>
+      <Col xs={{ span: 24 }} sm={{ span: 10 }} lg={{ span: 24 }}>
         <Space direction="vertical">
           <div key={0}>
             &nbsp;&nbsp;<b><img className="model_image" src={display.image} alt={display.title}/></b>
@@ -154,7 +153,7 @@ function ProductList(props) {
         open={isModalVisible1}
         onClose={handleCancel1}
         destroyOnClose
-        width={1000}
+        width={800}
         style={{
           textAlign: "center"
         }}
@@ -167,13 +166,13 @@ function ProductList(props) {
           </Button>,
         ]}
       >
-    <div className="modal-content2">
+    <div>
     <Row gutter={[16, 16]}>
-      <Col md={12} xs={24}>
-        <h1 className="modal-title">{display.title}</h1>
-        <h5>...........ඔබට මෙය මිලදී ගැනීමට හො වැඩි විස්තර දැන ගැනීමට අවශ්‍යනම් ඔබගේ නම, දුරකතනය අංකය ඔබගේ අවශ්‍යතාවය (මිලදී ගැනීමට ,විස්තර දැන ගැනීමට) සදහන් කර අප වෙත පනිවිඩයක් යොමු කරන්න. හැකි ඉක්මනින් අප ආයතනයෙන් ඔබ වෙතට ඇමතුමක් ලබා දෙනු ඇත...........</h5>
+      <Col className="model_contact" xs={{ span: 24 }} sm={{ span: 16 }} lg={{ span: 10 }}>
+        <h1>{display.title}</h1>
+        <h5>ඔබට මෙය මිලදී ගැනීමට හො වැඩි විස්තර දැන ගැනීමට අවශ්‍යනම් ඔබගේ නම, දුරකතනය අංකය ඔබගේ අවශ්‍යතාවය (මිලදී ගැනීමට ,විස්තර දැන ගැනීමට) සදහන් කර අප වෙත පනිවිඩයක් යොමු කරන්න. හැකි ඉක්මනින් අප ආයතනයෙන් ඔබ වෙතට ඇමතුමක් ලබා දෙනු ඇත.</h5>
       </Col>
-      <Col md={12} xs={24} className="form_col">
+      <Col className="Model_Form" xs={{ span: 24 }} sm={{ span: 16 }} lg={{ span: 12 }} >
         <Space direction="vertical" className="contact-form">
           <h2 className="form-title">Place Order</h2>
           <form onSubmit={handleSubmit}>

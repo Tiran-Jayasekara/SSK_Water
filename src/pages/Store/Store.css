@@ -1,53 +1,10 @@
-.Store_Header {
-  margin-left: 720px;
-  margin-top: 50px;
-  display: none;
-}
-.Container-custom2 {
-  margin-top: 20px;
-  border-radius: 5px;
-  padding: 0px;
-  margin-bottom: 0px;
-}
 
-.container-divider {
-  border-top: 1px solid #ccc;
-  margin-top: 0px;
-  margin-bottom: 40px;
+.Store_Nav_Bar h3{
+  text-align: center;
+  font-size: 20px;
 }
-
-.product-buttons-row {
-  margin-bottom: 20px;
-}
-
-.my-col {
-  position: relative;
-  
-}
-
-.my-col::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 2px;
-  height: 100%;
-  background-color: #ccc;
-  margin-right: 100px;
-  
-}
-
- /* Buttons */
-  .Product_NavBar ul { 
-    padding: 0;
-    overflow: hidden;
-    flex-direction: column;
-    gap: 30px;
-    margin-left: 0px;
-    margin-top: 30px;
-  }
-  .product-row {
-  background-color: #ffffff;
+.Store_Nav_Bar img{
+  align-items: center;
 }
 
 
@@ -63,38 +20,48 @@
   pointer-events: none;
   box-shadow: 0 0 10px rgba(1, 0, 2, 0.2); /* Add box shadow */
 }
+.Store_Header h1{
+ text-align: center;
+ margin-top: 20px;
+}
 
+.Store_Nav_Bar {
+  margin-left: auto;
+  margin-right: auto;
+}
+.Store_product_List{
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .button-icon{
   width: 70px;
   height: 70px;
-  margin-right: 0px;
-  margin-left: 20px;
   margin-right: auto;
+  margin-left: auto;
   border: 1px solid whitesmoke;
   border-radius: 30px;
-  
 }
+.centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 20px;
+}
+.centered h3{
+  font-size: 14px;
+}
+
 
 .button-icon:hover {
   transform: scale(1.10);
   cursor: pointer;
 }
-.Product_NavBar h5 { 
-  margin-left: 10px;
-  font-size: 14px;
-}
   
   /* Product List */
-  .product-row {
-    margin-bottom: 0px;
-    
-  }
   
-  .product-col {
-    display: flex;
-    justify-content: center;
-  }
   
   .product-container {
     width: 100%;
@@ -143,6 +110,12 @@
 
 
   /* Popup Window */
+  .model_contact{
+    margin: auto;
+  }
+  .Model_Form {
+    margin: auto;
+  }
 
   .model_image {
     width: 300px;
@@ -216,93 +189,55 @@
     outline: none;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
   }
+
+
+@media screen and (max-width: 1200px) {
+    .Store_Nav_Bar h3{
+      text-align: center;
+      font-size: 16px;
+    }
+    .model_contact{
+      margin: auto;
+    }
+    .Model_Form {
+      margin: auto;
+    }
+  }
     
   
 @media screen and (max-width: 760px) {
-  .my-col::after {
-    display: none;
+  .Store_Nav_Bar h3{
+    text-align: center;
+    font-size: 10px;
   }
-    
-      .Product_NavBar ul { 
-        font-size: 0px;
-        flex-direction: row;
-        gap: 0px;
-        margin-left: 0px;
-        margin-top: 0
-        
-      }
-      .Product_NavBar li{ 
-        font-size: 0px; 
-      }
-
-      .Product_NavBar button {
-        width: auto;
-        height: auto;
-        font-size: 5px;
-      }
-      .my-col {
-        width: 100%;
-        border-right: none;
-        margin-left: -50px;
-      }
-        .product-buttons-row {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-between;
-        }
-      
-        .my-col {
-          width: 100%;
-          margin-bottom: 1rem;
-        }  
-        .Product_NavBar{
-          width: 480px;
-          margin-left: 100px;
-          
-        }    
-      
+  .model_contact{
+    margin: auto;
+  }
+  .Model_Form {
+    margin: auto;
+  }
+  .model_contact h5{
+    font-size: 16px;
+    text-align: justify;
+  }
+ 
+  
     }
   
   @media screen and (max-width: 460px) {
-    .product-col {
-      flex-basis: 50%; /* Display two columns per row */
+
+    .Store_Nav_Bar h3{
+      text-align: center;
+      font-size: 10px;
     }
-    
-    .Product_NavBar button {
-     
-      font-size: 6px;
-      margin: 2px;
-      border-radius: 10px;
-    }
-    .my-col {
-      width: 100%;
-      border-right: none;
-      margin-left: -50px;
-    }
-      .product-buttons-row {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-      }
-    
-      .my-col {
-        width: 100%;
-        margin-bottom: 1rem;
-        
-        
-      }
-      .Product_NavBar{
-        width: 480px;
-        margin-left: 60px;
-        
-        
-        
-      }
+   
       .product-image {
         max-width: 100px;
         max-height: 100px;
         height: auto;
         margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
        
       }
       .product-title {
@@ -334,13 +269,7 @@
         /* Add the following styles to move the h5 element down */
         margin-bottom: 10px;
       }
-      
-      .Product_NavBar h5 {
-        margin-left: 10px;
-        font-size: 8px;
-        transition: margin-bottom 0.3s; /* Add transition for smooth movement */
-      }
-      
+    
       .image-text-wrapper:hover h5 {
         margin-bottom: 15px; /* Increase the margin-bottom to move the h5 element down */
       }
@@ -365,19 +294,11 @@
         font-size: 16px;
       }
 
-      .Store_Header {
-        margin-left: 130px;
-        margin-top: 20px;
-        display: flex;
-      }
+      
 
-      .modal-content2 h5{
-        margin-top: 20px;
-        text-align: justify;
-        margin-bottom: 40px;
-        width: 300px;
-        margin-left: 0px;
+      .model_contact h5{
         font-size: 14px;
+        text-align: justify;
       }
 
       .form_col{

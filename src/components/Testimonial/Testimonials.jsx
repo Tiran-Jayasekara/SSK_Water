@@ -1,8 +1,8 @@
 import React from "react";
 import "./testimonial.css";
-import { Container, Row, Col } from "reactstrap";
 import Slider from "react-slick";
 import { useEffect , useState } from "react";
+import { Col, Row } from 'antd';
 
 import img from "../../assests/images/Service/feedback.jpg";
 
@@ -32,17 +32,17 @@ const Testimonials = () => {
   };
 
   return (
-    <section>
-      <Container>
-      <Row>
-          <Col lg="6" md="6">
-          <div className="testimonial__img">
-                <img src={img} alt="" className="w-100" />
-              </div>
-          </Col>
+    <>
+    <Row className="Customer_voice" gutter={[16,16]}>
+    <Col xs={{ span: 1 }} sm={{ span: 1 }} lg={{ span: 2}}></Col>
+    <Col className="Voice_header" xs={{ span: 22 }} sm={{ span: 22 }} lg={{ span: 10}}>
+        <div className="testimonial__img">
+            <img src={img} alt="" className="w-100" />
+        </div>
+    </Col>
 
-          <Col lg="6" md="6" className="slider">
-          <h2 className="customer_header">Our Customer Voice</h2>
+    <Col className="voice_text" xs={{ span: 22 }} sm={{ span: 22 }} lg={{ span: 10 }}>
+        <h2 className="customer_header">Our Customer Voice</h2>
 
 <Slider {...settings}>
   <div>
@@ -189,10 +189,25 @@ const Testimonials = () => {
     </div>
   </div>
 </Slider>
-          </Col>
-        </Row>
-      </Container>
-    </section>
+    </Col>
+    <Col xs={{ span: 1 }} sm={{ span: 1 }} lg={{ span: 2}}></Col>
+    </Row>
+    </>
+//     <section>
+//       <Container>
+//       <Row>
+//           <Col lg="6" md="6">
+          // <div className="testimonial__img">
+          //       <img src={img} alt="" className="w-100" />
+          //     </div>
+//           </Col>
+
+//           <Col lg="6" md="6" className="slider">
+
+//           </Col>
+//         </Row>
+//       </Container>
+//     </section>
   );
 };
 

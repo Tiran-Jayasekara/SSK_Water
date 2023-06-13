@@ -10,10 +10,14 @@ const ChooseUs = () => {
   return (
     <>
     <Row style={{ height:"auto", backgroundColor: "rgba(18, 81, 255, 0.24)",paddingBottom:"30px"}} gutter={[16,16]}>
-    <Col  className="Choose_h1" xs={{ span: 22, }} lg={{ span: 22 }}>
+    <Col  className="Choose_h1" xs={{ span: 22 }} lg={{ span: 24 }}>
       <h1>Why Choose Us</h1>
     </Col>
+
+    
+    <Col xs={{ span: 2 }} sm={{ span: 2 }} lg={{ span: 2 }}></Col>
     <Col className="describe" xs={{ span: 20, }} sm={{ span: 16 }} lg={{ span: 10 }}>
+    
         <p>
                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                  Incidunt mollitia nostrum harum eos praesentium odit a sed quod
@@ -24,7 +28,9 @@ const ChooseUs = () => {
                  tenetur laboriosam debitis nisi eius!
         </p>
     </Col>
-    <Col className="choose_img_Header" xs={{ span: 22 }} sm={{ span: 16 }} lg={{ span: 12 }}>
+    
+    
+    <Col className="choose_img_Header" xs={{ span: 22 }} sm={{ span: 16 }} lg={{ span: 10 }}>
     <div className="choose__img">
               {showVideo ? (
                 <ReactPlayer
@@ -48,6 +54,7 @@ const ChooseUs = () => {
               )}
             </div>
     </Col>
+    <Col xs={{ span: 2 }} sm={{ span: 0 }} lg={{ span: 2 }}></Col>
                
     </Row>
 
