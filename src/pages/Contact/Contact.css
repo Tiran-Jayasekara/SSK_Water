@@ -17,13 +17,13 @@
 }
 .card_main1{
   width: '100%';
-  height: 450px;
+  height: 480px;
   border-radius: 20px;
  
 }
 .card_main2{
   width: '100%';
-  height: 450px;
+  height: 480px;
   border-radius: 20px;
  
 }
@@ -324,13 +324,13 @@ button[type='submit']:hover {
   
   .card_main1{
     width: '100%';
-    height: 350px;
+    height: 380px;
     margin-bottom: 40px;
   }
 
   .card_main2{
     width: '100%';
-    height: 350px;
+    height: 380px;
     margin-bottom: -30px;
   }
 
