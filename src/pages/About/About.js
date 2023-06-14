@@ -231,36 +231,36 @@ const About = () => {
           <Col xs={{ span: 2 }} sm={{ span: 2 }} lg={{ span: 2 }}></Col>
           <Col
             className="purpose"
-            xs={{ span: 5 }}
-            sm={{ span: 5 }}
-            lg={{ span: 5 }}
+            xs={{ span: 4 }}
+            sm={{ span: 4 }}
+            lg={{ span: 4 }}
           >
             <img className="" src={Affordable} alt="" />
             <h5>Affordabilty</h5>
           </Col>
           <Col
             className="purpose"
-            xs={{ span: 5 }}
-            sm={{ span: 5 }}
-            lg={{ span: 5 }}
+            xs={{ span: 4 }}
+            sm={{ span: 4 }}
+            lg={{ span: 4 }}
           >
             <img className="" src={HighestQuality} alt="" />
             <h5>Highest quality</h5>
           </Col>
           <Col
             className="purpose"
-            xs={{ span: 5 }}
-            sm={{ span: 22 }}
-            lg={{ span: 5 }}
+            xs={{ span: 4 }}
+            sm={{ span: 4 }}
+            lg={{ span: 4 }}
           >
             <img className="" src={delivery} alt="" />
             <h5>Island wide coverage</h5>
           </Col>
           <Col
             className="purpose"
-            xs={{ span: 5 }}
-            sm={{ span: 22 }}
-            lg={{ span: 6 }}
+            xs={{ span: 4 }}
+            sm={{ span: 4 }}
+            lg={{ span: 4 }}
           >
             <img className="" src={smart} alt="" />
             <h5>Smart Solutions</h5>
