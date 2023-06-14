@@ -1,5 +1,5 @@
 import Home from "./pages/Home/Home";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter , Routes , Route } from "react-router-dom";
 import Store from "./pages/Store/Store";
 import About from "./pages/About/About";
 import Blog from "./pages/Blog/Blog";
@@ -13,7 +13,7 @@ import BlogPost4 from "./pages/Blog/BlogPost4";
 
 function App() {
   return (
-    <Router>
+    <HashRouter>
       <ScrollToTop />
       <div className="Header_container">
         <NavBar />
@@ -32,7 +32,7 @@ function App() {
           </Routes>
         </div>
       </div>
-    </Router>
+      </HashRouter>
   );
 }
 

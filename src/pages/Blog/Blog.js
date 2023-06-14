@@ -7,7 +7,7 @@ import phi from "../../assests/images/blog/phi.jpg";
 import drink from "../../assests/images/blog/drink.png";
 import lanka from "../../assests/images/blog/lanka.png";
 import water from "../../assests/images/blog/water.png";
-import blogbanner from "../../assests/images/blog/blog-banner.jpg";
+import blogbanner from "../../assests/images/blog/blogbanner.jpg";
 
 const Blog = () => {
   return (

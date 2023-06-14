@@ -2,9 +2,9 @@ import React from "react";
 import "./Blog.css";
 import { Col, Row, Button } from "antd";
 import { Link } from "react-router-dom";
+import ReactPlayer from "react-player";
 
 import mesher from "../../assests/images/blog/meser.png";
-import water_check from "../../assests/images/blog/water_check.jpg";
 import checkwater from "../../assests/images/blog/checkwater.jpeg";
 
 const BlogPost = () => {
@@ -63,11 +63,19 @@ const BlogPost = () => {
       <Row gutter={[16, 16]}>
         <Col xs={{ span: 20 }} lg={{ span: 2 }}></Col>
         <Col className="blogParaImg" xs={{ span: 20 }} lg={{ span: 10 }}>
-          <img className="blogParaImage" src={water_check} alt="" />
+          <div className="choose__img">
+            <ReactPlayer
+              url="https://youtu.be/pdwp6S1lrP0"
+              controls
+              width="100%"
+              height="350px"
+            />
+          </div>
         </Col>
+
         <Col className="blogParaText" xs={{ span: 20 }} lg={{ span: 10 }}>
           <p>
-          In order to benefit from a diverse workforce's improved innovation
+            In order to benefit from a diverse workforce's improved innovation
             and creativity as well as greater market insights, our organization,
             which is a part of the Asia Pacific region, is adopting these ideas.
             Even though there has been recent progress, there is still much to
@@ -77,8 +85,7 @@ const BlogPost = () => {
             principles into practice and continuing to work toward improvement.
             In order to benefit from a diverse workforce's improved innovation
             and creativity as well as greater market insights, our organization,
-            which is a part of the Asia Pacific region, is adopting these ideas.
-            Even though there has been recent progress.
+            which is a part of the Asia Pacific region.
           </p>
         </Col>
         <Col xs={{ span: 20 }} lg={{ span: 2 }}></Col>
@@ -122,15 +129,13 @@ const BlogPost = () => {
             hiring and promotion decisions, as well as offer leadership
             development programs for employees from diverse backgrounds.
           </p>
-          <p>
-            
-          </p>
+          <p></p>
         </Col>
       </Row>
 
       <Row gutter={[16, 16]}>
         <Col xs={{ span: 20 }} lg={{ span: 2 }}></Col>
-        
+
         <Col className="blogParaText" xs={{ span: 20 }} lg={{ span: 10 }}>
           <p>
             In order to benefit from a diverse workforce's improved innovation
