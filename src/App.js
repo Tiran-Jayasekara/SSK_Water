@@ -6,6 +6,10 @@ import Blog from "./pages/Blog/Blog";
 import Contact from "./pages/Contact/Contact";
 import NavBar from "./components/NavBar/NavBar";
 import ScrollToTop from "./components/ScrollToTop";
+import BlogPost from "./pages/Blog/BlogPost";
+import BlogPost2 from "./pages/Blog/BlogPost2";
+import BlogPost3 from "./pages/Blog/BlogPost3";
+import BlogPost4 from "./pages/Blog/BlogPost4";
 
 function App() {
   return (
@@ -20,6 +24,11 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/BlogPost1" element={<BlogPost/>} />
+            <Route path="/BlogPost2" element={<BlogPost2/>} />
+            <Route path="/BlogPost3" element={<BlogPost3/>} />
+            <Route path="/BlogPost4" element={<BlogPost4/>} />
+            
           </Routes>
         </div>
       </div>
