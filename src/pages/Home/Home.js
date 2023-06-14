@@ -1,6 +1,6 @@
 import React from "react";
 import "../../App.css";
-import HeroSection from "../../components/Hero-Section/HeroSection";
+import ImageSlider from "../../components/SliderImges/ImageSlider";
 //import Cards from '../Cards';
 
 import ChooseUs from "../../components/Choose-us/ChooseUs";
@@ -14,7 +14,7 @@ import Cards from "../../components/Card/Cards";
 function Home() {
   return (
     <>
-      <HeroSection />
+      <ImageSlider/>
       <Cards />
       <Services />
       <ChooseUs />
