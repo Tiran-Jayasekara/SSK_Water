@@ -27,7 +27,7 @@
   position: relative;
   width: 100%;
   max-width: 100%;
-  background: rgb(13, 136, 252);
+  background: rgb(53, 134, 255);
   min-height: 60px;
   padding: 10px 30px;
   display: flex;
@@ -140,12 +140,24 @@ footer .wave#wave4 {
   line-height: 1.5;
   color: black;
   font-size: 10px;
+  font-weight: bold;
+}
+.secound_col h5 {
+  line-height: 1.5;
+  color: black;
+  font-weight: bold;
+}
+
+.main-ssk h5 {
+  color: black;
+  font-weight: bold;
 }
 
 .main-ssk h6 {
   color: black;
   font-size: 10px;
   width: 80%;
+  font-weight: bold;
 }
 
 .main-ssk h5 {
@@ -154,6 +166,7 @@ footer .wave#wave4 {
 
 .secound_col h5 {
   margin-top: 30px;
+  
 }
 
 @media (max-width: 768px) {
