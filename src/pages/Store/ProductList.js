@@ -2,6 +2,7 @@ import { Container } from "reactstrap";
 import "./Store.css";
 import { Modal, Button, Space, Row, Col } from "antd";
 import { useState } from "react";
+import domestic from "../../assests/images/about/gif3.gif";
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
@@ -78,7 +79,6 @@ function ProductList(props) {
 
   return (
     <div>
-      <Container></Container>
       {productList
         .reduce(
           (rows, product, index) =>
@@ -147,7 +147,7 @@ function ProductList(props) {
                   <b>
                     <img
                       className="model_image"
-                      src={display.image}
+                      src={domestic}
                       alt={display.title}
                     />
                   </b>
@@ -264,7 +264,7 @@ const Domestic = [
     title: "Domestic",
     author: "Douglas Adams",
     price: 85000,
-    image: "https://m.media-amazon.com/images/I/71Iq1Ihu4fL._SL1500_.jpg",
+    image: 'https://m.media-amazon.com/images/I/71Iq1Ihu4fL._SL1500_.jpg',
     Sinhala_describe:
       "ජල පෙරහන යනු භෞතික බාධකයක්, රසායනික ක්‍රියාවලියක් හෝ ජීව විද්‍යාත්මක ක්‍රියාවලියක් මගින් ජලයෙන් අපද්‍රව්‍ය සහ අපවිත්‍ර ද්‍රව්‍ය ඉවත් කරන උපකරණයකි. ජල පෙරණයක පරමාර්ථය වන්නේ අවසාදිත, ක්ලෝරීන්, බැක්ටීරියා, වෛරස්, බැර ලෝහ සහ වෙනත් හානිකර රසායනික ද්‍රව්‍ය වැනි අනවශ්‍ය ද්‍රව්‍ය ඉවත් කිරීමෙන් ජලයේ ගුණාත්මකභාවය වැඩි දියුණු කිරීමයි.",
     English_describe:

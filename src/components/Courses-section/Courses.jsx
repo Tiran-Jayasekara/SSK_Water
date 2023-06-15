@@ -42,8 +42,8 @@ function Services() {
   return (
     <>
       <Row className="service_header" gutter={0}>
-        <Col className="service_Header" xs={{ span: 24 }} lg={{ span: 24 }}>
-          <h1>WHAT THE HELL ARE WE SELLING ?</h1>
+        <Col className="service_Header" xs={{ span: 20 }} lg={{ span: 24 }}>
+          <h1>WHAT WE SELL?</h1>
         </Col>
       </Row>
       <Row className="cards_col_2" gutter={0} justify="center">

@@ -28,9 +28,9 @@ function Store() {
   return (
     <>
       <Row>
-        {/* <Col className="Store_Header" xs={{ span: 24 }} lg={{ span: 24 }}>
+        <Col className="Store_Header" xs={{ span: 24 }} lg={{ span: 24 }}>
           <h1>Our Store</h1>
-        </Col> */}
+        </Col>
 
         <Col
           className="Store_Nav_Bar"
@@ -143,10 +143,9 @@ function Store() {
           lg={{ span: 18 }}
         >
           <div className="Products_List">{data}</div>
-        </Col > 
-    <div className="addSpace">
-                  <Col className="addSpace">
-                  </Col>
+        </Col>
+        <div className="addSpace">
+          <Col className="addSpace"></Col>
         </div>
         <Col>
           <Testimonials />

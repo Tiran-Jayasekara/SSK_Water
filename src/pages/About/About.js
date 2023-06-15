@@ -4,7 +4,7 @@ import { Col, Row } from "antd";
 
 import "./about.css";
 
-import logo from "../../assests/images/about/logo3.png";
+import logo from "../../assests/images/about/gif.gif";
 import about from "../../assests/images/about/blogbanner.jpg";
 import trusted from "../../assests/images/about/trusted.png";
 import acolabarateout from "../../assests/images/about/colabarate.png";
@@ -13,7 +13,7 @@ import prograsive from "../../assests/images/about/prograsive.png";
 import Affordable from "../../assests/images/about/Affordable.png";
 import HighestQuality from "../../assests/images/about/HighestQuality.png";
 import delivery from "../../assests/images/about/delivery.png";
-import smart from "../../assests/images/about/smart-farming.png";
+import smart from "../../assests/images/about/smart.gif";
 import martin from "../../assests/images/about/company.png";
 // import vontron from "../../assests/images/about/vontron.png";
 // import Agua from "../../assests/images/about/Agua.png";

@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import contactImg from "../../assests/images/logo4.png";
+import logo from "../../assests/images/about/gif2.gif";
 
 import "./footer.css";
 
@@ -27,7 +28,7 @@ const Footer = () => {
           </Col>
 
           <Col lg="3" md="6" sm="6" xs="6">
-            <img src={contactImg} alt="" className="footer_image" />
+            <img src={logo} alt="" className="footer_image" />
           </Col>
 
           <Col lg="3" md="6" sm="6" xs="6" className="secound_col">
