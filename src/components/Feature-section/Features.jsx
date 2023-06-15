@@ -24,7 +24,7 @@ const FeatureData = [
 
 const Features = () => {
   return (
-    <section style={{ marginTop: "40px" }}>
+    <section style={{ marginTop: "30px" }}>
       <Container>
         <Row>
           {FeatureData.map((item, index) => (

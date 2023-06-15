@@ -33,7 +33,7 @@ const Testimonials = () => {
 
   return (
     <>
-      <Row className="Customer_voice" gutter={[16, 16]}>
+      <Row className="Customer_voice">
         <Col xs={{ span: 1 }} sm={{ span: 1 }} lg={{ span: 2 }}></Col>
         <Col
           className="Voice_header"

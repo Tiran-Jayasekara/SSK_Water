@@ -24,7 +24,7 @@ import Footer from "../../components/Footer/Footer";
 const About = () => {
   return (
     <>
-      <Row gutter={[16, 16]}>
+      <Row>
         <Col xs={{ span: 24 }} lg={{ span: 24 }}>
           <img
             src={about}

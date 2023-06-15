@@ -5,6 +5,9 @@
 .Store_Nav_Bar img {
   align-items: center;
 }
+.addSpace{
+  margin-top: 460px;
+}
 
 .product-container:hover::before {
   content: "";
@@ -284,5 +287,8 @@
 
   .form_col {
     margin-left: 0px;
+  }
+  .addSpace{
+    margin-top: 680px;
   }
 }

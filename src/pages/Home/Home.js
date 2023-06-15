@@ -15,9 +15,9 @@ function Home() {
   return (
     <>
       <ImageSlider/>
-      <Cards />
-      <Services />
       <ChooseUs />
+      <Services />
+      <Cards />
       <Features />
       <Testimonials />
       <Footer />

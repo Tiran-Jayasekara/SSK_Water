@@ -9,16 +9,17 @@ const ChooseUs = () => {
   const [showVideo, setShowVideo] = useState(false);
   return (
     <>
-      <Row
+      <Row className="whowe"
         style={{
           height: "auto",
-          backgroundColor: "rgba(18, 81, 255, 0.24)",
-          paddingBottom: "30px",
+          backgroundColor: "#dbeaeb",
+          paddingBottom: "20px",
+          
         }}
-        gutter={[16, 16]}
+        gutter={0}
       >
         <Col className="Choose_h1" xs={{ span: 22 }} lg={{ span: 24 }}>
-          <h1>Why Choose Us</h1>
+          <h1>WHO WE ARE ?</h1>
         </Col>
 
         <Col xs={{ span: 2 }} sm={{ span: 2 }} lg={{ span: 2 }}></Col>

@@ -1,11 +1,38 @@
+.service_header{
+  margin-top: 150px;
+}
 .service_Header {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  margin-bottom: 20PX;
 }
+
+.course-card img {
+  width: 100%;
+  height: auto;
+}
+.course__title {
+  margin-top: 20px;
+}
+.para{
+  margin-left: 100px;
+}
+.para2{
+  margin-left: 160px;
+}
+.course-details p {
+  font-size: 14px;
+  margin-bottom: 0px;
+}
+
 
 .service_Header h1 {
   font-size: 50px;
+}
+.service_Header h1{
+  font-size: 40px;
+  margin-top: -60px;
 }
 
 .Our_filters {
@@ -19,7 +46,27 @@
 }
 
 @media (max-width: 576px) {
+  .service_header{
+    margin-top: 120px;
+  }
   .Our_filters {
     margin-bottom: 0px;
+
+  }.service_Header h1{
+    font-size: 25px;
+    margin-top: -60px;
+  }
+  .course-card img {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-left: 20px;
+    height: auto;
+  }
+  .para{
+    margin-left: 40px;
+  }
+  .para2{
+    margin-left: 100px;
   }
 }

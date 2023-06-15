@@ -11,7 +11,7 @@ const coursesData = [
   {
     id: 1,
     title:
-      "World’s Best RO Water Purifiers Protect your Family with the Purest Drinking Water",
+      "World’s Best RO Water Purifiers Protect your Family with the Purest",
     Price: 78000,
     customer: 132,
     rating: 98,
@@ -41,23 +41,26 @@ const coursesData = [
 function Services() {
   return (
     <>
-      <Row gutter={[16, 16]}>
-        <Col className="service_Header" xs={{ span: 22 }} lg={{ span: 22 }}>
-          <h1>Our Filters</h1>
+      <Row className="service_header" gutter={0}>
+        <Col className="service_Header" xs={{ span: 24 }} lg={{ span: 24 }}>
+          <h1>WHAT THE HELL ARE WE SELLING ?</h1>
         </Col>
-
+      </Row>
+      <Row className="cards_col_2" gutter={0} justify="center">
+        <Col lg={{ span: 2 }} xs={{ span: 20 }}></Col>
         {coursesData.map((item) => (
           <Col
             className="Our_filters"
             key={item.id}
-            xs={{ span: 20 }}
+            xs={{ span: 16 }}
             sm={{ span: 16 }}
-            md={{ span: 7 }}
-            lg={{ span: 8 }}
+            md={{ span: 6 }}
+            lg={{ span: 6 }}
           >
             <CourseCard key={item.id} item={item} />
           </Col>
         ))}
+        <Col lg={{ span: 2 }} xs={{ span: 20 }}></Col>
       </Row>
     </>
   );

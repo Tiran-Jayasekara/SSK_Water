@@ -17,8 +17,8 @@
   margin-left: 100px;
 }
 .Customer_voice {
-  margin-top: 100px;
-  margin-bottom: 150px;
+  margin-top: 50px;
+  margin-bottom: 10px;
 }
 .Voice_header {
   margin: auto;
@@ -69,7 +69,7 @@
 
 @media screen and (max-width: 600px) {
   .testimonial__img {
-    width: 300px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
   }

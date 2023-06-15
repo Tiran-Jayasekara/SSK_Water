@@ -88,7 +88,7 @@ function ProductList(props) {
           []
         )
         .map((row, rowIndex) => (
-          <Row key={rowIndex} gutter={[16, 16]}>
+          <Row key={rowIndex} gutter={0}>
             {row.map((product) => (
               <Col
                 key={product.id}
