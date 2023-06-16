@@ -9,7 +9,8 @@ import ind from "../../assests/images/Filter/ind.png";
 import ion from "../../assests/images/Filter/ion.png";
 import spare from "../../assests/images/Filter/spare.png";
 import Testimonials from "../../components/Testimonial/Testimonials";
-import about from "../../assests/images/store/storebanner1.gif";
+import about from "../../assests/images/store/storebanner.gif";
+import about2 from "../../assests/images/store/storebanner2.gif";
 
 function Store() {
   const [data, SetData] = useState([]);
@@ -29,120 +30,120 @@ function Store() {
   return (
     <>
       <Row>
-      <Col className="Store_Header" xs={{ span: 24 }} lg={{ span: 24 }}>
-      <img
-                  src={about}
-                  alt="Domestic Icon"
-                  style={{maxWidth:"100%"}}
-                  
-                />
+        <Col className="Store_Header" xs={{ span: 24 }} lg={{ span: 24 }}>
+          <img src={about} className="topimage1" alt="Domestic Icon" style={{ maxWidth: "100%" }} />
+          <img src={about2} className="topimage2" alt="Domestic Icon" style={{ maxWidth: "100%" }} />
         </Col>
 
         {/* <Col className="Store_Header" xs={{ span: 24 }} lg={{ span: 24 }}>
           <h1>Our Store</h1>
         </Col> */}
 
-        <Col className="Store_Nav_Bar" xs={{ span: 22 }} sm={{ span: 24 }} lg={{ span: 4 }}>
-  <div className="nav-bar-container">
-    <Row gutter={0}>
-            <Col
-              className="Store_Nav_Bar"
-              xs={{ span: 4 }}
-              sm={{ span: 4 }}
-              lg={{ span: 24 }}
-            >
-              <div className="centered">
-                <img
-                  src={domestic}
-                  alt="Domestic Icon"
-                  className="button-icon"
-                  onClick={() => {
-                    SetData(<ProductList Category={"Domestic"} />);
-                  }}
-                />
-                <h3>Domestic</h3>
-              </div>
-            </Col>
+        <Col
+          className="Store_Nav_Bar"
+          xs={{ span: 22 }}
+          sm={{ span: 24 }}
+          lg={{ span: 4 }}
+        >
+          <div className="nav-bar-container">
+            <Row gutter={0}>
+              <Col
+                className="Store_Nav_Bar"
+                xs={{ span: 4 }}
+                sm={{ span: 4 }}
+                lg={{ span: 24 }}
+              >
+                <div className="centered">
+                  <img
+                    src={domestic}
+                    alt="Domestic Icon"
+                    className="button-icon"
+                    onClick={() => {
+                      SetData(<ProductList Category={"Domestic"} />);
+                    }}
+                  />
+                  <h3>Domestic</h3>
+                </div>
+              </Col>
 
-            <Col
-              className="Store_Nav_Bar"
-              xs={{ span: 4 }}
-              sm={{ span: 4 }}
-              lg={{ span: 24 }}
-            >
-              <div className="centered">
-                <img
-                  src={com}
-                  alt="Domestic Icon"
-                  className="button-icon"
-                  onClick={() => {
-                    SetData(<ProductList Category={"Commercial"} />);
-                  }}
-                />
-                <h3>Commercial</h3>
-              </div>
-            </Col>
+              <Col
+                className="Store_Nav_Bar"
+                xs={{ span: 4 }}
+                sm={{ span: 4 }}
+                lg={{ span: 24 }}
+              >
+                <div className="centered">
+                  <img
+                    src={com}
+                    alt="Domestic Icon"
+                    className="button-icon"
+                    onClick={() => {
+                      SetData(<ProductList Category={"Commercial"} />);
+                    }}
+                  />
+                  <h3>Commercial</h3>
+                </div>
+              </Col>
 
-            <Col
-              className="Store_Nav_Bar"
-              xs={{ span: 4 }}
-              sm={{ span: 4 }}
-              lg={{ span: 24 }}
-            >
-              <div className="centered">
-                <img
-                  src={ind}
-                  alt="Industrial"
-                  className="button-icon"
-                  onClick={() => {
-                    SetData(<ProductList Category={"Industrial"} />);
-                  }}
-                />
-                <h3>Industrial</h3>
-              </div>
-            </Col>
+              <Col
+                className="Store_Nav_Bar"
+                xs={{ span: 4 }}
+                sm={{ span: 4 }}
+                lg={{ span: 24 }}
+              >
+                <div className="centered">
+                  <img
+                    src={ind}
+                    alt="Industrial"
+                    className="button-icon"
+                    onClick={() => {
+                      SetData(<ProductList Category={"Industrial"} />);
+                    }}
+                  />
+                  <h3>Industrial</h3>
+                </div>
+              </Col>
 
-            <Col
-              className="Store_Nav_Bar"
-              xs={{ span: 4 }}
-              sm={{ span: 4 }}
-              lg={{ span: 24 }}
-            >
-              <div className="centered">
-                <img
-                  src={ion}
-                  alt="Industrial"
-                  className="button-icon"
-                  onClick={() => {
-                    SetData(<ProductList Category={"Ionizer"} />);
-                  }}
-                />
-                <h3>Ionizer</h3>
-              </div>
-            </Col>
+              <Col
+                className="Store_Nav_Bar"
+                xs={{ span: 4 }}
+                sm={{ span: 4 }}
+                lg={{ span: 24 }}
+              >
+                <div className="centered">
+                  <img
+                    src={ion}
+                    alt="Industrial"
+                    className="button-icon"
+                    onClick={() => {
+                      SetData(<ProductList Category={"Ionizer"} />);
+                    }}
+                  />
+                  <h3>Ionizer</h3>
+                </div>
+              </Col>
 
-            <Col
-              className="Store_Nav_Bar"
-              xs={{ span: 4 }}
-              sm={{ span: 4 }}
-              lg={{ span: 24 }}
-            >
-              <div className="centered">
-                <img
-                  src={spare}
-                  alt="Industrial"
-                  className="button-icon"
-                  onClick={() => {
-                    SetData(<ProductList Category={"Spare"} />);
-                  }}
-                />
-                <h3>Spare Parts</h3>
-              </div>
-            </Col>
-          </Row>
+              <Col
+                className="Store_Nav_Bar"
+                xs={{ span: 4 }}
+                sm={{ span: 4 }}
+                lg={{ span: 24 }}
+              >
+                <div className="centered">
+                  <img
+                    src={spare}
+                    alt="Industrial"
+                    className="button-icon"
+                    onClick={() => {
+                      SetData(<ProductList Category={"Spare"} />);
+                    }}
+                  />
+                  <h3>Spare Parts</h3>
+                </div>
+              </Col>
+            </Row>
           </div>
         </Col>
-      
 
         <Col
           className="Store_product_List"
@@ -154,7 +155,7 @@ function Store() {
         </Col>
         <div className="addSpace">
           <Col className="addSpace"></Col>
-  </div>
+        </div>
         <Col>
           <Testimonials />
         </Col>

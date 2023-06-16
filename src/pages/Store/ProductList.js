@@ -1,10 +1,10 @@
-
 import "./Store.css";
 import { Modal, Button, Space, Row, Col } from "antd";
 import { useState } from "react";
 import domestic from "../../assests/images/about/gif3.gif";
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+
 
 function ProductList(props) {
   // Example array of books
@@ -78,7 +78,7 @@ function ProductList(props) {
   }
 
   return (
-    <div>
+    <div className="product_main">
       {productList
         .reduce(
           (rows, product, index) =>
@@ -131,7 +131,7 @@ function ProductList(props) {
         ]}
       >
         <div className="modal-content">
-          <Row gutter={[16, 16]}>
+          <Row>
             <Col xs={{ span: 22 }} sm={{ span: 22 }} lg={{ span: 22 }}>
               <h1>{display.title}</h1>
             </Col>
@@ -194,7 +194,7 @@ function ProductList(props) {
         ]}
       >
         <div>
-          <Row gutter={[16, 16]}>
+          <Row>
             <Col
               className="model_contact"
               xs={{ span: 24 }}
@@ -203,6 +203,7 @@ function ProductList(props) {
             >
               <h1>{display.title}</h1>
               {/* <h5>ඔබට මෙය මිලදී ගැනීමට හො වැඩි විස්තර දැන ගැනීමට අවශ්‍යනම් ඔබගේ නම, දුරකතනය අංකය ඔබගේ අවශ්‍යතාවය (මිලදී ගැනීමට ,විස්තර දැන ගැනීමට) සදහන් කර අප වෙත පනිවිඩයක් යොමු කරන්න. හැකි ඉක්මනින් අප ආයතනයෙන් ඔබ වෙතට ඇමතුමක් ලබා දෙනු ඇත.</h5> */}
+              <h5>If you want to know more details about buying this, send us a message with your name, phone number and your need (to buy, to know the details). We will give you a call from our company as soon as possible.</h5>
             </Col>
             <Col
               className="Model_Form"
@@ -220,6 +221,7 @@ function ProductList(props) {
                     type="text"
                     id="name"
                     name="name"
+                    placeholder="Enter your Name"
                     value={name}
                     onChange={handleNameChange}
                     required
@@ -232,6 +234,7 @@ function ProductList(props) {
                     type="email"
                     id="email"
                     name="email"
+                    placeholder="Enter your Number"
                     value={email}
                     onChange={handleEmailChange}
                     required
@@ -243,6 +246,7 @@ function ProductList(props) {
                   <textarea
                     id="message"
                     name="message"
+                    placeholder="Put Your Message Here "
                     value={message}
                     onChange={handleMessageChange}
                     required
@@ -264,7 +268,7 @@ const Domestic = [
     title: "Domestic",
     author: "Douglas Adams",
     price: 85000,
-    image: 'https://m.media-amazon.com/images/I/71Iq1Ihu4fL._SL1500_.jpg',
+    image: "https://m.media-amazon.com/images/I/71Iq1Ihu4fL._SL1500_.jpg",
     Sinhala_describe:
       "ජල පෙරහන යනු භෞතික බාධකයක්, රසායනික ක්‍රියාවලියක් හෝ ජීව විද්‍යාත්මක ක්‍රියාවලියක් මගින් ජලයෙන් අපද්‍රව්‍ය සහ අපවිත්‍ර ද්‍රව්‍ය ඉවත් කරන උපකරණයකි. ජල පෙරණයක පරමාර්ථය වන්නේ අවසාදිත, ක්ලෝරීන්, බැක්ටීරියා, වෛරස්, බැර ලෝහ සහ වෙනත් හානිකර රසායනික ද්‍රව්‍ය වැනි අනවශ්‍ය ද්‍රව්‍ය ඉවත් කිරීමෙන් ජලයේ ගුණාත්මකභාවය වැඩි දියුණු කිරීමයි.",
     English_describe:

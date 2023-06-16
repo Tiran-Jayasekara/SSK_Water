@@ -15,11 +15,7 @@ import HighestQuality from "../../assests/images/about/batch1.gif";
 import delivery from "../../assests/images/about/delivery.gif";
 import smart from "../../assests/images/about/smart.gif";
 import martin from "../../assests/images/about/company.png";
-// import vontron from "../../assests/images/about/vontron.png";
-// import Agua from "../../assests/images/about/Agua.png";
-// import leo from "../../assests/images/about/leo.png";
 import Footer from "../../components/Footer/Footer";
-
 
 const About = () => {
   return (
@@ -32,8 +28,6 @@ const About = () => {
             style={{ maxWidth: "100%", height: "auto" }}
           ></img>
         </Col>
-
-
 
         <div className="blog_container_about">
           <Row className="Main_Blog" gutter={[16, 16]}>
@@ -69,8 +63,6 @@ const About = () => {
           </Row>
         </div>
       </Row>
-
-
 
       {/* <Row>
       <Col xs={{ span: 22 }} sm={{ span: 4 }} lg={{ span: 4 }}></Col>
@@ -288,7 +280,7 @@ const About = () => {
           </Col>
         </Row>
       </Row>
-      <Footer/>
+      <Footer />
     </>
   );
 };

@@ -89,7 +89,7 @@ const Contact = () => {
 
   return (
     <>
-      <Row gutter={[16, 16]}>
+      <Row>
         <Col className="" xs={{ span: 24 }} lg={{ span: 24 }}>
           <div className="banner-container">
             <h1>Contact Us</h1>
