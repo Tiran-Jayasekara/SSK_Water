@@ -9,6 +9,7 @@ import ind from "../../assests/images/Filter/ind.png";
 import ion from "../../assests/images/Filter/ion.png";
 import spare from "../../assests/images/Filter/spare.png";
 import Testimonials from "../../components/Testimonial/Testimonials";
+import about from "../../assests/images/store/storebanner1.gif";
 
 function Store() {
   const [data, SetData] = useState([]);
@@ -28,17 +29,22 @@ function Store() {
   return (
     <>
       <Row>
-        <Col className="Store_Header" xs={{ span: 24 }} lg={{ span: 24 }}>
-          <h1>Our Store</h1>
+      <Col className="Store_Header" xs={{ span: 24 }} lg={{ span: 24 }}>
+      <img
+                  src={about}
+                  alt="Domestic Icon"
+                  style={{maxWidth:"100%"}}
+                  
+                />
         </Col>
 
-        <Col
-          className="Store_Nav_Bar"
-          xs={{ span: 22 }}
-          sm={{ span: 24 }}
-          lg={{ span: 6 }}
-        >
-          <Row gutter={0}>
+        {/* <Col className="Store_Header" xs={{ span: 24 }} lg={{ span: 24 }}>
+          <h1>Our Store</h1>
+        </Col> */}
+
+        <Col className="Store_Nav_Bar" xs={{ span: 22 }} sm={{ span: 24 }} lg={{ span: 4 }}>
+  <div className="nav-bar-container">
+    <Row gutter={0}>
             <Col
               className="Store_Nav_Bar"
               xs={{ span: 4 }}
@@ -134,7 +140,9 @@ function Store() {
               </div>
             </Col>
           </Row>
+          </div>
         </Col>
+      
 
         <Col
           className="Store_product_List"
@@ -146,7 +154,7 @@ function Store() {
         </Col>
         <div className="addSpace">
           <Col className="addSpace"></Col>
-        </div>
+  </div>
         <Col>
           <Testimonials />
         </Col>

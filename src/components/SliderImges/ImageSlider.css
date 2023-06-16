@@ -1,5 +1,5 @@
-.slideshow-container {
-  
+.slideshow-container img{
+  max-width: 100%;
 }
 
 .slideshow-image {

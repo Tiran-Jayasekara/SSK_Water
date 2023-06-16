@@ -192,10 +192,6 @@ const Contact = () => {
             SSK Water Filter Technology is always here to assist with your
             queries and solve your problems. Contact us through this short form,
             and we are committed to your service. <br></br>
-            වැඩි විස්තර දැන ගැනීමට අවශ්‍යනම් ඔබගේ නම, දුරකතනය අංකය ඔබගේ
-            අවශ්‍යතාවය (මිලදී ගැනීමට ,විස්තර දැන ගැනීමට) සදහන් කර අප වෙත
-            පනිවිඩයක් යොමු කරන්න. හැකි ඉක්මනින් අප ආයතනයෙන් ඔබ වෙතට
-            ඇමතුමක් ලබා දෙනු ඇත
           </p>
         </Col>
         <Col xs={{ span: 2 }} sm={{ span: 2 }} lg={{ span: 4 }}></Col>

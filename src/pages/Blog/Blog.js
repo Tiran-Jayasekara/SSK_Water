@@ -7,7 +7,8 @@ import phi from "../../assests/images/blog/phi.jpg";
 import drink from "../../assests/images/blog/drink.png";
 import lanka from "../../assests/images/blog/lanka.png";
 import water from "../../assests/images/blog/water.png";
-import blogbanner from "../../assests/images/blog/blogbanner.jpg";
+
+import about from "../../components/SliderImges/banner.gif";
 
 const Blog = () => {
   return (
@@ -15,7 +16,7 @@ const Blog = () => {
       <Row>
         <Col xs={{ span: 24 }} lg={{ span: 24 }}>
           <img
-            src={blogbanner}
+            src={about}
             alt="about"
             style={{ maxWidth: "100%", height: "auto" }}
           ></img>
