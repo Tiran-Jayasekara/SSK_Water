@@ -1,7 +1,8 @@
 import "./Store.css";
 import { Modal, Button, Space, Row, Col } from "antd";
-import { useState } from "react";
+import { useState , useRef } from "react";
 import domestic1 from "../../assests/images/store/domestic/1.jpg";
+import emailjs from "emailjs-com";
 // import domestic2 from "../../assests/images/store/domestic/2.jpg";
 // import domestic3 from "../../assests/images/store/domestic/3.jpg";
 // import domestic4 from "../../assests/images/store/domestic/4.jpg";
@@ -17,41 +18,93 @@ function ProductList(props) {
       author: product.author,
       price: product.price,
       image: product.image,
-      image1:product.image1,
-      image2:product.image2,
-      image3:product.image3,
-      image4:product.image4,
+      image1: product.image1,
+      image2: product.image2,
+      image3: product.image3,
+      image4: product.image4,
       Sinhala_describe: product.Sinhala_describe,
       English_describe: product.English_describe,
     });
-    setSelectedImage(
-      product.image,
-    );
+    setSelectedImage(product.image);
     setIsModalVisible(true);
   };
 
+  const formRef = useRef();
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [isModalVisible1, setIsModalVisible1] = useState(false);
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+ 
+  const [errorMessage, setErrorMessage] = useState("");
 
-  const handleNameChange = (event) => {
-    setName(event.target.value);
+
+  const [loading, setLoading] = useState(false);
+  const handleChange = (e) => {
+    const { target } = e;
+    const { name, value } = target;
+
+    setForm({
+      ...form,
+      [name]: value,
+    });
   };
 
-  const handleEmailChange = (event) => {
-    setEmail(event.target.value);
-  };
+  
 
-  const handleMessageChange = (event) => {
-    setMessage(event.target.value);
-  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
-    // Send data to backend or email
+    // Validate form fields
+    if (form.name.trim() === "" || form.mobile.trim() === "") {
+      setErrorMessage("Please fill in all required fields.");
+      return;
+    }
+
+    // Check if the message field is empty
+    if (form.message.trim() === "") {
+      // Do not send the message if it's empty
+      alert("Message field is empty. Please enter a message.");
+      return;
+    }
+
+    setLoading(true);
+
+    emailjs
+      .send(
+        "service_fqrxcph",
+        "template_260471a",
+        {
+          from_name: form.name,
+          to_name: "SSK Water Filters Technology",
+          from_email: form.mobile,
+          to_email: "sskwaterfilters96@gmail.com",
+          message: form.message+ " "+ display.id+ " "+ display.title+ " "+ display.author+ " "+ display.price,
+        },
+        "LO1v1GenOPxy5VzGy"
+      )
+      .then(
+        () => {
+          setLoading(false);
+          alert("Thank you. I will get back to you as soon as possible.");
+
+          setForm({
+            name: "",
+            email: "",
+            message: "",
+          });
+          setErrorMessage("");
+        },
+        (error) => {
+          setLoading(false);
+          console.error(error);
+
+          alert("Ahh, something went wrong. Please try again.");
+        }
+      );
   };
 
   const handleCancel = () => {
@@ -109,12 +162,14 @@ function ProductList(props) {
                 sm={{ span: 10 }}
                 lg={{ span: 4 }}
               >
-                <div className="product-container" onClick={() => imageClick(product)}>
+                <div
+                  className="product-container"
+                  onClick={() => imageClick(product)}
+                >
                   <img
                     className="product-image"
                     src={product.image}
                     alt={product.title}
-                    
                   />
                   <h5 className="product-title">{product.title}</h5>
                   <div className="product-details">
@@ -127,7 +182,6 @@ function ProductList(props) {
         ))}
 
       <Modal
-        
         open={isModalVisible}
         onCancel={handleCancel}
         width={800}
@@ -145,7 +199,12 @@ function ProductList(props) {
       >
         <div className="modal-content">
           <Row>
-            <Col className="modal_content_h1" xs={{ span: 22 }} sm={{ span: 22 }} lg={{ span: 22 }}>
+            <Col
+              className="modal_content_h1"
+              xs={{ span: 22 }}
+              sm={{ span: 22 }}
+              lg={{ span: 22 }}
+            >
               <h1>{display.title}</h1>
             </Col>
             {/* <Col xs={{ span: 2 }} sm={{ span: 2 }} lg={{ span: 2 }}>
@@ -166,55 +225,67 @@ function ProductList(props) {
                   </b>
                 </div>
                 <Row className="model_smallImageList">
-                <Col xs={{ span: 4 }} sm={{ span: 4 }} lg={{ span: 4 }}></Col>
+                  <Col xs={{ span: 4 }} sm={{ span: 4 }} lg={{ span: 4 }}></Col>
                   <Col xs={{ span: 4 }} sm={{ span: 4 }} lg={{ span: 4 }}>
-                    <div className="model_Small_List" onClick={() => handleImageClick(display.image1)} key={0}>
+                    <div
+                      className="model_Small_List"
+                      onClick={() => handleImageClick(display.image1)}
+                      key={0}
+                    >
                       &nbsp;&nbsp;
                       <b>
                         <img
                           className="model_image_small"
                           src={display.image1}
                           alt={display.title}
-                          
                         />
                       </b>
                     </div>
                   </Col>
                   <Col xs={{ span: 4 }} sm={{ span: 4 }} lg={{ span: 4 }}>
-                    <div className="model_Small_List" onClick={() => handleImageClick(display.image2)} key={0}>
+                    <div
+                      className="model_Small_List"
+                      onClick={() => handleImageClick(display.image2)}
+                      key={0}
+                    >
                       &nbsp;&nbsp;
                       <b>
                         <img
                           className="model_image_small"
                           src={display.image2}
                           alt={display.title}
-                          
                         />
                       </b>
                     </div>
                   </Col>
                   <Col xs={{ span: 4 }} sm={{ span: 4 }} lg={{ span: 4 }}>
-                    <div className="model_Small_List" onClick={() => handleImageClick(display.image3)} key={0}>
+                    <div
+                      className="model_Small_List"
+                      onClick={() => handleImageClick(display.image3)}
+                      key={0}
+                    >
                       &nbsp;&nbsp;
                       <b>
                         <img
                           className="model_image_small"
                           src={display.image3}
                           alt={display.title}
-                        
                         />
                       </b>
                     </div>
                   </Col>
                   <Col xs={{ span: 4 }} sm={{ span: 4 }} lg={{ span: 4 }}>
-                    <div className="model_Small_List" key={0} onClick={() => handleImageClick(display.image4)}>
+                    <div
+                      className="model_Small_List"
+                      key={0}
+                      onClick={() => handleImageClick(display.image4)}
+                    >
                       &nbsp;&nbsp;
                       <b>
                         <img
                           className="model_image_small"
                           src={display.image4}
                           alt={display.title}
-                          
                         />
                       </b>
                     </div>
@@ -254,9 +325,9 @@ function ProductList(props) {
           textAlign: "center",
         }}
         footer={[
-          <Button key="send" onClick={handleCancel1}>
-            Send
-          </Button>,
+          // <Button key="send" onClick={handleCancel1}>
+          //   Send
+          // </Button>,
           <Button key="back" onClick={handleCancel1}>
             Cancel
           </Button>,
@@ -271,7 +342,7 @@ function ProductList(props) {
               lg={{ span: 10 }}
             >
               <h1>{display.title}</h1>
-              
+
               {/* <h5>ඔබට මෙය මිලදී ගැනීමට හො වැඩි විස්තර දැන ගැනීමට අවශ්‍යනම් ඔබගේ නම, දුරකතනය අංකය ඔබගේ අවශ්‍යතාවය (මිලදී ගැනීමට ,විස්තර දැන ගැනීමට) සදහන් කර අප වෙත පනිවිඩයක් යොමු කරන්න. හැකි ඉක්මනින් අප ආයතනයෙන් ඔබ වෙතට ඇමතුමක් ලබා දෙනු ඇත.</h5> */}
               <h5>
                 If you want to know more details about buying this, send us a
@@ -279,56 +350,72 @@ function ProductList(props) {
                 know the details). We will give you a call from our company as
                 soon as possible.
               </h5>
-              <img src={selectedImage} alt="firstShowImage"/>
+              <img src={selectedImage} alt="firstShowImage" />
             </Col>
-            
+
             <Col
               className="Model_Form"
               xs={{ span: 24 }}
               sm={{ span: 16 }}
               lg={{ span: 12 }}
             >
-              <Space direction="vertical" className="contact-form">
-                <h2 className="form-title">Place Order</h2>
-                <form onSubmit={handleSubmit}>
-                  <label htmlFor="name" className="form-label">
-                    Name:
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="Enter your Name"
-                    value={name}
-                    onChange={handleNameChange}
-                    required
-                    className="form-input"
-                  />
-                  <label htmlFor="email" className="form-label">
-                    Number:
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="Enter your Number"
-                    value={email}
-                    onChange={handleEmailChange}
-                    required
-                    className="form-input"
-                  />
-                  <label htmlFor="message" className="form-label">
-                    Message:
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    placeholder="Put Your Message Here "
-                    value={message}
-                    onChange={handleMessageChange}
-                    required
-                    className="form-input"
-                  ></textarea>
+              <Space direction="vertical">
+                <h2 >Place Order</h2>
+                <form
+                  ref={formRef}
+                  onSubmit={handleSubmit}
+                  className="contact-form"
+                >
+                  <div className="form-field">
+                    <label htmlFor="name">Your Name</label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={form.name}
+                      onChange={handleChange}
+                      placeholder="What's your good name?"
+                    />
+                  </div>
+                  <div className="form-field">
+                    <label htmlFor="number">Your Number</label>
+                    <input
+                      type="tel"
+                      id="mobile"
+                      name="mobile"
+                      value={form.mobile}
+                      onChange={handleChange}
+                      placeholder="What's your Mobile Number?"
+                    />
+                  </div>
+                  <div className="form-field">
+                    <label htmlFor="email">Brand</label>
+                    <input
+                      type="text"
+                      id="brand"
+                      name="brand"
+                      value={display.title}
+                      onChange={display.author}
+                      placeholder="Selected One"
+                    />
+                  </div>
+                  <div className="form-field">
+                    <label htmlFor="message">Your Message</label>
+                    <textarea
+                      id="message"
+                      rows={7}
+                      name="message"
+                      value={form.message}
+                      onChange={handleChange}
+                      placeholder="What do you want to say?"
+                    />
+                  </div>
+                  {errorMessage && (
+                    <div className="error-message">{errorMessage}</div>
+                  )}
+                  <button type="submit">
+                    {loading ? "Sending..." : "Send"}
+                  </button>
                 </form>
               </Space>
             </Col>
@@ -347,9 +434,12 @@ const Domestic = [
     price: 85000,
     image: domestic1,
     image1: domestic1,
-    image2: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-    image3: "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
-    image4: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image2:
+      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image3:
+      "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
+    image4:
+      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
     Sinhala_describe:
       "ජල පෙරහන යනු භෞතික බාධකයක්, රසායනික ක්‍රියාවලියක් හෝ ජීව විද්‍යාත්මක ක්‍රියාවලියක් මගින් ජලයෙන් අපද්‍රව්‍ය සහ අපවිත්‍ර ද්‍රව්‍ය ඉවත් කරන උපකරණයකි. ජල පෙරණයක පරමාර්ථය වන්නේ අවසාදිත, ක්ලෝරීන්, බැක්ටීරියා, වෛරස්, බැර ලෝහ සහ වෙනත් හානිකර රසායනික ද්‍රව්‍ය වැනි අනවශ්‍ය ද්‍රව්‍ය ඉවත් කිරීමෙන් ජලයේ ගුණාත්මකභාවය වැඩි දියුණු කිරීමයි.",
     English_describe:
@@ -362,10 +452,14 @@ const Domestic = [
     price: 85000,
     image:
       "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-    image1: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-    image2: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-    image3: "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
-    image4: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image1:
+      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image2:
+      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image3:
+      "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
+    image4:
+      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
   },
   {
     id: 3,
@@ -374,9 +468,12 @@ const Domestic = [
     price: 85000,
     image: domestic1,
     image1: domestic1,
-    image2: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-    image3: "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
-    image4: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image2:
+      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image3:
+      "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
+    image4:
+      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
   },
   {
     id: 4,
@@ -385,10 +482,14 @@ const Domestic = [
     price: 85000,
     image:
       "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-    image1: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-    image2: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-    image3: "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
-    image4: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image1:
+      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image2:
+      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image3:
+      "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
+    image4:
+      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
   },
   {
     id: 5,
@@ -397,10 +498,14 @@ const Domestic = [
     price: 85000,
     image:
       "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-    image1: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-    image2: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-    image3: "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
-    image4: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image1:
+      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image2:
+      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image3:
+      "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
+    image4:
+      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
   },
   {
     id: 6,
@@ -408,10 +513,14 @@ const Domestic = [
     author: "Harper Lee",
     price: 85000,
     image: domestic1,
-    image1: domestic1,
-    image2: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-    image3: "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
-    image4: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image1:
+      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image2:
+      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image3:
+      "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
+    image4:
+      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
   },
   {
     id: 7,
@@ -420,10 +529,14 @@ const Domestic = [
     price: 85000,
     image:
       "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-      image1: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-      image2: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-      image3: "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
-      image4: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image1:
+      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image2:
+      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image3:
+      "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
+    image4:
+      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
   },
   {
     id: 8,
@@ -432,10 +545,14 @@ const Domestic = [
     price: 85000,
     image:
       "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
-    image1: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-    image2: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-    image3: "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
-    image4: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image1:
+      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image2:
+      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image3:
+      "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
+    image4:
+      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
   },
   {
     id: 9,
@@ -443,11 +560,15 @@ const Domestic = [
     author: "Douglas Adams",
     price: 85000,
     image: "https://m.media-amazon.com/images/I/71Iq1Ihu4fL._SL1500_.jpg",
-    
-    image1: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-    image2: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-    image3: "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
-    image4: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+
+    image1:
+      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image2:
+      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image3:
+      "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
+    image4:
+      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
   },
   {
     id: 10,
@@ -456,11 +577,15 @@ const Domestic = [
     price: 85000,
     image:
       "https://cdn11.bigcommerce.com/s-mpfo2gcqca/images/stencil/1280x1280/products/476/2363/brondell-capella-RC250-reverse-osmosis-water-filtration-system-white__88084.1660687393.jpg?c=1",
-      
-    image1: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-    image2: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-    image3: "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
-    image4: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+
+    image1:
+      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image2:
+      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image3:
+      "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
+    image4:
+      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
   },
   {
     id: 11,
@@ -469,11 +594,15 @@ const Domestic = [
     price: 85000,
     image:
       "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-     
-    image1: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-    image2: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-    image3: "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
-    image4: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+
+    image1:
+      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image2:
+      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image3:
+      "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
+    image4:
+      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
   },
   {
     id: 12,
@@ -482,10 +611,14 @@ const Domestic = [
     price: 85000,
     image:
       "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
-    image1: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-    image2: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-    image3: "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
-    image4: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image1:
+      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image2:
+      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image3:
+      "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
+    image4:
+      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
   },
 ];
 
