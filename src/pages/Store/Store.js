@@ -8,7 +8,7 @@ import com from "../../assests/images/Filter/com.png";
 import ind from "../../assests/images/Filter/ind.png";
 import ion from "../../assests/images/Filter/ion.png";
 import spare from "../../assests/images/Filter/spare.png";
-import about from "../../components/SliderImges/banner.gif";
+// import about from "../../assests/images/Service/back.jpg";
 import about2 from "../../assests/images/store/storebanner2.gif";
 
 function Store() {
@@ -37,7 +37,7 @@ function Store() {
             style={{ maxWidth: "100%" }}
           />
           <img
-            src={about}
+            src={about2}
             className="topimage2"
             alt="Domestic Icon"
             style={{ maxWidth: "100%" }}

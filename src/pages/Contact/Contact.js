@@ -123,7 +123,7 @@ const Contact = () => {
               />
             }
             actions={[
-              <a href="tel:YOUR_PHONE_NUMBER">
+              <a href="tel:0714055143">
                 <PhoneOutlined style={{ fontSize: "34px" }} />
               </a>,
               <a href="mailto:sskwaterfilters96@gmail.com">

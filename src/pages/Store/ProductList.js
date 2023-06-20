@@ -3,6 +3,7 @@ import { Modal, Button, Space, Row, Col } from "antd";
 import { useState, useRef } from "react";
 import domestic1 from "../../assests/images/store/domestic/1.jpg";
 import emailjs from "emailjs-com";
+// import { red } from "@material-ui/core/colors";
 // import domestic2 from "../../assests/images/store/domestic/2.jpg";
 // import domestic3 from "../../assests/images/store/domestic/3.jpg";
 // import domestic4 from "../../assests/images/store/domestic/4.jpg";
@@ -192,9 +193,11 @@ function ProductList(props) {
       <Modal
         open={isModalVisible}
         onCancel={handleCancel}
-        width={800}
+        width={600}
         style={{
           textAlign: "center",
+         
+        
         }}
         footer={[
           <Button key="order" onClick={() => setIsModalVisible1(true)}>
@@ -233,8 +236,8 @@ function ProductList(props) {
                   </b>
                 </div>
                 <Row className="model_smallImageList">
-                  <Col xs={{ span: 4 }} sm={{ span: 4 }} lg={{ span: 4 }}></Col>
-                  <Col xs={{ span: 4 }} sm={{ span: 4 }} lg={{ span: 4 }}>
+                  <Col xs={{ span: 2 }} sm={{ span: 2 }} lg={{ span: 2 }}></Col>
+                  <Col xs={{ span: 5 }} sm={{ span: 5 }} lg={{ span: 5 }}>
                     <div
                       className="model_Small_List"
                       onClick={() => handleImageClick(display.image1)}
@@ -250,7 +253,7 @@ function ProductList(props) {
                       </b>
                     </div>
                   </Col>
-                  <Col xs={{ span: 4 }} sm={{ span: 4 }} lg={{ span: 4 }}>
+                  <Col xs={{ span: 5 }} sm={{ span: 5 }} lg={{ span: 5 }}>
                     <div
                       className="model_Small_List"
                       onClick={() => handleImageClick(display.image2)}
@@ -266,7 +269,7 @@ function ProductList(props) {
                       </b>
                     </div>
                   </Col>
-                  <Col xs={{ span: 4 }} sm={{ span: 4 }} lg={{ span: 4 }}>
+                  <Col xs={{ span: 5 }} sm={{ span: 5 }} lg={{ span: 5 }}>
                     <div
                       className="model_Small_List"
                       onClick={() => handleImageClick(display.image3)}
@@ -282,7 +285,7 @@ function ProductList(props) {
                       </b>
                     </div>
                   </Col>
-                  <Col xs={{ span: 4 }} sm={{ span: 4 }} lg={{ span: 4 }}>
+                  <Col xs={{ span: 5 }} sm={{ span: 5 }} lg={{ span: 5 }}>
                     <div
                       className="model_Small_List"
                       key={0}
@@ -298,7 +301,7 @@ function ProductList(props) {
                       </b>
                     </div>
                   </Col>
-                  <Col xs={{ span: 4 }} sm={{ span: 4 }} lg={{ span: 4 }}></Col>
+                  <Col xs={{ span: 2 }} sm={{ span: 2 }} lg={{ span: 2 }}></Col>
                 </Row>
                 <div className="model_about" key={1}>
                   {/* <h3>ABOUT</h3> */}
@@ -309,7 +312,7 @@ function ProductList(props) {
                     <h5>Stages : {display.stages}</h5>
                     <h5>Teachnology : {display.technology}</h5>
                     <h5>Features : {display.feature}</h5>
-                    <h5>Price : {display.price} RS</h5>
+                    <h4>Price : {display.price} RS</h4>
                   </div>
                   <br />
                   {/* <span className="justify-text">{display.Sinhala_describe}</span> */}
@@ -426,12 +429,15 @@ function ProductList(props) {
                       placeholder="What do you want to say?"
                     />
                   </div>
+                  
                   {errorMessage && (
                     <div className="error-message">{errorMessage}</div>
                   )}
                   <button type="submit">
                     {loading ? "Sending..." : "Send"}
                   </button>
+
+
                 </form>
               </Space>
             </Col>

@@ -21,12 +21,13 @@
   border: 2px solid blue;
 }
 .store_hedder_container{
-  border: 1px solid rgb(243, 240, 240);
+  border: 2px solid rgb(60, 145, 202);
   height: 160px;
   margin: 50px;
   border-radius: 10px;
   margin-top: -150px;
   background-color: #f7f4f4;
+  background-image: url("../../assests/images/blog//blog-banner.jpg");
 }
 .store_hedder_container h1{
   text-align: center;
@@ -124,6 +125,7 @@
 
 .product-details {
   margin-top: 10px;
+
 }
 
 .product-brand {
@@ -163,6 +165,11 @@
   margin-bottom: 0px;
   margin-top: 40px;
 }
+.model_contact h5 {
+  margin-top: 30px;
+  font-size: 16px;
+  text-align: center;
+}
 .Model_Form {
   margin: auto;
 }
@@ -181,7 +188,7 @@
   padding: 10px;
 }
 .model_Small_List:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
   border-radius: none;
   cursor: pointer;
 }
@@ -219,6 +226,7 @@
   margin-bottom: -50px;
 }
 
+
 .modal-title {
   font-size: 36px;
   font-weight: bold;
@@ -231,16 +239,23 @@
 .product_details{
   margin-top: 20px;
   border: 1px solid rgb(186, 208, 216);
-  width: 65%;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
   border-radius: 10px;
   margin-bottom: -80px;
+  background-color: rgb(241, 244, 245);
 }
 
 .product_details h5{
   margin-top: 10px;
   line-height: 1.5;
+  
+}
+.product_details h4{
+  margin-bottom: 10px;
+  line-height: 1.5;
+  color: red;
   
 }
 .contact-form {
@@ -310,8 +325,9 @@
     margin: auto;
   }
   .model_contact h5 {
-    font-size: 16px;
-    text-align: justify;
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center;
   }
   .topimage1 {
     display: none;
@@ -451,20 +467,19 @@
   }
   .model_Small_List{
     margin-top: 0px;
-    margin: 5px;
+    margin: 0px;
     border-radius: 5px;
     margin-top: 20px;
+    margin-right: 10px;
   }
   .model_image_small{
-    max-width: 80%;
+    max-width: 100%;
     height: auto;
     align-items: center;
     padding: 5px;
+    margin-top: -15px;
   }
-  .model_image {
-    margin-left: 0px;
-    margin-top: 0px;
-  }
+  
   .model_contact img{
     width: 200px;
     margin-bottom: 20px;
