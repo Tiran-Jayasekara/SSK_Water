@@ -2,9 +2,9 @@ import "./Store.css";
 import { Modal, Button, Space, Row, Col } from "antd";
 import { useState } from "react";
 import domestic1 from "../../assests/images/store/domestic/1.jpg";
-import domestic2 from "../../assests/images/store/domestic/2.jpg";
-import domestic3 from "../../assests/images/store/domestic/3.jpg";
-import domestic4 from "../../assests/images/store/domestic/4.jpg";
+// import domestic2 from "../../assests/images/store/domestic/2.jpg";
+// import domestic3 from "../../assests/images/store/domestic/3.jpg";
+// import domestic4 from "../../assests/images/store/domestic/4.jpg";
 
 function ProductList(props) {
   // Example array of books
@@ -127,8 +127,9 @@ function ProductList(props) {
         ))}
 
       <Modal
-        // onClose={handleCancel}
+        
         open={isModalVisible}
+        onCancel={handleCancel}
         width={800}
         style={{
           textAlign: "center",
@@ -247,7 +248,7 @@ function ProductList(props) {
       <Modal
         // eslint-disable-next-line no-useless-concat
         open={isModalVisible1}
-        // onClose={handleCancel1}
+        onCancel={handleCancel1}
         width={800}
         style={{
           textAlign: "center",
@@ -278,7 +279,7 @@ function ProductList(props) {
                 know the details). We will give you a call from our company as
                 soon as possible.
               </h5>
-              <img src={selectedImage}/>
+              <img src={selectedImage} alt="firstShowImage"/>
             </Col>
             
             <Col
@@ -345,7 +346,7 @@ const Domestic = [
     author: "Douglas Adams",
     price: 85000,
     image: domestic1,
-    image1: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image1: domestic1,
     image2: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
     image3: "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
     image4: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
@@ -372,7 +373,7 @@ const Domestic = [
     author: "F. Scott ",
     price: 85000,
     image: domestic1,
-    image1: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image1: domestic1,
     image2: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
     image3: "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
     image4: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
@@ -407,7 +408,7 @@ const Domestic = [
     author: "Harper Lee",
     price: 85000,
     image: domestic1,
-    image1: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image1: domestic1,
     image2: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
     image3: "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
     image4: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
