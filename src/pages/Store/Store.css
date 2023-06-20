@@ -4,11 +4,39 @@
 }
 
 .nav-bar-container {
-  border: 1px solid #000000;
+  border: 1px solid #ddd6d6;
   padding: 10px;
-  border-radius: 10px;
-  background-color: #f1f1f1;
+  border-radius: 5px;
+  background-color: #ffffff;
 }
+.small-image {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.small-image.active {
+  border: 2px solid blue;
+}
+.store_hedder_container{
+  border: 1px solid rgb(243, 240, 240);
+  height: 160px;
+  margin: 50px;
+  border-radius: 10px;
+  margin-top: -150px;
+  background-color: #f7f4f4;
+}
+.store_hedder_container h1{
+  text-align: center;
+  margin-top: 55px;
+  font-size: 40px;
+  
+  color: rgb(21, 8, 90);
+  
+  
+}
+
 
 .Store_Nav_Bar img {
   align-items: center;
@@ -18,15 +46,13 @@
 }
 
 .product-container:hover::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
+ 
+  border-radius: 5px;
   pointer-events: none;
   box-shadow: 0 0 10px rgba(1, 0, 2, 0.2); /* Add box shadow */
+}
+.Store_Header{
+  margin-bottom: 50px;
 }
 .Store_Header h1 {
   text-align: center;
@@ -34,7 +60,8 @@
 }
 .Store_Header img {
   margin-bottom: 20px;
-  max-width: 100%;
+  max-width: max-content;
+  height: 200px;
 }
 
 .Store_Nav_Bar {
@@ -55,7 +82,7 @@
   border: 1px solid whitesmoke;
   border-radius: 30px;
 }
-.centered {
+.centered1 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -63,8 +90,12 @@
   text-align: center;
   margin-top: 20px;
 }
-.centered h3 {
+.centered1 h3 {
   font-size: 14px;
+}
+.centered1 img {
+  width: 66px;
+  height: auto;
 }
 
 .button-icon:hover {
@@ -75,15 +106,16 @@
 /* Product List */
 
 .product-container {
-  width: 100%;
+  width: 90%;
   height: 100%;
   padding: 10px;
-  border: 2px solid rgb(224, 221, 230);
-  border-radius: 20px;
+  border: 1px solid rgb(224, 221, 230);
+  border-radius: 5px;
   background-color: #fff;
   text-align: center;
   position: relative;
 }
+
 
 .product-title {
   margin-bottom: 10px;
@@ -102,15 +134,14 @@
 }
 
 .product-image {
-  max-width: 150px;
-  max-height: 150px;
+  max-width: 120px;
+  max-height: 120px;
   height: auto;
   margin-top: 10px;
 }
-.product-image:hover {
-  content: url("../../assests/images/about/gif4.gif");
+.product-container:hover {
   transform: scale(1.1);
-  margin-bottom: 10px;
+  border-radius: none;
   cursor: pointer;
 }
 
@@ -123,12 +154,31 @@
 .model_contact {
   margin: auto;
 }
+.model_contact img{
+  width: 200px;
+  margin-bottom: 0px;
+}
 .Model_Form {
   margin: auto;
 }
 
 .model_image {
-  width: 300px;
+  width: 200px;
+}
+.model_Small_List{
+  border: 1px solid rgb(137, 124, 124);
+  margin-top: 50px;
+  margin: 10px;
+  border-radius: 5px;
+}
+.model_image_small{
+  max-width: 80%;
+  padding: 10px;
+}
+.model_Small_List:hover {
+  transform: scale(1.1);
+  border-radius: none;
+  cursor: pointer;
 }
 
 .modal-content {
@@ -158,12 +208,20 @@
 
 .justify-text {
   text-align: justify;
+  
+}
+.model_about h3{
+  margin-bottom: -50px;
 }
 
 .modal-title {
   font-size: 36px;
   font-weight: bold;
   margin-bottom: 20px;
+}
+.model_smallImageList{
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .contact-form {
@@ -203,6 +261,9 @@
 }
 
 @media screen and (max-width: 1200px) {
+  .store_hedder_container{
+    display: none;
+  }
   .Store_Nav_Bar h3 {
     text-align: center;
     font-size: 16px;
@@ -243,8 +304,8 @@
     font-size: 10px;
   }
   .Store_Header img {
-    height: 70px;
-    margin-bottom: 10px;
+    height: 150px;
+    margin-bottom: -100px;
     width: auto;
   }
   .topimage1 {
@@ -312,14 +373,11 @@
     margin-bottom: 40px;
     width: 300px;
     margin-left: 0px;
-    font-size: 16px;
+    font-size: 14px;
   }
 
-  .model_contact h5 {
-    font-size: 14px;
-    text-align: justify;
-    margin-top: 20px;
-    margin-bottom: 20px;
+  .modal_content_h1 h1 {
+    margin-left: 20px;
   }
 
   .form_col {
@@ -366,5 +424,33 @@
   .Store_product_List {
     margin-top: -10px;
   }
+
+  .centered1 img {
+    width: 30px;
+    height: 30px;
+    margin-left: 12px;
+  }
+  .model_Small_List{
+    margin-top: 0px;
+    margin: 5px;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+  .model_image_small{
+    max-width: 80%;
+    height: auto;
+    align-items: center;
+    padding: 5px;
+  }
+  .model_image {
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+  .model_contact img{
+    width: 200px;
+    margin-bottom: 20px;
+    margin-top: -10px;
+  }
+  
   
 }

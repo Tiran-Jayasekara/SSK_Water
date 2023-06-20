@@ -172,35 +172,27 @@ const Contact = () => {
         </Col>
         <Col xs={{ span: 22 }} sm={{ span: 4 }} lg={{ span: 4 }}></Col>
 
-        <Col
-          className="Contact_us"
-          xs={{ span: 24 }}
-          sm={{ span: 24 }}
-          lg={{ span: 24 }}
-        >
-          <h1>CONTACT US</h1>
-        </Col>
-
-        <Col xs={{ span: 2 }} sm={{ span: 2 }} lg={{ span: 4 }}></Col>
+        <Col xs={{ span: 22 }} sm={{ span: 2 }} lg={{ span: 4 }}></Col>
         <Col
           className="contsct_para"
           xs={{ span: 20 }}
           sm={{ span: 20 }}
-          lg={{ span: 16 }}
+          lg={{ span: 6 }}
         >
+          <h1>CONTACT US</h1>
           <p>
             SSK Water Filter Technology is always here to assist with your
             queries and solve your problems. Contact us through this short form,
             and we are committed to your service. <br></br>
           </p>
         </Col>
-        <Col xs={{ span: 2 }} sm={{ span: 2 }} lg={{ span: 4 }}></Col>
+        
 
         <Col
           className="centered"
-          xs={{ span: 24 }}
+          xs={{ span: 20 }}
           sm={{ span: 24 }}
-          lg={{ span: 24 }}
+          lg={{ span: 12 }}
         >
           <form ref={formRef} onSubmit={handleSubmit} className="contact-form">
             <div className="form-field">
@@ -242,6 +234,7 @@ const Contact = () => {
             <button type="submit">{loading ? "Sending..." : "Send"}</button>
           </form>
         </Col>
+        <Col xs={{ span: 22 }} sm={{ span: 2 }} lg={{ span: 2 }}></Col>
         <Footer />
       </Row>
     </>

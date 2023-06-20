@@ -8,8 +8,7 @@ import com from "../../assests/images/Filter/com.png";
 import ind from "../../assests/images/Filter/ind.png";
 import ion from "../../assests/images/Filter/ion.png";
 import spare from "../../assests/images/Filter/spare.png";
-import Testimonials from "../../components/Testimonial/Testimonials";
-import about from "../../assests/images/store/storebanner.gif";
+import about from "../../components/SliderImges/banner.gif";
 import about2 from "../../assests/images/store/storebanner2.gif";
 
 function Store() {
@@ -31,8 +30,24 @@ function Store() {
     <>
       <Row>
         <Col className="Store_Header" xs={{ span: 24 }} lg={{ span: 24 }}>
-          <img src={about} className="topimage1" alt="Domestic Icon" style={{ maxWidth: "100%" }} />
-          <img src={about2} className="topimage2" alt="Domestic Icon" style={{ maxWidth: "100%" }} />
+          <img
+            src={about2}
+            className="topimage1"
+            alt="Domestic Icon"
+            style={{ maxWidth: "100%" }}
+          />
+          <img
+            src={about}
+            className="topimage2"
+            alt="Domestic Icon"
+            style={{ maxWidth: "100%" }}
+          />
+        </Col>
+        <Col xs={{ span: 24 }} lg={{ span: 24 }}>
+          <div className="store_hedder_container">
+            <h1>WELL COME TO OUR STORE</h1>
+
+          </div>
         </Col>
 
         {/* <Col className="Store_Header" xs={{ span: 24 }} lg={{ span: 24 }}>
@@ -53,7 +68,7 @@ function Store() {
                 sm={{ span: 4 }}
                 lg={{ span: 24 }}
               >
-                <div className="centered">
+                <div className="centered1">
                   <img
                     src={domestic}
                     alt="Domestic Icon"
@@ -72,7 +87,7 @@ function Store() {
                 sm={{ span: 4 }}
                 lg={{ span: 24 }}
               >
-                <div className="centered">
+                <div className="centered1">
                   <img
                     src={com}
                     alt="Domestic Icon"
@@ -91,7 +106,7 @@ function Store() {
                 sm={{ span: 4 }}
                 lg={{ span: 24 }}
               >
-                <div className="centered">
+                <div className="centered1">
                   <img
                     src={ind}
                     alt="Industrial"
@@ -110,7 +125,7 @@ function Store() {
                 sm={{ span: 4 }}
                 lg={{ span: 24 }}
               >
-                <div className="centered">
+                <div className="centered1">
                   <img
                     src={ion}
                     alt="Industrial"
@@ -129,7 +144,7 @@ function Store() {
                 sm={{ span: 4 }}
                 lg={{ span: 24 }}
               >
-                <div className="centered">
+                <div className="centered1">
                   <img
                     src={spare}
                     alt="Industrial"
@@ -153,12 +168,10 @@ function Store() {
         >
           <div className="Products_List">{data}</div>
         </Col>
-        <div className="addSpace">
-          <Col className="addSpace"></Col>
-        </div>
-        <Col>
+
+        {/* <Col>
           <Testimonials />
-        </Col>
+        </Col> */}
       </Row>
     </>
   );

@@ -13,6 +13,10 @@
 .single__testimonial {
   margin-left: 100px;
 }
+.single__testimonial p{
+  text-align: justify;
+}
+
 .customer_header {
   margin-left: 100px;
 }

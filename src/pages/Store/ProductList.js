@@ -1,10 +1,10 @@
 import "./Store.css";
 import { Modal, Button, Space, Row, Col } from "antd";
 import { useState } from "react";
-import domestic from "../../assests/images/about/gif3.gif";
-import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
-
+import domestic1 from "../../assests/images/store/domestic/1.jpg";
+import domestic2 from "../../assests/images/store/domestic/2.jpg";
+import domestic3 from "../../assests/images/store/domestic/3.jpg";
+import domestic4 from "../../assests/images/store/domestic/4.jpg";
 
 function ProductList(props) {
   // Example array of books
@@ -17,9 +17,16 @@ function ProductList(props) {
       author: product.author,
       price: product.price,
       image: product.image,
+      image1:product.image1,
+      image2:product.image2,
+      image3:product.image3,
+      image4:product.image4,
       Sinhala_describe: product.Sinhala_describe,
       English_describe: product.English_describe,
     });
+    setSelectedImage(
+      product.image,
+    );
     setIsModalVisible(true);
   };
 
@@ -57,6 +64,11 @@ function ProductList(props) {
   };
 
   const [display, setDisplay] = useState({});
+  const [selectedImage, setSelectedImage] = useState(display.image);
+
+  const handleImageClick = (image) => {
+    setSelectedImage(image);
+  };
 
   let productList;
 
@@ -82,7 +94,7 @@ function ProductList(props) {
       {productList
         .reduce(
           (rows, product, index) =>
-            index % 4 === 0
+            index % 6 === 0
               ? rows.concat([[product]])
               : (rows[rows.length - 1].push(product), rows),
           []
@@ -95,14 +107,14 @@ function ProductList(props) {
                 className="Store_product_List"
                 xs={{ span: 12 }}
                 sm={{ span: 10 }}
-                lg={{ span: 5 }}
+                lg={{ span: 4 }}
               >
-                <div className="product-container">
+                <div className="product-container" onClick={() => imageClick(product)}>
                   <img
                     className="product-image"
                     src={product.image}
                     alt={product.title}
-                    onClick={() => imageClick(product)}
+                    
                   />
                   <h5 className="product-title">{product.title}</h5>
                   <div className="product-details">
@@ -115,7 +127,7 @@ function ProductList(props) {
         ))}
 
       <Modal
-        onClose={handleCancel}
+        // onClose={handleCancel}
         open={isModalVisible}
         width={800}
         style={{
@@ -132,7 +144,7 @@ function ProductList(props) {
       >
         <div className="modal-content">
           <Row>
-            <Col xs={{ span: 22 }} sm={{ span: 22 }} lg={{ span: 22 }}>
+            <Col className="modal_content_h1" xs={{ span: 22 }} sm={{ span: 22 }} lg={{ span: 22 }}>
               <h1>{display.title}</h1>
             </Col>
             {/* <Col xs={{ span: 2 }} sm={{ span: 2 }} lg={{ span: 2 }}>
@@ -147,12 +159,68 @@ function ProductList(props) {
                   <b>
                     <img
                       className="model_image"
-                      src={domestic}
+                      src={selectedImage}
                       alt={display.title}
                     />
                   </b>
                 </div>
-                <div key={1}>
+                <Row className="model_smallImageList">
+                <Col xs={{ span: 4 }} sm={{ span: 4 }} lg={{ span: 4 }}></Col>
+                  <Col xs={{ span: 4 }} sm={{ span: 4 }} lg={{ span: 4 }}>
+                    <div className="model_Small_List" onClick={() => handleImageClick(display.image1)} key={0}>
+                      &nbsp;&nbsp;
+                      <b>
+                        <img
+                          className="model_image_small"
+                          src={display.image1}
+                          alt={display.title}
+                          
+                        />
+                      </b>
+                    </div>
+                  </Col>
+                  <Col xs={{ span: 4 }} sm={{ span: 4 }} lg={{ span: 4 }}>
+                    <div className="model_Small_List" onClick={() => handleImageClick(display.image2)} key={0}>
+                      &nbsp;&nbsp;
+                      <b>
+                        <img
+                          className="model_image_small"
+                          src={display.image2}
+                          alt={display.title}
+                          
+                        />
+                      </b>
+                    </div>
+                  </Col>
+                  <Col xs={{ span: 4 }} sm={{ span: 4 }} lg={{ span: 4 }}>
+                    <div className="model_Small_List" onClick={() => handleImageClick(display.image3)} key={0}>
+                      &nbsp;&nbsp;
+                      <b>
+                        <img
+                          className="model_image_small"
+                          src={display.image3}
+                          alt={display.title}
+                        
+                        />
+                      </b>
+                    </div>
+                  </Col>
+                  <Col xs={{ span: 4 }} sm={{ span: 4 }} lg={{ span: 4 }}>
+                    <div className="model_Small_List" key={0} onClick={() => handleImageClick(display.image4)}>
+                      &nbsp;&nbsp;
+                      <b>
+                        <img
+                          className="model_image_small"
+                          src={display.image4}
+                          alt={display.title}
+                          
+                        />
+                      </b>
+                    </div>
+                  </Col>
+                  <Col xs={{ span: 4 }} sm={{ span: 4 }} lg={{ span: 4 }}></Col>
+                </Row>
+                <div className="model_about" key={1}>
                   <h3>ABOUT</h3>
                   <br />
                   {/* <span className="justify-text">{display.Sinhala_describe}</span> */}
@@ -179,7 +247,7 @@ function ProductList(props) {
       <Modal
         // eslint-disable-next-line no-useless-concat
         open={isModalVisible1}
-        onClose={handleCancel1}
+        // onClose={handleCancel1}
         width={800}
         style={{
           textAlign: "center",
@@ -202,9 +270,17 @@ function ProductList(props) {
               lg={{ span: 10 }}
             >
               <h1>{display.title}</h1>
+              
               {/* <h5>ඔබට මෙය මිලදී ගැනීමට හො වැඩි විස්තර දැන ගැනීමට අවශ්‍යනම් ඔබගේ නම, දුරකතනය අංකය ඔබගේ අවශ්‍යතාවය (මිලදී ගැනීමට ,විස්තර දැන ගැනීමට) සදහන් කර අප වෙත පනිවිඩයක් යොමු කරන්න. හැකි ඉක්මනින් අප ආයතනයෙන් ඔබ වෙතට ඇමතුමක් ලබා දෙනු ඇත.</h5> */}
-              <h5>If you want to know more details about buying this, send us a message with your name, phone number and your need (to buy, to know the details). We will give you a call from our company as soon as possible.</h5>
+              <h5>
+                If you want to know more details about buying this, send us a
+                message with your name, phone number and your need (to buy, to
+                know the details). We will give you a call from our company as
+                soon as possible.
+              </h5>
+              <img src={selectedImage}/>
             </Col>
+            
             <Col
               className="Model_Form"
               xs={{ span: 24 }}
@@ -268,7 +344,11 @@ const Domestic = [
     title: "Domestic",
     author: "Douglas Adams",
     price: 85000,
-    image: "https://m.media-amazon.com/images/I/71Iq1Ihu4fL._SL1500_.jpg",
+    image: domestic1,
+    image1: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image2: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image3: "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
+    image4: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
     Sinhala_describe:
       "ජල පෙරහන යනු භෞතික බාධකයක්, රසායනික ක්‍රියාවලියක් හෝ ජීව විද්‍යාත්මක ක්‍රියාවලියක් මගින් ජලයෙන් අපද්‍රව්‍ය සහ අපවිත්‍ර ද්‍රව්‍ය ඉවත් කරන උපකරණයකි. ජල පෙරණයක පරමාර්ථය වන්නේ අවසාදිත, ක්ලෝරීන්, බැක්ටීරියා, වෛරස්, බැර ලෝහ සහ වෙනත් හානිකර රසායනික ද්‍රව්‍ය වැනි අනවශ්‍ය ද්‍රව්‍ය ඉවත් කිරීමෙන් ජලයේ ගුණාත්මකභාවය වැඩි දියුණු කිරීමයි.",
     English_describe:
@@ -280,15 +360,22 @@ const Domestic = [
     author: "Harper Lee",
     price: 85000,
     image:
-      "https://cdn11.bigcommerce.com/s-mpfo2gcqca/images/stencil/1280x1280/products/476/2363/brondell-capella-RC250-reverse-osmosis-water-filtration-system-white__88084.1660687393.jpg?c=1",
+      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image1: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image2: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image3: "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
+    image4: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
   },
   {
     id: 3,
     title: "Domestic 3 ",
     author: "F. Scott ",
     price: 85000,
-    image:
-      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image: domestic1,
+    image1: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image2: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image3: "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
+    image4: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
   },
   {
     id: 4,
@@ -296,22 +383,34 @@ const Domestic = [
     author: "F. Scott ",
     price: 85000,
     image:
-      "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
+      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image1: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image2: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image3: "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
+    image4: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
   },
   {
     id: 5,
     title: "Domestic 1 ",
     author: "Douglas Adams",
     price: 85000,
-    image: "https://m.media-amazon.com/images/I/71Iq1Ihu4fL._SL1500_.jpg",
+    image:
+      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image1: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image2: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image3: "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
+    image4: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
   },
   {
     id: 6,
     title: "Domestic 2 ",
     author: "Harper Lee",
     price: 85000,
-    image:
-      "https://cdn11.bigcommerce.com/s-mpfo2gcqca/images/stencil/1280x1280/products/476/2363/brondell-capella-RC250-reverse-osmosis-water-filtration-system-white__88084.1660687393.jpg?c=1",
+    image: domestic1,
+    image1: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image2: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image3: "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
+    image4: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
   },
   {
     id: 7,
@@ -320,6 +419,10 @@ const Domestic = [
     price: 85000,
     image:
       "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+      image1: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+      image2: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+      image3: "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
+      image4: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
   },
   {
     id: 8,
@@ -328,6 +431,10 @@ const Domestic = [
     price: 85000,
     image:
       "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
+    image1: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image2: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image3: "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
+    image4: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
   },
   {
     id: 9,
@@ -335,6 +442,11 @@ const Domestic = [
     author: "Douglas Adams",
     price: 85000,
     image: "https://m.media-amazon.com/images/I/71Iq1Ihu4fL._SL1500_.jpg",
+    
+    image1: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image2: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image3: "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
+    image4: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
   },
   {
     id: 10,
@@ -343,6 +455,11 @@ const Domestic = [
     price: 85000,
     image:
       "https://cdn11.bigcommerce.com/s-mpfo2gcqca/images/stencil/1280x1280/products/476/2363/brondell-capella-RC250-reverse-osmosis-water-filtration-system-white__88084.1660687393.jpg?c=1",
+      
+    image1: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image2: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image3: "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
+    image4: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
   },
   {
     id: 11,
@@ -351,6 +468,11 @@ const Domestic = [
     price: 85000,
     image:
       "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+     
+    image1: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image2: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image3: "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
+    image4: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
   },
   {
     id: 12,
@@ -359,6 +481,10 @@ const Domestic = [
     price: 85000,
     image:
       "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
+    image1: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image2: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image3: "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
+    image4: "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
   },
 ];
 

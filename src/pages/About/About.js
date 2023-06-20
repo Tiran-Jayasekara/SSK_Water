@@ -10,9 +10,9 @@ import trusted from "../../assests/images/about/trusted.png";
 import acolabarateout from "../../assests/images/about/colabarate.png";
 import responce from "../../assests/images/about/responce.png";
 import prograsive from "../../assests/images/about/prograsive.png";
-import Affordable from "../../assests/images/about/Affordable.gif";
-import HighestQuality from "../../assests/images/about/batch1.gif";
-import delivery from "../../assests/images/about/delivery.gif";
+import Affordable from "../../assests/images/about/aff.gif";
+import HighestQuality from "../../assests/images/about/quality.gif";
+import delivery from "../../assests/images/about/delevary.gif";
 import smart from "../../assests/images/about/smart.gif";
 import martin from "../../assests/images/about/company.png";
 import Footer from "../../components/Footer/Footer";
@@ -200,12 +200,13 @@ const About = () => {
             >
               <h1>OUR MISSION</h1>
               <p>
-                our mission is to innovate and develop intelligent water
-                filtration solutions that deliver exceptional quality,
-                efficiency, and environmental sustainability.our mission is to
-                innovate and develop intelligent water filtration solutions that
-                deliver exceptional quality, efficiency, and environmental
-                sustainability.
+                our mission is to provide individuals, businesses, and
+                organizations with the highest quality water filtration
+                solutions. We strive to deliver exceptional products that ensure
+                clean and safe water while prioritizing efficiency and
+                environmental sustainability. Through innovation, research, and
+                a commitment to excellence, we aim to improve lives and
+                contribute to a healthier, more sustainable future for all.
               </p>
             </Col>
           </Row>
@@ -228,7 +229,7 @@ const About = () => {
             lg={{ span: 4 }}
           >
             <img className="" src={Affordable} alt="" />
-            <h5>Affordabilty</h5>
+            {/* <h5>Affordabilty</h5> */}
           </Col>
           <Col
             className="purpose"
@@ -237,7 +238,7 @@ const About = () => {
             lg={{ span: 4 }}
           >
             <img className="" src={HighestQuality} alt="" />
-            <h5>Highest quality</h5>
+            {/* <h5>Highest quality</h5> */}
           </Col>
           <Col
             className="purpose"
@@ -246,7 +247,7 @@ const About = () => {
             lg={{ span: 4 }}
           >
             <img className="" src={delivery} alt="" />
-            <h5>Island wide coverage</h5>
+            {/* <h5>Island wide coverage</h5> */}
           </Col>
           <Col
             className="purpose"
@@ -255,7 +256,7 @@ const About = () => {
             lg={{ span: 4 }}
           >
             <img className="" src={smart} alt="" />
-            <h5>Smart Solutions</h5>
+            {/* <h5>Smart Solutions</h5> */}
           </Col>
           <Col xs={{ span: 2 }} sm={{ span: 2 }} lg={{ span: 2 }}></Col>
         </Row>

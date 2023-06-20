@@ -5,19 +5,19 @@ import "./features.css";
 const FeatureData = [
   {
     title: "Quick Delivery",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum molestias, aperiam doloribus aut sapiente praesentium eos iste dicta amet itaque!",
+    desc: "Quick delivery of premium water filtration solutions for clean and safe water, enhancing your quality of life",
     icon: "ri-home-4-fill",
   },
 
   {
     title: "24 hour Service",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum molestias, aperiam doloribus aut sapiente praesentium eos iste dicta amet itaque!",
+    desc: "24-hour customer service for prompt assistance and support with your water filtration needs",
     icon: "ri-customer-service-2-line",
   },
 
   {
     title: "1 year warranty",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum molestias, aperiam doloribus aut sapiente praesentium eos iste dicta amet itaque!",
+    desc: "Enjoy peace of mind with a 1-year warranty on our water filtration solutions.",
     icon: "ri-hand-heart-line",
   },
 ];

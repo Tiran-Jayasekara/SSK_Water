@@ -62,10 +62,10 @@ const BlogPost = () => {
 
       <Row gutter={[16, 16]}>
         <Col xs={{ span: 20 }} lg={{ span: 2 }}></Col>
-        <Col className="blogParaImg" xs={{ span: 20 }} lg={{ span: 10 }}>
+        <Col className="blogParaImg" xs={{ span: 22 }} lg={{ span: 10 }}>
           <div className="choose__img">
             <ReactPlayer
-              url="https://youtu.be/pdwp6S1lrP0"
+              url="https://www.youtube.com/embed/rlpqflI0ghI"
               controls
               width="100%"
               height="350px"
