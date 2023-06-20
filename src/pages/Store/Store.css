@@ -16,6 +16,7 @@
   cursor: pointer;
 }
 
+
 .small-image.active {
   border: 2px solid blue;
 }
@@ -154,9 +155,13 @@
 .model_contact {
   margin: auto;
 }
+.modal_content_h1 h1{
+  margin-bottom: 30px;
+}
 .model_contact img{
   width: 200px;
   margin-bottom: 0px;
+  margin-top: 40px;
 }
 .Model_Form {
   margin: auto;
@@ -166,7 +171,7 @@
   width: 200px;
 }
 .model_Small_List{
-  border: 1px solid rgb(137, 124, 124);
+  border: 1px solid  rgb(186, 208, 216);
   margin-top: 50px;
   margin: 10px;
   border-radius: 5px;
@@ -223,7 +228,21 @@
   margin-left: auto;
   margin-right: auto;
 }
+.product_details{
+  margin-top: 20px;
+  border: 1px solid rgb(186, 208, 216);
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  margin-bottom: -80px;
+}
 
+.product_details h5{
+  margin-top: 10px;
+  line-height: 1.5;
+  
+}
 .contact-form {
   padding: 20px;
   background-color: #f1f1f1;
@@ -450,6 +469,23 @@
     width: 200px;
     margin-bottom: 20px;
     margin-top: 10px;
+  }
+
+  .product_details{
+    margin-top: 20px;
+    border: 1px solid rgb(186, 208, 216);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    margin-bottom: -60px;
+  }
+
+  .product_details h5{
+    line-height: 0;
+    text-align: center;
+    margin-top: 30px;
+
   }
   
   

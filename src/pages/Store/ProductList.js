@@ -1,6 +1,6 @@
 import "./Store.css";
 import { Modal, Button, Space, Row, Col } from "antd";
-import { useState , useRef } from "react";
+import { useState, useRef } from "react";
 import domestic1 from "../../assests/images/store/domestic/1.jpg";
 import emailjs from "emailjs-com";
 // import domestic2 from "../../assests/images/store/domestic/2.jpg";
@@ -17,6 +17,12 @@ function ProductList(props) {
       title: product.title,
       author: product.author,
       price: product.price,
+      application: product.application,
+      installation: product.installation,
+      waterTank: product.waterTank,
+      stages: product.stages,
+      technology: product.technology,
+      feature: product.feature,
       image: product.image,
       image1: product.image1,
       image2: product.image2,
@@ -32,15 +38,14 @@ function ProductList(props) {
   const formRef = useRef();
   const [form, setForm] = useState({
     name: "",
-    email: "",
+    mobile: "",
     message: "",
   });
 
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [isModalVisible1, setIsModalVisible1] = useState(false);
- 
-  const [errorMessage, setErrorMessage] = useState("");
 
+  const [errorMessage, setErrorMessage] = useState("");
 
   const [loading, setLoading] = useState(false);
   const handleChange = (e) => {
@@ -52,8 +57,6 @@ function ProductList(props) {
       [name]: value,
     });
   };
-
-  
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -82,7 +85,12 @@ function ProductList(props) {
           to_name: "SSK Water Filters Technology",
           from_email: form.mobile,
           to_email: "sskwaterfilters96@gmail.com",
-          message: form.message+ " "+ display.id+ " "+ display.title+ " "+ display.author+ " "+ display.price,
+          id: display.id,
+          title: display.title,
+          author: display.author,
+          price: display.price,
+          number: form.mobile,
+          message: form.message,
         },
         "LO1v1GenOPxy5VzGy"
       )
@@ -93,7 +101,7 @@ function ProductList(props) {
 
           setForm({
             name: "",
-            email: "",
+            mobile: "",
             message: "",
           });
           setErrorMessage("");
@@ -293,23 +301,31 @@ function ProductList(props) {
                   <Col xs={{ span: 4 }} sm={{ span: 4 }} lg={{ span: 4 }}></Col>
                 </Row>
                 <div className="model_about" key={1}>
-                  <h3>ABOUT</h3>
+                  {/* <h3>ABOUT</h3> */}
+                  <div className="product_details">
+                    <h5>Application : {display.application}</h5>
+                    <h5>Installation Type : {display.installation}</h5>
+                    <h5>Water Tank : {display.waterTank}</h5>
+                    <h5>Stages : {display.stages}</h5>
+                    <h5>Teachnology : {display.technology}</h5>
+                    <h5>Features : {display.feature}</h5>
+                    <h5>Price : {display.price} RS</h5>
+                  </div>
                   <br />
                   {/* <span className="justify-text">{display.Sinhala_describe}</span> */}
                   <br />
                   <br />
-                  <span className="justify-text">
+                  {/* <span className="justify-text">
                     {display.English_describe}
-                  </span>
+                  </span> */}
                   <br />
                 </div>
-
-                <div key={8}>
+                {/* <div key={8}>
                   <h4>Brand : {display.author}</h4>
                 </div>
                 <div key={9}>
                   <h4>Created : {display.title}</h4>
-                </div>
+                </div> */}
               </Space>
             </Col>
           </Row>
@@ -360,7 +376,7 @@ function ProductList(props) {
               lg={{ span: 12 }}
             >
               <Space direction="vertical">
-                <h2 >Place Order</h2>
+                <h2>Place Order</h2>
                 <form
                   ref={formRef}
                   onSubmit={handleSubmit}
@@ -378,7 +394,7 @@ function ProductList(props) {
                     />
                   </div>
                   <div className="form-field">
-                    <label htmlFor="number">Your Number</label>
+                    <label htmlFor="mobile">Your Number</label>
                     <input
                       type="tel"
                       id="mobile"
@@ -389,13 +405,13 @@ function ProductList(props) {
                     />
                   </div>
                   <div className="form-field">
-                    <label htmlFor="email">Brand</label>
+                    <label htmlFor="Brand">Brand</label>
                     <input
                       type="text"
                       id="brand"
                       name="brand"
                       value={display.title}
-                      onChange={display.author}
+                      readOnly
                       placeholder="Selected One"
                     />
                   </div>
@@ -432,6 +448,12 @@ const Domestic = [
     title: "Domestic",
     author: "Douglas Adams",
     price: 85000,
+    application: "Household",
+    installation: "Wall Mounted",
+    waterTank: "11L",
+    stages: "6 Stage Filter",
+    technology: "RO + uv + TDS",
+    feature: "Transferase the process",
     image: domestic1,
     image1: domestic1,
     image2:
@@ -450,6 +472,12 @@ const Domestic = [
     title: "Domestic 2 ",
     author: "Harper Lee",
     price: 85000,
+    application: "Household",
+    installation: "Wall Mounted",
+    waterTank: "11L",
+    stages: "6 Stage Filter",
+    technology: "RO + uv + TDS",
+    feature: "Transferase the process",
     image:
       "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
     image1:
@@ -466,6 +494,12 @@ const Domestic = [
     title: "Domestic 3 ",
     author: "F. Scott ",
     price: 85000,
+    application: "Household",
+    installation: "Wall Mounted",
+    waterTank: "11L",
+    stages: "6 Stage Filter",
+    technology: "RO + uv + TDS",
+    feature: "Transferase the process",
     image: domestic1,
     image1: domestic1,
     image2:
@@ -480,6 +514,12 @@ const Domestic = [
     title: "Domestic 4 ",
     author: "F. Scott ",
     price: 85000,
+    application: "Household",
+    installation: "Wall Mounted",
+    waterTank: "11L",
+    stages: "6 Stage Filter",
+    technology: "RO + uv + TDS",
+    feature: "Transferase the process",
     image:
       "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
     image1:
@@ -496,6 +536,12 @@ const Domestic = [
     title: "Domestic 1 ",
     author: "Douglas Adams",
     price: 85000,
+    application: "Household",
+    installation: "Wall Mounted",
+    waterTank: "11L",
+    stages: "6 Stage Filter",
+    technology: "RO + uv + TDS",
+    feature: "Transferase the process",
     image:
       "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
     image1:
@@ -512,6 +558,12 @@ const Domestic = [
     title: "Domestic 2 ",
     author: "Harper Lee",
     price: 85000,
+    application: "Household",
+    installation: "Wall Mounted",
+    waterTank: "11L",
+    stages: "6 Stage Filter",
+    technology: "RO + uv + TDS",
+    feature: "Transferase the process",
     image: domestic1,
     image1:
       "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
@@ -527,6 +579,12 @@ const Domestic = [
     title: "Domestic 3 ",
     author: "F. Scott ",
     price: 85000,
+    application: "Household",
+    installation: "Wall Mounted",
+    waterTank: "11L",
+    stages: "6 Stage Filter",
+    technology: "RO + uv + TDS",
+    feature: "Transferase the process",
     image:
       "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
     image1:
@@ -543,6 +601,12 @@ const Domestic = [
     title: "Domestic 4 ",
     author: "F. Scott ",
     price: 85000,
+    application: "Household",
+    installation: "Wall Mounted",
+    waterTank: "11L",
+    stages: "6 Stage Filter",
+    technology: "RO + uv + TDS",
+    feature: "Transferase the process",
     image:
       "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
     image1:
@@ -559,6 +623,12 @@ const Domestic = [
     title: "Domestic 1 ",
     author: "Douglas Adams",
     price: 85000,
+    application: "Household",
+    installation: "Wall Mounted",
+    waterTank: "11L",
+    stages: "6 Stage Filter",
+    technology: "RO + uv + TDS",
+    feature: "Transferase the process",
     image: "https://m.media-amazon.com/images/I/71Iq1Ihu4fL._SL1500_.jpg",
 
     image1:
@@ -575,6 +645,12 @@ const Domestic = [
     title: "Domestic 2 ",
     author: "Harper Lee",
     price: 85000,
+    application: "Household",
+    installation: "Wall Mounted",
+    waterTank: "11L",
+    stages: "6 Stage Filter",
+    technology: "RO + uv + TDS",
+    feature: "Transferase the process",
     image:
       "https://cdn11.bigcommerce.com/s-mpfo2gcqca/images/stencil/1280x1280/products/476/2363/brondell-capella-RC250-reverse-osmosis-water-filtration-system-white__88084.1660687393.jpg?c=1",
 
@@ -592,6 +668,12 @@ const Domestic = [
     title: "Domestic 3 ",
     author: "F. Scott ",
     price: 85000,
+    application: "Household",
+    installation: "Wall Mounted",
+    waterTank: "11L",
+    stages: "6 Stage Filter",
+    technology: "RO + uv + TDS",
+    feature: "Transferase the process",
     image:
       "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
 
@@ -609,6 +691,12 @@ const Domestic = [
     title: "Domestic 4 ",
     author: "F. Scott ",
     price: 85000,
+    application: "Household",
+    installation: "Wall Mounted",
+    waterTank: "11L",
+    stages: "6 Stage Filter",
+    technology: "RO + uv + TDS",
+    feature: "Transferase the process",
     image:
       "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
     image1:
