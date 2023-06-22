@@ -5,7 +5,7 @@ import { Col, Row } from "antd";
 import "./about.css";
 
 import logo from "../../assests/images/about/gif.gif";
-import about from "../../components/SliderImges/banner.gif";
+import about from "../../assests/images/about/5.png";
 import trusted from "../../assests/images/about/trusted.png";
 import acolabarateout from "../../assests/images/about/colabarate.png";
 import responce from "../../assests/images/about/responce.png";

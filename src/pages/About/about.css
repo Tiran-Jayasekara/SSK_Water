@@ -1,7 +1,7 @@
 .blog_container_about {
   border: 1px solid #ccc; /* Adjust the border styles as needed */
   margin: 100px;
-  margin-top: 20px;
+  margin-top: 50px;
   margin-bottom: 20px;
   border-radius: 20px;
   /* Adjust the padding as needed */
@@ -9,8 +9,10 @@
 .vision {
   background-color: #a2bee5;
   padding-bottom: 30px;
-  margin-top: 60px;
+  margin-top: 80px;
+  margin-bottom: 40px;
 }
+
 .about_header h1 {
   margin-left: auto;
   margin-right: auto;
@@ -37,9 +39,10 @@
   margin-right: auto;
 }
 .Philosophy h1 {
-  margin-top: 20px;
-  font-size: 30px;
+  margin-top: 10px;
+  font-size: 40px;
   text-align: center;
+  color:  #1C67B5 !important;
 }
 .Philosophy1 {
   margin-left: auto;
@@ -50,8 +53,8 @@
 
 .Philosophy1 h1 {
   margin-top: 120px;
-  font-size: 30px;
-
+  font-size: 40px;
+  color:  #1C67B5 !important;;
   text-align: center;
   margin-bottom: 50px;
 }
@@ -94,8 +97,8 @@
 }
 .blog_header1 h6 {
   text-align: center;
-  font-size: 40px;
-  color: #605454;
+  font-size: 50px;
+  color:  #1C67B5 !important;
   margin-top: 20px;
   margin-bottom: 20px;
 }

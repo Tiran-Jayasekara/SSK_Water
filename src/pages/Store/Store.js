@@ -8,8 +8,10 @@ import com from "../../assests/images/Filter/com.png";
 import ind from "../../assests/images/Filter/ind.png";
 import ion from "../../assests/images/Filter/ion.png";
 import spare from "../../assests/images/Filter/spare.png";
-// import about from "../../assests/images/Service/back.jpg";
-import about2 from "../../assests/images/store/storebanner2.gif";
+import image1 from "../../assests/images/store/1.png";
+import image2 from "../../assests/images/store/4.png";
+import image3 from "../../assests/images/store/3.png";
+import Slider from "react-slick";
 
 function Store() {
   const [data, SetData] = useState([]);
@@ -26,27 +28,68 @@ function Store() {
     });
   };
 
+
+
+
+
+  const [showDots, setShowDots] = useState(window.innerWidth > 1000);
+
+  useEffect(() => {
+    const handleWindowResize = () => {
+      setShowDots(window.innerWidth > 1000);
+    };
+
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
+
+  const settings = {
+    infinite: true,
+    dots: showDots,
+    speed: 2000,
+    slidesToShow: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    slidesToScroll: 1,
+  };
+
+
   return (
     <>
       <Row>
-        <Col className="Store_Header" xs={{ span: 24 }} lg={{ span: 24 }}>
-          <img
-            src={about2}
+            <Col
+              className="store_slider"
+              xs={{ span: 24 }}
+              sm={{ span: 24 }}
+              lg={{ span: 24 }}
+            >
+              <Slider {...settings}>
+                <div className="slideshow-container-store">
+                  <img src={image1} alt="slideshow" />
+                </div>
+                
+                <div className="slideshow-container-store">
+                  <img src={image2} alt="slideshow" />
+                </div>
+                <div className="slideshow-container-store">
+                  <img src={image3} alt="slideshow" />
+                </div>
+              </Slider>
+            </Col>
+          
+          {/* <img
+            src={about3}
             className="topimage1"
             alt="Domestic Icon"
             style={{ maxWidth: "100%" }}
-          />
-          <img
-            src={about2}
-            className="topimage2"
-            alt="Domestic Icon"
-            style={{ maxWidth: "100%" }}
-          />
-        </Col>
+          /> */}
+          
         <Col xs={{ span: 24 }} lg={{ span: 24 }}>
           <div className="store_hedder_container">
-            <h1>WELL COME TO OUR STORE</h1>
-
+            <h1> OUR STORE</h1>
           </div>
         </Col>
 

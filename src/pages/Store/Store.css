@@ -15,28 +15,36 @@
   margin-right: 10px;
   cursor: pointer;
 }
+.slideshow-container-store img {
+  width: 1600px;
+  height: 300px;
+
+}
 
 
 .small-image.active {
   border: 2px solid blue;
 }
 .store_hedder_container{
-  border: 2px solid rgb(60, 145, 202);
-  height: 160px;
+  border: 1px solid rgba(0, 1, 2, 0.395);
+  height: 120px;
   margin: 50px;
-  border-radius: 10px;
-  margin-top: -150px;
-  background-color: #f7f4f4;
-  background-image: url("../../assests/images/blog//blog-banner.jpg");
+  margin-left: 100px;
+  margin-right: 100px;
+  border-radius: 0px;
+  margin-top: 20px;
+  background-image: url("../../assests/images/store/back.jpg");
+}
+
+.store_slider{
+  display: none;
 }
 .store_hedder_container h1{
   text-align: center;
-  margin-top: 55px;
+  margin-top: 35px;
   font-size: 40px;
-  
-  color: rgb(21, 8, 90);
-  
-  
+  font-family: "LEXEND", sans-serif;
+  color: rgb(255, 255, 255);
 }
 
 
@@ -62,8 +70,8 @@
 }
 .Store_Header img {
   margin-bottom: 20px;
-  max-width: max-content;
-  height: 200px;
+  width: 2240px;
+  height: 400px;
 }
 
 .Store_Nav_Bar {
@@ -501,6 +509,17 @@
     text-align: center;
     margin-top: 30px;
 
+  }
+  .slideshow-container-store img {
+    max-width: 100%;
+    height: auto;
+  
+  }
+  .nav-bar-container {
+    margin-top: -60px;
+  }
+  .store_slider{
+    display: block;
   }
   
   

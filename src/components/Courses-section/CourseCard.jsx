@@ -30,21 +30,21 @@ const CourseCard = (props) => {
         <h6 className="course__title">{title}</h6>
 
         <div className="d-flex ">
-          <p className="lesson d-flex gap-1">
+          <p className="lesson d-flex gap-2">
             <i className="ri-book-open-line"></i> {Price} RS
           </p>
 
-          <p className="para d-flex gap-1">
+          <p className="para d-flex gap-2">
             <i className="ri-user-line"></i> {customer} Sold
           </p>
         </div>
 
         <div className=" d-flex">
-          <p className="rating d-flex gap-1">
+          <p className="rating d-flex gap-2">
             <i className="ri-star-fill"></i> {rating}
           </p>
 
-          <p className="para2 d-flex gap-1">
+          <p className="para2 d-flex gap-2">
             <a href="google.com"> Order Now</a>
           </p>
         </div>

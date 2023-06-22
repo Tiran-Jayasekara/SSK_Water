@@ -33,6 +33,8 @@
 .service_Header h1{
   font-size: 40px;
   margin-top: -60px;
+  color: #1C67B5 !important;
+
 }
 
 .Our_filters {
@@ -68,5 +70,8 @@
   }
   .para2{
     margin-left: 100px;
+  }
+  .course__details {
+    margin-bottom: 20px;
   }
 }

@@ -27,8 +27,13 @@
 .Voice_header {
   margin: auto;
 }
+.voice_text h2 {
+  font-size: 40px;
+  color:  #1C67B5 !important;
+}
 .voice_text {
   margin: auto;
+  color:  #1C67B5 !important;;
 }
 
 @media screen and (max-width: 1200px) {
@@ -76,23 +81,26 @@
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    margin-left: -10px;
   }
   .slider {
     margin-left: -50px;
   }
   .single__testimonial {
-    margin-left: 40px;
+    margin-left: 20px;
   }
   .single__testimonial h6 {
     font-size: 14px;
     margin-top: 20px;
+    
   }
   .single__testimonial p {
     font-size: 10px;
+    line-height: 2;
   }
   .customer_header {
     margin-top: 10px;
-    margin-left: 40px;
+    margin-left: 20px;
     margin-right: auto;
   }
 }

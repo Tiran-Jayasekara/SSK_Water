@@ -8,7 +8,7 @@ import drink from "../../assests/images/blog/drink.png";
 import lanka from "../../assests/images/blog/lanka.png";
 import water from "../../assests/images/blog/water.png";
 
-import about from "../../components/SliderImges/banner.gif";
+import about from "../../assests/images/blog/3.png";
 
 const Blog = () => {
   return (

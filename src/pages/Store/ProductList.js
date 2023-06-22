@@ -363,13 +363,13 @@ function ProductList(props) {
               <h1>{display.title}</h1>
 
               {/* <h5>ඔබට මෙය මිලදී ගැනීමට හො වැඩි විස්තර දැන ගැනීමට අවශ්‍යනම් ඔබගේ නම, දුරකතනය අංකය ඔබගේ අවශ්‍යතාවය (මිලදී ගැනීමට ,විස්තර දැන ගැනීමට) සදහන් කර අප වෙත පනිවිඩයක් යොමු කරන්න. හැකි ඉක්මනින් අප ආයතනයෙන් ඔබ වෙතට ඇමතුමක් ලබා දෙනු ඇත.</h5> */}
+              <img src={selectedImage} alt="firstShowImage" />
               <h5>
                 If you want to know more details about buying this, send us a
                 message with your name, phone number and your need (to buy, to
                 know the details). We will give you a call from our company as
                 soon as possible.
               </h5>
-              <img src={selectedImage} alt="firstShowImage" />
             </Col>
 
             <Col

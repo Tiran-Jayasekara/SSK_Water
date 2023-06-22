@@ -21,6 +21,7 @@
 .contsct_para h1 {
   text-align: center;
   margin-bottom: 20px;
+  color:  #1C67B5 !important;;
 }
 .contsct_para {
   margin: auto;
@@ -36,6 +37,7 @@
   margin-right: auto;
   text-align: center;
   margin-top: 50px;
+  color:  #1C67B5 !important;;
 }
 
 .banner-container {
