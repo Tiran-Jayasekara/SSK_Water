@@ -20,31 +20,46 @@
   height: 300px;
 
 }
+.chooseBuy{
+  
+}
+.form-field2{
+  margin-right: auto;
+}
+
+/* Styling the checkbox */
+input[type="checkbox"] {
+  width: 40px; /* Adjust the size of the checkbox */
+  height: 40px; /* Adjust the size of the checkbox */
+  margin-left: 10px;
+  
+}
+
+
 
 
 .small-image.active {
   border: 2px solid blue;
 }
 .store_hedder_container{
-  border: 1px solid rgba(0, 1, 2, 0.395);
+  border: 2px solid rgba(0, 1, 2, 0.395);
   height: 120px;
   margin: 50px;
   margin-left: 100px;
   margin-right: 100px;
   border-radius: 0px;
-  margin-top: 20px;
-  background-image: url("../../assests/images/store/back.jpg");
+  margin-top: -60px;
+  background-color: rgb(255, 255, 255);
+  box-shadow:#1C67B5;
 }
 
-.store_slider{
-  display: none;
-}
 .store_hedder_container h1{
   text-align: center;
-  margin-top: 35px;
-  font-size: 40px;
+  margin-top: 30px;
+  font-size: 50px;
   font-family: "LEXEND", sans-serif;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+
 }
 
 
@@ -167,6 +182,7 @@
 }
 .modal_content_h1 h1{
   margin-bottom: 30px;
+  color: #1C67B5 !important;;
 }
 .model_contact img{
   width: 200px;
@@ -178,13 +194,23 @@
   font-size: 16px;
   text-align: center;
 }
+.model_contact h1 {
+ 
+  color: #1C67B5 !important;
+}
 .Model_Form {
   margin: auto;
 }
 
 .model_image {
   width: 200px;
+  transition: transform 0.3s;
 }
+
+.model_image:hover {
+  transform: scale(1.2);
+}
+
 .model_Small_List{
   border: 1px solid  rgb(186, 208, 216);
   margin-top: 50px;
@@ -285,6 +311,7 @@
   margin-bottom: 10px;
 }
 
+
 .form-input {
   padding: 0px;
   font-size: 16px;
@@ -293,6 +320,7 @@
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
 }
+
 
 .form-input:focus {
   outline: none;
@@ -317,7 +345,7 @@
     margin: auto;
   }
   .topimage1 {
-    display: none;
+    display: block;
 }
 }
 
@@ -337,9 +365,7 @@
     font-size: 14px;
     text-align: center;
   }
-  .topimage1 {
-    display: none;
-}
+  
 }
 @media screen and (max-width: 460px) {
   .Store_Nav_Bar h3 {
@@ -351,9 +377,7 @@
     margin-bottom: -100px;
     width: auto;
   }
-  .topimage1 {
-    display: none;
-  }
+  
   .topimage2 {
     display: block;
   }
@@ -510,13 +534,9 @@
     margin-top: 30px;
 
   }
-  .slideshow-container-store img {
-    max-width: 100%;
-    height: auto;
   
-  }
   .nav-bar-container {
-    margin-top: -60px;
+    margin-top: -30px;
   }
   .store_slider{
     display: block;

@@ -24,12 +24,12 @@ const FeatureData = [
 
 const Features = () => {
   return (
-    <section style={{ marginTop: "30px" }}>
-      <Container>
-        <Row>
+    <section style={{ marginTop: "30px" }} className="features">
+      <Container >
+        <Row >
           {FeatureData.map((item, index) => (
             <Col lg="4" md="6" key={index}>
-              <div className="single__feature text-center px-4">
+              <div className="single__feature text-center px-4 service_p" >
                 <h2 className="mb-3">
                   <i className={item.icon}></i>
                 </h2>

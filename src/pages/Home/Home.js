@@ -16,8 +16,9 @@ function Home() {
     <>
       <ImageSlider/>
       <ChooseUs />
-      <Services />
       <Cards />
+      <Services />
+      
       <Features />
       <Testimonials />
       <Footer />

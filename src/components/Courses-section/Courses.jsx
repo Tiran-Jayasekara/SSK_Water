@@ -46,7 +46,7 @@ function Services() {
           <h1>WHAT WE SELL?</h1>
         </Col>
       </Row>
-      <Row className="cards_col_2" gutter={0} justify="center">
+      <Row className="cards_col_3" gutter={0} justify="center">
         <Col lg={{ span: 2 }} xs={{ span: 20 }}></Col>
         {coursesData.map((item) => (
           <Col

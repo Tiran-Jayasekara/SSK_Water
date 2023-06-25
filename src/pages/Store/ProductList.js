@@ -9,6 +9,11 @@ import emailjs from "emailjs-com";
 // import domestic4 from "../../assests/images/store/domestic/4.jpg";
 
 function ProductList(props) {
+  const [checkboxValues, setCheckboxValues] = useState({
+    buy: false,
+    getInfo: false,
+  });
+
   // Example array of books
 
   const imageClick = (product) => {
@@ -34,6 +39,14 @@ function ProductList(props) {
     });
     setSelectedImage(product.image);
     setIsModalVisible(true);
+  };
+
+  const handleCheckboxChange = (event) => {
+    const { name, checked } = event.target;
+    setCheckboxValues((prevValues) => ({
+      ...prevValues,
+      [name]: checked,
+    }));
   };
 
   const formRef = useRef();
@@ -69,11 +82,11 @@ function ProductList(props) {
     }
 
     // Check if the message field is empty
-    if (form.message.trim() === "") {
-      // Do not send the message if it's empty
-      alert("Message field is empty. Please enter a message.");
-      return;
-    }
+    // if (form.message.trim() === "") {
+    //   // Do not send the message if it's empty
+    //   alert("Message field is empty. Please enter a message.");
+    //   return;
+    // }
 
     setLoading(true);
 
@@ -91,7 +104,8 @@ function ProductList(props) {
           author: display.author,
           price: display.price,
           number: form.mobile,
-          message: form.message,
+          buy: checkboxValues.buy ? "Buy" : "Not Selected",
+          getInfo: checkboxValues.getInfo ? "Get Info" : "Not Selected",
         },
         "LO1v1GenOPxy5VzGy"
       )
@@ -99,6 +113,7 @@ function ProductList(props) {
         () => {
           setLoading(false);
           alert("Thank you. I will get back to you as soon as possible.");
+          handleCancel1();
 
           setForm({
             name: "",
@@ -118,7 +133,7 @@ function ProductList(props) {
 
   const handleCancel = () => {
     setIsModalVisible(false);
-    console.log("handleCancel");
+    
   };
 
   const handleCancel1 = () => {
@@ -196,8 +211,6 @@ function ProductList(props) {
         width={600}
         style={{
           textAlign: "center",
-         
-        
         }}
         footer={[
           <Button key="order" onClick={() => setIsModalVisible1(true)}>
@@ -225,7 +238,7 @@ function ProductList(props) {
             </Col> */}
             <Col xs={{ span: 24 }} sm={{ span: 10 }} lg={{ span: 24 }}>
               <Space direction="vertical">
-                <div key={0}>
+                <div key={0} className="image-container">
                   &nbsp;&nbsp;
                   <b>
                     <img
@@ -418,7 +431,63 @@ function ProductList(props) {
                       placeholder="Selected One"
                     />
                   </div>
+
                   <div className="form-field">
+                  <label htmlFor="choose">Choose</label>
+
+                    <Row>
+                    <Col
+                      className="checkbuy"
+                      xs={{ span: 8 }}
+                      sm={{ span: 8 }}
+                      lg={{ span: 8}}
+                    >
+                      <label>
+                        <input
+                          type="checkbox"
+                          name="buy"
+                          checked={checkboxValues.buy}
+                          onChange={handleCheckboxChange}
+                          style={{ height: '20px', width: '20px' }}
+                        />
+                      </label>
+                    </Col>
+
+
+                    <Col className=""
+                      xs={{ span: 16 }}
+                      sm={{ span: 16 }}
+                      lg={{ span: 16}}>
+                        <h6>I want to Buy</h6>
+                    </Col>
+                  
+                    <Col
+                      className=""
+                      xs={{ span: 8 }}
+                      sm={{ span: 8 }}
+                      lg={{ span: 8 }}
+                    >
+                      <label>
+                        <input
+                          type="checkbox"
+                          name="getInfo"
+                          checked={checkboxValues.getInfo}
+                          onChange={handleCheckboxChange}
+                          style={{ height: '20px', width: '20px' }}
+                        />
+                        
+                      </label>
+                    </Col>
+                    <Col className=""
+                      xs={{ span: 16 }}
+                      sm={{ span: 16 }}
+                      lg={{ span: 16}}>
+                        <h6>I want to Get More Details</h6>
+                    </Col>
+                    </Row>
+                  </div>
+
+                  {/* <div className="form-field">
                     <label htmlFor="message">Your Message</label>
                     <textarea
                       id="message"
@@ -428,16 +497,14 @@ function ProductList(props) {
                       onChange={handleChange}
                       placeholder="What do you want to say?"
                     />
-                  </div>
-                  
+                  </div> */}
+
                   {errorMessage && (
                     <div className="error-message">{errorMessage}</div>
                   )}
                   <button type="submit">
                     {loading ? "Sending..." : "Send"}
                   </button>
-
-
                 </form>
               </Space>
             </Col>

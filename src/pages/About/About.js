@@ -1,6 +1,7 @@
 import React from "react";
 
-import { Col, Row } from "antd";
+import { Col, Row, Button } from 'antd';
+import { Link } from 'react-router-dom';
 
 import "./about.css";
 
@@ -21,13 +22,25 @@ const About = () => {
   return (
     <>
       <Row>
-        <Col xs={{ span: 24 }} lg={{ span: 24 }}>
+        <Col xs={{ span: 24 }} lg={{ span: 24 }} className="aboutBanner">
           <img
             src={about}
             alt="about"
-            style={{ maxWidth: "100%", height: "auto" }}
+            
           ></img>
         </Col>
+      </Row>
+      <Row className="about_hedder_container">
+        <Col xs={{ span: 14 }} lg={{ span: 14 }}>
+          <h1>IF YOU WANT TO GET MORE DETAILS, PLEASE CONTACT US</h1>
+        </Col>
+        <Col xs={{ span: 10 }} lg={{ span: 10 }} className="center-button1">
+          <Link to="/contact" className="">
+            <Button>CONTACT US</Button>
+          </Link>
+        </Col>
+      </Row>
+      <Row>
 
         <div className="blog_container_about">
           <Row className="Main_Blog" gutter={[16, 16]}>
@@ -190,7 +203,7 @@ const About = () => {
       </Row>
 
       <Row>
-        <div className="vision">
+        <div className="mission">
           <Row>
             <Col
               className="Philosophy"

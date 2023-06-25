@@ -1,5 +1,9 @@
 .whowe {
-  margin-top: 60px;
+  margin-top: 100px;
+  height: "auto";
+  background-color: #ffffff;
+
+  margin-bottom: 100px;
 }
 .Choose_h1 {
   margin-left: auto;
@@ -10,6 +14,7 @@
 .Choose_h1 h1 {
   font-size: 40px;
   margin-top: 50px;
+  font-weight:600;
   color:#1C67B5 !important;
 }
 
@@ -19,8 +24,21 @@
   margin-left: auto;
   margin-right: auto;
 }
+p {
+  color: #494949;
+  letter-spacing: 0.8px;
+  line-height: 28px;
+  font-size: 20px;
+  
+}
+
 .describe p {
   text-align: justify;
+  color: #464545;
+  letter-spacing: 0.8px;
+  line-height: 28px;
+  font-size: 20px;
+  
 }
 .choose_img_Header {
   margin: auto;
@@ -32,6 +50,8 @@
   height: auto;
   z-index: 777;
   margin-left: 40px;
+  margin-bottom: 30px;
+  
 }
 .video_image {
   width: 500px;
@@ -85,6 +105,7 @@
 @media screen and (max-width: 680px) {
   .whowe {
     margin-top: 0px;
+    margin-bottom: 0px;
   }
 
   .choose__content {

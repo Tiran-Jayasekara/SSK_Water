@@ -11,11 +11,7 @@ const ChooseUs = () => {
     <>
       <Row
         className="whowe"
-        style={{
-          height: "auto",
-          backgroundColor: "#dbeaeb",
-          paddingBottom: "20px",
-        }}
+        
         gutter={0}
       >
         <Col className="Choose_h1" xs={{ span: 22 }} lg={{ span: 24 }}>
