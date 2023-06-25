@@ -10,16 +10,39 @@
 .testimonial__content {
   margin-left: 200px;
 }
-.single__testimonial{
+.single__testimonial {
   margin-left: 100px;
 }
-.customer_header{
+.single__testimonial p{
+  text-align: justify;
+  color: #464545;
+  letter-spacing: 0.8px;
+  line-height: 28px;
+  font-size: 20px;
+}
+
+.customer_header {
   margin-left: 100px;
+}
+.Customer_voice {
+  margin-top: 100px;
+  margin-bottom: 200px;
+}
+.Voice_header {
+  margin: auto;
+}
+.voice_text h2 {
+  font-size: 40px;
+  font-weight:600;
+  color:#1C67B5 !important;
+}
+.voice_text {
+  margin: auto;
+  color:  #1C67B5 !important;;
 }
 
 @media screen and (max-width: 1200px) {
-  
-  .testimonial__img{
+  .testimonial__img {
     width: 500px;
     margin-left: auto;
     margin-right: auto;
@@ -32,22 +55,19 @@
   .single__testimonial p {
     font-size: 10px;
   }
-  .customer_header{
+  .customer_header {
     margin-top: 10px;
   }
-  }
+}
 
 @media screen and (max-width: 830px) {
-  
-
-  .testimonial__img{
+  .testimonial__img {
     width: 300px;
     margin-left: auto;
     margin-right: auto;
   }
-  .slider{
+  .slider {
     margin-left: -50px;
-  
   }
   .single__testimonial h6 {
     font-size: 14px;
@@ -56,31 +76,43 @@
   .single__testimonial p {
     font-size: 10px;
   }
-  .customer_header{
+  .customer_header {
     margin-top: 10px;
   }
-  }
+}
 
 @media screen and (max-width: 600px) {
-  
-
-.testimonial__img{
-  width: 300px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.slider{
-  margin-left: -50px;
-
-}
-.single__testimonial h6 {
-  font-size: 14px;
-  margin-top: 20px;
-}
-.single__testimonial p {
-  font-size: 10px;
-}
-.customer_header{
-  margin-top: 10px;
-}
+  .testimonial__img {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-left: -10px;
+  }
+  .slider {
+    margin-left: -50px;
+  }
+  .single__testimonial {
+    margin-left: 20px;
+  }
+  .single__testimonial h6 {
+    font-size: 14px;
+    margin-top: 20px;
+    
+  }
+  .single__testimonial p {
+    font-size: 10px;
+    line-height: 2;
+  }
+  .customer_header {
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: auto;
+  }
+  .voice_text h2 {
+    font-size: 20px;
+    
+  }
+  .Customer_voice{
+    margin-top: 150px;
+  }
 }

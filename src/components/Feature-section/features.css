@@ -5,3 +5,44 @@
 .single__feature h6 {
   font-weight: 600;
 }
+.features{
+  max-width: 100%;
+  background-color: #dbeaeb;
+  
+}
+
+.service_p h6{
+  text-align: center;
+  color: #464545;
+  letter-spacing: 0.8px;
+  line-height: 28px;
+  font-size: 25px;
+  margin-bottom: 30px;
+}
+.service_p p{
+  text-align: center;
+  color: #464545;
+  letter-spacing: 0.8px;
+  line-height: 28px;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+
+  .service_p h6{
+    text-align: center;
+    color: #464545;
+    letter-spacing: 0.8px;
+    line-height: 28px;
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  .service_p p{
+    text-align: center;
+    color: #464545;
+    letter-spacing: 0.8px;
+    line-height: 28px;
+    font-size: 14px;
+  }
+
+}

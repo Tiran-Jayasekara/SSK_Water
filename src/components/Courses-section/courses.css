@@ -1,113 +1,83 @@
-.single__course__item {
-  padding: 15px;
+.service_header{
+  margin-top: 200px;
+}
+.service_Header {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-bottom: 20PX;
 }
 
-.course__img img {
-  border-radius: 10px;
-  margin-bottom: 20px;
+.course-card img {
+  width: 100%;
+  height: auto;
 }
-.course__img img:hover {
-  transform: scale(1.1);
-  transition: all 0.3s ease-in-out;
-}
-
-.enroll a {
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.9rem;
-  color: #17bf9e;
-}
-
-.lesson,
-.students,
-.rating {
-  font-size: 0.9rem;
-  color: #0a2b1e;
-  font-weight: 500;
-}
-
-.lesson i,
-.students i,
-.rating i {
-  font-weight: 400;
-}
-
 .course__title {
-  line-height: 2rem;
+  margin-top: 20px;
+}
+.para{
+  margin-left: 100px;
+}
+.para2{
+  margin-left: 160px;
+}
+.course-details p {
+  font-size: 14px;
+  margin-bottom: 0px;
 }
 
-.course__top__left h2 {
-  font-weight: 600;
-  font-size: 50px;
-  margin-top: 40px;
-  margin-left: 60px;
+
+.service_Header h1 {
+  font-size: 40px;
+  margin-top: 50px;
+  font-weight:600;
+}
+.service_Header h1{
+  font-size: 40px;
+  margin-top: -60px;
+  color: #1C67B5 !important;
+
 }
 
-.course__top__left p {
-  margin-left: 60px;
+.cards_col_3{
+  margin-bottom: -10px;
 }
 
-.btn {
-  margin-right: 40px;
+.Our_filters {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 80px;
 }
-.ri-book-open-line , .ri-star-fill{
-  margin-left: 10px;
-}
-
-.students , .enroll {
-  margin-right: 40px;
-}
-
-.our_filters h2{
-  text-align: center; /* Align the heading at the center */
-  font-family: "Helvetica Neue", Arial, sans-serif; /* Apply a font style */
-  font-size: 40px; /* Set the font size */
-  font-weight: bold; /* Set the font weight */
-  margin-left: 440px;
-  width: 400px;
-  margin-top: 0px;
+.Cards_image {
+  margin-left: auto;
+  margin-right: auto;
 }
 
-@media screen and (max-width: 960px) {
-  .course__top h2 {
-    font-size: 30px;
-    margin-top: -50px;
-  } 
-}
+@media (max-width: 576px) {
+  .service_header{
+    margin-top: 200px;
+  }
+  .Our_filters {
+    margin-bottom: 0px;
 
-@media (max-width: 768px) {
-  .course__top h2 {
-    font-size: 30px;
-    margin-top: -50px;
+  }.service_Header h1{
+    font-size: 25px;
+    margin-top: -60px;
+  }
+  .course-card img {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-left: 20px;
+    height: auto;
+  }
+  .para{
+    margin-left: 40px;
+  }
+  .para2{
     margin-left: 100px;
-
-    margin-bottom: -50px;
-  } 
-  .course__img {
-    width: 300px;
-    margin-left: 10px;
   }
-  
-  .course__top {
-    width: 400px;
+  .course__details {
+    margin-bottom: 20px;
   }
-  .course__title {
-    font-size: 12px;
-  }
-  .students , .rating ,.enroll ,.lesson{
-    font-size: 12px;
-    margin-top: -30px;
-  }
-
-
-  .our_filters h2{
-    text-align: center; /* Align the heading at the center */
-    font-family: "Helvetica Neue", Arial, sans-serif; /* Apply a font style */
-    font-size: 30px; /* Set the font size */
-    font-weight: bold; /* Set the font weight */
-    margin-left: -50px;
-    width: 400px;
-    margin-top: -50px;
-  }
-  
 }
