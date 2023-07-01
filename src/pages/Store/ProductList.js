@@ -1,8 +1,10 @@
 import "./Store.css";
 import { Modal, Button, Space, Row, Col } from "antd";
-import { useState, useRef } from "react";
+import { useState, useRef,useEffect } from "react";
 import domestic1 from "../../assests/images/store/domestic/1.jpg";
 import emailjs from "emailjs-com";
+import ScrollReveal from "scrollreveal";
+
 // import { red } from "@material-ui/core/colors";
 // import domestic2 from "../../assests/images/store/domestic/2.jpg";
 // import domestic3 from "../../assests/images/store/domestic/3.jpg";
@@ -166,6 +168,22 @@ function ProductList(props) {
       productList = Industrial;
   }
 
+  
+
+
+  useEffect(() => {
+    const sr = ScrollReveal();
+
+    sr.reveal(".revealElement", {
+      duration: 1000,
+      distance: "100px",
+      easing: "ease",
+      origin: "bottom",
+    });
+  }, []);
+
+    
+
   return (
     <div className="product_main">
       {productList
@@ -181,13 +199,13 @@ function ProductList(props) {
             {row.map((product) => (
               <Col
                 key={product.id}
-                className="Store_product_List"
+                className="Store_product_List revealElement"
                 xs={{ span: 12 }}
                 sm={{ span: 10 }}
                 lg={{ span: 4 }}
               >
                 <div
-                  className="product-container"
+                  className="product-container "
                   onClick={() => imageClick(product)}
                 >
                   <img
@@ -195,9 +213,9 @@ function ProductList(props) {
                     src={product.image}
                     alt={product.title}
                   />
-                  <h5 className="product-title">{product.title}</h5>
-                  <div className="product-details">
-                    <p className="product-price">RS : {product.price}</p>
+                  <h5 className="product-title revealElement">{product.title}</h5>
+                  <div className="product-details revealElement">
+                    <p className="product-price revealElement">RS : {product.price}</p>
                   </div>
                 </div>
               </Col>
@@ -224,7 +242,7 @@ function ProductList(props) {
         <div className="modal-content">
           <Row>
             <Col
-              className="modal_content_h1"
+              className="modal_content_h1 "
               xs={{ span: 22 }}
               sm={{ span: 22 }}
               lg={{ span: 22 }}
@@ -238,11 +256,11 @@ function ProductList(props) {
             </Col> */}
             <Col xs={{ span: 24 }} sm={{ span: 10 }} lg={{ span: 24 }}>
               <Space direction="vertical">
-                <div key={0} className="image-container">
+                <div key={0} className="image-container revealElement">
                   &nbsp;&nbsp;
                   <b>
                     <img
-                      className="model_image"
+                      className="model_image revealElement"
                       src={selectedImage}
                       alt={display.title}
                     />
@@ -252,14 +270,14 @@ function ProductList(props) {
                   <Col xs={{ span: 2 }} sm={{ span: 2 }} lg={{ span: 2 }}></Col>
                   <Col xs={{ span: 5 }} sm={{ span: 5 }} lg={{ span: 5 }}>
                     <div
-                      className="model_Small_List"
+                      className="model_Small_List revealElement"
                       onClick={() => handleImageClick(display.image1)}
                       key={0}
                     >
                       &nbsp;&nbsp;
                       <b>
                         <img
-                          className="model_image_small"
+                          className="model_image_small revealElement"
                           src={display.image1}
                           alt={display.title}
                         />
@@ -268,14 +286,14 @@ function ProductList(props) {
                   </Col>
                   <Col xs={{ span: 5 }} sm={{ span: 5 }} lg={{ span: 5 }}>
                     <div
-                      className="model_Small_List"
+                      className="model_Small_List revealElement"
                       onClick={() => handleImageClick(display.image2)}
                       key={0}
                     >
                       &nbsp;&nbsp;
                       <b>
                         <img
-                          className="model_image_small"
+                          className="model_image_small revealElement"
                           src={display.image2}
                           alt={display.title}
                         />
@@ -284,14 +302,14 @@ function ProductList(props) {
                   </Col>
                   <Col xs={{ span: 5 }} sm={{ span: 5 }} lg={{ span: 5 }}>
                     <div
-                      className="model_Small_List"
+                      className="model_Small_List revealElement"
                       onClick={() => handleImageClick(display.image3)}
                       key={0}
                     >
                       &nbsp;&nbsp;
                       <b>
                         <img
-                          className="model_image_small"
+                          className="model_image_small revealElement"
                           src={display.image3}
                           alt={display.title}
                         />
@@ -300,14 +318,14 @@ function ProductList(props) {
                   </Col>
                   <Col xs={{ span: 5 }} sm={{ span: 5 }} lg={{ span: 5 }}>
                     <div
-                      className="model_Small_List"
+                      className="model_Small_List revealElement"
                       key={0}
                       onClick={() => handleImageClick(display.image4)}
                     >
                       &nbsp;&nbsp;
                       <b>
                         <img
-                          className="model_image_small"
+                          className="model_image_small revealElement"
                           src={display.image4}
                           alt={display.title}
                         />
@@ -316,9 +334,9 @@ function ProductList(props) {
                   </Col>
                   <Col xs={{ span: 2 }} sm={{ span: 2 }} lg={{ span: 2 }}></Col>
                 </Row>
-                <div className="model_about" key={1}>
+                <div className="model_about revealElement" key={1}>
                   {/* <h3>ABOUT</h3> */}
-                  <div className="product_details">
+                  <div className="product_details revealElement">
                     <h5>Application : {display.application}</h5>
                     <h5>Installation Type : {display.installation}</h5>
                     <h5>Water Tank : {display.waterTank}</h5>
@@ -368,7 +386,7 @@ function ProductList(props) {
         <div>
           <Row>
             <Col
-              className="model_contact"
+              className="model_contact revealElement"
               xs={{ span: 24 }}
               sm={{ span: 16 }}
               lg={{ span: 10 }}
@@ -396,9 +414,9 @@ function ProductList(props) {
                 <form
                   ref={formRef}
                   onSubmit={handleSubmit}
-                  className="contact-form"
+                  className="contact-form revealElement"
                 >
-                  <div className="form-field">
+                  <div className="form-field revealElement">
                     <label htmlFor="name">Your Name</label>
                     <input
                       type="text"
@@ -409,7 +427,7 @@ function ProductList(props) {
                       placeholder="What's your good name?"
                     />
                   </div>
-                  <div className="form-field">
+                  <div className="form-field revealElement">
                     <label htmlFor="mobile">Your Number</label>
                     <input
                       type="tel"
@@ -420,7 +438,7 @@ function ProductList(props) {
                       placeholder="What's your Mobile Number?"
                     />
                   </div>
-                  <div className="form-field">
+                  <div className="form-field revealElement">
                     <label htmlFor="Brand">Brand</label>
                     <input
                       type="text"
@@ -432,7 +450,7 @@ function ProductList(props) {
                     />
                   </div>
 
-                  <div className="form-field">
+                  <div className="form-field revealElement">
                   <label htmlFor="choose">Choose</label>
 
                     <Row>
@@ -478,7 +496,7 @@ function ProductList(props) {
                         
                       </label>
                     </Col>
-                    <Col className=""
+                    <Col className="revealElement"
                       xs={{ span: 16 }}
                       sm={{ span: 16 }}
                       lg={{ span: 16}}>

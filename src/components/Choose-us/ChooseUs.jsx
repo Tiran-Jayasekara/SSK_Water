@@ -1,16 +1,29 @@
-import React, { useState } from "react";
+import React, { useState , useEffect} from "react";
 import { Col, Row } from "antd";
 
 import chooseImg from "../../assests/images/Filter/filter4.png";
 import "./choose-us.css";
+import ScrollReveal from "scrollreveal";
+
 
 import ReactPlayer from "react-player";
 const ChooseUs = () => {
   const [showVideo, setShowVideo] = useState(false);
+  useEffect(() => {
+    const sr = ScrollReveal();
+
+    sr.reveal(".revealElement", {
+      duration: 3000,
+      distance: "100px",
+      easing: "ease",
+      origin: "bottom",
+    });
+  }, []);
+
   return (
     <>
       <Row
-        className="whowe"
+        className="whowe revealElement"
         
         gutter={0}
       >

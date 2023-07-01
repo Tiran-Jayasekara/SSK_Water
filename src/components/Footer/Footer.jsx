@@ -1,6 +1,5 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
-import contactImg from "../../assests/images/logo4.png";
 import logo from "../../assests/images/about/gif2.gif";
 
 import "./footer.css";

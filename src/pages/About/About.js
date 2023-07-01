@@ -1,7 +1,8 @@
-import React from "react";
+import React , { useEffect } from "react";
 
 import { Col, Row, Button } from 'antd';
 import { Link } from 'react-router-dom';
+import ScrollReveal from "scrollreveal";
 
 import "./about.css";
 
@@ -19,9 +20,20 @@ import martin from "../../assests/images/about/company.png";
 import Footer from "../../components/Footer/Footer";
 
 const About = () => {
+  useEffect(() => {
+    const sr = ScrollReveal();
+
+    sr.reveal(".revealElement", {
+      duration: 2000,
+      distance: "50px",
+      easing: "ease",
+      origin: "bottom",
+    });
+  }, []);
+
   return (
     <>
-      <Row>
+      <Row className="revealElement">
         <Col xs={{ span: 24 }} lg={{ span: 24 }} className="aboutBanner">
           <img
             src={about}
@@ -30,7 +42,7 @@ const About = () => {
           ></img>
         </Col>
       </Row>
-      <Row className="about_hedder_container">
+      <Row className="about_hedder_container revealElement">
         <Col xs={{ span: 14 }} lg={{ span: 14 }}>
           <h1>IF YOU WANT TO GET MORE DETAILS, PLEASE CONTACT US</h1>
         </Col>
@@ -42,8 +54,8 @@ const About = () => {
       </Row>
       <Row>
 
-        <div className="blog_container_about">
-          <Row className="Main_Blog" gutter={[16, 16]}>
+        <div className="blog_container_about revealElement">
+          <Row className="Main_Blog"  gutter={[16, 16]}>
             <Col
               className="blog_header"
               xs={{ span: 22 }}
@@ -134,7 +146,7 @@ const About = () => {
         <Col xs={{ span: 22 }} sm={{ span: 4 }} lg={{ span: 4 }}></Col>
       </Row> */}
 
-      <div className="vision">
+      <div className="vision revealElement">
         <Row>
           <Col
             className="Philosophy"
@@ -152,6 +164,7 @@ const About = () => {
           </Col>
         </Row>
       </div>
+      <div className="revealElement">
       <Row>
         <Col
           className="Philosophy"
@@ -201,9 +214,11 @@ const About = () => {
         </Col>
         <Col xs={{ span: 2 }} sm={{ span: 2 }} lg={{ span: 2 }}></Col>
       </Row>
-
+      </div>
+      
       <Row>
-        <div className="mission">
+
+        <div className="mission revealElement">
           <Row>
             <Col
               className="Philosophy"
@@ -224,7 +239,9 @@ const About = () => {
             </Col>
           </Row>
         </div>
-        <Row>
+
+        <Row className="revealElement">
+
           <Col
             className="Philosophy"
             xs={{ span: 24 }}
@@ -274,7 +291,7 @@ const About = () => {
           <Col xs={{ span: 2 }} sm={{ span: 2 }} lg={{ span: 2 }}></Col>
         </Row>
 
-        <Row>
+        <Row className="revealElement">
           <Col
             className="Philosophy1"
             xs={{ span: 20 }}

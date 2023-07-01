@@ -1,4 +1,5 @@
-import React from "react";
+import React ,{useEffect} from "react";
+import ScrollReveal from "scrollreveal";
 
 import courseImg1 from "../../assests/images/Filter/home1.jpg";
 import courseImg2 from "../../assests/images/Filter/home2.jpg";
@@ -39,14 +40,25 @@ const coursesData = [
 ];
 
 function Services() {
+  useEffect(() => {
+    const sr = ScrollReveal();
+
+    sr.reveal(".revealElement", {
+      duration: 3000,
+      distance: "100px",
+      easing: "ease",
+      origin: "bottom",
+    });
+  }, []);
+
   return (
     <>
       <Row className="service_header" gutter={0}>
-        <Col className="service_Header" xs={{ span: 20 }} lg={{ span: 24 }}>
+        <Col className="service_Header revealElement" xs={{ span: 20 }} lg={{ span: 24 }}>
           <h1>WHAT WE SELL?</h1>
         </Col>
       </Row>
-      <Row className="cards_col_3" gutter={0} justify="center">
+      <Row className="cards_col_3 revealElement" gutter={0} justify="center">
         <Col lg={{ span: 2 }} xs={{ span: 20 }}></Col>
         {coursesData.map((item) => (
           <Col
