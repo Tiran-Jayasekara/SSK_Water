@@ -18,7 +18,17 @@
   color: #464545;
   letter-spacing: 0.8px;
   line-height: 28px;
-  font-size: 20px;
+  font-size: 16px;
+  font-family: "LEXEND", sans-serif;
+}
+.black-text4 {
+  font-size: 40px;
+  line-height: 1.08349;
+  font-weight: 600;
+  letter-spacing: -0.003em;
+  font-family: "LEXEND", sans-serif;
+  display: inline;
+  color:rgb(30, 74, 218);
 }
 
 .customer_header {
@@ -33,8 +43,11 @@
 }
 .voice_text h2 {
   font-size: 40px;
-  font-weight:600;
-  color:#1C67B5 !important;
+  line-height: 1.08349;
+  font-weight: 600;
+  font-family: "LEXEND", sans-serif;
+  color:grey;
+  margin-left: 90px;
 }
 .voice_text {
   margin: auto;
@@ -88,6 +101,10 @@
     margin-right: auto;
     margin-left: -10px;
   }
+  .voice_text h2 {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
   .slider {
     margin-left: -50px;
   }
@@ -105,14 +122,17 @@
   }
   .customer_header {
     margin-top: 10px;
-    margin-left: 20px;
+    margin-left: 0px;
     margin-right: auto;
   }
   .voice_text h2 {
-    font-size: 20px;
-    
+    font-size: 30px;
   }
   .Customer_voice{
     margin-top: 150px;
+  }
+  .black-text4 {
+    font-size: 30px;
+    
   }
 }

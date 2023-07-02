@@ -59,7 +59,7 @@ const ImageChanger = () => {
             <img src={images[currentImageIndex]} alt="images" className="zoom-image" />
           </div>
           <h1 ref={textRef} aria-label="Auto-typing text">
-            WELL COME TO SSK WATER FILTERS
+           
           </h1>
         </Col>
       </Row>

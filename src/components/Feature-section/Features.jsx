@@ -37,7 +37,7 @@ const Features = () => {
 
   return (
     <section style={{ marginTop: "30px" }} className="features">
-      <Container >
+      <Container className="features" >
         <Row >
           {FeatureData.map((item, index) => (
             <Col lg="4" md="6" key={index}>

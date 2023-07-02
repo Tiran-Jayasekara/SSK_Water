@@ -1,11 +1,18 @@
-.service_header{
-  margin-top: 200px;
+.service_header {
+  margin-top: 100px;
+  /* background-color: rgb(27, 26, 26); */
+  background-image: url('./back.jpg');
+  padding-top: 100px;
+  backdrop-filter: blur(20px);
+  
 }
 .service_Header {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  margin-bottom: 20PX;
+  margin-bottom: 20px;
+ 
+ 
 }
 
 .course-card img {
@@ -14,33 +21,47 @@
 }
 .course__title {
   margin-top: 20px;
+  color:  rgb(224, 217, 217);
 }
-.para{
+.para {
   margin-left: 100px;
+  color: white;
 }
-.para2{
+.para2 {
   margin-left: 160px;
+  color: white;
 }
 .course-details p {
   font-size: 14px;
   margin-bottom: 0px;
+  color: white;
 }
-
 
 .service_Header h1 {
-  font-size: 40px;
-  margin-top: 50px;
-  font-weight:600;
+  font-size: 55px;
+  line-height: 1.08349;
+  font-weight: 600;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica",
+    "Arial", sans-serif;
+  color: rgb(224, 217, 217);
+  margin-top: -30px;
+  margin-bottom: 40px;
 }
-.service_Header h1{
-  font-size: 40px;
-  margin-top: -60px;
-  color: #1C67B5 !important;
-
+.service_Header p {
+  font-size: 15px;
+  line-height: 1.08349;
+  font-weight: 600;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica",
+    "Arial", sans-serif;
+  color:  rgb(224, 217, 217);
+  margin-top: -20px;
+  margin-bottom: 30px;
 }
 
-.cards_col_3{
+
+.cards_col_3 {
   margin-bottom: -10px;
+  color:  rgb(224, 217, 217);
 }
 
 .Our_filters {
@@ -52,16 +73,22 @@
   margin-left: auto;
   margin-right: auto;
 }
+.price {
+  color:  rgb(224, 217, 217);
+}
+.price p {
+  color:  rgb(224, 217, 217);
+}
 
 @media (max-width: 576px) {
-  .service_header{
-    margin-top: 200px;
+  .service_header {
+    margin-top: 100px;
   }
   .Our_filters {
     margin-bottom: 0px;
-
-  }.service_Header h1{
-    font-size: 25px;
+  }
+  .service_Header h1 {
+    font-size: 30px;
     margin-top: -60px;
   }
   .course-card img {
@@ -71,10 +98,10 @@
     margin-left: 20px;
     height: auto;
   }
-  .para{
+  .para {
     margin-left: 40px;
   }
-  .para2{
+  .para2 {
     margin-left: 100px;
   }
   .course__details {

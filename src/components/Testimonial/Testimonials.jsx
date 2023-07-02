@@ -4,7 +4,7 @@ import Slider from "react-slick";
 import { useEffect, useState } from "react";
 import { Col, Row } from "antd";
 
-import img from "../../assests/images/Service/feedback.jpg";
+import img from "../../assests/images/Service/voice.png";
 import ScrollReveal from "scrollreveal";
 
 const Testimonials = () => {
@@ -64,7 +64,10 @@ const Testimonials = () => {
           sm={{ span: 22 }}
           lg={{ span: 10 }}
         >
-          <h2 className="customer_header">Our Customer Voice</h2>
+          <h2>
+              <span className="black-text4">Our</span> Customer Voice
+            </h2>
+          
 
           <Slider {...settings}>
             <div>

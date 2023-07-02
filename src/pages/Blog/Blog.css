@@ -13,6 +13,7 @@ p {
   letter-spacing: 0.8px;
   line-height: 28px;
   font-size: 20px;
+  font-family: "LEXEND", sans-serif;
   
 }
 
@@ -42,6 +43,7 @@ p {
   text-align: justify;
   color: #5c5c5c;
   padding-right: 20px;
+  font-family: "LEXEND", sans-serif;
 }
 .blog_header h6 {
   text-align: center;
@@ -49,6 +51,7 @@ p {
   color:  #1C67B5 !important;;
   margin-top: 20px;
   margin-bottom: 20px;
+  font-family: "LEXEND", sans-serif;
 }
 .keyword_link {
   text-decoration: none;
@@ -129,7 +132,7 @@ p {
   }
   .blog_header p {
     font-size: 8px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "LEXEND", sans-serif;
     line-height: 1.2;
   }
   .blog_header Button {
@@ -170,13 +173,16 @@ p {
   }
 
   .blog_header h6 {
-    font-size: 12px;
+    font-size: 16px;
     margin-top: 0px;
   }
   .blog_header p {
-    font-size: 8px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-family: "LEXEND", sans-serif;
     line-height: 1.2;
+    margin-left: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
   .blog_header Button {
     margin-top: 0px;

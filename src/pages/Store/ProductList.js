@@ -1,7 +1,7 @@
 import "./Store.css";
 import { Modal, Button, Space, Row, Col } from "antd";
 import { useState, useRef,useEffect } from "react";
-import domestic1 from "../../assests/images/store/domestic/1.jpg";
+import domestic1 from "../../assests/images/store/domestic/1.png";
 import emailjs from "emailjs-com";
 import ScrollReveal from "scrollreveal";
 
@@ -189,34 +189,35 @@ function ProductList(props) {
       {productList
         .reduce(
           (rows, product, index) =>
-            index % 6 === 0
+            index % 3 === 0
               ? rows.concat([[product]])
               : (rows[rows.length - 1].push(product), rows),
           []
         )
         .map((row, rowIndex) => (
-          <Row key={rowIndex} gutter={0}>
-            {row.map((product) => (
+          <Row key={rowIndex}>
+            {row.map((product ,productIndex) => (
               <Col
                 key={product.id}
-                className="Store_product_List revealElement"
-                xs={{ span: 12 }}
-                sm={{ span: 10 }}
-                lg={{ span: 4 }}
+                className="Store_product_List "
+                xs={{ span: 24 }}
+                sm={{ span: 16 }}
+                lg={{ span: 8 }}
               >
                 <div
-                  className="product-container "
+                  className={`product-container ${productIndex === 0 ? 'first-product' : ''}`}
                   onClick={() => imageClick(product)}
                 >
+                  
+                  <h5 className="product-title revealElement">{product.title}</h5>
+                  <div className="product-details revealElement">
+                    <p className="product-price revealElement">RS : {product.price}</p>
+                  </div>
                   <img
                     className="product-image"
                     src={product.image}
                     alt={product.title}
                   />
-                  <h5 className="product-title revealElement">{product.title}</h5>
-                  <div className="product-details revealElement">
-                    <p className="product-price revealElement">RS : {product.price}</p>
-                  </div>
                 </div>
               </Col>
             ))}
@@ -538,7 +539,7 @@ const Domestic = [
     id: 1,
     title: "Domestic",
     author: "Douglas Adams",
-    price: 85000,
+    price: "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
     application: "Household",
     installation: "Wall Mounted",
     waterTank: "11L",
@@ -562,7 +563,7 @@ const Domestic = [
     id: 2,
     title: "Domestic 2 ",
     author: "Harper Lee",
-    price: 85000,
+    price: "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
     application: "Household",
     installation: "Wall Mounted",
     waterTank: "11L",
@@ -584,7 +585,7 @@ const Domestic = [
     id: 3,
     title: "Domestic 3 ",
     author: "F. Scott ",
-    price: 85000,
+    price: "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
     application: "Household",
     installation: "Wall Mounted",
     waterTank: "11L",
@@ -604,7 +605,7 @@ const Domestic = [
     id: 4,
     title: "Domestic 4 ",
     author: "F. Scott ",
-    price: 85000,
+    price: "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
     application: "Household",
     installation: "Wall Mounted",
     waterTank: "11L",
@@ -612,7 +613,7 @@ const Domestic = [
     technology: "RO + uv + TDS",
     feature: "Transferase the process",
     image:
-      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    domestic1,
     image1:
       "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
     image2:
@@ -626,7 +627,7 @@ const Domestic = [
     id: 5,
     title: "Domestic 1 ",
     author: "Douglas Adams",
-    price: 85000,
+    price: "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
     application: "Household",
     installation: "Wall Mounted",
     waterTank: "11L",
@@ -648,7 +649,7 @@ const Domestic = [
     id: 6,
     title: "Domestic 2 ",
     author: "Harper Lee",
-    price: 85000,
+    price: "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
     application: "Household",
     installation: "Wall Mounted",
     waterTank: "11L",
@@ -669,7 +670,7 @@ const Domestic = [
     id: 7,
     title: "Domestic 3 ",
     author: "F. Scott ",
-    price: 85000,
+    price: "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
     application: "Household",
     installation: "Wall Mounted",
     waterTank: "11L",
@@ -677,7 +678,7 @@ const Domestic = [
     technology: "RO + uv + TDS",
     feature: "Transferase the process",
     image:
-      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    domestic1,
     image1:
       "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
     image2:
@@ -691,7 +692,7 @@ const Domestic = [
     id: 8,
     title: "Domestic 4 ",
     author: "F. Scott ",
-    price: 85000,
+    price: "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
     application: "Household",
     installation: "Wall Mounted",
     waterTank: "11L",
@@ -713,7 +714,7 @@ const Domestic = [
     id: 9,
     title: "Domestic 1 ",
     author: "Douglas Adams",
-    price: 85000,
+    price: "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
     application: "Household",
     installation: "Wall Mounted",
     waterTank: "11L",
@@ -735,7 +736,7 @@ const Domestic = [
     id: 10,
     title: "Domestic 2 ",
     author: "Harper Lee",
-    price: 85000,
+    price: "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
     application: "Household",
     installation: "Wall Mounted",
     waterTank: "11L",
@@ -743,7 +744,7 @@ const Domestic = [
     technology: "RO + uv + TDS",
     feature: "Transferase the process",
     image:
-      "https://cdn11.bigcommerce.com/s-mpfo2gcqca/images/stencil/1280x1280/products/476/2363/brondell-capella-RC250-reverse-osmosis-water-filtration-system-white__88084.1660687393.jpg?c=1",
+    domestic1,
 
     image1:
       "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
@@ -758,7 +759,7 @@ const Domestic = [
     id: 11,
     title: "Domestic 3 ",
     author: "F. Scott ",
-    price: 85000,
+    price: "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
     application: "Household",
     installation: "Wall Mounted",
     waterTank: "11L",
@@ -781,7 +782,7 @@ const Domestic = [
     id: 12,
     title: "Domestic 4 ",
     author: "F. Scott ",
-    price: 85000,
+    price: "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
     application: "Household",
     installation: "Wall Mounted",
     waterTank: "11L",

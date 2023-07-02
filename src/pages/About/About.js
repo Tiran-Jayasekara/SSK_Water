@@ -1,12 +1,13 @@
-import React , { useEffect } from "react";
+import React, { useEffect } from "react";
 
-import { Col, Row, Button } from 'antd';
-import { Link } from 'react-router-dom';
+import { Col, Row } from "antd";
 import ScrollReveal from "scrollreveal";
 
 import "./about.css";
 
 import logo from "../../assests/images/about/gif.gif";
+import vision from "../../assests/images/about/vison.png";
+import mission from "../../assests/images/about/mission.png";
 import about from "../../assests/images/about/5.png";
 import trusted from "../../assests/images/about/trusted.png";
 import acolabarateout from "../../assests/images/about/colabarate.png";
@@ -33,31 +34,34 @@ const About = () => {
 
   return (
     <>
-      <Row className="revealElement">
+      <Row className="">
         <Col xs={{ span: 24 }} lg={{ span: 24 }} className="aboutBanner">
-          <img
-            src={about}
-            alt="about"
-            
-          ></img>
+          <img src={about} alt="about"></img>
         </Col>
       </Row>
-      <Row className="about_hedder_container revealElement">
-        <Col xs={{ span: 14 }} lg={{ span: 14 }}>
-          <h1>IF YOU WANT TO GET MORE DETAILS, PLEASE CONTACT US</h1>
-        </Col>
-        <Col xs={{ span: 10 }} lg={{ span: 10 }} className="center-button1">
-          <Link to="/contact" className="">
-            <Button>CONTACT US</Button>
-          </Link>
-        </Col>
-      </Row>
-      <Row>
 
+      <Row className="about_Top_background">
+        <Col
+          className="about_Top"
+          xs={{ span: 20 }}
+          sm={{ span: 20 }}
+          lg={{ span: 20 }}
+        >
+          <h2>
+            <span className="black-text5">SSK</span> Water Filters
+          </h2>
+          <p>
+            SSK Water Filters Pvt Ltd is a start-up that specializes in advanced
+            water filtration solutions.
+          </p>
+        </Col>
+      
+
+      <Row>
         <div className="blog_container_about revealElement">
-          <Row className="Main_Blog"  gutter={[16, 16]}>
+          <Row className="Main_Blog">
             <Col
-              className="blog_header"
+              className="about_header"
               xs={{ span: 22 }}
               sm={{ span: 8 }}
               lg={{ span: 8 }}
@@ -70,7 +74,6 @@ const About = () => {
               sm={{ span: 12 }}
               lg={{ span: 14 }}
             >
-              <h6>SSK WATER FILTERS</h6>
               <p>
                 SSK Water Filters Pvt Ltd is a start-up that specializes in
                 advanced water filtration solutions. Our mission is to provide
@@ -88,167 +91,112 @@ const About = () => {
           </Row>
         </div>
       </Row>
-
-      {/* <Row>
-      <Col xs={{ span: 22 }} sm={{ span: 4 }} lg={{ span: 4 }}></Col>
-      <Col
-          className="Contact_Cards"
-          xs={{ span: 22 }}
-          sm={{ span: 8 }}
-          lg={{ span: 8 }}
-        >
-          <Card
-            className="card_main1"
-            hoverable
-            cover={
-              <img
-                alt="example"
-                src={logo}
-                style={{ borderRadius: "20px" }}
-              />
-            }
-            actions={[
-              
-            ]}
-          >
-            <Meta title="QUICK CONTACT" />
-          </Card>
-        </Col>
-        <Col
-          className="Contact_Cards"
-          xs={{ span: 22 }}
-          sm={{ span: 8 }}
-          lg={{ span: 8 }}
-        >
-          <Card
-            className="card_main2"
-            hoverable
-            cover={
-              <img
-                alt="example"
-                src={logo}
-                style={{ borderRadius: "20px" }}
-              />
-            }
-          >
-            <Meta
-              title="CUSTOMER SERVICES"
-              description={
-                <>
-                  <div>
-                    <h5>Reliable and very fast service within 24 hours.</h5>
-                  </div>
-                </>
-              }
-            />
-          </Card>
-        </Col>
-        <Col xs={{ span: 22 }} sm={{ span: 4 }} lg={{ span: 4 }}></Col>
-      </Row> */}
-
-      <div className="vision revealElement">
-        <Row>
-          <Col
-            className="Philosophy"
-            xs={{ span: 20 }}
-            sm={{ span: 22 }}
-            lg={{ span: 16 }}
-          >
-            <h1>OUR VISION</h1>
-            <p>
-              Our vision is to be a Sri Lankan leader in providing advanced
-              water filtration solutions that contribute to a sustainable,
-              water-secure future. We strive to revolutionize how water is
-              treated and consumed,ensuring clean and safe water for all.
-            </p>
-          </Col>
-        </Row>
-      </div>
-      <div className="revealElement">
-      <Row>
-        <Col
-          className="Philosophy"
-          xs={{ span: 24 }}
-          sm={{ span: 24 }}
-          lg={{ span: 24 }}
-        >
-          <h1>OUR PURPOSE</h1>
-        </Col>
-
-        <Col xs={{ span: 2 }} sm={{ span: 2 }} lg={{ span: 2 }}></Col>
-        <Col
-          className="purpose"
-          xs={{ span: 5 }}
-          sm={{ span: 5 }}
-          lg={{ span: 5 }}
-        >
-          <img className="" src={trusted} alt="" />
-          <h5>TRUSTED</h5>
-        </Col>
-        <Col
-          className="purpose"
-          xs={{ span: 5 }}
-          sm={{ span: 5 }}
-          lg={{ span: 5 }}
-        >
-          <img className="" src={acolabarateout} alt="" />
-          <h5>COLLABORATIVE</h5>
-        </Col>
-        <Col
-          className="purpose"
-          xs={{ span: 5 }}
-          sm={{ span: 5 }}
-          lg={{ span: 5 }}
-        >
-          <img className="" src={responce} alt="" />
-          <h5>RESPONSIBLE</h5>
-        </Col>
-        <Col
-          className="purpose"
-          xs={{ span: 5 }}
-          sm={{ span: 5 }}
-          lg={{ span: 5 }}
-        >
-          <img className="" src={prograsive} alt="" />
-          <h5>PROGRESSIVE</h5>
-        </Col>
-        <Col xs={{ span: 2 }} sm={{ span: 2 }} lg={{ span: 2 }}></Col>
       </Row>
-      </div>
-      
+
       <Row>
-
-        <div className="mission revealElement">
-          <Row>
-            <Col
-              className="Philosophy"
-              xs={{ span: 20 }}
-              sm={{ span: 22 }}
-              lg={{ span: 16 }}
-            >
-              <h1>OUR MISSION</h1>
-              <p>
-                our mission is to provide individuals, businesses, and
-                organizations with the highest quality water filtration
-                solutions. We strive to deliver exceptional products that ensure
-                clean and safe water while prioritizing efficiency and
-                environmental sustainability. Through innovation, research, and
-                a commitment to excellence, we aim to improve lives and
-                contribute to a healthier, more sustainable future for all.
-              </p>
-            </Col>
-          </Row>
-        </div>
-
-        <Row className="revealElement">
-
+        <Col xs={{ span: 2 }} sm={{ span: 2 }} lg={{ span: 4 }}></Col>
+        <Col
+          className="vimi revealElement"
+          xs={{ span: 20 }}
+          sm={{ span: 20 }}
+          lg={{ span: 7 }}
+        >
+           <img src={vision} alt="" />
+          <h1>VISION</h1>
+          <p>
+            Our vision is to be a Sri Lankan leader in providing advanced water
+            filtration solutions that contribute to a sustainable, water-secure
+            future. We strive to revolutionize how water is treated and
+            consumed,ensuring clean and safe water for all.
+          </p>
+        </Col>
+        <Col xs={{ span: 2 }} sm={{ span: 2 }} lg={{ span: 0 }}></Col>
+        <Col xs={{ span: 2 }} sm={{ span: 2 }} lg={{ span: 0 }}></Col>
+        <Col
+          className="vimi revealElement"
+          xs={{ span: 20 }}
+          sm={{ span: 22 }}
+          lg={{ span: 7 }}
+        >
+           <img src={mission} alt="" />
+          <h1>MISSION</h1>
+          <p>
+            our mission is to provide individuals, businesses, and organizations
+            with the highest quality water filtration solutions. We strive to
+            deliver exceptional products that ensure clean and safe water while
+            prioritizing efficiency and environmental sustainability. Through
+            innovation, research, and a commitment to excellence, we aim to
+            improve lives and contribute to a healthier, more sustainable future
+            for all.
+          </p>
+        </Col>
+        <Col xs={{ span: 2 }} sm={{ span: 2 }} lg={{ span: 4 }}></Col>
+      </Row>
+      
+      
+      <div className="purpose_background revealElement">
+        <Row>
           <Col
             className="Philosophy"
             xs={{ span: 24 }}
             sm={{ span: 24 }}
             lg={{ span: 24 }}
           >
-            <h1>WHY YOU HAVE TO CHOSE US?</h1>
+            <h1>Purpose</h1>
+          </Col>
+
+          <Col xs={{ span: 2 }} sm={{ span: 2 }} lg={{ span: 2 }}></Col>
+          <Col
+            className="purpose"
+            xs={{ span: 5 }}
+            sm={{ span: 5 }}
+            lg={{ span: 5 }}
+          >
+            <img className="" src={trusted} alt="" />
+            <h5>TRUSTED</h5>
+          </Col>
+          <Col
+            className="purpose"
+            xs={{ span: 5 }}
+            sm={{ span: 5 }}
+            lg={{ span: 5 }}
+          >
+            <img className="" src={acolabarateout} alt="" />
+            <h5>COLLABORATIVE</h5>
+          </Col>
+          <Col
+            className="purpose"
+            xs={{ span: 5 }}
+            sm={{ span: 5 }}
+            lg={{ span: 5 }}
+          >
+            <img className="" src={responce} alt="" />
+            <h5>RESPONSIBLE</h5>
+          </Col>
+          <Col
+            className="purpose"
+            xs={{ span: 5 }}
+            sm={{ span: 5 }}
+            lg={{ span: 5 }}
+          >
+            <img className="" src={prograsive} alt="" />
+            <h5>PROGRESSIVE</h5>
+          </Col>
+          <Col xs={{ span: 2 }} sm={{ span: 2 }} lg={{ span: 2 }}></Col>
+        </Row>
+      </div>
+
+      
+      
+
+        <Row className=" revealElement">
+          <Col
+            className="Philosophy"
+            xs={{ span: 24 }}
+            sm={{ span: 24 }}
+            lg={{ span: 24 }}
+          >
+            <h1>Why Chose Us?</h1>
           </Col>
 
           <Col xs={{ span: 2 }} sm={{ span: 2 }} lg={{ span: 2 }}></Col>
@@ -291,14 +239,14 @@ const About = () => {
           <Col xs={{ span: 2 }} sm={{ span: 2 }} lg={{ span: 2 }}></Col>
         </Row>
 
-        <Row className="revealElement">
+        <Row className="purpose_background2 revealElement">
           <Col
             className="Philosophy1"
             xs={{ span: 20 }}
             sm={{ span: 20 }}
             lg={{ span: 20 }}
           >
-            <h1>COMPANIES THAT WE ARE COLLABERATE WITH</h1>
+            <h1>We Are Collabarate With</h1>
           </Col>
 
           <Col
@@ -310,7 +258,6 @@ const About = () => {
             <img className="" src={martin} alt="" />
           </Col>
         </Row>
-      </Row>
       <Footer />
     </>
   );

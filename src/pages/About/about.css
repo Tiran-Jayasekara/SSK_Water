@@ -1,41 +1,128 @@
 .blog_container_about {
-  border: 1px solid #ccc; /* Adjust the border styles as needed */
+  /* border: 1px solid #ccc;  */
   margin: 100px;
-  margin-top: 100px;
+  margin-top: 0px;
   margin-bottom: 40px;
   border-radius: 20px;
   /* Adjust the padding as needed */
+}
+
+.vimi{
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  margin-top: 60px;
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+.vimi:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+}
+
+.vimi h1{
+  margin-top: 40px;
+  text-align: center;
+  font-family: "LEXEND", sans-serif;
+  font-size: 30px;
+}
+
+.vimi p{
+  color: #828282;
+  letter-spacing: 0.8px;
+  line-height: 28px;
+  text-align: center;
+  font-family: "LEXEND", sans-serif;
+  font-size: 16px;
+}
+.vimi img{
+  width: 120px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+.about_Top{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}
+.about_Top_background{
+  margin-top: 40px;
+  background-color: #f8f8f8;
+}
+.purpose_background{
+  margin-top: 60px;
+  background-color: #f8f8f8;
+  padding-bottom: 60px;
+}
+.purpose_background2{
+  margin-top: 100px;
+  background-color: #f8f8f8;
+  padding-bottom: 60px;
+  margin-bottom: 200px;
+}
+.about_Top h2{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "LEXEND", sans-serif;
+  color: grey;
+  font-size: 50px;
+  
+}
+.about_Top p{
+  color: #828282;
+  letter-spacing: 0.8px;
+  line-height: 28px;
+  text-align: center;
+  font-family: "LEXEND", sans-serif;
+  font-size: 20px;
+    
 }
 p {
   color: #828282;
   letter-spacing: 0.8px;
   line-height: 28px;
-  font-size: 20px;
-  
+  text-align: center;
+  font-family: "LEXEND", sans-serif;
+  font-size: 16px;
 }
+.black-text5 {
+  font-size: 50px;
+  line-height: 1.08349;
+  font-weight: 600;
+  letter-spacing: -0.003em;
+  font-family: "LEXEND", sans-serif;
+  display: inline;
+  color:rgb(30, 74, 218);
+}
+.blog_header1 {
+  margin: auto;
+}
+.blog_header1 p {
+  font-size: 20px;
+  text-align: justify;
+  color: #828282;
+  letter-spacing: 0.8px;
+  line-height: 28px;
+  font-family: "LEXEND", sans-serif;
+}
+
 .aboutBanner img{
 height: 75vh;
 max-width: 100%;
 }
-
-.about_hedder_container {
-  border: 1px solid rgba(0, 1, 2, 0.395);
-  margin-left: 100px;
-  margin-right: 100px;
-  border-radius: 0px;
-  margin-top: -50px;
-  background-color: rgb(56, 50, 50);
-  height: 100px;
-  position: relative;
-  z-index: 1;
+.about_header{
+  margin-top: 30px;
 }
-
-.about_hedder_container h1 {
-  text-align: center;
-  margin-top: 35px;
-  font-size: 20px;
-  font-family: "LEXEND", sans-serif;
-  color: rgb(255, 255, 255);
+.about_header img{
+  width: 80%;
+  margin-top: -40px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .center-button1 {
@@ -60,37 +147,19 @@ max-width: 100%;
   margin-bottom: 70px;
 }
 
-.about_header h1 {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  font-size: 30px;
-}
-.logo {
-  margin: auto;
-  max-width: 100%;
-  height: 100%;
-}
-.logo_description {
-  margin: auto;
-}
-.logo_description p {
-  text-align: justify;
-  font-size: 20px;
-}
+
 .Philosophy {
-  margin-top: 50px;
+  margin-top: 100px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .Philosophy h1 {
   margin-top: 10px;
-  font-size: 40px;
+  margin-bottom: 20px;
   text-align: center;
-  color:  #1C67B5 !important;
+  font-family: "LEXEND", sans-serif;
+  font-size: 40px;
 }
 .Philosophy1 {
   margin-left: auto;
@@ -100,11 +169,11 @@ max-width: 100%;
 
 
 .Philosophy1 h1 {
-  margin-top: 120px;
-  font-size: 40px;
-  color:  #1C67B5 !important;;
-  text-align: center;
+  margin-top: 10px;
   margin-bottom: 50px;
+  text-align: center;
+  font-family: "LEXEND", sans-serif;
+  font-size: 40px;
 }
 .Philosophy p {
   font-size: 20px;
@@ -127,7 +196,7 @@ max-width: 100%;
 .purpose1 img {
   margin: auto;
   max-width: 100%;
-  margin-bottom: 100px;
+  margin-bottom: 10px;
 }
 .purpose h5 {
   margin: auto;
@@ -137,64 +206,97 @@ max-width: 100%;
 .purpose img {
   margin-bottom: 10px;
 }
-.blog_header1 {
-  margin: auto;
-}
-.blog_header1 p {
-  font-size: 20px;
-  text-align: justify;
-  color: #5c5c5c;
-  padding-right: 20px;
-  
- 
-}
+
 
 .blog_header1 h6 {
   text-align: center;
-  font-size: 50px;
-  color:  #1C67B5 !important;
+  font-size: 45px;
+  line-height: 1.08349;
+  font-weight: 600;
+  letter-spacing: -0.003em;
+  font-family: "LEXEND", sans-serif;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 575px) {  
+  .about_Top{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+  }
+  .about_Top_background{
+    margin-bottom: 40px;
+    margin-top: -10px;
+  }
+
   .blog_container_about {
-    border: 1px solid #ccc; /* Adjust the border styles as needed */
     margin: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 0px;
+    margin-bottom: 50px;
     border-radius: 20px;
     /* Adjust the padding as needed */
   }
-  .about_hedder_container {
-    border: 1px solid rgba(0, 1, 2, 0.395);
-    margin-left: 10px;
-    margin-right: 10px;
-    border-radius: 0px;
-    margin-top: -60px;
-    background-color: rgb(56, 50, 50);
-    height: 80px;
-    position: relative;
-    z-index: 1;
-    border-radius: 5px;
-  }
-
-  .about_hedder_container h1 {
-    text-align: center;
-    margin: auto;
-    margin-top: 25px;
-    margin-left: 20px;
-    font-size: 10px;
-    font-family: "LEXEND", sans-serif;
-    color: rgb(255, 255, 255);
+  .about_Top h2{
     
+    font-size: 25px;
+    font-weight: 600;
+  }
+  .about_Top p{
+    font-size: 15px;
+    
+  }
+  .Philosophy1 h1 {
+    margin-top: 0px;
+    font-size: 20px;
+    color:  #070707 !important;;
+    text-align: center;
+    font-family: "LEXEND", sans-serif;
+    margin-bottom: 50px;
+
+  }
+  p {
+    color: #828282;
+    letter-spacing: 0.8px;
+    line-height: 28px;
+    text-align: center;
+    font-family: "LEXEND", sans-serif;
+    font-size: 20px;
+      
+  }
+  .vimi{
+    padding: 20px;
+    margin-top: 10px;
+  }
+  .vimi p{
+    font-size: 14px;
+  }
+  
+  .black-text5 {
+    font-size: 25px;
   }
   .center-button1 {
     padding-right: 30px;
   }
+  .about_header img{
+    width: 80%;
+    margin-top: -40px;
+    margin-left: 40px;
+    
+  }
+  .purpose_background{
+    margin-top: 60px;
+    background-color: #f8f8f8;
+    padding-bottom: 10px;
+    padding-top: -20px;
+  }
+  .purpose_background2{
+    margin-top: 10px;
+    background-color: #f8f8f8;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
   
-
-
   .aboutBanner img{
     height: 25vh;
     max-width: 100%;
@@ -205,11 +307,13 @@ max-width: 100%;
     font-size: 14px;
     line-height: 1.4;
     text-align: justify;
+    font-family: "LEXEND", sans-serif;
   }
   .Philosophy p {
     font-size: 10px;
     line-height: 1.4;
     text-align: justify;
+    font-family: "LEXEND", sans-serif;
   }
 
   .Philosophy {
@@ -218,17 +322,14 @@ max-width: 100%;
     margin-right: auto;
   }
   .Philosophy h1 {
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 16px;
+    margin-top: 40px;
+    font-size: 20px;
+    color:  #070707 !important;;
+    text-align: center;
+    font-family: "LEXEND", sans-serif;
+    margin-bottom: 20px;
   }
-  .Philosophy1 h1 {
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 16px;
-  }
+  
   .vision {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -269,8 +370,12 @@ max-width: 100%;
     margin-top: 0px;
   }
   .blog_header1 p {
-    font-size: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.2;
+    color: #828282;
+  letter-spacing: 0.8px;
+  line-height: 28px;
+  text-align: center;
+  font-family: "LEXEND", sans-serif;
+  font-size: 14px;
+    
   }
 }
