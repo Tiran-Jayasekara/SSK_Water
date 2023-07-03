@@ -8,7 +8,6 @@ import com from "../../assests/images/Filter/com.png";
 import ind from "../../assests/images/Filter/ind.png";
 import ion from "../../assests/images/Filter/ion.png";
 import spare from "../../assests/images/Filter/spare.png";
-import about from "../../assests/images/homeBanner/1.png";
 
 
 function Store() {
@@ -25,147 +24,187 @@ function Store() {
       SetData(fetchedData);
     });
   };
-    
 
   return (
     <>
-      <Row>     
-          <img
-            src={about}
-            className="topimage1"
-            alt="Domestic Icon"
-            style={{ maxWidth: "100%" }}
-          />
-          
-        <Col xs={{ span: 24 }} lg={{ span: 24 }}>
-          <div className="store_hedder_container">
-            <h1> OUR STORE</h1>
-          </div>
-        </Col>
-
-        {/* <Col className="Store_Header" xs={{ span: 24 }} lg={{ span: 24 }}>
-          <h1>Our Store</h1>
-        </Col> */}
-
-        <Col
-          className="Store_Nav_Bar"
-          xs={{ span: 22 }}
-          sm={{ span: 24 }}
-          lg={{ span: 4 }}
-        >
-          <div className="nav-bar-container">
-            <Row gutter={0}>
+      <div className="store_main">
+        <Row>
+          <Col
+            className="store_header"
+            xs={{ span: 10 }}
+            sm={{ span: 10 }}
+            lg={{ span: 14 }}
+          >
+            <h2>
+              <span className="black-text">Store.</span> The best way to buy the
+              products you love.
+            </h2>
+          </Col>
+          <Col
+            className="store_header"
+            xs={{ span: 10 }}
+            sm={{ span: 10 }}
+            lg={{ span: 8 }}
+          >
+            <Row>
               <Col
-                className="Store_Nav_Bar"
-                xs={{ span: 4 }}
-                sm={{ span: 4 }}
+                className=""
+                xs={{ span: 24 }}
+                sm={{ span: 24 }}
                 lg={{ span: 24 }}
               >
-                <div className="centered1">
+                <div className="image-h6-container">
                   <img
                     src={domestic}
-                    alt="Domestic Icon"
-                    className="button-icon"
-                    onClick={() => {
-                      SetData(<ProductList Category={"Domestic"} />);
-                    }}
+                    alt="contact"
+                    className="image_store_contact"
                   />
-                  <h3>Domestic</h3>
+                  <h6>Need shopping help?</h6>
                 </div>
-              </Col>
-
-              <Col
-                className="Store_Nav_Bar"
-                xs={{ span: 4 }}
-                sm={{ span: 4 }}
-                lg={{ span: 24 }}
+                <div className="storeLink">
+                <a
+                href="/#/contact"
+                target="_blank"
+                rel="noreferrer"
+                className="keyword_link"
               >
-                <div className="centered1">
-                  <img
-                    src={com}
-                    alt="Domestic Icon"
-                    className="button-icon"
-                    onClick={() => {
-                      SetData(<ProductList Category={"Commercial"} />);
-                    }}
-                  />
-                  <h3>Commercial</h3>
+                Check Here
+              </a>
+               
                 </div>
               </Col>
-
-              <Col
-                className="Store_Nav_Bar"
-                xs={{ span: 4 }}
-                sm={{ span: 4 }}
-                lg={{ span: 24 }}
-              >
-                <div className="centered1">
-                  <img
-                    src={ind}
-                    alt="Industrial"
-                    className="button-icon"
-                    onClick={() => {
-                      SetData(<ProductList Category={"Industrial"} />);
-                    }}
-                  />
-                  <h3>Industrial</h3>
-                </div>
-              </Col>
-
-              <Col
-                className="Store_Nav_Bar"
-                xs={{ span: 4 }}
-                sm={{ span: 4 }}
-                lg={{ span: 24 }}
-              >
-                <div className="centered1">
-                  <img
-                    src={ion}
-                    alt="Industrial"
-                    className="button-icon"
-                    onClick={() => {
-                      SetData(<ProductList Category={"Ionizer"} />);
-                    }}
-                  />
-                  <h3>Ionizer</h3>
-                </div>
-              </Col>
-
-              <Col
-                className="Store_Nav_Bar"
-                xs={{ span: 4 }}
-                sm={{ span: 4 }}
-                lg={{ span: 24 }}
-              >
-                <div className="centered1">
-                  <img
-                    src={spare}
-                    alt="Industrial"
-                    className="button-icon"
-                    onClick={() => {
-                      SetData(<ProductList Category={"Spare"} />);
-                    }}
-                  />
-                  <h3>Spare Parts</h3>
-                </div>
-              </Col>
+             
             </Row>
-          </div>
-        </Col>
+          </Col>
+        </Row>
 
-        <Col
-          className="Store_product_List"
-          xs={{ span: 24 }}
-          sm={{ span: 24 }}
-          lg={{ span: 18 }}
-        >
-          <div className="Products_List">{data}</div>
-        </Col>
+        <Row>
+          <Col
+            className="Store_Nav_Bar"
+            xs={{ span: 22 }}
+            sm={{ span: 24 }}
+            lg={{ span: 24 }}
+          >
+            <div className="nav-bar-container">
+              <Row className="nav-bar-row">
+                <Col xs={{ span: 2 }} sm={{ span: 4 }} lg={{ span: 4 }}></Col>
+                <Col
+                  className="Store_Nav_Bar"
+                  xs={{ span: 4 }}
+                  sm={{ span: 3 }}
+                  lg={{ span: 3 }}
+                >
+                  <div className="centered1">
+                    <img
+                      src={domestic}
+                      alt="Domestic Icon"
+                      className="button-icon"
+                      onClick={() => {
+                        SetData(<ProductList Category={"Domestic"} />);
+                      }}
+                    />
+                    <h3>Domestic</h3>
+                  </div>
+                </Col>
 
-        {/* <Col>
+                <Col
+                  className="Store_Nav_Bar"
+                  xs={{ span: 4 }}
+                  sm={{ span: 3 }}
+                  lg={{ span: 3 }}
+                >
+                  <div className="centered1">
+                    <img
+                      src={com}
+                      alt="Domestic Icon"
+                      className="button-icon"
+                      onClick={() => {
+                        SetData(<ProductList Category={"Commercial"} />);
+                      }}
+                    />
+                    <h3>Commercial</h3>
+                  </div>
+                </Col>
+
+                <Col
+                  className="Store_Nav_Bar"
+                  xs={{ span: 4 }}
+                  sm={{ span: 3 }}
+                  lg={{ span: 3 }}
+                >
+                  <div className="centered1">
+                    <img
+                      src={ind}
+                      alt="Industrial"
+                      className="button-icon"
+                      onClick={() => {
+                        SetData(<ProductList Category={"Industrial"} />);
+                      }}
+                    />
+                    <h3>Industrial</h3>
+                  </div>
+                </Col>
+
+                <Col
+                  className="Store_Nav_Bar"
+                  xs={{ span: 4 }}
+                  sm={{ span: 3 }}
+                  lg={{ span: 3 }}
+                >
+                  <div className="centered1">
+                    <img
+                      src={ion}
+                      alt="Industrial"
+                      className="button-icon"
+                      onClick={() => {
+                        SetData(<ProductList Category={"Ionizer"} />);
+                      }}
+                    />
+                    <h3>Ionizer</h3>
+                  </div>
+                </Col>
+
+                <Col
+                  className="Store_Nav_Bar"
+                  xs={{ span: 4 }}
+                  sm={{ span: 3 }}
+                  lg={{ span: 3 }}
+                >
+                  <div className="centered1">
+                    <img
+                      src={spare}
+                      alt="Industrial"
+                      className="button-icon"
+                      onClick={() => {
+                        SetData(<ProductList Category={"Spare"} />);
+                      }}
+                    />
+                    <h3>Spare Parts</h3>
+                  </div>
+                </Col>
+                <Col xs={{ span: 2 }} sm={{ span: 4 }} lg={{ span: 4 }}></Col>
+              </Row>
+            </div>
+          </Col>
+        </Row>
+
+        <Row>
+          <Col xs={{ span: 2 }} sm={{ span: 2 }} lg={{ span: 2 }}></Col>
+          <Col
+            className="Store_product_List"
+            xs={{ span: 20 }}
+            sm={{ span: 20 }}
+            lg={{ span: 20 }}
+          >
+            <div className="Products_List">{data}</div>
+          </Col>
+          <Col xs={{ span: 2 }} sm={{ span: 2 }} lg={{ span: 2 }}></Col>
+
+          {/* <Col>
           <Testimonials />
         </Col> */}
-      </Row>
+        </Row>
+      </div>
     </>
   );
 }

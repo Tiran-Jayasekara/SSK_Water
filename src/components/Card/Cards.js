@@ -1,4 +1,4 @@
-import React from "react";
+import React ,{useEffect} from "react";
 import "./Cards.css";
 import { Col, Row } from "antd";
 import CardItem from "./CardItem";
@@ -7,28 +7,41 @@ import CardItem from "./CardItem";
 import service3 from "../../assests/images/Service/service3.jpg";
 import service4 from "../../assests/images/Service/service4.jpg";
 import service5 from "../../assests/images/Service/service1.jpg";
+import ScrollReveal from "scrollreveal";
 
 function Cards() {
+  useEffect(() => {
+    const sr = ScrollReveal();
+
+    sr.reveal(".revealElement", {
+      duration: 3000,
+      distance: "100px",
+      easing: "ease",
+      origin: "bottom",
+    });
+  }, []);
   return (
     <>
-      <div className="cards_background">
+      <div className="cards_background revealElement">
         <Row gutter={0}>
           <Col
-            className="cards_header"
+            className="cards_header revealElement"
             xs={{ span: 22 }}
             sm={{ span: 22 }}
             lg={{ span: 22 }}
           >
-            <h1>Maintaining And Services!</h1>
+            <h1>
+              Maintaining And Services!
+            </h1>
           </Col>
         </Row>
 
 
-        <Row className="cards_col_2" gutter={0} justify="center">
+        <Row className="cards_col_2 revealElement" gutter={0} justify="center">
           <Col lg={{ span: 4 }} xs={{ span: 2 }}></Col>
 
           <Col
-            className="cards_col_1"
+            className="cards_col_1 revealElement"
             xs={{ span: 20, offset: 2 }}
             sm={{ span: 20, offset: 2 }}
             lg={{ span: 8, offset: 9 }}
@@ -42,7 +55,7 @@ function Cards() {
           </Col>
 
           <Col
-            className="cards_col_1"
+            className="cards_col_1 revealElement"
             xs={{ span: 20 ,offset: 2}}
             sm={{ span: 20 ,offset: 2 }}
             lg={{ span: 8 ,offset: 9}}
@@ -62,10 +75,10 @@ function Cards() {
 
         {/* card set 2 */}
         
-        <Row className="cards_col_2" gutter={0} justify="center">
+        <Row className="cards_col_2 revealElement" gutter={0} justify="center">
           <Col lg={{ span: 3 }} xs={{ span: 20 }}></Col>
           <Col
-            className="cards_col_1"
+            className="cards_col_1 revealElement"
             xs={{ span: 20, offset: 2 }}
             sm={{ span: 20, offset: 2 }}
             lg={{ span: 6, offset: 9 }}
@@ -78,7 +91,7 @@ function Cards() {
             />
           </Col>
           <Col
-            className="cards_col_1"
+            className="cards_col_1 revealElement"
             xs={{ span: 20, offset: 2 }}
             sm={{ span: 20, offset: 2 }}
             lg={{ span: 6, offset: 9 }}
@@ -92,7 +105,7 @@ function Cards() {
           </Col>
 
           <Col
-            className="cards_col_1"
+            className="cards_col_1 revealElement"
             xs={{ span: 20 }}
             sm={{ span: 20 }}
             lg={{ span: 6 }}

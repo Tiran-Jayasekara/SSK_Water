@@ -1,8 +1,10 @@
 import "./Store.css";
 import { Modal, Button, Space, Row, Col } from "antd";
-import { useState, useRef } from "react";
-import domestic1 from "../../assests/images/store/domestic/1.jpg";
+import { useState, useRef,useEffect } from "react";
+import domestic1 from "../../assests/images/store/domestic/1.png";
 import emailjs from "emailjs-com";
+import ScrollReveal from "scrollreveal";
+
 // import { red } from "@material-ui/core/colors";
 // import domestic2 from "../../assests/images/store/domestic/2.jpg";
 // import domestic3 from "../../assests/images/store/domestic/3.jpg";
@@ -166,39 +168,56 @@ function ProductList(props) {
       productList = Industrial;
   }
 
+  
+
+
+  useEffect(() => {
+    const sr = ScrollReveal();
+
+    sr.reveal(".revealElement", {
+      duration: 1000,
+      distance: "100px",
+      easing: "ease",
+      origin: "bottom",
+    });
+  }, []);
+
+    
+
   return (
     <div className="product_main">
       {productList
         .reduce(
           (rows, product, index) =>
-            index % 6 === 0
+            index % 3 === 0
               ? rows.concat([[product]])
               : (rows[rows.length - 1].push(product), rows),
           []
         )
         .map((row, rowIndex) => (
-          <Row key={rowIndex} gutter={0}>
-            {row.map((product) => (
+          <Row key={rowIndex}>
+            {row.map((product ,productIndex) => (
               <Col
                 key={product.id}
-                className="Store_product_List"
-                xs={{ span: 12 }}
-                sm={{ span: 10 }}
-                lg={{ span: 4 }}
+                className="Store_product_List "
+                xs={{ span: 24 }}
+                sm={{ span: 16 }}
+                lg={{ span: 8 }}
               >
                 <div
-                  className="product-container"
+                  className={`product-container ${productIndex === 0 ? 'first-product' : ''}`}
                   onClick={() => imageClick(product)}
                 >
+                  
+                  <h5 className="product-title revealElement">{product.title}</h5>
+                  <div className="product-details revealElement">
+                    <p className="product-price revealElement">RS : {product.price}</p>
+                  </div>
                   <img
                     className="product-image"
                     src={product.image}
                     alt={product.title}
                   />
-                  <h5 className="product-title">{product.title}</h5>
-                  <div className="product-details">
-                    <p className="product-price">RS : {product.price}</p>
-                  </div>
                 </div>
               </Col>
             ))}
@@ -224,7 +243,7 @@ function ProductList(props) {
         <div className="modal-content">
           <Row>
             <Col
-              className="modal_content_h1"
+              className="modal_content_h1 "
               xs={{ span: 22 }}
               sm={{ span: 22 }}
               lg={{ span: 22 }}
@@ -238,11 +257,11 @@ function ProductList(props) {
             </Col> */}
             <Col xs={{ span: 24 }} sm={{ span: 10 }} lg={{ span: 24 }}>
               <Space direction="vertical">
-                <div key={0} className="image-container">
+                <div key={0} className="image-container revealElement">
                   &nbsp;&nbsp;
                   <b>
                     <img
-                      className="model_image"
+                      className="model_image revealElement"
                       src={selectedImage}
                       alt={display.title}
                     />
@@ -252,14 +271,14 @@ function ProductList(props) {
                   <Col xs={{ span: 2 }} sm={{ span: 2 }} lg={{ span: 2 }}></Col>
                   <Col xs={{ span: 5 }} sm={{ span: 5 }} lg={{ span: 5 }}>
                     <div
-                      className="model_Small_List"
+                      className="model_Small_List revealElement"
                       onClick={() => handleImageClick(display.image1)}
                       key={0}
                     >
                       &nbsp;&nbsp;
                       <b>
                         <img
-                          className="model_image_small"
+                          className="model_image_small revealElement"
                           src={display.image1}
                           alt={display.title}
                         />
@@ -268,14 +287,14 @@ function ProductList(props) {
                   </Col>
                   <Col xs={{ span: 5 }} sm={{ span: 5 }} lg={{ span: 5 }}>
                     <div
-                      className="model_Small_List"
+                      className="model_Small_List revealElement"
                       onClick={() => handleImageClick(display.image2)}
                       key={0}
                     >
                       &nbsp;&nbsp;
                       <b>
                         <img
-                          className="model_image_small"
+                          className="model_image_small revealElement"
                           src={display.image2}
                           alt={display.title}
                         />
@@ -284,14 +303,14 @@ function ProductList(props) {
                   </Col>
                   <Col xs={{ span: 5 }} sm={{ span: 5 }} lg={{ span: 5 }}>
                     <div
-                      className="model_Small_List"
+                      className="model_Small_List revealElement"
                       onClick={() => handleImageClick(display.image3)}
                       key={0}
                     >
                       &nbsp;&nbsp;
                       <b>
                         <img
-                          className="model_image_small"
+                          className="model_image_small revealElement"
                           src={display.image3}
                           alt={display.title}
                         />
@@ -300,14 +319,14 @@ function ProductList(props) {
                   </Col>
                   <Col xs={{ span: 5 }} sm={{ span: 5 }} lg={{ span: 5 }}>
                     <div
-                      className="model_Small_List"
+                      className="model_Small_List revealElement"
                       key={0}
                       onClick={() => handleImageClick(display.image4)}
                     >
                       &nbsp;&nbsp;
                       <b>
                         <img
-                          className="model_image_small"
+                          className="model_image_small revealElement"
                           src={display.image4}
                           alt={display.title}
                         />
@@ -316,9 +335,9 @@ function ProductList(props) {
                   </Col>
                   <Col xs={{ span: 2 }} sm={{ span: 2 }} lg={{ span: 2 }}></Col>
                 </Row>
-                <div className="model_about" key={1}>
+                <div className="model_about revealElement" key={1}>
                   {/* <h3>ABOUT</h3> */}
-                  <div className="product_details">
+                  <div className="product_details revealElement">
                     <h5>Application : {display.application}</h5>
                     <h5>Installation Type : {display.installation}</h5>
                     <h5>Water Tank : {display.waterTank}</h5>
@@ -368,7 +387,7 @@ function ProductList(props) {
         <div>
           <Row>
             <Col
-              className="model_contact"
+              className="model_contact revealElement"
               xs={{ span: 24 }}
               sm={{ span: 16 }}
               lg={{ span: 10 }}
@@ -396,9 +415,9 @@ function ProductList(props) {
                 <form
                   ref={formRef}
                   onSubmit={handleSubmit}
-                  className="contact-form"
+                  className="contact-form revealElement"
                 >
-                  <div className="form-field">
+                  <div className="form-field revealElement">
                     <label htmlFor="name">Your Name</label>
                     <input
                       type="text"
@@ -409,7 +428,7 @@ function ProductList(props) {
                       placeholder="What's your good name?"
                     />
                   </div>
-                  <div className="form-field">
+                  <div className="form-field revealElement">
                     <label htmlFor="mobile">Your Number</label>
                     <input
                       type="tel"
@@ -420,7 +439,7 @@ function ProductList(props) {
                       placeholder="What's your Mobile Number?"
                     />
                   </div>
-                  <div className="form-field">
+                  <div className="form-field revealElement">
                     <label htmlFor="Brand">Brand</label>
                     <input
                       type="text"
@@ -432,7 +451,7 @@ function ProductList(props) {
                     />
                   </div>
 
-                  <div className="form-field">
+                  <div className="form-field revealElement">
                   <label htmlFor="choose">Choose</label>
 
                     <Row>
@@ -478,7 +497,7 @@ function ProductList(props) {
                         
                       </label>
                     </Col>
-                    <Col className=""
+                    <Col className="revealElement"
                       xs={{ span: 16 }}
                       sm={{ span: 16 }}
                       lg={{ span: 16}}>
@@ -520,7 +539,7 @@ const Domestic = [
     id: 1,
     title: "Domestic",
     author: "Douglas Adams",
-    price: 85000,
+    price: "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
     application: "Household",
     installation: "Wall Mounted",
     waterTank: "11L",
@@ -544,7 +563,7 @@ const Domestic = [
     id: 2,
     title: "Domestic 2 ",
     author: "Harper Lee",
-    price: 85000,
+    price: "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
     application: "Household",
     installation: "Wall Mounted",
     waterTank: "11L",
@@ -566,7 +585,7 @@ const Domestic = [
     id: 3,
     title: "Domestic 3 ",
     author: "F. Scott ",
-    price: 85000,
+    price: "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
     application: "Household",
     installation: "Wall Mounted",
     waterTank: "11L",
@@ -586,7 +605,7 @@ const Domestic = [
     id: 4,
     title: "Domestic 4 ",
     author: "F. Scott ",
-    price: 85000,
+    price: "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
     application: "Household",
     installation: "Wall Mounted",
     waterTank: "11L",
@@ -594,7 +613,7 @@ const Domestic = [
     technology: "RO + uv + TDS",
     feature: "Transferase the process",
     image:
-      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    domestic1,
     image1:
       "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
     image2:
@@ -608,7 +627,7 @@ const Domestic = [
     id: 5,
     title: "Domestic 1 ",
     author: "Douglas Adams",
-    price: 85000,
+    price: "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
     application: "Household",
     installation: "Wall Mounted",
     waterTank: "11L",
@@ -630,7 +649,7 @@ const Domestic = [
     id: 6,
     title: "Domestic 2 ",
     author: "Harper Lee",
-    price: 85000,
+    price: "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
     application: "Household",
     installation: "Wall Mounted",
     waterTank: "11L",
@@ -651,7 +670,7 @@ const Domestic = [
     id: 7,
     title: "Domestic 3 ",
     author: "F. Scott ",
-    price: 85000,
+    price: "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
     application: "Household",
     installation: "Wall Mounted",
     waterTank: "11L",
@@ -659,7 +678,7 @@ const Domestic = [
     technology: "RO + uv + TDS",
     feature: "Transferase the process",
     image:
-      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    domestic1,
     image1:
       "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
     image2:
@@ -673,7 +692,7 @@ const Domestic = [
     id: 8,
     title: "Domestic 4 ",
     author: "F. Scott ",
-    price: 85000,
+    price: "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
     application: "Household",
     installation: "Wall Mounted",
     waterTank: "11L",
@@ -695,7 +714,7 @@ const Domestic = [
     id: 9,
     title: "Domestic 1 ",
     author: "Douglas Adams",
-    price: 85000,
+    price: "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
     application: "Household",
     installation: "Wall Mounted",
     waterTank: "11L",
@@ -717,7 +736,7 @@ const Domestic = [
     id: 10,
     title: "Domestic 2 ",
     author: "Harper Lee",
-    price: 85000,
+    price: "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
     application: "Household",
     installation: "Wall Mounted",
     waterTank: "11L",
@@ -725,7 +744,7 @@ const Domestic = [
     technology: "RO + uv + TDS",
     feature: "Transferase the process",
     image:
-      "https://cdn11.bigcommerce.com/s-mpfo2gcqca/images/stencil/1280x1280/products/476/2363/brondell-capella-RC250-reverse-osmosis-water-filtration-system-white__88084.1660687393.jpg?c=1",
+    domestic1,
 
     image1:
       "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
@@ -740,7 +759,7 @@ const Domestic = [
     id: 11,
     title: "Domestic 3 ",
     author: "F. Scott ",
-    price: 85000,
+    price: "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
     application: "Household",
     installation: "Wall Mounted",
     waterTank: "11L",
@@ -763,7 +782,7 @@ const Domestic = [
     id: 12,
     title: "Domestic 4 ",
     author: "F. Scott ",
-    price: 85000,
+    price: "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
     application: "Household",
     installation: "Wall Mounted",
     waterTank: "11L",

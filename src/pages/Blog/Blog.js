@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import "./Blog.css";
 import { Col, Row, Button } from "antd";
 import { Link } from "react-router-dom";
@@ -9,23 +9,36 @@ import lanka from "../../assests/images/blog/lanka.png";
 import water from "../../assests/images/blog/water.png";
 
 import about from "../../assests/images/blog/3.png";
+import ScrollReveal from "scrollreveal";
 
 const Blog = () => {
+  useEffect(() => {
+    const sr = ScrollReveal();
+
+    sr.reveal(".revealElement", {
+      duration: 2000,
+      distance: "50px",
+      easing: "ease",
+      origin: "bottom",
+    });
+  }, []);
+
   return (
     <>
-      <Row>
-        <Col xs={{ span: 24 }} lg={{ span: 24 }}>
+      <Row className="revealElement">
+        <Col className="blogbanner" xs={{ span: 24 }} lg={{ span: 24 }}>
           <img
             src={about}
             alt="about"
             style={{ maxWidth: "100%", height: "auto" }}
+
           ></img>
         </Col>
       </Row>
-      <div className="blog_container">
-        <Row className="Main_Blog" gutter={[16, 16]}>
+      <div className="blog_container revealElement">
+        <Row className="Main_Blog revealElement" gutter={[16, 16]}>
           <Col
-            className="blog_header"
+            className="blog_header revealElement"
             xs={{ span: 22 }}
             sm={{ span: 8 }}
             lg={{ span: 8 }}
@@ -61,7 +74,7 @@ const Blog = () => {
               involves assessing various factors to ensure its quality and
               safety. Here are some key measurements commonly used
             </p>
-            <div className="button_container">
+            <div className="button_container revealElement">
               <Link to="/BlogPost1" className="nav-links">
                 <Button>Read More</Button>
               </Link>
@@ -69,8 +82,8 @@ const Blog = () => {
           </Col>
         </Row>
       </div>
-      <div className="blog_container">
-        <Row className="Main_Blog" gutter={[16, 16]}>
+      <div className="blog_container revealElement">
+        <Row className="Main_Blog revealElement" gutter={[16, 16]}>
           <Col
             className="blog_header"
             xs={{ span: 22 }}
@@ -91,7 +104,7 @@ const Blog = () => {
             </p>
           </Col>
           <Col
-            className="blog_header"
+            className="blog_header revealElement"
             xs={{ span: 22 }}
             sm={{ span: 12 }}
             lg={{ span: 14 }}
@@ -109,7 +122,7 @@ const Blog = () => {
               involves assessing various factors to ensure its quality and
               safety. Here are some key measurements commonly used
             </p>
-            <div className="button_container">
+            <div className="button_container revealElement">
               <Link to="/BlogPost2" className="nav-links">
                 <Button>Read More</Button>
               </Link>
@@ -118,10 +131,10 @@ const Blog = () => {
         </Row>
       </div>
 
-      <div className="blog_container">
-        <Row className="Main_Blog" gutter={[16, 16]}>
+      <div className="blog_container revealElement">
+        <Row className="Main_Blog revealElement" gutter={[16, 16]}>
           <Col
-            className="blog_header"
+            className="blog_header revealElement"
             xs={{ span: 22 }}
             sm={{ span: 8 }}
             lg={{ span: 8 }}
@@ -140,7 +153,7 @@ const Blog = () => {
             </p>
           </Col>
           <Col
-            className="blog_header"
+            className="blog_header revealElement"
             xs={{ span: 22 }}
             sm={{ span: 12 }}
             lg={{ span: 14 }}
@@ -158,7 +171,7 @@ const Blog = () => {
               involves assessing various factors to ensure its quality and
               safety. Here are some key measurements commonly used
             </p>
-            <div className="button_container">
+            <div className="button_container revealElement">
               <Link to="/BlogPost3" className="nav-links">
                 <Button>Read More</Button>
               </Link>
@@ -167,8 +180,8 @@ const Blog = () => {
         </Row>
       </div>
 
-      <div className="blog_container">
-        <Row className="Main_Blog" gutter={[16, 16]}>
+      <div className="blog_container revealElement">
+        <Row className="Main_Blog revealElement" gutter={[16, 16]}>
           <Col
             className="blog_header"
             xs={{ span: 22 }}
@@ -189,7 +202,7 @@ const Blog = () => {
             </p>
           </Col>
           <Col
-            className="blog_header"
+            className="blog_header revealElement"
             xs={{ span: 22 }}
             sm={{ span: 12 }}
             lg={{ span: 14 }}
@@ -207,7 +220,7 @@ const Blog = () => {
               involves assessing various factors to ensure its quality and
               safety. Here are some key measurements commonly used
             </p>
-            <div className="button_container">
+            <div className="button_container revealElement">
               <Link to="/BlogPost4" className="nav-links">
                 <Button>Read More</Button>
               </Link>

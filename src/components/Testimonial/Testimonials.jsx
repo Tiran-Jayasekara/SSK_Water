@@ -4,7 +4,8 @@ import Slider from "react-slick";
 import { useEffect, useState } from "react";
 import { Col, Row } from "antd";
 
-import img from "../../assests/images/Service/feedback.jpg";
+import img from "../../assests/images/Service/voice.png";
+import ScrollReveal from "scrollreveal";
 
 const Testimonials = () => {
   const [showDots, setShowDots] = useState(window.innerWidth > 1000);
@@ -31,9 +32,20 @@ const Testimonials = () => {
     slidesToScroll: 1,
   };
 
+  useEffect(() => {
+    const sr = ScrollReveal();
+
+    sr.reveal(".revealElement", {
+      duration: 3000,
+      distance: "100px",
+      easing: "ease",
+      origin: "bottom",
+    });
+  }, []);
+
   return (
     <>
-      <Row className="Customer_voice">
+      <Row className="Customer_voice revealElement">
         <Col xs={{ span: 1 }} sm={{ span: 1 }} lg={{ span: 2 }}></Col>
         <Col
           className="Voice_header"
@@ -41,7 +53,7 @@ const Testimonials = () => {
           sm={{ span: 22 }}
           lg={{ span: 10 }}
         >
-          <div className="testimonial__img">
+          <div className="testimonial__img ">
             <img src={img} alt="" className="w-100" />
           </div>
         </Col>
@@ -52,7 +64,10 @@ const Testimonials = () => {
           sm={{ span: 22 }}
           lg={{ span: 10 }}
         >
-          <h2 className="customer_header">Our Customer Voice</h2>
+          <h2>
+              <span className="black-text4">Our</span> Customer Voice
+            </h2>
+          
 
           <Slider {...settings}>
             <div>

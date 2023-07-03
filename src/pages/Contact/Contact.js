@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState , useEffect } from "react";
 import "./Contact.css";
 import Footer from "../../components/Footer/Footer";
 import service1 from "../../assests/images/Service/phone.jpg";
@@ -10,11 +10,24 @@ import {
 } from "@ant-design/icons";
 import banner from "../../assests/images/contactus-banner.jpg";
 import emailjs from "emailjs-com";
+import ScrollReveal from "scrollreveal";
 
 import { Card, Col, Row } from "antd";
 const { Meta } = Card;
 
 const Contact = () => {
+
+  useEffect(() => {
+    const sr = ScrollReveal();
+
+    sr.reveal(".revealElement", {
+      duration: 2000,
+      distance: "50px",
+      easing: "ease",
+      origin: "bottom",
+    });
+  }, []);
+
   const formRef = useRef();
   const [form, setForm] = useState({
     name: "",
@@ -91,14 +104,14 @@ const Contact = () => {
     <>
       <Row>
         <Col className="" xs={{ span: 24 }} lg={{ span: 24 }}>
-          <div className="banner-container">
+          <div className="banner-container revealElement">
             <h1>Contact Us</h1>
 
             <img src={banner} alt="" />
           </div>
         </Col>
         <Col
-          className="GetIn_Touch"
+          className="GetIn_Touch revealElement"
           xs={{ span: 24 }}
           sm={{ span: 24 }}
           lg={{ span: 24 }}
@@ -107,13 +120,13 @@ const Contact = () => {
         </Col>
         <Col xs={{ span: 22 }} sm={{ span: 4 }} lg={{ span: 4 }}></Col>
         <Col
-          className="Contact_Cards"
+          className="Contact_Cards revealElement"
           xs={{ span: 22 }}
           sm={{ span: 8 }}
           lg={{ span: 8 }}
         >
           <Card
-            className="card_main1"
+            className="card_main1 revealElement"
             hoverable
             cover={
               <img
@@ -142,13 +155,13 @@ const Contact = () => {
           </Card>
         </Col>
         <Col
-          className="Contact_Cards"
+          className="Contact_Cards revealElement"
           xs={{ span: 22 }}
           sm={{ span: 8 }}
           lg={{ span: 8 }}
         >
           <Card
-            className="card_main2"
+            className="card_main2 revealElement"
             hoverable
             cover={
               <img
@@ -174,7 +187,7 @@ const Contact = () => {
 
         <Col xs={{ span: 22 }} sm={{ span: 2 }} lg={{ span: 4 }}></Col>
         <Col
-          className="contsct_para"
+          className="contsct_para revealElement"
           xs={{ span: 20 }}
           sm={{ span: 20 }}
           lg={{ span: 6 }}
@@ -189,13 +202,13 @@ const Contact = () => {
         
 
         <Col
-          className="centered"
+          className="centered revealElement"
           xs={{ span: 20 }}
           sm={{ span: 24 }}
           lg={{ span: 12 }}
         >
-          <form ref={formRef} onSubmit={handleSubmit} className="contact-form">
-            <div className="form-field">
+          <form ref={formRef} onSubmit={handleSubmit} className="contact-form revealElement">
+            <div className="form-field revealElement">
               <label htmlFor="name">Your Name</label>
               <input
                 type="text"
@@ -206,7 +219,7 @@ const Contact = () => {
                 placeholder="What's your good name?"
               />
             </div>
-            <div className="form-field">
+            <div className="form-field revealElement">
               <label htmlFor="email">Your Email</label>
               <input
                 type="email"
@@ -217,7 +230,7 @@ const Contact = () => {
                 placeholder="What's your web address?"
               />
             </div>
-            <div className="form-field">
+            <div className="form-field revealElement">
               <label htmlFor="message">Your Message</label>
               <textarea
                 id="message"

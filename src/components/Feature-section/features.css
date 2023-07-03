@@ -6,9 +6,10 @@
   font-weight: 600;
 }
 .features{
+  margin-top: 60px;
+  margin-bottom: 60px;
   max-width: 100%;
-  background-color: #dbeaeb;
-  
+  background-color: #f8f8f8;
 }
 
 .service_p h6{
@@ -24,7 +25,10 @@
   color: #464545;
   letter-spacing: 0.8px;
   line-height: 28px;
-  font-size: 20px;
+  font-size: 16
+  px;
+  font-family: SF Pro Display, SF Pro Icons, AOS Icons, Helvetica Neue,
+    Helvetica, Arial, sans-serif;
 }
 
 @media screen and (max-width: 768px) {
@@ -43,6 +47,12 @@
     letter-spacing: 0.8px;
     line-height: 28px;
     font-size: 14px;
+  }
+  .features{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    max-width: 100%;
+    background-color: #f8f8f8;
   }
 
 }

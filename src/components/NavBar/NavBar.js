@@ -26,7 +26,7 @@ function Navbar() {
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li className='nav-item'>
               <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-                HOME
+                Home
               </Link>
             </li>
             <li className='nav-item'>
@@ -35,16 +35,7 @@ function Navbar() {
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
-                STORE
-              </Link>
-            </li>
-            <li className='nav-item'>
-              <Link
-                to='/about'
-                className='nav-links'
-                onClick={closeMobileMenu}
-              >
-                ABOUT
+                Store
               </Link>
             </li>
             <li className='nav-item'>
@@ -53,18 +44,47 @@ function Navbar() {
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
-                BLOG
+                Blog
               </Link>
             </li>
+            <li className='nav-item'>
+              <Link
+                to='/about'
+                className='nav-links'
+                onClick={closeMobileMenu}
+              >
+                About
+              </Link>
+            </li>
+            
             <li className='nav-item'>
               <Link
                 to='/contact'
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
-                CONTACT
+                Contact
               </Link>
             </li>
+            <li className='nav-item'>
+              <Link
+                to='/Policy'
+                className='nav-links'
+                onClick={closeMobileMenu}
+              >
+                Policy
+              </Link>
+            </li>
+            <li className='nav-item'>
+              <Link
+                to='/Term'
+                className='nav-links'
+                onClick={closeMobileMenu}
+              >
+                Term & Condition
+              </Link>
+            </li>
+            
           </ul>
         </div>
       </div>
