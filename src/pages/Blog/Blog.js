@@ -26,7 +26,7 @@ const Blog = () => {
   return (
     <>
       <Row className="revealElement">
-        <Col xs={{ span: 24 }} lg={{ span: 24 }}>
+        <Col className="blogbanner" xs={{ span: 24 }} lg={{ span: 24 }}>
           <img
             src={about}
             alt="about"

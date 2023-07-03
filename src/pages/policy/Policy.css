@@ -1,0 +1,30 @@
+.Policy_Header{
+    margin-top: 100px;
+    
+}
+.Policy_Header p{
+    text-align: justify;
+}
+.backColor{
+    background-color: #f8f8f8;
+}
+
+@media screen and (max-width: 800px) {
+    .Policy_Header h1, h3{
+        letter-spacing: 0.8px;
+        line-height: 28px;
+        font-family: "LEXEND", sans-serif;
+        font-size: 20px;
+        margin-top: -60px;
+        
+    }
+
+    .Policy_Header p{
+    color: #828282;
+    letter-spacing: 0.8px;
+    line-height: 28px;
+    font-family: "LEXEND", sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+    }
+}

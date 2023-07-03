@@ -4,18 +4,13 @@
   border-radius: 20px;
   /* Adjust the padding as needed */
 }
-
+.blogbanner{
+  margin-top: 30px
+}
 .blog_header {
   margin: auto;
 }
-p {
-  color: #828282;
-  letter-spacing: 0.8px;
-  line-height: 28px;
-  font-size: 20px;
-  font-family: "LEXEND", sans-serif;
-  
-}
+
 
 .blog_header img {
   margin-top: 40px;
@@ -119,6 +114,9 @@ p {
 } */
 
 @media screen and (max-width: 1000px) {
+  .blogbanner{
+    margin-top: 30px
+  }
   .blog_header img {
     margin-top: 20px;
     margin-left: auto;
@@ -157,6 +155,9 @@ p {
 }
 
 @media screen and (max-width: 575px) {
+  .blogbanner{
+    margin-top: 30px
+  }
   .blog_container {
     border: 1px solid #ccc; /* Adjust the border styles as needed */
     margin: 20px;

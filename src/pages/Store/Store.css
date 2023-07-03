@@ -424,7 +424,7 @@ input[type="checkbox"] {
   }
   .Store_Nav_Bar {
     margin-left: 0px;
-    margin-left: 0px;
+    padding-left: 10px;
     margin-right: auto;
   }
 
@@ -451,15 +451,11 @@ input[type="checkbox"] {
   .nav-bar-container {
     margin-top: 10px;
     margin-bottom: 0px;
-    margin-left: -20px;
+    margin-left: 0px;
   }
 
   /* Styles for individual navigation items */
-  .Store_Nav_Bar .centered1 img {
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
-  }
+  
   .store_main {
     padding-top: 30px;
     margin-top: 0px;
@@ -558,6 +554,14 @@ input[type="checkbox"] {
     width: 30px;
     height: 30px;
     margin-left: 12px;
+  }
+  .centered1 h3 {
+    margin-left: 12px;
+  }
+  .Store_Nav_Bar .centered1 img {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
   }
 
   .model_Small_List {

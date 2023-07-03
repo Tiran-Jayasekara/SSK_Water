@@ -10,6 +10,8 @@ import BlogPost from "./pages/Blog/BlogPost";
 import BlogPost2 from "./pages/Blog/BlogPost2";
 import BlogPost3 from "./pages/Blog/BlogPost3";
 import BlogPost4 from "./pages/Blog/BlogPost4";
+import Policy from "./pages/policy/Policy";
+import Term from "./pages/Term/Term";
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
             <Route path="/BlogPost2" element={<BlogPost2/>} />
             <Route path="/BlogPost3" element={<BlogPost3/>} />
             <Route path="/BlogPost4" element={<BlogPost4/>} />
+            <Route path="/Policy" element={<Policy/>} />
+            <Route path="/Term" element={<Term/>} />
             
           </Routes>
         </div>

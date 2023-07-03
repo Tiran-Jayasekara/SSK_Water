@@ -86,8 +86,8 @@ function Store() {
             lg={{ span: 24 }}
           >
             <div className="nav-bar-container">
-              <Row gutter={0} className="nav-bar-row">
-                <Col xs={{ span: 4 }} sm={{ span: 4 }} lg={{ span: 4 }}></Col>
+              <Row className="nav-bar-row">
+                <Col xs={{ span: 2 }} sm={{ span: 4 }} lg={{ span: 4 }}></Col>
                 <Col
                   className="Store_Nav_Bar"
                   xs={{ span: 4 }}
@@ -182,7 +182,7 @@ function Store() {
                     <h3>Spare Parts</h3>
                   </div>
                 </Col>
-                <Col xs={{ span: 4 }} sm={{ span: 4 }} lg={{ span: 4 }}></Col>
+                <Col xs={{ span: 2 }} sm={{ span: 4 }} lg={{ span: 4 }}></Col>
               </Row>
             </div>
           </Col>

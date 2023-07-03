@@ -6,6 +6,22 @@
   border-radius: 20px;
   /* Adjust the padding as needed */
 }
+.aboutBanner{
+  margin-top: 30px;
+}
+.videoElement {
+  width: 100%;
+  height: auto;
+  position: relative;
+  
+}
+
+.videoContainer {
+  position: relative;
+}
+.blurred {
+  filter: blur(4px);
+}
 
 .vimi{
   margin-left: auto;
@@ -111,18 +127,36 @@ p {
   font-family: "LEXEND", sans-serif;
 }
 
-.aboutBanner img{
-height: 75vh;
-max-width: 100%;
+
+
+
+
+.textOverlay {
+  position: absolute;
+  top: 38%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
+
+.textOverlay h1{
+  color: rgb(20, 51, 151);
+  font-family: "LEXEND", sans-serif;
+  font-weight: 1000;
+  font-size: 80px;
+}
+
+
+
+
 .about_header{
   margin-top: 30px;
 }
 .about_header img{
-  width: 80%;
+  width: 100%;
   margin-top: -40px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 20px;
+  
 }
 
 .center-button1 {
@@ -220,10 +254,19 @@ max-width: 100%;
 }
 
 @media screen and (max-width: 575px) {  
+  .aboutBanner{
+    margin-top: 25px;
+  }
   .about_Top{
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
+  }
+  .textOverlay {
+    display: none;
+  }
+  .blurred {
+    filter: blur(0px);
   }
   .about_Top_background{
     margin-bottom: 40px;
