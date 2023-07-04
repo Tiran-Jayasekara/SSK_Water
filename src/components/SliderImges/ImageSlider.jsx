@@ -58,12 +58,15 @@ const ImageChanger = () => {
           <div className="image-changer-container">
             <img src={images[currentImageIndex]} alt="images" className="zoom-image" />
           </div>
+          <div className='banner_text'>
           <h1 ref={textRef} aria-label="Auto-typing text">
            
+           
           </h1>
+          </div>
         </Col>
       </Row>
-      <Row className="Home_hedder_container1">
+      {/* <Row className="Home_hedder_container1">
         <Col xs={{ span: 14 }} lg={{ span: 14 }}>
           <h1>WE UNDERSTAND YOUR NEEDS ON WATER FILTER TECHNOLOGY</h1>
         </Col>
@@ -72,7 +75,7 @@ const ImageChanger = () => {
             <Button>ABOUT US</Button>
           </Link>
         </Col>
-      </Row>
+      </Row> */}
     </>
   );
 };

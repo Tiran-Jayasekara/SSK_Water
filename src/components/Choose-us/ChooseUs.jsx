@@ -27,7 +27,7 @@ const ChooseUs = () => {
         
         gutter={0}
       >
-        <Col className="Choose_h1" xs={{ span: 22 }} lg={{ span: 24 }}>
+        <Col className="Choose_h1" xs={{ span: 24 }} lg={{ span: 24 }}>
           <h1>
               <span className="black-text2">Who</span> We Are ?
             </h1>
@@ -37,7 +37,7 @@ const ChooseUs = () => {
         <Col
           className="describe"
           xs={{ span: 20 }}
-          sm={{ span: 16 }}
+          sm={{ span: 10 }}
           lg={{ span: 10 }}
         >
           <p>
@@ -51,11 +51,12 @@ const ChooseUs = () => {
             water filtration solutions available in the market.
           </p>
         </Col>
+        <Col xs={{ span: 2 }} sm={{ span: 0 }} lg={{ span: 0 }}></Col>
 
         <Col
           className="choose_img_Header"
           xs={{ span: 22 }}
-          sm={{ span: 16 }}
+          sm={{ span: 10 }}
           lg={{ span: 10 }}
         >
           <div className="choose__img">
@@ -80,7 +81,7 @@ const ChooseUs = () => {
             )}
           </div>
         </Col>
-        <Col xs={{ span: 2 }} sm={{ span: 0 }} lg={{ span: 2 }}></Col>
+        <Col xs={{ span: 2 }} sm={{ span: 2 }} lg={{ span: 2 }}></Col>
       </Row>
     </>
   );

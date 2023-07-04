@@ -1,33 +1,34 @@
 .whowe {
   margin-top: 10px;
   height: "auto";
-  background-color: #f9f9fc;
+  background-color: #ffffff;
   padding-top: 100px;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 }
 .Choose_h1 {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  
 }
 .black-text2 {
-  font-size: 50px;
-  line-height: 1.08349;
+  font-family: "Poppins", sans-serif;
+  align-items: center;
+  font-size: 35px;
   font-weight: 600;
-  letter-spacing: -0.003em;
-  font-family: SF Pro Display, SF Pro Icons, AOS Icons, Helvetica Neue,
-    Helvetica, Arial, sans-serif;
+  letter-spacing: 1px;
   display: inline;
-  color: rgb(30, 74, 218);
+  color: #1354a4;
 }
 
 .Choose_h1 h1 {
-  font-size: 50px;
-    line-height: 1.125;
-    font-weight: 600;
-    letter-spacing: 0.004em;
-    color: gray;
-    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
+  align-items: center;
+  font-size: 35px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  display: inline;
+  color: black;
 }
 
 
@@ -37,22 +38,15 @@
   margin-left: auto;
   margin-right: auto;
 }
-p {
-  color: #1d1d1f;
-  letter-spacing: 0.8px;
-  line-height: 28px;
-  font-size: 20px;
-  
-}
+
 
 .describe p {
   text-align: justify;
-  color: #1d1d1f;
-  letter-spacing: 0.8px;
-  line-height: 28px;
-  font-size: 20px;
-  
-    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: black;
 }
 .choose_img_Header {
   margin: auto;
@@ -70,7 +64,7 @@ p {
 .video_image {
   width: 500px;
   height: 360px;
-  margin-left: 100px;
+  margin-left: 78px;
   margin-right: auto;
 }
 .video_player {
@@ -118,26 +112,29 @@ p {
 
 @media screen and (max-width: 680px) {
   .whowe {
-    margin-top: -40px;
+    margin-top: -50px;
+    padding-top: 0px;
     margin-bottom: 0px;
   }
   .black-text2 {
-    font-size: 30px;
+    font-size: 25px;
   }
   .choose__content {
     width: 100%;
     margin-left: 20px;
   }
   .Choose_h1 h1 {
-    font-size: 30px;
+    font-size: 25px;
     margin-top: 0px;
-    text-align: center;
-    margin-left: 40px;
+    margin-left: auto;
+   
   }
   .describe p{
     font-size: 12px;
     line-height: 2;
     text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
     
   }
 
@@ -156,7 +153,7 @@ p {
     width: max-content;
   }
   .play__icon {
-    color: #17bf9e;
+    color: #1b49e0;
     font-size: 2rem;
     padding: 10px;
     margin-left: -10px;
