@@ -60,12 +60,12 @@ const Testimonials = () => {
 
         <Col
           className="voice_text"
-          xs={{ span: 22 }}
+          xs={{ span: 20 }}
           sm={{ span: 22 }}
           lg={{ span: 10 }}
         >
           <h2>
-              <span className="black-text4">Our</span> Customer Voice
+              <span className="black-text4">Our Customer</span> Voice
             </h2>
           
 

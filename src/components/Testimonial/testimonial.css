@@ -1,7 +1,4 @@
-.testimonial__content h2 {
-  font-weight: 600;
-  margin-left: 100px;
-}
+
 .testimonial__img {
   margin-right: 10px;
   width: 600px;
@@ -13,22 +10,32 @@
 .single__testimonial {
   margin-left: 100px;
 }
+.single__testimonial h6{
+  margin-top: 20px;
+  text-align: justify;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: black
+}
 .single__testimonial p{
   text-align: justify;
-  color: #464545;
-  letter-spacing: 0.8px;
-  line-height: 28px;
-  font-size: 16px;
-  font-family: "LEXEND", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: black;
+  line-height: 2;
 }
 .black-text4 {
-  font-size: 40px;
-  line-height: 1.08349;
+  font-family: "Poppins", sans-serif;
+  align-items: center;
+  font-size: 35px;
   font-weight: 600;
-  letter-spacing: -0.003em;
-  font-family: "LEXEND", sans-serif;
+  letter-spacing: 1px;
   display: inline;
-  color:rgb(30, 74, 218);
+  color: #1354a4;
 }
 
 .customer_header {
@@ -42,11 +49,12 @@
   margin: auto;
 }
 .voice_text h2 {
-  font-size: 40px;
-  line-height: 1.08349;
+  font-family: "Poppins", sans-serif;
+  align-items: center;
+  font-size: 35px;
   font-weight: 600;
-  font-family: "LEXEND", sans-serif;
-  color:grey;
+  letter-spacing: 1px;
+  color: black;
   margin-left: 90px;
 }
 .voice_text {
@@ -66,7 +74,7 @@
     margin-top: 20px;
   }
   .single__testimonial p {
-    font-size: 10px;
+    font-size: 12px;
   }
   .customer_header {
     margin-top: 10px;
@@ -87,10 +95,13 @@
     margin-top: 20px;
   }
   .single__testimonial p {
-    font-size: 10px;
+    font-size: 12px;
   }
   .customer_header {
     margin-top: 10px;
+  }
+  .voice_text h2 {
+    font-size: 25px;
   }
 }
 
@@ -101,38 +112,40 @@
     margin-right: auto;
     margin-left: -10px;
   }
+  .black-text4 {
+    font-size: 25px;
+    margin-left: 10px;
+    text-align: center;
+  }
   .voice_text h2 {
+    font-size: 25px;
     margin-top: 20px;
-    margin-left: 20px;
+    text-align: center;
+    margin-left: 0px;
   }
   .slider {
-    margin-left: -50px;
+    margin-left: 0px;
   }
   .single__testimonial {
     margin-left: 20px;
   }
   .single__testimonial h6 {
-    font-size: 14px;
-    margin-top: 20px;
+    font-size: 12px;
+    margin-top: 10px;
     
   }
   .single__testimonial p {
-    font-size: 10px;
-    line-height: 2;
+    font-size: 12px;
+    line-height: 1.8;
+    color: #464545;
   }
   .customer_header {
     margin-top: 10px;
     margin-left: 0px;
     margin-right: auto;
   }
-  .voice_text h2 {
-    font-size: 30px;
-  }
+  
   .Customer_voice{
     margin-top: 150px;
-  }
-  .black-text4 {
-    font-size: 30px;
-    
   }
 }

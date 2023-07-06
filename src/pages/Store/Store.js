@@ -36,7 +36,7 @@ function Store() {
             lg={{ span: 14 }}
           >
             <h2>
-              <span className="black-text">Store.</span> The best way to buy the
+              <span className="black-text">Store</span> The best way to buy the
               products you love.
             </h2>
           </Col>

@@ -1,9 +1,8 @@
 .whowe {
-  margin-top: 10px;
+  margin-top: 70px;
   height: "auto";
   background-color: #ffffff;
   padding-top: 100px;
-  margin-bottom: 10px;
 }
 .Choose_h1 {
   margin-left: auto;
@@ -46,7 +45,7 @@
   font-size: 14px;
   font-weight: 400;
   letter-spacing: 1px;
-  color: black;
+  color: #464545;
 }
 .choose_img_Header {
   margin: auto;
@@ -89,7 +88,7 @@
 }
 
 .play__icon i {
-  color: #17bf9e;
+  color: #1354a4;
   font-size: 2rem;
   padding: 10px;
 }
@@ -112,7 +111,7 @@
 
 @media screen and (max-width: 680px) {
   .whowe {
-    margin-top: -50px;
+    margin-top: 80px;
     padding-top: 0px;
     margin-bottom: 0px;
   }
@@ -135,7 +134,7 @@
     text-align: center;
     margin-top: 10px;
     margin-bottom: 20px;
-    
+    color: #464545;
   }
 
   .choose__img {

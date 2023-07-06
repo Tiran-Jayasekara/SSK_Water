@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import "./Blog.css";
 import { Col, Row, Button } from "antd";
 import { Link } from "react-router-dom";
@@ -8,7 +8,7 @@ import drink from "../../assests/images/blog/drink.png";
 import lanka from "../../assests/images/blog/lanka.png";
 import water from "../../assests/images/blog/water.png";
 
-import about from "../../assests/images/blog/3.png";
+import about from "../../assests/images/blog/1.png";
 import ScrollReveal from "scrollreveal";
 
 const Blog = () => {
@@ -31,12 +31,11 @@ const Blog = () => {
             src={about}
             alt="about"
             style={{ maxWidth: "100%", height: "auto" }}
-
           ></img>
         </Col>
       </Row>
       <div className="blog_container revealElement">
-        <Row className="Main_Blog revealElement" gutter={[16, 16]}>
+        <Row className="Main_Blog revealElement">
           <Col
             className="blog_header revealElement"
             xs={{ span: 22 }}
@@ -61,22 +60,23 @@ const Blog = () => {
             sm={{ span: 12 }}
             lg={{ span: 14 }}
           >
-            <h6>What is the measurement for good drinking water?</h6>
+            <h6>
+              Benifits of
+              <span className="black-text-blog"> Water</span>
+            </h6>
             <p>
-              The measurement for good drinking water involves assessing various
-              factors to ensure its quality and safety. Here are some key
-              measurements commonly used.The measurement for good drinking water
-              involves assessing various factors to ensure its quality and
-              safety. Here are some key measurements commonly used The
-              measurement for good drinking water involves assessing various
-              factors to ensure its quality and safety. Here are some key
-              measurements commonly used The measurement for good drinking water
-              involves assessing various factors to ensure its quality and
-              safety. Here are some key measurements commonly used
+              Water is a vital resource that sustains life on Earth. Beyond
+              quenching our thirst, it plays a crucial role in maintaining our
+              overall health and well-being. From boosting our physical
+              performance to enhancing cognitive function, the benefits of
+              drinking water are abundant and often underestimated. In this
+              article, we will explore the remarkable advantages that hydration
+              offers and why it should be an integral part of our daily
+              routines.
             </p>
-            <div className="button_container revealElement">
+            <div className="revealElement">
               <Link to="/BlogPost1" className="nav-links">
-                <Button>Read More</Button>
+                <p>Read More</p>
               </Link>
             </div>
           </Col>
@@ -109,22 +109,29 @@ const Blog = () => {
             sm={{ span: 12 }}
             lg={{ span: 14 }}
           >
-            <h6>How the current drinking situation in Sri Lanka?</h6>
+            <h6>
+              Ensuring Safe and
+              <span className="black-text-blog">
+                {" "}
+                Healthy Drinking Water
+              </span>{" "}
+              in Sri Lanka
+            </h6>
+
             <p>
-              The measurement for good drinking water involves assessing various
-              factors to ensure its quality and safety. Here are some key
-              measurements commonly used.The measurement for good drinking water
-              involves assessing various factors to ensure its quality and
-              safety. Here are some key measurements commonly used The
-              measurement for good drinking water involves assessing various
-              factors to ensure its quality and safety. Here are some key
-              measurements commonly used The measurement for good drinking water
-              involves assessing various factors to ensure its quality and
-              safety. Here are some key measurements commonly used
+              Access to clean and safe drinking water is a fundamental human
+              right and plays a crucial role in maintaining public health. In
+              Sri Lanka, like many other countries, ensuring the quality of
+              drinking water is of utmost importance. To achieve this, it is
+              essential to understand the measurement standards used to evaluate
+              the safety and purity of drinking water. This article aims to shed
+              light on the measurement criteria for good drinking water in Sri
+              Lanka, emphasizing the parameters and guidelines set by relevant
+              authorities.
             </p>
-            <div className="button_container revealElement">
+            <div className=" revealElement">
               <Link to="/BlogPost2" className="nav-links">
-                <Button>Read More</Button>
+                <p>Read More</p>
               </Link>
             </div>
           </Col>
@@ -158,22 +165,27 @@ const Blog = () => {
             sm={{ span: 12 }}
             lg={{ span: 14 }}
           >
-            <h6>What are the disease occur from water in Sri Lanka?</h6>
+            <h6>
+              How the
+              <span className="black-text-blog">
+                {" "}
+                current drinking situation
+              </span>{" "}
+              in Sri Lanka
+            </h6>
             <p>
-              The measurement for good drinking water involves assessing various
-              factors to ensure its quality and safety. Here are some key
-              measurements commonly used.The measurement for good drinking water
-              involves assessing various factors to ensure its quality and
-              safety. Here are some key measurements commonly used The
-              measurement for good drinking water involves assessing various
-              factors to ensure its quality and safety. Here are some key
-              measurements commonly used The measurement for good drinking water
-              involves assessing various factors to ensure its quality and
-              safety. Here are some key measurements commonly used
+              Access to safe and clean drinking water is a vital necessity for
+              the well-being and health of any nation's population. In Sri
+              Lanka, an island nation located in South Asia, the provision of
+              clean drinking water has been a significant concern. This article
+              aims to assess the current drinking water situation in Sri Lanka,
+              highlighting the challenges faced and the initiatives undertaken
+              to ensure a sustainable supply of safe drinking water for its
+              citizens.
             </p>
-            <div className="button_container revealElement">
+            <div className=" revealElement">
               <Link to="/BlogPost3" className="nav-links">
-                <Button>Read More</Button>
+                <p>Read More</p>
               </Link>
             </div>
           </Col>
@@ -207,30 +219,35 @@ const Blog = () => {
             sm={{ span: 12 }}
             lg={{ span: 14 }}
           >
-            <h6>How to prevent these situation?</h6>
+            <h6>
+              What are the
+              <span className="black-text-blog">
+                {" "}
+                disease occur from water
+              </span>{" "}
+              in Sri Lanka ?
+            </h6>
             <p>
-              The measurement for good drinking water involves assessing various
-              factors to ensure its quality and safety. Here are some key
-              measurements commonly used.The measurement for good drinking water
-              involves assessing various factors to ensure its quality and
-              safety. Here are some key measurements commonly used The
-              measurement for good drinking water involves assessing various
-              factors to ensure its quality and safety. Here are some key
-              measurements commonly used The measurement for good drinking water
-              involves assessing various factors to ensure its quality and
-              safety. Here are some key measurements commonly used
+              Water, the source of life, is indispensable for human existence.
+              However, in Sri Lanka, the scarcity and contamination of clean
+              drinking water have led to a concerning water crisis. This article
+              aims to shed light on the waterborne diseases affecting the
+              country and emphasizes the significance of clean drinking water.
+              Join us as we explore the impact of unsafe water and uncover
+              potential solutions to ensure a healthier future for all Sri
+              Lankans.
             </p>
-            <div className="button_container revealElement">
+            <div className=" revealElement">
               <Link to="/BlogPost4" className="nav-links">
-                <Button>Read More</Button>
+                <p>Read More</p>
               </Link>
             </div>
           </Col>
         </Row>
       </div>
-      <div className="Blog_Footer">
+      {/* <div className="Blog_Footer">
         <Footer />
-      </div>
+      </div> */}
     </>
   );
 };

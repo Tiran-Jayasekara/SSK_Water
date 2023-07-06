@@ -74,7 +74,7 @@ const ChooseUs = () => {
             {!showVideo && (
               <span className="play__icon">
                 <i
-                  className="ri-play-circle-line"
+                  className="ri-play-circle-line "
                   onClick={() => setShowVideo(!showVideo)}
                 ></i>
               </span>

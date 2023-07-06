@@ -1,8 +1,6 @@
 .cards_background{
   margin-top: 0px;
-  background-color: #f8f8f8;
-  margin-bottom: -50px;
-  padding-bottom: 60px;
+  background-color: #ffffff;
   margin-top: 0px;
 }
 .card-heading h4{
@@ -42,6 +40,7 @@
 .cards_header{
   margin-left: auto;
   margin-right: auto;
+  margin-top: 80px;
 }
 
 .cards_header h1{
@@ -98,15 +97,18 @@
     letter-spacing: 2px;
     color: black;
   }
+  .cards_header{
+    margin-top: 70px;
+  }
   
   .card-paragraph p{
     font-family: "Poppins", sans-serif;
     text-align: center;
     margin-top: 20px;
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 400;
     letter-spacing: 1px;
-    color: black;
+    color: #464545;
     line-height: 2;
   }
   

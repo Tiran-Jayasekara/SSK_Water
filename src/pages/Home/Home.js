@@ -19,7 +19,6 @@ function Home() {
       <ChooseUs />
       <Cards />
       <Services />
-      
       <Features />
       <Testimonials />
       <Footer />

@@ -1,9 +1,88 @@
+.main-ssk h5 {
+  font-family: "Poppins", sans-serif;
+  color: black;
+  align-items: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.main-ssk h6 {
+  font-family: "Poppins", sans-serif;
+  color: black;
+  align-items: start;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-align: center;
+}
+.privacyLink{
+  text-decoration: none;
+}
+
+.secound_col h5 {
+  font-family: "Poppins", sans-serif;
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.secound_col h6 {
+  font-family: "Poppins", sans-serif;
+  color: black;
+  text-decoration: none;
+  font-size: 12px;
+  height: 100%;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.footer {
+  background-color: #f8f8f8;
+}
+
+.footer_image {
+  width: 150px;
+  margin-top: -20px;
+  margin-left: 40px; /* Set the desired width */
+
+}
+
+
+
+.follows {
+  margin-top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.follows h5 {
+  font-family: "Poppins", sans-serif;
+  color: black;
+  align-items: start;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
 .follows span a {
   text-decoration: none;
+  text-align: center;
 }
 
 .follows span {
   margin-right: 25px;
+  text-align: center;
 }
 
 .follows span a i {
@@ -19,192 +98,72 @@
   transition: color 0.3s ease;
 }
 
-.follows span a i:hover {
-  color: white;
-}
 
-.footer {
-  position: relative;
-  width: 100%;
-  max-width: 100%;
-  background: rgb(53, 134, 255);
-  min-height: 60px;
-  padding: 10px 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 100px;
-}
 
-.footer .wave {
-  content: "";
-  position: absolute;
-  top: -80px;
-  left: 0;
-  width: 100%;
-  height: 80px;
-  background-image: url(wave.png); /* Set the background image */
-  background-size: 1000px 100px;
-  z-index: -1;
-}
-
-footer .wave#wave1 {
-  z-index: 1000;
-  opacity: 1;
-  bottom: 0;
-  animation: animateWave 4s linear infinite;
-  z-index: -1;
-}
-
-footer .wave#wave2 {
-  z-index: 999;
-  opacity: 0.5;
-  bottom: 10px;
-  animation: animateWave_02 4s linear infinite;
-  z-index: -1;
-}
-
-footer .wave#wave3 {
-  z-index: 1000;
-  opacity: 0.2;
-  bottom: 15px;
-  animation: animateWave_03 3s linear infinite;
-  z-index: -1;
-}
-
-footer .wave#wave4 {
-  z-index: 999;
-  opacity: 0.7;
-  bottom: 20px;
-  animation: animateWave_04 3s linear infinite;
-  z-index: -1;
-}
-.footer_image {
-  width: 200px; /* Set the desired width */
-  height: auto; /* Let the height adjust proportionally */
-  /* Add any additional styles you want for the image */
-}
-
-@keyframes animateWave {
-  0% {
-    background-position-x: 1000px;
-  }
-
-  100% {
-    background-position-x: 0px;
-  }
-}
-
-@keyframes animateWave_02 {
-  0% {
-    background-position-x: 0px;
-  }
-
-  100% {
-    background-position-x: 1000px;
-  }
-}
-
-@keyframes animateWave_03 {
-  0% {
-    background-position-x: 0px;
-  }
-
-  100% {
-    background-position-x: 1000px;
-  }
-}
-
-@keyframes animateWave_04 {
-  0% {
-    background-position-x: 0px;
-  }
-
-  100% {
-    background-position-x: 1000px;
-  }
-}
-
-.follows {
-  margin-top: 30px;
-}
-
-.follows h5 {
-  color: black;
-  font-weight: bold;
-}
-.secound_col {
-  width: 100%;
-}
-.secound_col h6 {
-  line-height: 1.5;
-  color: black;
-  font-size: 10px;
-  font-weight: bold;
-}
-.secound_col h5 {
-  line-height: 1.5;
-  color: black;
-  font-weight: bold;
-}
-
-.main-ssk h5 {
-  color: black;
-  font-weight: bold;
-}
-
-.main-ssk h6 {
-  color: black;
-  font-size: 10px;
-  width: 80%;
-  font-weight: bold;
-}
-
-.main-ssk h5 {
-  margin-top: 50px;
-}
-
-.secound_col h5 {
-  margin-top: 30px;
-  
-}
 
 @media (max-width: 768px) {
+
+  .footer {
+    background-color: #f8f8f8;
+    margin-top: -400px;
+  }
+  .main-ssk {
+    margin-top: -80px;
+  }
+  .text-center{
+    margin-top: -80px;
+  }
+
   .main-ssk h6 {
     color: black;
     font-size: 8px;
     width: 100%;
+    text-align: center;
   }
 
   .main-ssk h5 {
     font-size: 12px;
     margin-top: 50px;
+    text-align: center;
   }
 
   .footer_image {
     width: 150px; /* Set the desired width */
-    height: auto; /* Let the height adjust proportionally */
+    height: auto;
+    margin-top: 20px;
+    margin-left: 10px; /* Let the height adjust proportionally */
     /* Add any additional styles you want for the image */
   }
   .secound_col h6 {
     line-height: 1.5;
     color: black;
     font-size: 8px;
+    text-align: center;
+  }
+
+  .follows {
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
   }
 
   .secound_col h5 {
     margin-top: 20px;
     font-size: 10px;
+    text-align: center;
   }
 
-  .follows span a i {
+  .follows span a {
     font-size: 1em;
     width: 30px;
     height: 30px;
+    text-align: center;
+    margin-left: 20px;
   }
 
   .footer {
-    padding: 10px;
+    margin-top: -100px;
   }
 
   .footer-content {
@@ -213,6 +172,8 @@ footer .wave#wave4 {
 
   .follows h5 {
     font-size: 10px;
+    text-align: center;
+    margin-top: 20px;
   }
 
   .follows span a i {
@@ -226,5 +187,6 @@ footer .wave#wave4 {
     justify-content: center;
     transition: color 0.3s ease;
     margin-top: 10px;
+    text-align: center;
   }
 }

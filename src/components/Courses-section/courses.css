@@ -1,9 +1,10 @@
 .service_header {
-  margin-top: 100px;
+  margin-top: 200px;
   /* background-color: rgb(27, 26, 26); */
   background-image: url('./back.jpg');
-  padding-top: 100px;
+  padding-top: 60px;
   backdrop-filter: blur(20px);
+  height: auto;
   
 }
 .service_Header {
@@ -11,8 +12,6 @@
   margin-right: auto;
   text-align: center;
   margin-bottom: 20px;
- 
- 
 }
 
 .course-card img {
@@ -21,7 +20,12 @@
 }
 .course__title {
   margin-top: 20px;
-  color:  rgb(224, 217, 217);
+  text-align: justify;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: rgb(255, 255, 255);
 }
 .para {
   margin-left: 100px;
@@ -31,31 +35,23 @@
   margin-left: 160px;
   color: white;
 }
-.course-details p {
-  font-size: 14px;
-  margin-bottom: 0px;
-  color: white;
-}
 
 .service_Header h1 {
-  font-size: 55px;
-  line-height: 1.08349;
+  font-family: "Poppins", sans-serif;
+  align-items: center;
+  font-size: 35px;
   font-weight: 600;
-  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica",
-    "Arial", sans-serif;
-  color: rgb(224, 217, 217);
-  margin-top: -30px;
-  margin-bottom: 40px;
+  letter-spacing: 2px;
+  color: rgb(255, 255, 255);
+  margin-top: 0px;
 }
 .service_Header p {
-  font-size: 15px;
-  line-height: 1.08349;
-  font-weight: 600;
-  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica",
-    "Arial", sans-serif;
-  color:  rgb(224, 217, 217);
-  margin-top: -20px;
-  margin-bottom: 30px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: rgb(255, 255, 255);
 }
 
 
@@ -73,23 +69,49 @@
   margin-left: auto;
   margin-right: auto;
 }
-.price {
-  color:  rgb(224, 217, 217);
-}
+
 .price p {
-  color:  rgb(224, 217, 217);
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin-left: 55px;
+  color: rgb(255, 255, 255);
 }
 
 @media (max-width: 576px) {
   .service_header {
     margin-top: 100px;
+    padding-top: 100px;
   }
   .Our_filters {
     margin-bottom: 0px;
   }
+  .course__title {
+    font-size: 12px;
+   
+  }
   .service_Header h1 {
-    font-size: 30px;
+    font-size: 25px;
     margin-top: -60px;
+  }
+  .price p {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: rgb(255, 255, 255);
+    margin-left: 25px;
+  }
+  .service_Header p {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: rgb(255, 255, 255);
   }
   .course-card img {
     width: 80%;

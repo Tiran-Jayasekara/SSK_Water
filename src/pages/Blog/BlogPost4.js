@@ -1,93 +1,125 @@
 import React from "react";
 import "./Blog.css";
-import { Col, Row,Button } from "antd";
-import { Link } from 'react-router-dom';
-import drink from "../../assests/images/blog/meser.jpg";
+import { Col, Row, Button } from "antd";
+import { Link } from "react-router-dom";
+import mesher from "../../assests/images/blog/meser.png";
 
 const BlogPost4 = () => {
   return (
     <>
-      <Row gutter={[16, 16]}>
+      <Row>
         <Col className="BlogPost1_header" xs={{ span: 20 }} lg={{ span: 16 }}>
-          <h1>How to prevent these situation?</h1>
+          <h1>
+            What are the
+            <span className="black-text-blog"> disease occur from water </span>
+            in Sri Lanka ?
+          </h1>
         </Col>
         <Col className="blog1Image" xs={{ span: 20 }} lg={{ span: 20 }}>
-          <img className="BlogPost1headerimg" src={drink} alt="" />
+          <img className="BlogPost1headerimg" src={mesher} alt="" />
         </Col>
 
         <Col className="blog1Para" xs={{ span: 20 }} lg={{ span: 20 }}>
+          <h6>The Alarming Waterborne Disease Scenario in Sri Lanka</h6>
           <p>
-            When it comes to addressing biases and stereotypes can be achieved
-            through awareness and education around diversity and inclusion
-            issues. Companies can establish committees or task forces to
-            identify and address areas where bias or stereotypes may be present.
-            Promoting a culture of inclusion requires open communication,
-            collaboration, and respect among all employees, regardless of their
-            backgrounds or identities. Providing training programs and workshops
-            can help employees develop skills and knowledge related to diversity
-            and inclusion.
+            1.1 The Silent Threat: Waterborne Diseases Shocking statistics:
+            Every day, 4,000 children lose their lives to waterborne diseases,
+            predominantly in developing and underdeveloped nations. Sri Lanka's
+            struggle: The country has been grappling with a persistent health
+            issue since 1996 - chronic kidney disease of unknown origin (CKDu).
+            Tracing the causes: Contaminated drinking water, harboring
+            infections, microbial toxins, and pesticide pollutants, is a
+            significant contributor to the spread of waterborne diseases.
           </p>
+
+          <h6>The Hidden Dangers of Water Contamination</h6>
           <p>
-            It takes a lot of time for a farmer to complete one task on his
-            farm. For example, it takes a long time for a farmer to provide
-            water for his plants. Then he has very little time to spend on the
-            rest of the work on the farm. His income decreases as efficiency
-            decreases. There is no way to quickly become aware of an emergency.
-            For example , in the event of a fire, such as a disaster on the
-            farm, there is no safety system in place to quickly alert and
-            minimize the disaster. The loss to the farm due to the inability to
-            know such a disaster situation is immense. There is no way to even
-            know about a person or animal that is trespassing on the farm at
-            night. For this reason, the security of the farm is very low.
+            2.1 Unraveling the Water Quality Crisis The impact of groundwater:
+            Studies reveal a correlation between groundwater quality and the
+            prevalence of CKDu. Identifying natural contaminants: Elevated
+            levels of fluoride, calcium, and magnesium, alongside lower
+            concentrations of heavy metals, have been found in affected regions.
+            Unmasking the processes: Water-rock interactions, dissolution, ion
+            exchange, and precipitation play crucial roles in shaping
+            groundwater chemistry. Section 3: The Human Toll: Impacts on Public
+            Health and Human Rights
           </p>
+
+          <h6>Safeguarding the Right to Clean Drinking Water</h6>
           <p>
-            To truly embrace diversity and inclusion, companies must make a
-            conscious effort to recruit and retain diverse talent. This can be
-            achieved by targeting recruitment efforts towards underrepresented
-            groups, offering mentorship and support programs for employees from
-            diverse backgrounds, and providing opportunities for professional
-            development and career advancement. Building partnerships and
-            networks with organizations and individuals who are committed to
-            promoting these values is also a crucial strategy. Finally,
-            supporting diversity in leadership positions is essential. Companies
-            can establish policies and practices that promote diversity in
-            hiring and promotion decisions, as well as offer leadership
-            development programs for employees from diverse backgrounds.
+            Recognizing a fundamental human right: Access to safe drinking water
+            is essential for the wellbeing of individuals. A grim reality:
+            Globally, 2.2 million people, predominantly children under five,
+            succumb to diarrheal diseases annually, with 90% of cases caused by
+            consuming unsafe water, inadequate sanitation, and poor hygiene. Sri
+            Lanka's challenges: A significant portion of households
+            (one-quarter) lacks access to clean drinking water, while 18% of
+            children face inadequate water supply and sanitation facilities.
           </p>
+
+          <h6>Empowering Change for a Healthier Future</h6>
           <p>
-            In order to benefit from a diverse workforce's improved innovation
-            and creativity as well as greater market insights, our organization,
-            which is a part of the Asia Pacific region, is adopting these ideas.
-            Even though there has been recent progress, there is still much to
-            be done to develop an industry that is really inclusive and
-            egalitarian. We can develop a more thriving and prosperous
-            agriculture economy in the Asia Pacific area by putting these
-            principles into practice and continuing to work toward improvement.
+            4.1 Taking Action to Protect Lives Spreading awareness: Educating
+            communities about the criticality of clean drinking water and the
+            risks associated with waterborne diseases. Strengthening
+            infrastructure: Investing in improved water supply and sanitation
+            facilities to ensure access to safe drinking water for all
+            communities. Monitoring water quality: Implementing regular testing
+            and monitoring programs to identify and address contamination issues
+            promptly. Community engagement: Encouraging active participation
+            from individuals and communities in preserving water sources and
+            promoting proper hygiene practices.
+          </p>
+
+          <h6>Safeguarding the Right to Clean Drinking Water</h6>
+          <p>
+            Recognizing a fundamental human right: Access to safe drinking water
+            is essential for the wellbeing of individuals. A grim reality:
+            Globally, 2.2 million people, predominantly children under five,
+            succumb to diarrheal diseases annually, with 90% of cases caused by
+            consuming unsafe water, inadequate sanitation, and poor hygiene. Sri
+            Lanka's challenges: A significant portion of households
+            (one-quarter) lacks access to clean drinking water, while 18% of
+            children face inadequate water supply and sanitation facilities.
+          </p>
+
+          <h6>Conclusion</h6>
+          <p>
+            Access to clean drinking water is not just a necessity; it is a
+            fundamental human right crucial for public health. Sri Lanka's water
+            crisis, characterized by the prevalence of waterborne diseases,
+            demands immediate attention and concerted efforts. By raising
+            awareness, enhancing infrastructure, and fostering community
+            engagement, we can overcome these challenges and make clean drinking
+            water accessible to every Sri Lankan. Let us join hands to protect
+            lives, safeguard health, and pave the way for a brighter and
+            healthier future in Sri Lanka
           </p>
         </Col>
-
-  <Col className="blog1Buttons" xs={{ span: 5 }} lg={{ span: 8 }}>
-  <div className="button_container" >
-        <Link to='/BlogPost3' className='nav-links'>
+      </Row>
+      <Row>
+        <Col className="blog1Buttons" xs={{ span: 5 }} lg={{ span: 8 }}>
+          <div className="button_container">
+            <Link to="/BlogPost3" className="nav-links">
               <Button>Previous</Button>
-        </Link>
-  </div>
-</Col>
-<Col className="blog1Buttons" xs={{ span: 5 }} lg={{ span: 8 }}>
-  <div className="button_container" >
-      <Link to='/Blog' className='nav-links'>
+            </Link>
+          </div>
+        </Col>
+        <Col className="blog1Buttons" xs={{ span: 5 }} lg={{ span: 8 }}>
+          <div className="button_container">
+            <Link to="/Blog" className="nav-links">
               <Button>Home</Button>
-      </Link>
-  </div>
-</Col>
-<Col className="blog1Buttons" xs={{ span: 5 }} lg={{ span: 8 }}>
-  <div className="button_container">
-      <Link to='/BlogPost1' className='nav-links'>
+            </Link>
+          </div>
+        </Col>
+        <Col className="blog1Buttons" xs={{ span: 5 }} lg={{ span: 8 }}>
+          <div className="button_container">
+            <Link to="/BlogPost1" className="nav-links">
               <Button>Next</Button>
-      </Link>
-  </div>
-</Col>
-</Row>
+            </Link>
+          </div>
+        </Col>
+      </Row>
     </>
   );
 };

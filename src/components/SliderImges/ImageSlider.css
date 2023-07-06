@@ -1,12 +1,16 @@
 .image-changer-container {
-  height: 100vh;
+  height: auto;
   overflow: hidden;
   top: 0;
   left: 0;
-  width: 100%;
+  max-width: 100%;
 }
 .image-changer-container img{
-  
+  height: auto;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  max-width: 100%;
 }
 
 .background-row {
@@ -50,12 +54,15 @@
 
 @media (max-width: 1000px) {
   
-  .image-changer-container {
-    height: 30vh;
+  .image-changer-container{
+    height: auto;
     overflow: hidden;
     top: 0;
     left: 0;
-    width: 100%;
+    max-width: 100%;
+  }
+  .image-changer-container img{
+    margin-top: 20px;
   }
   .banner_text h1 {
     text-align: center;

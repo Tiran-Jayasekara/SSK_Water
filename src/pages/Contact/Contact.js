@@ -103,11 +103,11 @@ const Contact = () => {
   return (
     <>
       <Row>
-        <Col className="" xs={{ span: 24 }} lg={{ span: 24 }}>
-          <div className="banner-container revealElement">
+        <Col xs={{ span: 24 }}  sm={{ span: 24 }} lg={{ span: 24 }}>
+          <div className="banner-container ">
             <h1>Contact Us</h1>
 
-            <img src={banner} alt="" />
+            <img src={banner} alt="contactBanner" />
           </div>
         </Col>
         <Col
@@ -116,7 +116,9 @@ const Contact = () => {
           sm={{ span: 24 }}
           lg={{ span: 24 }}
         >
-          <h1>GET IN TOUCH WITH US</h1>
+          <h1>
+              <span className="black-text-contact">Get In Touch</span> With Us
+            </h1>
         </Col>
         <Col xs={{ span: 22 }} sm={{ span: 4 }} lg={{ span: 4 }}></Col>
         <Col
@@ -151,7 +153,7 @@ const Contact = () => {
               </a>,
             ]}
           >
-            <Meta title="QUICK CONTACT" />
+            <h2 className="contact_h2">Quick Contact</h2>
           </Card>
         </Col>
         <Col
@@ -171,16 +173,8 @@ const Contact = () => {
               />
             }
           >
-            <Meta
-              title="CUSTOMER SERVICES"
-              description={
-                <>
-                  <div>
-                    <h5>Reliable and very fast service within 24 hours.</h5>
-                  </div>
-                </>
-              }
-            />
+            <h2 className="contact_h2">Customer Service</h2>
+            <h4 className="contact_h4">Reliable and very fast service within 24 hours.</h4>
           </Card>
         </Col>
         <Col xs={{ span: 22 }} sm={{ span: 4 }} lg={{ span: 4 }}></Col>
@@ -192,7 +186,7 @@ const Contact = () => {
           sm={{ span: 20 }}
           lg={{ span: 6 }}
         >
-          <h1>CONTACT US</h1>
+          <h1>Contact Us</h1>
           <p>
             SSK Water Filter Technology is always here to assist with your
             queries and solve your problems. Contact us through this short form,

@@ -1,93 +1,109 @@
 import React from "react";
 import "./Blog.css";
-import { Col, Row,Button } from "antd";
-import { Link } from 'react-router-dom';
-import drink from "../../assests/images/blog/drink.png";
+import { Col, Row, Button } from "antd";
+import { Link } from "react-router-dom";
+import mesher from "../../assests/images/blog/meser.png";
 
 const BlogPost2 = () => {
   return (
     <>
-      <Row gutter={[16, 16]}>
+      <Row>
         <Col className="BlogPost1_header" xs={{ span: 20 }} lg={{ span: 16 }}>
-          <h1>How the current drinking situation in Sri Lanka?</h1>
+          <h1>
+            <span className="black-text-blog">
+              {" "}
+              Ensuring Safe and Healthy Drinking Water
+            </span>
+            in Sri Lanka: Understanding the Measurement Standards
+          </h1>
         </Col>
         <Col className="blog1Image" xs={{ span: 20 }} lg={{ span: 20 }}>
-          <img className="BlogPost1headerimg" src={drink} alt="" />
+          <img className="BlogPost1headerimg" src={mesher} alt="" />
         </Col>
 
         <Col className="blog1Para" xs={{ span: 20 }} lg={{ span: 20 }}>
+          <h6>Physical Parameters</h6>
           <p>
-            When it comes to addressing biases and stereotypes can be achieved
-            through awareness and education around diversity and inclusion
-            issues. Companies can establish committees or task forces to
-            identify and address areas where bias or stereotypes may be present.
-            Promoting a culture of inclusion requires open communication,
-            collaboration, and respect among all employees, regardless of their
-            backgrounds or identities. Providing training programs and workshops
-            can help employees develop skills and knowledge related to diversity
-            and inclusion.
+            Physical parameters are the measurable characteristics of water that
+            provide insights into its visual appearance and physical properties.
+            Some essential physical parameters include color, odor, and
+            turbidity. a. Color: Clean drinking water should ideally be
+            colorless or have a faint hue. Any unusual coloration may indicate
+            the presence of contaminants or dissolved substances. b. Odor:
+            Odorless water is considered the norm for drinking purposes. The
+            presence of a strong or unpleasant smell may suggest the presence of
+            pollutants or bacterial growth. c. Turbidity: Turbidity refers to
+            the cloudiness or haziness of water caused by suspended particles.
+            Low turbidity levels ensure water clarity and indicate minimal
+            contamination.
           </p>
-          <p>
-            It takes a lot of time for a farmer to complete one task on his
-            farm. For example, it takes a long time for a farmer to provide
-            water for his plants. Then he has very little time to spend on the
-            rest of the work on the farm. His income decreases as efficiency
-            decreases. There is no way to quickly become aware of an emergency.
-            For example , in the event of a fire, such as a disaster on the
-            farm, there is no safety system in place to quickly alert and
-            minimize the disaster. The loss to the farm due to the inability to
-            know such a disaster situation is immense. There is no way to even
-            know about a person or animal that is trespassing on the farm at
-            night. For this reason, the security of the farm is very low.
-          </p>
-          <p>
-            To truly embrace diversity and inclusion, companies must make a
-            conscious effort to recruit and retain diverse talent. This can be
-            achieved by targeting recruitment efforts towards underrepresented
-            groups, offering mentorship and support programs for employees from
-            diverse backgrounds, and providing opportunities for professional
-            development and career advancement. Building partnerships and
-            networks with organizations and individuals who are committed to
-            promoting these values is also a crucial strategy. Finally,
-            supporting diversity in leadership positions is essential. Companies
-            can establish policies and practices that promote diversity in
-            hiring and promotion decisions, as well as offer leadership
-            development programs for employees from diverse backgrounds.
-          </p>
-          <p>
-            In order to benefit from a diverse workforce's improved innovation
-            and creativity as well as greater market insights, our organization,
-            which is a part of the Asia Pacific region, is adopting these ideas.
-            Even though there has been recent progress, there is still much to
-            be done to develop an industry that is really inclusive and
-            egalitarian. We can develop a more thriving and prosperous
-            agriculture economy in the Asia Pacific area by putting these
-            principles into practice and continuing to work toward improvement.
-          </p>
-        </Col>
 
-  <Col className="blog1Buttons" xs={{ span: 5 }} lg={{ span: 8 }}>
-  <div className="button_container" >
-        <Link to='/BlogPost1' className='nav-links'>
+          <h6>Chemical Parameters</h6>
+          <p>
+            Chemical parameters evaluate the presence and concentration of
+            various chemical substances in drinking water. These substances may
+            include minerals, heavy metals, organic compounds, and disinfection
+            by-products: a. pH Level: The pH level measures the acidity or
+            alkalinity of water. In Sri Lanka, the recommended pH range for
+            drinking water is typically between 6.5 and 8.5. b. Total Dissolved
+            Solids (TDS): TDS represent the total amount of inorganic salts,
+            minerals, and metals present in water. It is generally recommended
+            that TDS levels in drinking water should not exceed 500 milligrams
+            per liter (mg/L). c. Heavy Metals: Certain heavy metals, such as
+            lead, arsenic, and cadmium, pose serious health risks even in small
+            quantities. The permissible limits for heavy metals in drinking
+            water are strictly regulated and enforced in Sri Lanka
+          </p>
+
+          <h6>Microbiological Parameters</h6>
+          <p>
+            Microbiological parameters help determine the presence of
+            microorganisms, including bacteria, viruses, and parasites, which
+            can cause waterborne diseases: a. Coliform Bacteria: The presence of
+            coliform bacteria in drinking water suggests contamination from
+            fecal matter and potential disease-causing microorganisms. The
+            permissible limit for coliform bacteria in Sri Lanka is zero. b.
+            Escherichia coli (E. coli): E. coli is a bacterium found in the
+            intestines of humans and animals. Its presence in drinking water
+            indicates contamination by fecal matter, and its absence is crucial
+            for ensuring water safety.
+          </p>
+
+          <h6>Standards and Regulations</h6>
+          <p>
+            In Sri Lanka, the National Water Supply and Drainage Board (NWSDB)
+            is responsible for setting standards and guidelines for drinking
+            water quality. They adhere to the World Health Organization (WHO)
+            guidelines and continuously monitor water quality across the
+            country. The NWSDB conducts regular testing and imposes strict
+            penalties for non-compliance
+          </p>
+
+        </Col>
+      </Row>
+      <Row>
+        <Col className="blog1Buttons" xs={{ span: 5 }} lg={{ span: 8 }}>
+          <div className="button_container">
+            <Link to="/BlogPost1" className="nav-links">
               <Button>Previous</Button>
-        </Link>
-  </div>
-</Col>
-<Col className="blog1Buttons" xs={{ span: 5 }} lg={{ span: 8 }}>
-  <div className="button_container" >
-      <Link to='/Blog' className='nav-links'>
+            </Link>
+          </div>
+        </Col>
+        <Col className="blog1Buttons" xs={{ span: 5 }} lg={{ span: 8 }}>
+          <div className="button_container">
+            <Link to="/Blog" className="nav-links">
               <Button>Home</Button>
-      </Link>
-  </div>
-</Col>
-<Col className="blog1Buttons" xs={{ span: 5 }} lg={{ span: 8 }}>
-  <div className="button_container">
-      <Link to='/BlogPost3' className='nav-links'>
+            </Link>
+          </div>
+        </Col>
+        <Col className="blog1Buttons" xs={{ span: 5 }} lg={{ span: 8 }}>
+          <div className="button_container">
+            <Link to="/BlogPost3" className="nav-links">
               <Button>Next</Button>
-      </Link>
-  </div>
-</Col>
-</Row>
+            </Link>
+          </div>
+        </Col>
+      </Row>
     </>
   );
 };

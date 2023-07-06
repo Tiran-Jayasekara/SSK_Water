@@ -1,6 +1,6 @@
 import "./Store.css";
 import { Modal, Button, Space, Row, Col } from "antd";
-import { useState, useRef,useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import domestic1 from "../../assests/images/store/domestic/1.png";
 import emailjs from "emailjs-com";
 import ScrollReveal from "scrollreveal";
@@ -114,7 +114,9 @@ function ProductList(props) {
       .then(
         () => {
           setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
+          alert(
+            "Thank you. I will get back to you as soon as possible. බොහොම ස්තූතියි . ඔබගේ පණිවිඩය අපට ලැබුණා. අප ආයතනයෙන් හැකි ඉක්මනින් ඔබට ඇමතුමක් ලබා දෙනු ඇත."
+          );
           handleCancel1();
 
           setForm({
@@ -135,7 +137,6 @@ function ProductList(props) {
 
   const handleCancel = () => {
     setIsModalVisible(false);
-    
   };
 
   const handleCancel1 = () => {
@@ -168,9 +169,6 @@ function ProductList(props) {
       productList = Industrial;
   }
 
-  
-
-
   useEffect(() => {
     const sr = ScrollReveal();
 
@@ -181,8 +179,6 @@ function ProductList(props) {
       origin: "bottom",
     });
   }, []);
-
-    
 
   return (
     <div className="product_main">
@@ -196,7 +192,7 @@ function ProductList(props) {
         )
         .map((row, rowIndex) => (
           <Row key={rowIndex}>
-            {row.map((product ,productIndex) => (
+            {row.map((product, productIndex) => (
               <Col
                 key={product.id}
                 className="Store_product_List "
@@ -205,13 +201,18 @@ function ProductList(props) {
                 lg={{ span: 8 }}
               >
                 <div
-                  className={`product-container ${productIndex === 0 ? 'first-product' : ''}`}
+                  className={`product-container ${
+                    productIndex === 0 ? "first-product" : ""
+                  }`}
                   onClick={() => imageClick(product)}
                 >
-                  
-                  <h5 className="product-title revealElement">{product.title}</h5>
+                  <h5 className="product-title revealElement">
+                    {product.title}
+                  </h5>
                   <div className="product-details revealElement">
-                    <p className="product-price revealElement">RS : {product.price}</p>
+                    <p className="product-price revealElement">
+                      RS : {product.price}
+                    </p>
                   </div>
                   <img
                     className="product-image"
@@ -337,14 +338,14 @@ function ProductList(props) {
                 </Row>
                 <div className="model_about revealElement" key={1}>
                   {/* <h3>ABOUT</h3> */}
-                  <div className="product_details revealElement">
-                    <h5>Application : {display.application}</h5>
-                    <h5>Installation Type : {display.installation}</h5>
-                    <h5>Water Tank : {display.waterTank}</h5>
-                    <h5>Stages : {display.stages}</h5>
-                    <h5>Teachnology : {display.technology}</h5>
-                    <h5>Features : {display.feature}</h5>
-                    <h4>Price : {display.price} RS</h4>
+                  <div className="product_details">
+                    <h4>Application : {display.application}</h4>
+                    <h4>Installation Type : {display.installation}</h4>
+                    <h4>Water Tank : {display.waterTank}</h4>
+                    <h4>Stages : {display.stages}</h4>
+                    <h4>Teachnology : {display.technology}</h4>
+                    <h4>Features : {display.feature}</h4>
+                    <h6>Price : {display.price} RS</h6>
                   </div>
                   <br />
                   {/* <span className="justify-text">{display.Sinhala_describe}</span> */}
@@ -394,8 +395,13 @@ function ProductList(props) {
             >
               <h1>{display.title}</h1>
 
-              {/* <h5>ඔබට මෙය මිලදී ගැනීමට හො වැඩි විස්තර දැන ගැනීමට අවශ්‍යනම් ඔබගේ නම, දුරකතනය අංකය ඔබගේ අවශ්‍යතාවය (මිලදී ගැනීමට ,විස්තර දැන ගැනීමට) සදහන් කර අප වෙත පනිවිඩයක් යොමු කරන්න. හැකි ඉක්මනින් අප ආයතනයෙන් ඔබ වෙතට ඇමතුමක් ලබා දෙනු ඇත.</h5> */}
               <img src={selectedImage} alt="firstShowImage" />
+              <h5>
+                ඔබට මෙය මිලදී ගැනීමට හො වැඩි විස්තර දැන ගැනීමට අවශ්‍යනම් ඔබගේ
+                නම, දුරකතනය අංකය ඔබගේ අවශ්‍යතාවය (මිලදී ගැනීමට ,විස්තර දැන
+                ගැනීමට) සදහන් කර අප වෙත පනිවිඩයක් යොමු කරන්න. හැකි ඉක්මනින් අප
+                ආයතනයෙන් ඔබ වෙතට ඇමතුමක් ලබා දෙනු ඇත.
+              </h5>
               <h5>
                 If you want to know more details about buying this, send us a
                 message with your name, phone number and your need (to buy, to
@@ -452,57 +458,59 @@ function ProductList(props) {
                   </div>
 
                   <div className="form-field revealElement">
-                  <label htmlFor="choose">Choose</label>
+                    <label htmlFor="choose">Choose</label>
 
                     <Row>
-                    <Col
-                      className="checkbuy"
-                      xs={{ span: 8 }}
-                      sm={{ span: 8 }}
-                      lg={{ span: 8}}
-                    >
-                      <label>
-                        <input
-                          type="checkbox"
-                          name="buy"
-                          checked={checkboxValues.buy}
-                          onChange={handleCheckboxChange}
-                          style={{ height: '20px', width: '20px' }}
-                        />
-                      </label>
-                    </Col>
+                      <Col
+                        className="checkbuy"
+                        xs={{ span: 8 }}
+                        sm={{ span: 8 }}
+                        lg={{ span: 8 }}
+                      >
+                        <label>
+                          <input
+                            type="checkbox"
+                            name="buy"
+                            checked={checkboxValues.buy}
+                            onChange={handleCheckboxChange}
+                            style={{ height: "20px", width: "20px" }}
+                          />
+                        </label>
+                      </Col>
 
+                      <Col
+                        className="model_checkbox"
+                        xs={{ span: 16 }}
+                        sm={{ span: 16 }}
+                        lg={{ span: 16 }}
+                      >
+                        <h6>I want to Buy (මිලදී ගැනීමට)</h6>
+                      </Col>
 
-                    <Col className=""
-                      xs={{ span: 16 }}
-                      sm={{ span: 16 }}
-                      lg={{ span: 16}}>
-                        <h6>I want to Buy</h6>
-                    </Col>
-                  
-                    <Col
-                      className=""
-                      xs={{ span: 8 }}
-                      sm={{ span: 8 }}
-                      lg={{ span: 8 }}
-                    >
-                      <label>
-                        <input
-                          type="checkbox"
-                          name="getInfo"
-                          checked={checkboxValues.getInfo}
-                          onChange={handleCheckboxChange}
-                          style={{ height: '20px', width: '20px' }}
-                        />
-                        
-                      </label>
-                    </Col>
-                    <Col className="revealElement"
-                      xs={{ span: 16 }}
-                      sm={{ span: 16 }}
-                      lg={{ span: 16}}>
-                        <h6>I want to Get More Details</h6>
-                    </Col>
+                      <Col
+                        className=""
+                        xs={{ span: 8 }}
+                        sm={{ span: 8 }}
+                        lg={{ span: 8 }}
+                      >
+                        <label>
+                          <input
+                            type="checkbox"
+                            name="getInfo"
+                            checked={checkboxValues.getInfo}
+                            onChange={handleCheckboxChange}
+                            style={{ height: "20px", width: "20px" }}
+                          />
+                        </label>
+                      </Col>
+                      <Col
+                        className="model_checkbox revealElement"
+                        xs={{ span: 16 }}
+                        sm={{ span: 16 }}
+                        lg={{ span: 16 }}
+                      >
+                        <h6>I want to Get More Details (විස්තර දැන ගැනීමට )</h6>
+                      </Col>
                     </Row>
                   </div>
 
@@ -539,7 +547,8 @@ const Domestic = [
     id: 1,
     title: "Domestic",
     author: "Douglas Adams",
-    price: "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
+    price:
+      "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
     application: "Household",
     installation: "Wall Mounted",
     waterTank: "11L",
@@ -563,7 +572,8 @@ const Domestic = [
     id: 2,
     title: "Domestic 2 ",
     author: "Harper Lee",
-    price: "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
+    price:
+      "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
     application: "Household",
     installation: "Wall Mounted",
     waterTank: "11L",
@@ -585,7 +595,8 @@ const Domestic = [
     id: 3,
     title: "Domestic 3 ",
     author: "F. Scott ",
-    price: "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
+    price:
+      "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
     application: "Household",
     installation: "Wall Mounted",
     waterTank: "11L",
@@ -605,15 +616,15 @@ const Domestic = [
     id: 4,
     title: "Domestic 4 ",
     author: "F. Scott ",
-    price: "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
+    price:
+      "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
     application: "Household",
     installation: "Wall Mounted",
     waterTank: "11L",
     stages: "6 Stage Filter",
     technology: "RO + uv + TDS",
     feature: "Transferase the process",
-    image:
-    domestic1,
+    image: domestic1,
     image1:
       "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
     image2:
@@ -627,7 +638,8 @@ const Domestic = [
     id: 5,
     title: "Domestic 1 ",
     author: "Douglas Adams",
-    price: "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
+    price:
+      "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
     application: "Household",
     installation: "Wall Mounted",
     waterTank: "11L",
@@ -649,7 +661,8 @@ const Domestic = [
     id: 6,
     title: "Domestic 2 ",
     author: "Harper Lee",
-    price: "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
+    price:
+      "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
     application: "Household",
     installation: "Wall Mounted",
     waterTank: "11L",
@@ -670,15 +683,15 @@ const Domestic = [
     id: 7,
     title: "Domestic 3 ",
     author: "F. Scott ",
-    price: "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
+    price:
+      "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
     application: "Household",
     installation: "Wall Mounted",
     waterTank: "11L",
     stages: "6 Stage Filter",
     technology: "RO + uv + TDS",
     feature: "Transferase the process",
-    image:
-    domestic1,
+    image: domestic1,
     image1:
       "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
     image2:
@@ -692,7 +705,8 @@ const Domestic = [
     id: 8,
     title: "Domestic 4 ",
     author: "F. Scott ",
-    price: "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
+    price:
+      "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
     application: "Household",
     installation: "Wall Mounted",
     waterTank: "11L",
@@ -714,7 +728,8 @@ const Domestic = [
     id: 9,
     title: "Domestic 1 ",
     author: "Douglas Adams",
-    price: "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
+    price:
+      "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
     application: "Household",
     installation: "Wall Mounted",
     waterTank: "11L",
@@ -736,15 +751,15 @@ const Domestic = [
     id: 10,
     title: "Domestic 2 ",
     author: "Harper Lee",
-    price: "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
+    price:
+      "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
     application: "Household",
     installation: "Wall Mounted",
     waterTank: "11L",
     stages: "6 Stage Filter",
     technology: "RO + uv + TDS",
     feature: "Transferase the process",
-    image:
-    domestic1,
+    image: domestic1,
 
     image1:
       "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
@@ -759,7 +774,8 @@ const Domestic = [
     id: 11,
     title: "Domestic 3 ",
     author: "F. Scott ",
-    price: "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
+    price:
+      "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
     application: "Household",
     installation: "Wall Mounted",
     waterTank: "11L",
@@ -782,7 +798,8 @@ const Domestic = [
     id: 12,
     title: "Domestic 4 ",
     author: "F. Scott ",
-    price: "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
+    price:
+      "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
     application: "Household",
     installation: "Wall Mounted",
     waterTank: "11L",
