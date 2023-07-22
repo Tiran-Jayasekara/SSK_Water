@@ -20,7 +20,7 @@
   text-decoration: none;
   text-align: center;
 }
-.privacyLink{
+.privacyLink {
   text-decoration: none;
 }
 
@@ -53,10 +53,7 @@
   width: 150px;
   margin-top: -20px;
   margin-left: 40px; /* Set the desired width */
-
 }
-
-
 
 .follows {
   margin-top: 0px;
@@ -98,19 +95,28 @@
   transition: color 0.3s ease;
 }
 
-
-
+@media (max-width: 1000px) {
+  .main-ssk {
+    margin-bottom: 50px;
+  }
+  .follows {
+    margin-top: 0px;
+    margin-left: 50px;
+    margin-right: auto;
+    text-align: center;
+  }
+}
 
 @media (max-width: 768px) {
-
   .footer {
     background-color: #f8f8f8;
     margin-top: -400px;
   }
   .main-ssk {
     margin-top: -80px;
+    margin-bottom: 10px;
   }
-  .text-center{
+  .text-center {
     margin-top: -80px;
   }
 

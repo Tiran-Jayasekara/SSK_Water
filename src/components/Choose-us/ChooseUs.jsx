@@ -1,10 +1,9 @@
-import React, { useState , useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { Col, Row } from "antd";
 
 import chooseImg from "../../assests/images/Filter/filter4.png";
 import "./choose-us.css";
 import ScrollReveal from "scrollreveal";
-
 
 import ReactPlayer from "react-player";
 const ChooseUs = () => {
@@ -22,15 +21,11 @@ const ChooseUs = () => {
 
   return (
     <>
-      <Row
-        className="whowe revealElement"
-        
-        gutter={0}
-      >
-        <Col className="Choose_h1" xs={{ span: 24 }} lg={{ span: 24 }}>
+      <Row className="whowe revealElement">
+        <Col className="Choose_h1" xs={{ span: 24 }} sm={{span: 24}} lg={{ span: 24 }}>
           <h1>
-              <span className="black-text2">Who</span> We Are ?
-            </h1>
+            <span className="black-text2">Who</span> We Are ?
+          </h1>
         </Col>
 
         <Col xs={{ span: 2 }} sm={{ span: 2 }} lg={{ span: 2 }}></Col>

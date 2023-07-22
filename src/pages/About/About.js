@@ -65,6 +65,7 @@ const About = () => {
             water filtration solutions.
           </p>
         </Col>
+      </Row>
 
         <Row>
           <div className="blog_container_about revealElement">
@@ -80,8 +81,8 @@ const About = () => {
               <Col
                 className="blog_header1"
                 xs={{ span: 22 }}
-                sm={{ span: 12 }}
-                lg={{ span: 14 }}
+                sm={{ span: 16 }}
+                lg={{ span: 16 }}
               >
                 <p>
                   SSK Water Filters Pvt Ltd is a start-up that specializes in
@@ -100,7 +101,7 @@ const About = () => {
             </Row>
           </div>
         </Row>
-      </Row>
+      
 
       <Row>
         <Col xs={{ span: 2 }} sm={{ span: 2 }} lg={{ span: 4 }}></Col>
@@ -127,7 +128,7 @@ const About = () => {
         <Col
           className="vimi revealElement"
           xs={{ span: 20 }}
-          sm={{ span: 22 }}
+          sm={{ span: 20 }}
           lg={{ span: 7 }}
         >
           <img src={mission} alt="" />

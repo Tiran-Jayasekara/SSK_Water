@@ -5,8 +5,8 @@
   left: 0;
   max-width: 100%;
 }
-.image-changer-container img{
-  height: auto;
+.image-changer-container img {
+  max-height: 100%;
   overflow: hidden;
   top: 0;
   left: 0;
@@ -53,27 +53,22 @@
 }
 
 @media (max-width: 1000px) {
-  
-  .image-changer-container{
+  .image-changer-container {
     height: auto;
     overflow: hidden;
     top: 0;
     left: 0;
     max-width: 100%;
   }
-  .image-changer-container img{
+  .image-changer-container img {
     margin-top: 20px;
-  }
-  .banner_text h1 {
-    text-align: center;
-    margin-top: -120px;
-    height: 30vh;
-    position: relative;
-    font-size: 15px;
-    font-weight: bold;
-    z-index: 1;
-    color: rgb(255, 255, 255);
+    height: 500px;
   }
 
+}
 
+@media (max-width: 600px) {
+  .image-changer-container img {
+    height: 200px;
+  }
 }

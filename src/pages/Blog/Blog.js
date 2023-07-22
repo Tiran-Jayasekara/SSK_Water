@@ -25,7 +25,7 @@ const Blog = () => {
 
   return (
     <>
-      <Row className="revealElement">
+      <Row>
         <Col className="blogbanner" xs={{ span: 24 }} lg={{ span: 24 }}>
           <img
             src={about}
@@ -34,10 +34,11 @@ const Blog = () => {
           ></img>
         </Col>
       </Row>
+
       <div className="blog_container revealElement">
-        <Row className="Main_Blog revealElement">
+        <Row className="Main_Blog">
           <Col
-            className="blog_header revealElement"
+            className="blog_header"
             xs={{ span: 22 }}
             sm={{ span: 8 }}
             lg={{ span: 8 }}
@@ -57,7 +58,7 @@ const Blog = () => {
           <Col
             className="blog_header"
             xs={{ span: 22 }}
-            sm={{ span: 12 }}
+            sm={{ span: 14 }}
             lg={{ span: 14 }}
           >
             <h6>
@@ -74,7 +75,7 @@ const Blog = () => {
               offers and why it should be an integral part of our daily
               routines.
             </p>
-            <div className="revealElement">
+            <div className="">
               <Link to="/BlogPost1" className="nav-links">
                 <p>Read More</p>
               </Link>
@@ -82,8 +83,11 @@ const Blog = () => {
           </Col>
         </Row>
       </div>
+
+
+
       <div className="blog_container revealElement">
-        <Row className="Main_Blog revealElement" gutter={[16, 16]}>
+        <Row className="Main_Blog " gutter={[16, 16]}>
           <Col
             className="blog_header"
             xs={{ span: 22 }}
@@ -104,9 +108,9 @@ const Blog = () => {
             </p>
           </Col>
           <Col
-            className="blog_header revealElement"
+            className="blog_header"
             xs={{ span: 22 }}
-            sm={{ span: 12 }}
+            sm={{ span: 14 }}
             lg={{ span: 14 }}
           >
             <h6>
@@ -129,7 +133,7 @@ const Blog = () => {
               Lanka, emphasizing the parameters and guidelines set by relevant
               authorities.
             </p>
-            <div className=" revealElement">
+            <div className=" ">
               <Link to="/BlogPost2" className="nav-links">
                 <p>Read More</p>
               </Link>
@@ -139,9 +143,9 @@ const Blog = () => {
       </div>
 
       <div className="blog_container revealElement">
-        <Row className="Main_Blog revealElement" gutter={[16, 16]}>
+        <Row className="Main_Blog " gutter={[16, 16]}>
           <Col
-            className="blog_header revealElement"
+            className="blog_header "
             xs={{ span: 22 }}
             sm={{ span: 8 }}
             lg={{ span: 8 }}
@@ -160,9 +164,9 @@ const Blog = () => {
             </p>
           </Col>
           <Col
-            className="blog_header revealElement"
+            className="blog_header "
             xs={{ span: 22 }}
-            sm={{ span: 12 }}
+            sm={{ span: 14 }}
             lg={{ span: 14 }}
           >
             <h6>
@@ -183,7 +187,7 @@ const Blog = () => {
               to ensure a sustainable supply of safe drinking water for its
               citizens.
             </p>
-            <div className=" revealElement">
+            <div className=" ">
               <Link to="/BlogPost3" className="nav-links">
                 <p>Read More</p>
               </Link>
@@ -193,7 +197,7 @@ const Blog = () => {
       </div>
 
       <div className="blog_container revealElement">
-        <Row className="Main_Blog revealElement" gutter={[16, 16]}>
+        <Row className="Main_Blog " gutter={[16, 16]}>
           <Col
             className="blog_header"
             xs={{ span: 22 }}
@@ -214,9 +218,9 @@ const Blog = () => {
             </p>
           </Col>
           <Col
-            className="blog_header revealElement"
+            className="blog_header "
             xs={{ span: 22 }}
-            sm={{ span: 12 }}
+            sm={{ span: 14 }}
             lg={{ span: 14 }}
           >
             <h6>
@@ -237,7 +241,7 @@ const Blog = () => {
               potential solutions to ensure a healthier future for all Sri
               Lankans.
             </p>
-            <div className=" revealElement">
+            <div className="">
               <Link to="/BlogPost4" className="nav-links">
                 <p>Read More</p>
               </Link>

@@ -1,7 +1,7 @@
 import "./Store.css";
 import { Modal, Button, Space, Row, Col } from "antd";
 import { useState, useRef, useEffect } from "react";
-import domestic1 from "../../assests/images/store/domestic/1.png";
+import domestic1 from "../../assests/images/Filter/domestic.png";
 import emailjs from "emailjs-com";
 import ScrollReveal from "scrollreveal";
 
@@ -197,7 +197,7 @@ function ProductList(props) {
                 key={product.id}
                 className="Store_product_List "
                 xs={{ span: 24 }}
-                sm={{ span: 16 }}
+                sm={{ span: 8 }}
                 lg={{ span: 8 }}
               >
                 <div
@@ -241,6 +241,10 @@ function ProductList(props) {
           </Button>,
         ]}
       >
+
+
+
+
         <div className="modal-content">
           <Row>
             <Col
@@ -256,7 +260,7 @@ function ProductList(props) {
                 <FontAwesomeIcon icon={faTimes} />
               </button>
             </Col> */}
-            <Col xs={{ span: 24 }} sm={{ span: 10 }} lg={{ span: 24 }}>
+            <Col xs={{ span: 24 }} sm={{ span: 24 }} lg={{ span: 24 }}>
               <Space direction="vertical">
                 <div key={0} className="image-container revealElement">
                   &nbsp;&nbsp;
@@ -390,7 +394,7 @@ function ProductList(props) {
             <Col
               className="model_contact revealElement"
               xs={{ span: 24 }}
-              sm={{ span: 16 }}
+              sm={{ span: 10 }}
               lg={{ span: 10 }}
             >
               <h1>{display.title}</h1>
@@ -413,7 +417,7 @@ function ProductList(props) {
             <Col
               className="Model_Form"
               xs={{ span: 24 }}
-              sm={{ span: 16 }}
+              sm={{ span: 12 }}
               lg={{ span: 12 }}
             >
               <Space direction="vertical">
@@ -421,9 +425,9 @@ function ProductList(props) {
                 <form
                   ref={formRef}
                   onSubmit={handleSubmit}
-                  className="contact-form revealElement"
+                  className="contact-form-model revealElement"
                 >
-                  <div className="form-field revealElement">
+                  <div className="form-field-model revealElement">
                     <label htmlFor="name">Your Name</label>
                     <input
                       type="text"
@@ -434,7 +438,7 @@ function ProductList(props) {
                       placeholder="What's your good name?"
                     />
                   </div>
-                  <div className="form-field revealElement">
+                  <div className="form-field-model revealElement">
                     <label htmlFor="mobile">Your Number</label>
                     <input
                       type="tel"
@@ -445,7 +449,7 @@ function ProductList(props) {
                       placeholder="What's your Mobile Number?"
                     />
                   </div>
-                  <div className="form-field revealElement">
+                  <div className="form-field-model revealElement">
                     <label htmlFor="Brand">Brand</label>
                     <input
                       type="text"
@@ -457,7 +461,7 @@ function ProductList(props) {
                     />
                   </div>
 
-                  <div className="form-field revealElement">
+                  <div className="form-field-model revealElement">
                     <label htmlFor="choose">Choose</label>
 
                     <Row>

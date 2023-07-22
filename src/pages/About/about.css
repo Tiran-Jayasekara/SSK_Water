@@ -83,19 +83,21 @@
   margin-top: 30px;
 }
 .about_header img {
-  width: 80%;
+  width: 60%;
   margin-top: -50px;
   margin-left: 40px;
   margin-right: auto;
 }
-
+.Main_Blog{
+  margin-top: 20px;
+}
 .blog_header1 {
   margin: auto;
 }
 .blog_header1 p {
+  font-size: 14px;
   text-align: justify;
   font-family: "Poppins", sans-serif;
-  font-size: 14px;
   font-weight: 400;
   letter-spacing: 1px;
   color: #464545;
@@ -144,7 +146,7 @@
 .about_Top {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 100px;
+  margin-top: 120px;
 }
 
 .purpose_background {
@@ -273,14 +275,56 @@
   margin-bottom: 20px;
 }
 
+
+@media screen and (max-width: 1000px) {
+
+  .blog_container_about {
+    /* border: 1px solid #ccc;  */
+    margin: 40px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+ 
+    /* Adjust the padding as needed */
+  }
+  .Main_Blog{
+    margin-top: 20px;
+    margin-bottom: 140px;
+  }
+
+  .about_header {
+    margin-top: 30px;
+  }
+  .about_header img {
+    width: 100%;
+    margin-top: 0px;
+    margin-left: -20px;
+    margin-right: auto;
+  }
+  .vimi {
+    padding: 20px;
+    margin-top: 30px;
+  }
+  .vimi p {
+    font-size: 14px;
+    color: #464545;
+  }
+  
+}
+
+
 @media screen and (max-width: 575px) {
+
+  .Main_Blog{
+    margin-top: 20px;
+    margin-bottom: 100px;
+  }
   .aboutBanner {
     margin-top: 25px;
   }
   .about_Top {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 50px;
+    margin-top: 100px;
   }
   .vimi img {
     width: 80px;
@@ -336,7 +380,7 @@
   }
   .vimi p {
     font-size: 12px;
-    color: #828282;
+    color: #464545;
   }
 
   .black-text5 {
@@ -347,7 +391,7 @@
   }
   .about_header img {
     width: 60%;
-    margin-top: -40px;
+    margin-top: -80px;
     margin-right: auto;
     margin-left: 75px;
   }
@@ -356,7 +400,7 @@
     margin-top: 0px;
   }
   .blog_header1 p {
-    color: #828282;
+    color: #464545;
     font-size: 12px;
     line-height: 2;
     text-align: center;

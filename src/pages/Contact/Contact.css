@@ -37,10 +37,7 @@
   padding: 20px;
   margin-top: 20px;
   margin-bottom: -10px;
- 
 }
-
-
 
 .card_main1 {
   width: "100%";
@@ -56,9 +53,7 @@
   margin-top: 100px;
 }
 
-
-
-.contact_h2{
+.contact_h2 {
   font-family: "Poppins", sans-serif;
   text-align: start;
   font-size: 20px;
@@ -66,7 +61,7 @@
   letter-spacing: 1px;
   color: black;
 }
-.contact_h4{
+.contact_h4 {
   font-family: "Poppins", sans-serif;
   text-align: start;
   font-size: 16px;
@@ -74,8 +69,6 @@
   letter-spacing: 1px;
   color: black;
 }
-
-
 
 .contsct_para h1 {
   font-family: "Poppins", sans-serif;
@@ -97,12 +90,6 @@
   color: #000000;
 }
 
-
-
-
-
-
-
 .centered {
   flex-direction: column;
   align-items: center;
@@ -112,15 +99,7 @@
   margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
-  
 }
-
-
-
-
-
-
-
 
 .form-field {
   display: flex;
@@ -131,6 +110,7 @@
 label {
   font-weight: bold;
   margin-bottom: 5px;
+  margin-top: 10px;
 }
 
 input,
@@ -151,6 +131,7 @@ button {
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
+  margin-bottom: 100px;
 }
 
 .error-message {
@@ -220,6 +201,7 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  margin-bottom: 20px;
 }
 
 .contact-form button:hover {
@@ -317,11 +299,61 @@ button[type="submit"] {
   cursor: pointer;
 }
 
-button[type="submit"]:hover {
-  background-color: #23527c;
-}
 
 /* Media queries for mobile responsiveness */
+@media screen and (max-width: 1000px) {
+  .card_main1 {
+    width: "100%";
+    height: 400px;
+    margin-bottom: 40px;
+  }
+
+  .card_main2 {
+    width: "100%";
+    height: 400px;
+    margin-bottom: -30px;
+  }
+
+  .contsct_para h1 {
+    margin-top: 80px;
+    text-align: center;
+    margin-left: -100px;
+  }
+
+  .contsct_para p {
+    margin-left: -60px;
+    font-size: 20px;
+  }
+  .contact-form {
+    max-width: 600px;
+  }
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+
+  .form-field label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+
+  .form-field input,
+  .form-field textarea {
+    width: 550px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+  }
+
+  .form-field textarea {
+    height: 150px; /* Adjust the height as desired */
+  }
+}
+
 @media screen and (max-width: 768px) {
   .contact-details {
     padding: 20px;
@@ -337,7 +369,6 @@ button[type="submit"]:hover {
     font-size: 20px;
   }
   .banner-container img {
- 
     width: 100%;
     height: auto;
   }
@@ -408,7 +439,7 @@ button[type="submit"]:hover {
   } */
 
   button[type="submit"] {
-    width: 100%;
+    width: 80%;
   }
   .contact-header h1:first-child {
     color: #ffffff;
@@ -444,7 +475,6 @@ button[type="submit"]:hover {
   }
 }
 
-
 @media screen and (max-width: 576px) {
   .card_main1 {
     width: "80%";
@@ -461,26 +491,22 @@ button[type="submit"]:hover {
 
   .GetIn_Touch h1 {
     font-size: 20px;
-    
   }
   .black-text-contact {
     font-size: 20px;
-   
   }
 
+  .contact_h2 {
+    font-size: 14px;
+  }
+  .contact_h4 {
+    font-size: 14px;
+  }
 
-  .contact_h2{
-    font-size: 14px;
-  }
-  .contact_h4{
-    font-size: 14px;
-    
-  }
-  
   .contsct_para h1 {
     font-size: 20px;
     margin-top: 30px;
-    
+    margin-left: 0px;
   }
   .contsct_para {
     margin: auto;
@@ -490,7 +516,7 @@ button[type="submit"]:hover {
     line-height: 2;
     text-align: center;
     margin-top: 20px;
-    
+    margin-left: 0px;
   }
 }
 
@@ -509,7 +535,7 @@ button[type="submit"]:hover {
   .Contact_us h1 {
     margin-top: 40px;
   }
-  
+
   .contact-form {
     margin-left: auto;
     margin-right: auto;

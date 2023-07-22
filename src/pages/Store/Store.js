@@ -4,9 +4,9 @@ import { Col, Row } from "antd";
 import ProductList from "./ProductList";
 import "./Store.css";
 import domestic from "../../assests/images/Filter/domestic.png";
-import com from "../../assests/images/Filter/com.png";
-import ind from "../../assests/images/Filter/ind.png";
-import ion from "../../assests/images/Filter/ion.png";
+import com from "../../assests/images/Filter/commercial.png";
+import ind from "../../assests/images/Filter/industrial.png";
+import ion from "../../assests/images/Filter/ionizer.png";
 import spare from "../../assests/images/Filter/spare.png";
 
 
@@ -87,7 +87,7 @@ function Store() {
           >
             <div className="nav-bar-container">
               <Row className="nav-bar-row">
-                <Col xs={{ span: 2 }} sm={{ span: 4 }} lg={{ span: 4 }}></Col>
+                <Col xs={{ span: 2 }} sm={{ span: 2 }} lg={{ span: 4 }}></Col>
                 <Col
                   className="Store_Nav_Bar"
                   xs={{ span: 4 }}
@@ -182,7 +182,7 @@ function Store() {
                     <h3>Spare Parts</h3>
                   </div>
                 </Col>
-                <Col xs={{ span: 2 }} sm={{ span: 4 }} lg={{ span: 4 }}></Col>
+                <Col xs={{ span: 2 }} sm={{ span: 2 }} lg={{ span: 4 }}></Col>
               </Row>
             </div>
           </Col>

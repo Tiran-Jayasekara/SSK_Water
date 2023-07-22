@@ -60,7 +60,7 @@ function Services() {
           
         </Col>
       </Row>
-      <Row className="cards_col_3 revealElement"  gutter={0} justify="center">
+      <Row className="cards_col_3 revealElement" justify="center">
         <Col lg={{ span: 2 }} xs={{ span: 20 }}></Col>
         {coursesData.map((item) => (
           <Col

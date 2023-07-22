@@ -69,16 +69,16 @@ function Cards() {
                     component="div"
                     className="card-heading"
                   >
-                    <h4>Purching</h4>
+                    <h4>Purchase</h4>
                   </Typography>
                   <Typography
                     variant="body2"
                     color="text.secondary"
                     className="card-paragraph"
                   >
-                      Lizards are a widespread group of squamate reptiles, with
-                      over 6,000 species, ranging across all continents except
-                      Antarctica
+                    Lizards are a widespread group of squamate reptiles, with
+                    over 6,000 species, ranging across all continents except
+                    Antarctica
                   </Typography>
                 </CardContent>
               </CardActionArea>
@@ -119,9 +119,9 @@ function Cards() {
                     color="text.secondary"
                     className="card-paragraph"
                   >
-                      Lizards are a widespread group of squamate reptiles, with
-                      over 6,000 species, ranging across all continents except
-                      Antarctica
+                    Lizards are a widespread group of squamate reptiles, with
+                    over 6,000 species, ranging across all continents except
+                    Antarctica
                   </Typography>
                 </CardContent>
               </CardActionArea>
@@ -163,9 +163,9 @@ function Cards() {
                     color="text.secondary"
                     className="card-paragraph"
                   >
-                      Lizards are a widespread group of squamate reptiles, with
-                      over 6,000 species, ranging across all continents except
-                      Antarctica
+                    Lizards are a widespread group of squamate reptiles, with
+                    over 6,000 species, ranging across all continents except
+                    Antarctica
                   </Typography>
                 </CardContent>
               </CardActionArea>

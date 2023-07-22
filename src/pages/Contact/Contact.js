@@ -120,11 +120,11 @@ const Contact = () => {
               <span className="black-text-contact">Get In Touch</span> With Us
             </h1>
         </Col>
-        <Col xs={{ span: 22 }} sm={{ span: 4 }} lg={{ span: 4 }}></Col>
+        <Col xs={{ span: 22 }} sm={{ span: 0 }} lg={{ span: 4 }}></Col>
         <Col
           className="Contact_Cards revealElement"
           xs={{ span: 22 }}
-          sm={{ span: 8 }}
+          sm={{ span: 12 }}
           lg={{ span: 8 }}
         >
           <Card
@@ -159,7 +159,7 @@ const Contact = () => {
         <Col
           className="Contact_Cards revealElement"
           xs={{ span: 22 }}
-          sm={{ span: 8 }}
+          sm={{ span: 12 }}
           lg={{ span: 8 }}
         >
           <Card
@@ -177,7 +177,7 @@ const Contact = () => {
             <h4 className="contact_h4">Reliable and very fast service within 24 hours.</h4>
           </Card>
         </Col>
-        <Col xs={{ span: 22 }} sm={{ span: 4 }} lg={{ span: 4 }}></Col>
+        <Col xs={{ span: 22 }} sm={{ span: 0 }} lg={{ span: 4 }}></Col>
 
         <Col xs={{ span: 22 }} sm={{ span: 2 }} lg={{ span: 4 }}></Col>
         <Col
