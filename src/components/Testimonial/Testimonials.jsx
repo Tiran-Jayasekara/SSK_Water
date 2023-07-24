@@ -36,8 +36,8 @@ const Testimonials = () => {
     const sr = ScrollReveal();
 
     sr.reveal(".revealElement", {
-      duration: 3000,
-      distance: "100px",
+      duration: 2000,
+      distance: "50px",
       easing: "ease",
       origin: "bottom",
     });

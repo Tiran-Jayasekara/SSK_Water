@@ -10,7 +10,7 @@
   margin-top: 0px;
 }
 .videoElement {
-  width: 100%;
+  max-width: 100%;
   height: auto;
   position: relative;
 }
@@ -19,7 +19,7 @@
   position: relative;
 }
 .blurred {
-  filter: blur(4px);
+  filter: blur(6px);
 }
 
 .textOverlay {
@@ -40,7 +40,7 @@
 }
 
 .about_Top_background {
-  margin-top: 40px;
+  margin-top: 20px;
   background-color: #ffffff;
 }
 
@@ -274,7 +274,14 @@
   margin-top: 20px;
   margin-bottom: 20px;
 }
+.companyImage img{
+  padding: 20px;
+  margin-left: 40px;
+  width: 200px;
+  height: auto;
+  margin-bottom: 100px;
 
+}
 
 @media screen and (max-width: 1000px) {
 
@@ -307,6 +314,14 @@
   .vimi p {
     font-size: 14px;
     color: #464545;
+  }
+  .companyImage img{
+    padding: 20px;
+    margin-left: 10px;
+    width: 150px;
+    height: auto;
+    margin-bottom: 100px;
+  
   }
   
 }
@@ -460,7 +475,7 @@
 
   .weAreCollabarate{
     margin-top: 40px;
-    margin-bottom: 80px;
+    margin-bottom: 0px;
   }
 
   .vision {
@@ -497,5 +512,14 @@
     text-align: center;
     font-size: 8px;
     margin-bottom: 20px;
+  }
+  .companyImage img{
+    padding: 20px;
+    margin-left: -10px;
+    margin-top: -150px;
+    width: 100px;
+    height: auto;
+    margin-bottom: 200px;
+  
   }
 }

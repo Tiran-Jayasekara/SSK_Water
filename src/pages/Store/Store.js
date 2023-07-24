@@ -4,7 +4,7 @@ import { Col, Row } from "antd";
 import ProductList from "./ProductList";
 import "./Store.css";
 import domestic from "../../assests/images/Filter/domestic.png";
-import com from "../../assests/images/Filter/commercial.png";
+import com from "../../assests/images/Filter/Commercial/4.png";
 import ind from "../../assests/images/Filter/industrial.png";
 import ion from "../../assests/images/Filter/ionizer.png";
 import spare from "../../assests/images/Filter/spare.png";

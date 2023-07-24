@@ -8,16 +8,21 @@ import "./about.css";
 import logo from "../../assests/images/about/gif.gif";
 import vision from "../../assests/images/about/vision2.png";
 import mission from "../../assests/images/about/mission.png";
-import videoSource from "../../assests/images/about/repair.mp4";
 import trusted from "../../assests/images/about/trusted.png";
 import acolabarateout from "../../assests/images/about/colabarate.png";
 import responce from "../../assests/images/about/responce.png";
 import prograsive from "../../assests/images/about/prograsive.png";
+
 import Affordable from "../../assests/images/about/aff.gif";
 import HighestQuality from "../../assests/images/about/quality.gif";
 import delivery from "../../assests/images/about/delevary.gif";
 import smart from "../../assests/images/about/smart.gif";
-import martin from "../../assests/images/about/company.png";
+
+import martin from "../../assests/images/about/company/1.png";
+import vontron from "../../assests/images/about/company/2.png";
+import cruze from "../../assests/images/about/company/3.png";
+import aqua from "../../assests/images/about/company/4.png";
+
 import Footer from "../../components/Footer/Footer";
 
 const About = () => {
@@ -34,23 +39,7 @@ const About = () => {
 
   return (
     <>
-      <Row>
-        <Col xs={{ span: 24 }} lg={{ span: 24 }} className="aboutBanner">
-          <video
-            src={videoSource}
-            controls={false}
-            autoPlay
-            loop
-            className="videoElement blurred"
-          ></video>
-          <div className="textOverlay">
-            <h1>We Are SSK Water Filters</h1>
-          </div>
-        </Col>
-      </Row>
-      <Row className="about_Top_background">
-        
-
+      <Row className="about_Top_background revealElement">
         <Col
           className="about_Top"
           xs={{ span: 20 }}
@@ -58,7 +47,7 @@ const About = () => {
           lg={{ span: 24 }}
         >
           <h2>
-            <span className="black-text5">SSK</span> Water Filters
+            <span className="black-text5 revealElement">SSK</span> Water Filters
           </h2>
           <p>
             SSK Water Filters Pvt Ltd is a start-up that specializes in advanced
@@ -67,41 +56,40 @@ const About = () => {
         </Col>
       </Row>
 
-        <Row>
-          <div className="blog_container_about revealElement">
-            <Row className="Main_Blog">
-              <Col
-                className="about_header"
-                xs={{ span: 22 }}
-                sm={{ span: 8 }}
-                lg={{ span: 8 }}
-              >
-                <img src={logo} alt="" />
-              </Col>
-              <Col
-                className="blog_header1"
-                xs={{ span: 22 }}
-                sm={{ span: 16 }}
-                lg={{ span: 16 }}
-              >
-                <p>
-                  SSK Water Filters Pvt Ltd is a start-up that specializes in
-                  advanced water filtration solutions. Our mission is to provide
-                  individuals, businesses, and organizations with cutting-edge
-                  technology to purify and ensure access to clean, safe water.
-                  We offer a range of innovative water filters and purification
-                  systems designed to meet diverse needs and requirements.
-                  Whether it's for residential use, commercial applications, or
-                  industrial purposes, SSK Water Filters is committed to
-                  delivering reliable and efficient water filtration solutions
-                  that enhance the quality of life for our customers.
-                </p>
-                <div className="button_container"></div>
-              </Col>
-            </Row>
-          </div>
-        </Row>
-      
+      <Row>
+        <div className="blog_container_about revealElement">
+          <Row className="Main_Blog">
+            <Col
+              className="about_header"
+              xs={{ span: 22 }}
+              sm={{ span: 8 }}
+              lg={{ span: 8 }}
+            >
+              <img src={logo} alt="" />
+            </Col>
+            <Col
+              className="blog_header1"
+              xs={{ span: 22 }}
+              sm={{ span: 16 }}
+              lg={{ span: 16 }}
+            >
+              <p>
+                SSK Water Filters Pvt Ltd is a start-up that specializes in
+                advanced water filtration solutions. Our mission is to provide
+                individuals, businesses, and organizations with cutting-edge
+                technology to purify and ensure access to clean, safe water. We
+                offer a range of innovative water filters and purification
+                systems designed to meet diverse needs and requirements. Whether
+                it's for residential use, commercial applications, or industrial
+                purposes, SSK Water Filters is committed to delivering reliable
+                and efficient water filtration solutions that enhance the
+                quality of life for our customers.
+              </p>
+              <div className="button_container"></div>
+            </Col>
+          </Row>
+        </div>
+      </Row>
 
       <Row>
         <Col xs={{ span: 2 }} sm={{ span: 2 }} lg={{ span: 4 }}></Col>
@@ -113,7 +101,7 @@ const About = () => {
         >
           <img src={vision} alt="" />
           <h1>
-          <span className="black-text-vision">V</span>ISION
+            <span className="black-text-vision">V</span>ISION
           </h1>
           <p>
             Our vision is to be a Sri Lankan leader in providing advanced water
@@ -133,7 +121,7 @@ const About = () => {
         >
           <img src={mission} alt="" />
           <h1>
-          <span className="black-text-vision">M</span>ISSION
+            <span className="black-text-vision">M</span>ISSION
           </h1>
           <p>
             our mission is to provide individuals, businesses, and organizations
@@ -207,7 +195,7 @@ const About = () => {
 
       <Row className="WhyChose">
         <Col
-          className="ChooseUs"
+          className="ChooseUs revealElement"
           xs={{ span: 24 }}
           sm={{ span: 24 }}
           lg={{ span: 24 }}
@@ -217,7 +205,7 @@ const About = () => {
 
         <Col xs={{ span: 2 }} sm={{ span: 2 }} lg={{ span: 2 }}></Col>
         <Col
-          className="purpose"
+          className="purpose revealElement"
           xs={{ span: 4 }}
           sm={{ span: 4 }}
           lg={{ span: 4 }}
@@ -228,7 +216,7 @@ const About = () => {
           </div>
         </Col>
         <Col
-          className="purpose"
+          className="purpose revealElement"
           xs={{ span: 4 }}
           sm={{ span: 4 }}
           lg={{ span: 4 }}
@@ -239,7 +227,7 @@ const About = () => {
           </div>
         </Col>
         <Col
-          className="purpose"
+          className="purpose revealElement"
           xs={{ span: 4 }}
           sm={{ span: 4 }}
           lg={{ span: 4 }}
@@ -250,7 +238,7 @@ const About = () => {
           </div>
         </Col>
         <Col
-          className="purpose"
+          className="purpose revealElement"
           xs={{ span: 4 }}
           sm={{ span: 4 }}
           lg={{ span: 4 }}
@@ -263,7 +251,7 @@ const About = () => {
         <Col xs={{ span: 2 }} sm={{ span: 2 }} lg={{ span: 2 }}></Col>
       </Row>
 
-      <Row className="weAreCollabarate">
+      <Row className="weAreCollabarate revealElement">
         <Col
           className="Philosophy1"
           xs={{ span: 20 }}
@@ -272,15 +260,54 @@ const About = () => {
         >
           <h1>We Are Collabarate With</h1>
         </Col>
+      </Row>
+
+      <Row className="revealElement">
+        <Col
+          className=""
+          xs={{ span: 2 }}
+          sm={{ span: 2 }}
+          lg={{ span: 2 }}
+        ></Col>
 
         <Col
-          className="purpose1"
-          xs={{ span: 20 }}
-          sm={{ span: 20 }}
-          lg={{ span: 20 }}
+          className="companyImage"
+          xs={{ span: 5 }}
+          sm={{ span: 5 }}
+          lg={{ span: 5 }}
         >
           <img className="" src={martin} alt="" />
         </Col>
+        <Col
+          className="companyImage"
+          xs={{ span: 5 }}
+          sm={{ span: 5 }}
+          lg={{ span: 5 }}
+        >
+          <img className="" src={vontron} alt="" />
+        </Col>
+        <Col
+          className="companyImage"
+          xs={{ span: 5 }}
+          sm={{ span: 5 }}
+          lg={{ span: 5 }}
+        >
+          <img className="" src={cruze} alt="" />
+        </Col>
+        <Col
+          className="companyImage"
+          xs={{ span: 5 }}
+          sm={{ span: 5 }}
+          lg={{ span: 5 }}
+        >
+          <img className="" src={aqua} alt="" />
+        </Col>
+        <Col
+          className="purpose1"
+          xs={{ span: 2 }}
+          sm={{ span: 2 }}
+          lg={{ span: 2 }}
+        ></Col>
       </Row>
       <Footer />
     </>

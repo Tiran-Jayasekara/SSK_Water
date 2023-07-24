@@ -20,7 +20,7 @@ function Home() {
       <Cards />
       <Services />
       <Features />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Footer />
     </>
   );

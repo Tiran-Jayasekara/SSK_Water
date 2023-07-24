@@ -2,7 +2,7 @@ import React from "react";
 import "./Blog.css";
 import { Col, Row, Button } from "antd";
 import { Link } from "react-router-dom";
-import mesher from "../../assests/images/blog/meser.png";
+import mesher from "../../assests/images/blog/check.jpg";
 
 const BlogPost4 = () => {
   return (
@@ -20,21 +20,25 @@ const BlogPost4 = () => {
         </Col>
 
         <Col className="blog1Para" xs={{ span: 20 }} lg={{ span: 20 }}>
-          <h6>The Alarming Waterborne Disease Scenario in Sri Lanka</h6>
+          <h6>
+            Section 1 : The Alarming Waterborne Disease Scenario in Sri Lanka
+          </h6>
           <p>
-            1.1 The Silent Threat: Waterborne Diseases Shocking statistics:
-            Every day, 4,000 children lose their lives to waterborne diseases,
-            predominantly in developing and underdeveloped nations. Sri Lanka's
-            struggle: The country has been grappling with a persistent health
-            issue since 1996 - chronic kidney disease of unknown origin (CKDu).
-            Tracing the causes: Contaminated drinking water, harboring
-            infections, microbial toxins, and pesticide pollutants, is a
-            significant contributor to the spread of waterborne diseases.
+            <b>The Silent Threat : Waterborne Diseases : </b> 
+            Shocking statistics: Every day, 4,000 children lose their lives to
+            waterborne diseases, predominantly in developing and underdeveloped
+            nations. Sri Lanka's struggle: The country has been grappling with a
+            persistent health issue since 1996 - chronic kidney disease of
+            unknown origin (CKDu). Tracing the causes: Contaminated drinking
+            water, harboring infections, microbial toxins, and pesticide
+            pollutants, is a significant contributor to the spread of waterborne
+            diseases.<br></br>
+            <br></br>
           </p>
 
-          <h6>The Hidden Dangers of Water Contamination</h6>
+          <h6>Section 2 : The Hidden Dangers of Water Contamination</h6>
           <p>
-            2.1 Unraveling the Water Quality Crisis The impact of groundwater:
+            <b>Unraveling the Water Quality Crisis : </b> The impact of groundwater:
             Studies reveal a correlation between groundwater quality and the
             prevalence of CKDu. Identifying natural contaminants: Elevated
             levels of fluoride, calcium, and magnesium, alongside lower
@@ -42,24 +46,29 @@ const BlogPost4 = () => {
             Unmasking the processes: Water-rock interactions, dissolution, ion
             exchange, and precipitation play crucial roles in shaping
             groundwater chemistry. Section 3: The Human Toll: Impacts on Public
-            Health and Human Rights
+            Health and Human Rights.<br></br>
+            <br></br>
+          </p>
+          <h6>
+            Section 3: The Human Toll: Impacts on Public Health and Human Rights
+          </h6>
+
+          <p>
+          <b>Safeguarding the Right to Clean Drinking Water : </b> Recognizing a
+            fundamental human right: Access to safe drinking water is essential
+            for the wellbeing of individuals. A grim reality: Globally, 2.2
+            million people, predominantly children under five, succumb to
+            diarrheal diseases annually, with 90% of cases caused by consuming
+            unsafe water, inadequate sanitation, and poor hygiene. Sri Lanka's
+            challenges: A significant portion of households (one-quarter) lacks
+            access to clean drinking water, while 18% of children face
+            inadequate water supply and sanitation facilities.<br></br>
+            <br></br>
           </p>
 
-          <h6>Safeguarding the Right to Clean Drinking Water</h6>
+          <h6>Section 4 : Empowering Change for a Healthier Future</h6>
           <p>
-            Recognizing a fundamental human right: Access to safe drinking water
-            is essential for the wellbeing of individuals. A grim reality:
-            Globally, 2.2 million people, predominantly children under five,
-            succumb to diarrheal diseases annually, with 90% of cases caused by
-            consuming unsafe water, inadequate sanitation, and poor hygiene. Sri
-            Lanka's challenges: A significant portion of households
-            (one-quarter) lacks access to clean drinking water, while 18% of
-            children face inadequate water supply and sanitation facilities.
-          </p>
-
-          <h6>Empowering Change for a Healthier Future</h6>
-          <p>
-            4.1 Taking Action to Protect Lives Spreading awareness: Educating
+          <b>Taking Action to Protect Lives : </b> Spreading awareness: Educating
             communities about the criticality of clean drinking water and the
             risks associated with waterborne diseases. Strengthening
             infrastructure: Investing in improved water supply and sanitation
@@ -68,19 +77,8 @@ const BlogPost4 = () => {
             and monitoring programs to identify and address contamination issues
             promptly. Community engagement: Encouraging active participation
             from individuals and communities in preserving water sources and
-            promoting proper hygiene practices.
-          </p>
-
-          <h6>Safeguarding the Right to Clean Drinking Water</h6>
-          <p>
-            Recognizing a fundamental human right: Access to safe drinking water
-            is essential for the wellbeing of individuals. A grim reality:
-            Globally, 2.2 million people, predominantly children under five,
-            succumb to diarrheal diseases annually, with 90% of cases caused by
-            consuming unsafe water, inadequate sanitation, and poor hygiene. Sri
-            Lanka's challenges: A significant portion of households
-            (one-quarter) lacks access to clean drinking water, while 18% of
-            children face inadequate water supply and sanitation facilities.
+            promoting proper hygiene practices.<br></br>
+            <br></br>
           </p>
 
           <h6>Conclusion</h6>
@@ -93,7 +91,7 @@ const BlogPost4 = () => {
             engagement, we can overcome these challenges and make clean drinking
             water accessible to every Sri Lankan. Let us join hands to protect
             lives, safeguard health, and pave the way for a brighter and
-            healthier future in Sri Lanka
+            healthier future in Sri Lanka.
           </p>
         </Col>
       </Row>

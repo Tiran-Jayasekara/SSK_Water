@@ -3,7 +3,7 @@ import "./Blog.css";
 import { Col, Row, Button } from "antd";
 import { Link } from "react-router-dom";
 
-import mesher from "../../assests/images/blog/meser.png";
+import mesher from "../../assests/images/blog/situation.jpg";
 
 const BlogPost3 = () => {
   return (
@@ -29,7 +29,8 @@ const BlogPost3 = () => {
             treated water supplies, many rural and remote regions still rely on
             groundwater sources, which may be prone to contamination. The
             availability and accessibility of clean drinking water remain a
-            significant concern, particularly in marginalized communities
+            significant concern, particularly in marginalized communities.
+            <br></br> <br></br>
           </p>
 
           <h6>Water Quality and Contamination Issues</h6>
@@ -40,7 +41,7 @@ const BlogPost3 = () => {
             inadequate sanitation practices, and natural occurrences such as
             floods and droughts. These factors contribute to the presence of
             harmful substances, such as heavy metals, pesticides, and microbial
-            pathogens, posing risks to public health.
+            pathogens, posing risks to public health.<br></br> <br></br>
           </p>
 
           <h6>Waterborne Diseases</h6>
@@ -51,27 +52,30 @@ const BlogPost3 = () => {
             Vulnerable populations, such as children and the elderly, are
             particularly at risk. Addressing waterborne diseases requires a
             comprehensive approach involving improved water quality, sanitation
-            facilities, and hygiene practices.
+            facilities, and hygiene practices.<br></br> <br></br>
           </p>
 
           <h6>Government Initiatives and Policies</h6>
           <p>
             Recognizing the importance of clean drinking water, the Sri Lankan
             government has implemented several initiatives to address the
-            challenges in water supply and quality: a. National Water Supply and
-            Drainage Board (NWSDB): The NWSDB plays a crucial role in managing
-            water resources and providing safe drinking water to the population.
-            It oversees water treatment, distribution networks, and quality
-            monitoring across the country. b. Rural Water Supply and Sanitation
-            Project (RWSSP): This project aims to improve access to safe
-            drinking water and sanitation facilities in rural areas. It involves
-            the construction and rehabilitation of water supply schemes,
-            rainwater harvesting systems, and community education on hygiene
-            practices. c. Policy and Regulatory Framework: The government has
-            developed policies and regulations to ensure water quality standards
-            are met. These include setting permissible limits for contaminants,
-            conducting regular monitoring, and implementing penalties for
-            non-compliance
+            challenges in water supply and quality: <br></br>
+            <b>a. National Water Supply and Drainage Board (NWSDB): </b>
+            The
+            NWSDB plays a crucial role in managing water resources and providing
+            safe drinking water to the population. It oversees water treatment,
+            distribution networks, and quality monitoring across the country. <br></br>
+
+            <b>b. Rural Water Supply and Sanitation Project (RWSSP):</b> This project aims
+            to improve access to safe drinking water and sanitation facilities
+            in rural areas. It involves the construction and rehabilitation of
+            water supply schemes, rainwater harvesting systems, and community
+            education on hygiene practices. <br></br> 
+            <b>c. Policy and Regulatory Framework: </b>
+            The government has developed policies and regulations to ensure
+            water quality standards are met. These include setting permissible
+            limits for contaminants, conducting regular monitoring, and
+            implementing penalties for non-compliance
           </p>
         </Col>
       </Row>

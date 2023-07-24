@@ -1,19 +1,19 @@
 import React, { useRef, useState , useEffect } from "react";
 import "./Contact.css";
 import Footer from "../../components/Footer/Footer";
-import service1 from "../../assests/images/Service/phone.jpg";
-import service2 from "../../assests/images/Service/service2.jpg";
+import getintouch from "../../assests/images/contact/getintouch.jpg";
+import service2 from "../../assests/images/contact/customer.jpg";
 import {
   PhoneOutlined,
   WhatsAppOutlined,
   MailOutlined,
 } from "@ant-design/icons";
-import banner from "../../assests/images/contactus-banner.jpg";
+import banner from "../../assests/images/contact/contact.jpg";
 import emailjs from "emailjs-com";
 import ScrollReveal from "scrollreveal";
 
 import { Card, Col, Row } from "antd";
-const { Meta } = Card;
+
 
 const Contact = () => {
 
@@ -104,8 +104,8 @@ const Contact = () => {
     <>
       <Row>
         <Col xs={{ span: 24 }}  sm={{ span: 24 }} lg={{ span: 24 }}>
-          <div className="banner-container ">
-            <h1>Contact Us</h1>
+          <div className="banner-container">
+            {/* <h1>Contact Us</h1> */}
 
             <img src={banner} alt="contactBanner" />
           </div>
@@ -133,7 +133,7 @@ const Contact = () => {
             cover={
               <img
                 alt="example"
-                src={service1}
+                src={getintouch}
                 style={{ borderRadius: "20px" }}
               />
             }
@@ -202,7 +202,7 @@ const Contact = () => {
           lg={{ span: 12 }}
         >
           <form ref={formRef} onSubmit={handleSubmit} className="contact-form revealElement">
-            <div className="form-field revealElement">
+            <div className="form-field ">
               <label htmlFor="name">Your Name</label>
               <input
                 type="text"
@@ -213,7 +213,7 @@ const Contact = () => {
                 placeholder="What's your good name?"
               />
             </div>
-            <div className="form-field revealElement">
+            <div className="form-field ">
               <label htmlFor="email">Your Email</label>
               <input
                 type="email"
@@ -224,7 +224,7 @@ const Contact = () => {
                 placeholder="What's your web address?"
               />
             </div>
-            <div className="form-field revealElement">
+            <div className="form-field ">
               <label htmlFor="message">Your Message</label>
               <textarea
                 id="message"

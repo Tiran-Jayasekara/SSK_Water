@@ -1,7 +1,39 @@
 import "./Store.css";
 import { Modal, Button, Space, Row, Col } from "antd";
 import { useState, useRef, useEffect } from "react";
-import domestic1 from "../../assests/images/Filter/domestic.png";
+import cruze1 from "../../assests/images/Filter/cruze/cruze1.png";
+import cruze2 from "../../assests/images/Filter/cruze/cruze2.png";
+import cruze3 from "../../assests/images/Filter/cruze/cruze3.png";
+
+import aqua from "../../assests/images/Filter/Aqua/aqua.png";
+import aqua1 from "../../assests/images/Filter/Aqua/aqua1.png";
+import aqua2 from "../../assests/images/Filter/Aqua/aqua2.png";
+
+import smartRO from "../../assests/images/Filter/smartRO/smartRO.png";
+
+
+import stage1 from "../../assests/images/Filter/3stage/3stage4.png";
+import stage2 from "../../assests/images/Filter/3stage/3stage5.png";
+import stage3 from "../../assests/images/Filter/3stage/3stage11.png";
+import stage from "../../assests/images/Filter/domestic.png";
+
+
+import com2 from "../../assests/images/Filter/Commercial/com.jpg";
+import indu1 from "../../assests/images/Filter/Commercial/1.png";
+import indu2 from "../../assests/images/Filter/Commercial/2.png";
+import indu3 from "../../assests/images/Filter/Commercial/3.png";
+import indu4 from "../../assests/images/Filter/Commercial/4.png";
+
+import hot1 from "../../assests/images/Filter/heron/1.png";
+import hot2 from "../../assests/images/Filter/heron/2.jpg";
+import hot3 from "../../assests/images/Filter/heron/3.png";
+import hot4 from "../../assests/images/Filter/heron/4.jpg";
+
+import spare1 from "../../assests/images/spare/spare1.jpg";
+import spare2 from "../../assests/images/spare/spare2.jpg";
+import spare3 from "../../assests/images/spare/spare3.jpg";
+import spare4 from "../../assests/images/spare/spare4.jpg";
+
 import emailjs from "emailjs-com";
 import ScrollReveal from "scrollreveal";
 
@@ -16,6 +48,9 @@ function ProductList(props) {
     getInfo: false,
   });
 
+  const [isModalVisible1, setIsModalVisible1] = useState(false);
+  const [isModalVisible, setIsModalVisible] = useState(false);
+
   // Example array of books
 
   const imageClick = (product) => {
@@ -24,13 +59,20 @@ function ProductList(props) {
       id: product.id,
       title: product.title,
       author: product.author,
+      brand: product.brand,
       price: product.price,
+      price1: product.price1,
+      price2: product.price2,
+      price3: product.price3,
+      price4: product.price4,
       application: product.application,
       installation: product.installation,
       waterTank: product.waterTank,
+      feature: product.feature,
       stages: product.stages,
       technology: product.technology,
-      feature: product.feature,
+      Warranty: product.Warranty,
+      FiltrationCapacity: product.FiltrationCapacity,
       image: product.image,
       image1: product.image1,
       image2: product.image2,
@@ -57,9 +99,6 @@ function ProductList(props) {
     mobile: "",
     message: "",
   });
-
-  const [isModalVisible, setIsModalVisible] = useState(false);
-  const [isModalVisible1, setIsModalVisible1] = useState(false);
 
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -206,11 +245,11 @@ function ProductList(props) {
                   }`}
                   onClick={() => imageClick(product)}
                 >
-                  <h5 className="product-title revealElement">
+                  <h5 className="product-title ">
                     {product.title}
                   </h5>
-                  <div className="product-details revealElement">
-                    <p className="product-price revealElement">
+                  <div className="product-details ">
+                    <p className="product-price ">
                       RS : {product.price}
                     </p>
                   </div>
@@ -241,10 +280,6 @@ function ProductList(props) {
           </Button>,
         ]}
       >
-
-
-
-
         <div className="modal-content">
           <Row>
             <Col
@@ -253,7 +288,7 @@ function ProductList(props) {
               sm={{ span: 22 }}
               lg={{ span: 22 }}
             >
-              <h1>{display.title}</h1>
+              <h1>{display.author}</h1>
             </Col>
             {/* <Col xs={{ span: 2 }} sm={{ span: 2 }} lg={{ span: 2 }}>
               <button className="close-button" onClick={handleCancel}>
@@ -262,28 +297,36 @@ function ProductList(props) {
             </Col> */}
             <Col xs={{ span: 24 }} sm={{ span: 24 }} lg={{ span: 24 }}>
               <Space direction="vertical">
-                <div key={0} className="image-container revealElement">
+                <div key={0} className="image-container ">
                   &nbsp;&nbsp;
                   <b>
                     <img
-                      className="model_image revealElement"
+                      className="model_image "
                       src={selectedImage}
                       alt={display.title}
                     />
                   </b>
                 </div>
-                <Row className="model_smallImageList">
+
+                {display.id === 50 ? (
+                  <>
+                    
+                  </>
+                ) : null}
+
+                {display.id < 50 ? (
+                  <Row className="model_smallImageList">
                   <Col xs={{ span: 2 }} sm={{ span: 2 }} lg={{ span: 2 }}></Col>
                   <Col xs={{ span: 5 }} sm={{ span: 5 }} lg={{ span: 5 }}>
                     <div
-                      className="model_Small_List revealElement"
+                      className="model_Small_List "
                       onClick={() => handleImageClick(display.image1)}
                       key={0}
                     >
                       &nbsp;&nbsp;
                       <b>
                         <img
-                          className="model_image_small revealElement"
+                          className="model_image_small "
                           src={display.image1}
                           alt={display.title}
                         />
@@ -292,14 +335,14 @@ function ProductList(props) {
                   </Col>
                   <Col xs={{ span: 5 }} sm={{ span: 5 }} lg={{ span: 5 }}>
                     <div
-                      className="model_Small_List revealElement"
+                      className="model_Small_List "
                       onClick={() => handleImageClick(display.image2)}
                       key={0}
                     >
                       &nbsp;&nbsp;
                       <b>
                         <img
-                          className="model_image_small revealElement"
+                          className="model_image_small "
                           src={display.image2}
                           alt={display.title}
                         />
@@ -308,14 +351,14 @@ function ProductList(props) {
                   </Col>
                   <Col xs={{ span: 5 }} sm={{ span: 5 }} lg={{ span: 5 }}>
                     <div
-                      className="model_Small_List revealElement"
+                      className="model_Small_List "
                       onClick={() => handleImageClick(display.image3)}
                       key={0}
                     >
                       &nbsp;&nbsp;
                       <b>
                         <img
-                          className="model_image_small revealElement"
+                          className="model_image_small "
                           src={display.image3}
                           alt={display.title}
                         />
@@ -324,14 +367,14 @@ function ProductList(props) {
                   </Col>
                   <Col xs={{ span: 5 }} sm={{ span: 5 }} lg={{ span: 5 }}>
                     <div
-                      className="model_Small_List revealElement"
+                      className="model_Small_List "
                       key={0}
                       onClick={() => handleImageClick(display.image4)}
                     >
                       &nbsp;&nbsp;
                       <b>
                         <img
-                          className="model_image_small revealElement"
+                          className="model_image_small "
                           src={display.image4}
                           alt={display.title}
                         />
@@ -340,17 +383,43 @@ function ProductList(props) {
                   </Col>
                   <Col xs={{ span: 2 }} sm={{ span: 2 }} lg={{ span: 2 }}></Col>
                 </Row>
-                <div className="model_about revealElement" key={1}>
+                ) : null}
+
+                
+                <div className="model_about " key={1}>
                   {/* <h3>ABOUT</h3> */}
-                  <div className="product_details">
-                    <h4>Application : {display.application}</h4>
-                    <h4>Installation Type : {display.installation}</h4>
-                    <h4>Water Tank : {display.waterTank}</h4>
-                    <h4>Stages : {display.stages}</h4>
-                    <h4>Teachnology : {display.technology}</h4>
-                    <h4>Features : {display.feature}</h4>
-                    <h6>Price : {display.price} RS</h6>
-                  </div>
+
+                  {display.id > 35 && display.id <= 39 ? (
+                    <>
+                      <h4>Brand : {display.brand}</h4>
+                      <h4>Price : {display.price}</h4>
+                    </>
+                  ) : null}
+
+                  {display.id < 28 ? (
+                    <div className="product_details">
+                      <h4>Application : {display.application}</h4>
+                      <h4>Installation Type : {display.installation}</h4>
+                      <h4>Water Tank : {display.waterTank}</h4>
+                      <h4>Stages : {display.stages}</h4>
+                      <h4>Features : {display.technology}</h4>
+                      <h4>Warranty : {display.Warranty}</h4>
+                      <h4>
+                        Filtration Capacity : {display.FiltrationCapacity}
+                      </h4>
+                      <h6>Price : RS {display.price}</h6>
+                    </div>
+                  ) : null}
+
+                  {display.id === 50 ? (
+                    <>
+                      <h4>300 GPD : RS : {display.price1}</h4>
+                      <h4>500 GPD : RS : {display.price2}</h4>
+                      <h4>600 GPD : RS : {display.price3}</h4>
+                      <h4>900 GPD : RS : {display.price4}</h4>
+                    </>
+                  ) : null}
+
                   <br />
                   {/* <span className="justify-text">{display.Sinhala_describe}</span> */}
                   <br />
@@ -392,10 +461,10 @@ function ProductList(props) {
         <div>
           <Row>
             <Col
-              className="model_contact revealElement"
+              className="model_contact"
               xs={{ span: 24 }}
               sm={{ span: 10 }}
-              lg={{ span: 10 }}
+              lg={{ span: 12 }}
             >
               <h1>{display.title}</h1>
 
@@ -407,10 +476,11 @@ function ProductList(props) {
                 ආයතනයෙන් ඔබ වෙතට ඇමතුමක් ලබා දෙනු ඇත.
               </h5>
               <h5>
-                If you want to know more details about buying this, send us a
-                message with your name, phone number and your need (to buy, to
-                know the details). We will give you a call from our company as
-                soon as possible.
+                To acquire further details or proceed with a purchase, we kindly
+                request you to send us a message encompassing your full name,
+                phone number, and specific requirements. Our company will
+                promptly reach out to you to address your inquiries and fulfill
+                your needs. We appreciate your cooperation.
               </h5>
             </Col>
 
@@ -425,9 +495,9 @@ function ProductList(props) {
                 <form
                   ref={formRef}
                   onSubmit={handleSubmit}
-                  className="contact-form-model revealElement"
+                  className="contact-form-model "
                 >
-                  <div className="form-field-model revealElement">
+                  <div className="form-field-model ">
                     <label htmlFor="name">Your Name</label>
                     <input
                       type="text"
@@ -438,7 +508,7 @@ function ProductList(props) {
                       placeholder="What's your good name?"
                     />
                   </div>
-                  <div className="form-field-model revealElement">
+                  <div className="form-field-model ">
                     <label htmlFor="mobile">Your Number</label>
                     <input
                       type="tel"
@@ -449,19 +519,19 @@ function ProductList(props) {
                       placeholder="What's your Mobile Number?"
                     />
                   </div>
-                  <div className="form-field-model revealElement">
+                  <div className="form-field-model ">
                     <label htmlFor="Brand">Brand</label>
                     <input
                       type="text"
                       id="brand"
                       name="brand"
-                      value={display.title}
+                      value={display.author}
                       readOnly
                       placeholder="Selected One"
                     />
                   </div>
 
-                  <div className="form-field-model revealElement">
+                  <div className="form-field-model ">
                     <label htmlFor="choose">Choose</label>
 
                     <Row>
@@ -508,7 +578,7 @@ function ProductList(props) {
                         </label>
                       </Col>
                       <Col
-                        className="model_checkbox revealElement"
+                        className="model_checkbox "
                         xs={{ span: 16 }}
                         sm={{ span: 16 }}
                         lg={{ span: 16 }}
@@ -549,24 +619,22 @@ function ProductList(props) {
 const Domestic = [
   {
     id: 1,
-    title: "Domestic",
-    author: "Douglas Adams",
-    price:
-      "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
+    title: "Cruze Water Filter",
+    author: "Ro + Uv + Alakline Cruze Glaze, For Domestic (White,12L)",
+    price: " 70 000",
     application: "Household",
     installation: "Wall Mounted",
-    waterTank: "11L",
+    waterTank: "12L",
     stages: "6 Stage Filter",
-    technology: "RO + uv + TDS",
-    feature: "Transferase the process",
-    image: domestic1,
-    image1: domestic1,
-    image2:
-      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-    image3:
-      "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
-    image4:
-      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    technology: "UV + TDS",
+    Warranty: "1 year warranty ",
+    FiltrationCapacity: "100-150 litters per day",
+    feature: "No",
+    image: cruze1,
+    image1: cruze1,
+    image2: cruze2,
+    image3: cruze3,
+    image4: cruze1,
     Sinhala_describe:
       "ජල පෙරහන යනු භෞතික බාධකයක්, රසායනික ක්‍රියාවලියක් හෝ ජීව විද්‍යාත්මක ක්‍රියාවලියක් මගින් ජලයෙන් අපද්‍රව්‍ය සහ අපවිත්‍ර ද්‍රව්‍ය ඉවත් කරන උපකරණයකි. ජල පෙරණයක පරමාර්ථය වන්නේ අවසාදිත, ක්ලෝරීන්, බැක්ටීරියා, වෛරස්, බැර ලෝහ සහ වෙනත් හානිකර රසායනික ද්‍රව්‍ය වැනි අනවශ්‍ය ද්‍රව්‍ය ඉවත් කිරීමෙන් ජලයේ ගුණාත්මකභාවය වැඩි දියුණු කිරීමයි.",
     English_describe:
@@ -574,41 +642,45 @@ const Domestic = [
   },
   {
     id: 2,
-    title: "Domestic 2 ",
-    author: "Harper Lee",
-    price:
-      "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
+    title: "Aqua Grand Water Filter",
+    author:
+      "Ro+uv+uf+tds Plastic EFM Supreme Water Purifier Regular Domestic RO System",
+    price: " 75 000",
     application: "Household",
     installation: "Wall Mounted",
-    waterTank: "11L",
+    waterTank: "18L",
     stages: "6 Stage Filter",
-    technology: "RO + uv + TDS",
-    feature: "Transferase the process",
-    image:
-      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-    image1:
-      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-    image2:
-      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-    image3:
-      "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
-    image4:
-      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    technology: "RO + UF + TDS + ALKALINE",
+    Warranty: "1 Year (Electronic parts only)",
+    FiltrationCapacity: "100-150 litters per day",
+    feature: "No",
+
+    image: aqua,
+    image1: aqua,
+    image2: aqua1,
+    image3: aqua2,
+    image4: aqua,
+
+    Sinhala_describe:
+      "ජල පෙරහන යනු භෞතික බාධකයක්, රසායනික ක්‍රියාවලියක් හෝ ජීව විද්‍යාත්මක ක්‍රියාවලියක් මගින් ජලයෙන් අපද්‍රව්‍ය සහ අපවිත්‍ර ද්‍රව්‍ය ඉවත් කරන උපකරණයකි. ජල පෙරණයක පරමාර්ථය වන්නේ අවසාදිත, ක්ලෝරීන්, බැක්ටීරියා, වෛරස්, බැර ලෝහ සහ වෙනත් හානිකර රසායනික ද්‍රව්‍ය වැනි අනවශ්‍ය ද්‍රව්‍ය ඉවත් කිරීමෙන් ජලයේ ගුණාත්මකභාවය වැඩි දියුණු කිරීමයි.",
+    English_describe:
+      "A water filter is a device that removes impurities and contaminants from water by means of a physical barrier, a chemical process, or a biological process. The purpose of a water filter is to improve the quality of the water by removing unwanted substances such as sediment, chlorine, bacteria, viruses, heavy metals, and other harmful chemicals.",
   },
   {
     id: 3,
-    title: "Domestic 3 ",
-    author: "F. Scott ",
-    price:
-      "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
+    title: "Smart RO Water Filter",
+    author: "Compact Home RO Water Purifier with UV Sterilizer",
+    price: "70 000",
     application: "Household",
     installation: "Wall Mounted",
     waterTank: "11L",
     stages: "6 Stage Filter",
-    technology: "RO + uv + TDS",
-    feature: "Transferase the process",
-    image: domestic1,
-    image1: domestic1,
+    technology: "RO + UV + TDS",
+    Warranty: "1 Year (Electronic parts only)",
+    FiltrationCapacity: "100-150 litters per day",
+    feature: "No",
+    image: smartRO,
+    image1: smartRO,
     image2:
       "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
     image3:
@@ -618,273 +690,78 @@ const Domestic = [
   },
   {
     id: 4,
-    title: "Domestic 4 ",
-    author: "F. Scott ",
-    price:
-      "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
+    title: "3 stage Water Filter",
+    author: "RO water purifier",
+    price: "70 000",
     application: "Household",
     installation: "Wall Mounted",
-    waterTank: "11L",
-    stages: "6 Stage Filter",
-    technology: "RO + uv + TDS",
-    feature: "Transferase the process",
-    image: domestic1,
-    image1:
-      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-    image2:
-      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-    image3:
-      "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
-    image4:
-      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    waterTank: "10L",
+    stages: "4 Stage Filter",
+    technology: "RO + UV + TDS",
+    Warranty: " 1 Year (Electronic parts only) ",
+    FiltrationCapacity: "100-150 litters per day",
+    feature: "Tap Included",
+    image: stage,
+    image1: stage3,
+    image2: stage1,
+    image3: stage2,
+    image4: stage3,
   },
   {
     id: 5,
-    title: "Domestic 1 ",
-    author: "Douglas Adams",
-    price:
-      "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
+    title: "Hot and Normal Water Filter",
+    author: "5 STAGES HOT NORMAL RO WATER FILTER",
+    price: "88 000",
     application: "Household",
     installation: "Wall Mounted",
-    waterTank: "11L",
-    stages: "6 Stage Filter",
-    technology: "RO + uv + TDS",
-    feature: "Transferase the process",
-    image:
-      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-    image1:
-      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-    image2:
-      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-    image3:
-      "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
-    image4:
-      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-  },
-  {
-    id: 6,
-    title: "Domestic 2 ",
-    author: "Harper Lee",
-    price:
-      "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
-    application: "Household",
-    installation: "Wall Mounted",
-    waterTank: "11L",
-    stages: "6 Stage Filter",
-    technology: "RO + uv + TDS",
-    feature: "Transferase the process",
-    image: domestic1,
-    image1:
-      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-    image2:
-      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-    image3:
-      "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
-    image4:
-      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-  },
-  {
-    id: 7,
-    title: "Domestic 3 ",
-    author: "F. Scott ",
-    price:
-      "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
-    application: "Household",
-    installation: "Wall Mounted",
-    waterTank: "11L",
-    stages: "6 Stage Filter",
-    technology: "RO + uv + TDS",
-    feature: "Transferase the process",
-    image: domestic1,
-    image1:
-      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-    image2:
-      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-    image3:
-      "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
-    image4:
-      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-  },
-  {
-    id: 8,
-    title: "Domestic 4 ",
-    author: "F. Scott ",
-    price:
-      "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
-    application: "Household",
-    installation: "Wall Mounted",
-    waterTank: "11L",
-    stages: "6 Stage Filter",
-    technology: "RO + uv + TDS",
-    feature: "Transferase the process",
-    image:
-      "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
-    image1:
-      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-    image2:
-      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-    image3:
-      "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
-    image4:
-      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-  },
-  {
-    id: 9,
-    title: "Domestic 1 ",
-    author: "Douglas Adams",
-    price:
-      "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
-    application: "Household",
-    installation: "Wall Mounted",
-    waterTank: "11L",
-    stages: "6 Stage Filter",
-    technology: "RO + uv + TDS",
-    feature: "Transferase the process",
-    image: "https://m.media-amazon.com/images/I/71Iq1Ihu4fL._SL1500_.jpg",
-
-    image1:
-      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-    image2:
-      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-    image3:
-      "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
-    image4:
-      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-  },
-  {
-    id: 10,
-    title: "Domestic 2 ",
-    author: "Harper Lee",
-    price:
-      "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
-    application: "Household",
-    installation: "Wall Mounted",
-    waterTank: "11L",
-    stages: "6 Stage Filter",
-    technology: "RO + uv + TDS",
-    feature: "Transferase the process",
-    image: domestic1,
-
-    image1:
-      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-    image2:
-      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-    image3:
-      "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
-    image4:
-      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-  },
-  {
-    id: 11,
-    title: "Domestic 3 ",
-    author: "F. Scott ",
-    price:
-      "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
-    application: "Household",
-    installation: "Wall Mounted",
-    waterTank: "11L",
-    stages: "6 Stage Filter",
-    technology: "RO + uv + TDS",
-    feature: "Transferase the process",
-    image:
-      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-
-    image1:
-      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-    image2:
-      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-    image3:
-      "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
-    image4:
-      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-  },
-  {
-    id: 12,
-    title: "Domestic 4 ",
-    author: "F. Scott ",
-    price:
-      "$999 or $41.62/mo.per month for 24 mo.months before trade inFootnote",
-    application: "Household",
-    installation: "Wall Mounted",
-    waterTank: "11L",
-    stages: "6 Stage Filter",
-    technology: "RO + uv + TDS",
-    feature: "Transferase the process",
-    image:
-      "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
-    image1:
-      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-    image2:
-      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-    image3:
-      "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
-    image4:
-      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    waterTank: "8L",
+    stages: "4 Stage Filter",
+    technology: "RO + TDS",
+    Warranty: "1 Year (Electronic parts only)",
+    FiltrationCapacity: "100-150 litters per day",
+    feature: "Hot water included",
+    color: "Gold and Red",
+    image: hot1,
+    image1: hot1,
+    image2: hot2,
+    image3: hot3,
+    image4: hot4,
   },
 ];
 
 const Commercial = [
   {
     id: 13,
-    title: "Commercial 1",
-    author: "Douglas Adams",
-    price: 85000,
-    image:
-      "https://waterionizer.org/wp-content/uploads/best-water-filters1.jpg",
+    title: "400 GPD RO PLANT",
+    author: "400 GPD RO PLANT",
+    price: "375 000",
+    application: "Business",
+    installation: "Wall Mounted / Stranded",
+    waterTank: "500 L",
+    stages: "3 Stage Filter",
+    technology: "RO + UV + TDS",
+    Warranty: "1 Year (Electronic parts only)",
+    FiltrationCapacity: "750 - 1000 litters per day",
+    feature: " Outline frame constructed ",
+    color: "Blue",
+    image: indu4,
+    image1: indu1,
+    image2: indu2,
+    image3: indu3,
+    image4: indu4,
   },
   {
-    id: 14,
-    title: "Commercial 2",
-    author: "Harper Lee",
-    price: 85000,
-    image:
-      "https://m.media-amazon.com/images/I/61XP6k4LhJL._AC_UF1000,1000_QL80_.jpg",
-  },
-  {
-    id: 15,
-    title: "Commercial 3",
-    author: "F. Scott Fitzgerald",
-    price: 85000,
-    image: "https://m.media-amazon.com/images/I/81dXerYATVL.jpg",
-  },
-  {
-    id: 16,
-    title: "Commercial 4",
-    author: "F. Scott Fitzgerald",
-    price: 85000,
-    image:
-      "https://i5.walmartimages.com/asr/b20d86f4-a146-4e9c-a5ce-ae1743ab468b.5562a4a4c06e9fed73187456ae5ab223.jpeg?odnHeight=580&odnWidth=580&odnBg=FFFFFF",
-  },
-  {
-    id: 17,
-    title: "Commercial 1",
-    author: "Douglas Adams",
-    price: 85000,
-    image:
-      "https://waterionizer.org/wp-content/uploads/best-water-filters1.jpg",
-  },
-  {
-    id: 18,
-    title: "Commercial 2",
-    author: "Harper Lee",
-    price: 85000,
-    image:
-      "https://m.media-amazon.com/images/I/61XP6k4LhJL._AC_UF1000,1000_QL80_.jpg",
-  },
-  {
-    id: 19,
-    title: "Commercial 3",
-    author: "F. Scott Fitzgerald",
-    price: 85000,
-    image: "https://m.media-amazon.com/images/I/81dXerYATVL.jpg",
-  },
-  {
-    id: 20,
-    title: "Commercial 4",
-    author: "F. Scott Fitzgerald",
-    price: 85000,
-    image:
-      "https://i5.walmartimages.com/asr/b20d86f4-a146-4e9c-a5ce-ae1743ab468b.5562a4a4c06e9fed73187456ae5ab223.jpeg?odnHeight=580&odnWidth=580&odnBg=FFFFFF",
+    id: 50,
+    title: "Custormisble RO Filters",
+    author: "Custormisble RO Filters [300,500,600,900 GPD RO PALNTS]",
+    price:"Custom",
+    price1: "25 000",
+    price2: "25 000",
+    price3: "25 000",
+    price4: "25 000",
+
+    image: com2,
+ 
   },
 ];
 
@@ -955,44 +832,9 @@ const Ionizer = [
   },
 ];
 
-const Spare = [
-  {
-    id: 29,
-    title: "Spare 1",
-    author: "Douglas Adams",
-    price: 1099,
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhy-3G8I6RCqLIQOqv1NzSUbe4O2NxyPTZwQ&usqp=CAU",
-  },
-  {
-    id: 30,
-    title: "Spare 2",
-    author: "Harper Lee",
-    price: 799,
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPcXCHl7VsM9ogGXSy9cFQKHgTCFY7bwqnVUB3fBiHchl1OkRMS8DDi9fu12lfbNXrWPM&usqp=CAU",
-  },
-  {
-    id: 31,
-    title: "Spare 3",
-    author: "F. Scott Fitzgerald",
-    price: 1299,
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkA25k_qXXxSjY70j77YHjjCjKiZ88rcMtjrfg1gdjeHfnr06nTnJcq7QE-gyhqlCBUUU&usqp=CAU",
-  },
-  {
-    id: 32,
-    title: "Spare 4",
-    author: "F. Scott Fitzgerald",
-    price: 1299,
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRcenTO2gmA-QsPMO6xJn4mznzVzfRsndQak9eGegYY_yp1sC15dxdB13kqBLPefhyz7g&usqp=CAU",
-  },
-];
-
 const Industrial = [
   {
-    id: 33,
+    id: 30,
     title: "Industrial 1",
     author: "Douglas Adams",
     price: 1099,
@@ -1000,7 +842,7 @@ const Industrial = [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhy-3G8I6RCqLIQOqv1NzSUbe4O2NxyPTZwQ&usqp=CAU",
   },
   {
-    id: 34,
+    id: 31,
     title: "Industrial 2",
     author: "Harper Lee",
     price: 7099,
@@ -1008,7 +850,7 @@ const Industrial = [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPcXCHl7VsM9ogGXSy9cFQKHgTCFY7bwqnVUB3fBiHchl1OkRMS8DDi9fu12lfbNXrWPM&usqp=CAU",
   },
   {
-    id: 35,
+    id: 32,
     title: "Industrial 3",
     author: "F. Scott Fitzgerald",
     price: 12099,
@@ -1016,12 +858,60 @@ const Industrial = [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkA25k_qXXxSjY70j77YHjjCjKiZ88rcMtjrfg1gdjeHfnr06nTnJcq7QE-gyhqlCBUUU&usqp=CAU",
   },
   {
-    id: 36,
+    id: 33,
     title: "Industrial 4",
     author: "F. Scott Fitzgerald",
     price: 12399,
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRcenTO2gmA-QsPMO6xJn4mznzVzfRsndQak9eGegYY_yp1sC15dxdB13kqBLPefhyz7g&usqp=CAU",
+  },
+];
+
+const Spare = [
+  {
+    id: 36,
+    title: "Sediment Filter",
+    brand: "Cruze Gold",
+    install: "Inside",
+    technology: "uv",
+    feature: "-",
+    warranty: "1 year warranty",
+    price: 1099,
+    image: spare1,
+  },
+
+  {
+    id: 37,
+    title: "Sediment Filter",
+    brand: "Cruze Gold",
+    install: "Inside",
+    technology: "uv",
+    feature: "-",
+    warranty: "1 year warranty",
+    price: 1099,
+    image: spare2,
+  },
+  {
+    id: 38,
+    title: "Sediment Filter",
+    brand: "Cruze Gold",
+    install: "Inside",
+    technology: "uv",
+    feature: "-",
+    warranty: "1 year warranty",
+    price: 1099,
+    image: spare3,
+  },
+  {
+    id: 39,
+    title: "Sediment Filter",
+    brand: "Cruze Gold",
+    install: "Inside",
+    technology: "uv",
+    feature: "-",
+    warranty: "1 year warranty",
+    price: 1099,
+    image: spare4,
   },
 ];
 

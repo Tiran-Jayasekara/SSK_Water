@@ -21,8 +21,8 @@ function Cards() {
     const sr = ScrollReveal();
 
     sr.reveal(".revealElement", {
-      duration: 3000,
-      distance: "100px",
+      duration: 2000,
+      distance: "50px",
       easing: "ease",
       origin: "bottom",
     });
@@ -76,9 +76,8 @@ function Cards() {
                     color="text.secondary"
                     className="card-paragraph"
                   >
-                    Lizards are a widespread group of squamate reptiles, with
-                    over 6,000 species, ranging across all continents except
-                    Antarctica
+                    Purchase-Click on our store page to view prices for
+                    purchases.
                   </Typography>
                 </CardContent>
               </CardActionArea>
@@ -119,9 +118,9 @@ function Cards() {
                     color="text.secondary"
                     className="card-paragraph"
                   >
-                    Lizards are a widespread group of squamate reptiles, with
-                    over 6,000 species, ranging across all continents except
-                    Antarctica
+                    Service-Within 72 hours of ordering the products, we will
+                    bring them and install them free of
+                    charge.
                   </Typography>
                 </CardContent>
               </CardActionArea>
@@ -163,9 +162,8 @@ function Cards() {
                     color="text.secondary"
                     className="card-paragraph"
                   >
-                    Lizards are a widespread group of squamate reptiles, with
-                    over 6,000 species, ranging across all continents except
-                    Antarctica
+                    Maintain -Free maintenance services are provided during the
+                    warranty period.
                   </Typography>
                 </CardContent>
               </CardActionArea>

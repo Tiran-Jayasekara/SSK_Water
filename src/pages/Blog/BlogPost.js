@@ -2,10 +2,9 @@ import React from "react";
 import "./Blog.css";
 import { Col, Row, Button } from "antd";
 import { Link } from "react-router-dom";
-import ReactPlayer from "react-player";
 
-import mesher from "../../assests/images/blog/meser.png";
-import checkwater from "../../assests/images/blog/checkwater.jpeg";
+
+import mesher from "../../assests/images/blog/benifit.jpg";
 
 const BlogPost = () => {
   return (
@@ -31,7 +30,7 @@ const BlogPost = () => {
             crucial to replenish our fluid levels to avoid dehydration, which
             can lead to fatigue, muscle cramps, and reduced endurance. By
             maintaining adequate hydration, we can enhance our performance,
-            endurance, and overall athletic abilities.
+            endurance, and overall athletic abilities.<br></br> <br></br> 
           </p>
 
           <h6>Promotes Digestive Health</h6>
@@ -42,7 +41,7 @@ const BlogPost = () => {
             helps break down food, enabling the body to extract essential
             vitamins, minerals, and energy more efficiently. By incorporating
             adequate hydration into our daily routine, we can ensure a smooth
-            and efficient digestive process, leading to improved overall health.
+            and efficient digestive process, leading to improved overall health.<br></br> <br></br> 
           </p>
 
           <h6>Weight Management</h6>
@@ -54,7 +53,7 @@ const BlogPost = () => {
             Additionally, water has zero calories and can be a satisfying
             substitute for high-calorie beverages like sugary sodas and juices.
             By making water your beverage of choice, you can support your weight
-            management goals and maintain a healthier lifestyle.
+            management goals and maintain a healthier lifestyle.<br></br> <br></br> 
           </p>
 
           <h6>Enhances Brain Function</h6>
@@ -65,7 +64,7 @@ const BlogPost = () => {
             memory. By staying hydrated, you can improve your focus, mental
             clarity, and overall cognitive abilities. So, the next time you're
             feeling mentally fatigued, reach for a glass of water to give your
-            brain the boost it needs.
+            brain the boost it needs.<br></br> <br></br> 
           </p>
 
           <h6>Supports Skin Health</h6>
@@ -76,7 +75,7 @@ const BlogPost = () => {
             drinking enough water, you can keep your skin hydrated, reduce the
             appearance of wrinkles, and achieve a more youthful complexion.
             Remember, hydrating your body from the inside is just as important
-            as applying moisturizers externally
+            as applying moisturizers externally.<br></br> <br></br> 
           </p>
         </Col>
       </Row>

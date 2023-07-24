@@ -1,14 +1,13 @@
 import React, { useEffect } from "react";
 import "./Blog.css";
-import { Col, Row, Button } from "antd";
+import { Col, Row } from "antd";
 import { Link } from "react-router-dom";
-import Footer from "../../components/Footer/Footer";
-import phi from "../../assests/images/blog/phi.jpg";
-import drink from "../../assests/images/blog/drink.png";
-import lanka from "../../assests/images/blog/lanka.png";
-import water from "../../assests/images/blog/water.png";
+import phi from "../../assests/images/blog/benifit.jpg";
+import drink from "../../assests/images/blog/ph.jpg";
+import lanka from "../../assests/images/blog/situation.jpg";
+import water from "../../assests/images/blog/check.jpg";
 
-import about from "../../assests/images/blog/1.png";
+import about from "../../assests/images/blog/banner4.jpg";
 import ScrollReveal from "scrollreveal";
 
 const Blog = () => {
@@ -30,7 +29,7 @@ const Blog = () => {
           <img
             src={about}
             alt="about"
-            style={{ maxWidth: "100%", height: "auto" }}
+            style={{ maxWidth: "100%", height: "100%" }}
           ></img>
         </Col>
       </Row>

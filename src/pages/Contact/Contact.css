@@ -544,4 +544,7 @@ button[type="submit"] {
   .centered {
     margin-bottom: 200px;
   }
+  .banner-container img{
+    margin-top: 20px;
+  }
 }

@@ -35,7 +35,7 @@
   font-weight: 600;
   letter-spacing: 1px;
   display: inline;
-  color: #000000;
+  color: grey;
 }
 .nav-bar-row {
   display: flex;
@@ -167,7 +167,7 @@ input[type="checkbox"] {
 
 .product-container {
   width: 95%;
-  height: 70vh;
+  height: 55vh;
   padding: 10px;
   border: 1px solid rgb(224, 221, 230);
   border-radius: 15px;
@@ -177,6 +177,11 @@ input[type="checkbox"] {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 20px;
+}
+.product-container img{
+  width: auto;
+  margin-top: 0px;
+  height: 200px;
 }
 .first-product {
   background-color: #1354a4;
@@ -226,7 +231,7 @@ input[type="checkbox"] {
   max-width: 240px;
   max-height: 240px;
   height: auto;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 .image_store_contact {
   width: 30px;
@@ -272,6 +277,7 @@ input[type="checkbox"] {
 /* Popup Window */
 .model_contact {
   margin: auto;
+  margin-right: 0px;
 }
 .model_contact h1 {
   font-family: "Poppins", sans-serif;
@@ -284,7 +290,7 @@ input[type="checkbox"] {
 }
 .model_contact img {
   width: 200px;
-  margin-bottom: 0px;
+  margin-bottom: 20px;
   margin-top: 10px;
 }
 .model_contact h5 {
@@ -297,10 +303,11 @@ input[type="checkbox"] {
   margin-bottom: 30px;
   line-height: 1.5;
 }
-.model_contact h1 {
+.modal_content_h1 h1 {
   color: #1354a4 !important;
   text-align: center;
   display: block;
+  font-size: 20px;
 }
 .Model_Form {
   margin: auto;
@@ -326,23 +333,33 @@ input[type="checkbox"] {
   text-align: start;
 }
 .model_image {
-  width: 200px;
+  width: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 200px;
   transition: transform 0.3s;
 }
 
 .model_image:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .model_Small_List {
   border: 1px solid rgb(186, 208, 216);
   margin-top: 50px;
   margin: 10px;
+  margin-bottom: 0px;
   border-radius: 5px;
 }
+
+.model_Small_List img{
+  width: auto;
+  height: 60px;
+  margin-left: -10px;
+}
 .model_image_small {
-  max-width: 80%;
-  padding: 10px;
+  max-width: 100%;
+  padding: 5px;
 }
 .model_Small_List:hover {
   transform: scale(1.2);
@@ -394,7 +411,7 @@ input[type="checkbox"] {
 .product_details {
   margin-top: 20px;
   border: 1px solid rgb(186, 208, 216);
-  width: 80%;
+  width: 500px;
   margin-left: auto;
   margin-right: auto;
   border-radius: 10px;
@@ -532,6 +549,11 @@ input[type="checkbox"] {
     height: auto;
     margin-top: 40px;
   }
+  .model_Small_List img{
+    width: auto;
+    height: 60px;
+    margin-left: -10px;
+  }
 
 }
 
@@ -568,7 +590,7 @@ input[type="checkbox"] {
   }
 
   .store_header h2 {
-    color: gray;
+    color: rgb(0, 0, 0);
     font-size: 10px;
     margin-left: 0px;
     line-height: 1;
@@ -583,6 +605,7 @@ input[type="checkbox"] {
     margin-left: 10px;
     margin-top: 5px;
     font-size: 8px;
+    color: #000000;
   }
   .storeLink {
     margin-bottom: 30px;
@@ -640,12 +663,12 @@ input[type="checkbox"] {
     letter-spacing: 1px;
     color: rgb(0, 0, 0);
     margin-bottom: 20px;
-    line-height: 0.6;
+    line-height: 1.5;
   }
   .product-image {
     max-width: 150px;
-    height: auto;
-    margin-top: 20px;
+    height: 150px;
+    margin-top: 0px;
     margin-bottom: 20px;
   }
 
@@ -713,11 +736,6 @@ input[type="checkbox"] {
   .product-container {
     height: auto;
   }
-  .product-image:hover {
-    transform: scale(1.1);
-    margin-bottom: 10px;
-    cursor: pointer;
-  }
 
   .product_main {
     margin-top: 60px;
@@ -735,6 +753,8 @@ input[type="checkbox"] {
   }
   .centered1 h3 {
     font-size: 6px;
+    color: #000000;
+    font-weight: 600;
   }
   .Store_Nav_Bar .centered1 img {
     width: 40px;
@@ -743,24 +763,42 @@ input[type="checkbox"] {
   }
 
   .model_Small_List {
-    margin-top: 0px;
-    margin: 0px;
+    border: 1px solid rgb(186, 208, 216);
+    height: 60px;
+    margin-top: 50px;
+    margin: 10px;
     border-radius: 5px;
-    margin-top: 20px;
-    margin-right: 10px;
   }
+  .model_Small_List img{
+    width: 40px;
+    height: 50px;
+    margin-left: 0px;
+    margin-top: -18px;
+  }
+
   .model_image_small {
     max-width: 100%;
-    height: auto;
+    height: 100px;
     align-items: center;
     padding: 5px;
     margin-top: -15px;
   }
 
-  .model_contact img {
-    width: 200px;
+  .model_image {
+   max-width: 100%;
+    height: auto;
+    margin-top: 20px;
     margin-bottom: 20px;
-    margin-top: 10px;
+    height: 200px;
+    transition: transform 0.3s;
+  }
+  
+
+  .model_contact img {
+    max-width: 100%;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    
   }
 
 

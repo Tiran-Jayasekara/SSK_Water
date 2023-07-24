@@ -2,7 +2,7 @@ import React from "react";
 import "./Blog.css";
 import { Col, Row, Button } from "antd";
 import { Link } from "react-router-dom";
-import mesher from "../../assests/images/blog/meser.png";
+import mesher from "../../assests/images/blog/ph.jpg";
 
 const BlogPost2 = () => {
   return (
@@ -27,15 +27,19 @@ const BlogPost2 = () => {
             Physical parameters are the measurable characteristics of water that
             provide insights into its visual appearance and physical properties.
             Some essential physical parameters include color, odor, and
-            turbidity. a. Color: Clean drinking water should ideally be
+            turbidity.<br></br>
+
+            <b>a. Color:</b>  Clean drinking water should ideally be
             colorless or have a faint hue. Any unusual coloration may indicate
-            the presence of contaminants or dissolved substances. b. Odor:
-            Odorless water is considered the norm for drinking purposes. The
+            the presence of contaminants or dissolved substances. <br></br> 
+            <b>b. Odor:</b> Odorless water is considered the norm for drinking purposes. The
             presence of a strong or unpleasant smell may suggest the presence of
-            pollutants or bacterial growth. c. Turbidity: Turbidity refers to
+            pollutants or bacterial growth. <br></br> 
+            
+            <b>c. Turbidity:</b> Turbidity refers to
             the cloudiness or haziness of water caused by suspended particles.
             Low turbidity levels ensure water clarity and indicate minimal
-            contamination.
+            contamination.<br></br> <br></br> 
           </p>
 
           <h6>Chemical Parameters</h6>
@@ -43,30 +47,35 @@ const BlogPost2 = () => {
             Chemical parameters evaluate the presence and concentration of
             various chemical substances in drinking water. These substances may
             include minerals, heavy metals, organic compounds, and disinfection
-            by-products: a. pH Level: The pH level measures the acidity or
+            by-products: <br></br>
+            <b>a. pH Level:</b> The pH level measures the acidity or
             alkalinity of water. In Sri Lanka, the recommended pH range for
-            drinking water is typically between 6.5 and 8.5. b. Total Dissolved
-            Solids (TDS): TDS represent the total amount of inorganic salts,
+            drinking water is typically between 6.5 and 8.5.<br></br>
+
+            <b>b. Total Dissolved Solids (TDS):</b> TDS represent the total amount of inorganic salts,
             minerals, and metals present in water. It is generally recommended
             that TDS levels in drinking water should not exceed 500 milligrams
-            per liter (mg/L). c. Heavy Metals: Certain heavy metals, such as
+            per liter (mg/L). <br></br>
+            <b>c. Heavy Metals:</b> Certain heavy metals, such as
             lead, arsenic, and cadmium, pose serious health risks even in small
             quantities. The permissible limits for heavy metals in drinking
-            water are strictly regulated and enforced in Sri Lanka
+            water are strictly regulated and enforced in Sri Lanka. <br></br> <br></br> 
           </p>
 
           <h6>Microbiological Parameters</h6>
           <p>
             Microbiological parameters help determine the presence of
             microorganisms, including bacteria, viruses, and parasites, which
-            can cause waterborne diseases: a. Coliform Bacteria: The presence of
+            can cause waterborne diseases: <br></br> 
+            <b>a. Coliform Bacteria:</b> The presence of
             coliform bacteria in drinking water suggests contamination from
             fecal matter and potential disease-causing microorganisms. The
-            permissible limit for coliform bacteria in Sri Lanka is zero. b.
-            Escherichia coli (E. coli): E. coli is a bacterium found in the
+            permissible limit for coliform bacteria in Sri Lanka is zero. <br></br> 
+
+            <b>b. Escherichia coli (E. coli):</b> E. coli is a bacterium found in the
             intestines of humans and animals. Its presence in drinking water
             indicates contamination by fecal matter, and its absence is crucial
-            for ensuring water safety.
+            for ensuring water safety. <br></br> <br></br> 
           </p>
 
           <h6>Standards and Regulations</h6>
@@ -76,7 +85,7 @@ const BlogPost2 = () => {
             water quality. They adhere to the World Health Organization (WHO)
             guidelines and continuously monitor water quality across the
             country. The NWSDB conducts regular testing and imposes strict
-            penalties for non-compliance
+            penalties for non-compliance. <br></br> <br></br> 
           </p>
 
         </Col>
