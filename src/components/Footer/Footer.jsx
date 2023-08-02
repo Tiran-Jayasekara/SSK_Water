@@ -20,10 +20,10 @@ const Footer = () => {
             SSK Water Technology is an innovative water filter company that
             provides advanced, sustainable solutions for clean and safe water.
           </h6>
-          <Link to="/policy" className="privacyLink">
+          <Link to="" className="privacyLink">
             <h6>Privacy Policy</h6>
           </Link>
-          <Link to="/term" className="privacyLink">
+          <Link to="" className="privacyLink">
             <h6>Term and Condition</h6>
           </Link>
         </Col>
@@ -47,15 +47,14 @@ const Footer = () => {
           <h6>
             SSK water Filter Technology
             <br />
-            New Town,
+            Delnegama,
             <br />
-            Thambuththegama,
+            Kiralogama,
             <br />
-            Anuradhapura,
+            Thalawa,
             <br />
-            Srilanka.
+            Anuradhapura.
             <br />
-            5000
           </h6>
         </Col>
 
@@ -73,7 +72,7 @@ const Footer = () => {
             </span>
             <span>
               <a
-                href="https://web.facebook.com/profile.php?id=100092485520069"
+                href="https://www.instagram.com/ssk_water_filter_/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -100,6 +99,7 @@ const Footer = () => {
             </span>
           </div>
         </Col>
+        
       </Row>
     </footer>
   );

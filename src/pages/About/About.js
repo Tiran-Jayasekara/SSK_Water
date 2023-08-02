@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect ,useState } from "react";
 
 import { Col, Row } from "antd";
 import ScrollReveal from "scrollreveal";
@@ -24,8 +24,21 @@ import cruze from "../../assests/images/about/company/3.png";
 import aqua from "../../assests/images/about/company/4.png";
 
 import Footer from "../../components/Footer/Footer";
+import Spline from '@splinetool/react-spline';
+import LoadingScreen from "../Loading/LoadingScreen";
+
 
 const About = () => {
+
+  useEffect(() => {
+    // Simulate a 3-second loading process
+    const loadingTimer = setTimeout(() => {
+      setIsLoading(false);
+    }, 500);
+
+    return () => clearTimeout(loadingTimer);
+  }, []);
+  
   useEffect(() => {
     const sr = ScrollReveal();
 
@@ -37,9 +50,17 @@ const About = () => {
     });
   }, []);
 
+
+
+  const [isLoading, setIsLoading] = useState(true);
+
   return (
     <>
-      <Row className="about_Top_background revealElement">
+    {isLoading ? (
+        <LoadingScreen/>
+      ) : (
+        <>
+          <Row className="about_Top_background">
         <Col
           className="about_Top"
           xs={{ span: 20 }}
@@ -47,7 +68,7 @@ const About = () => {
           lg={{ span: 24 }}
         >
           <h2>
-            <span className="black-text5 revealElement">SSK</span> Water Filters
+            <span className="black-text5">SSK</span> Water Filters
           </h2>
           <p>
             SSK Water Filters Pvt Ltd is a start-up that specializes in advanced
@@ -55,9 +76,10 @@ const About = () => {
           </p>
         </Col>
       </Row>
+     
 
       <Row>
-        <div className="blog_container_about revealElement">
+        <div className="blog_container_about">
           <Row className="Main_Blog">
             <Col
               className="about_header"
@@ -90,6 +112,12 @@ const About = () => {
           </Row>
         </div>
       </Row>
+      
+     
+      <div className="spline">
+      <Spline scene="https://prod.spline.design/kW8NVbzqgDH0sYkT/scene.splinecode" />
+      </div>
+      
 
       <Row>
         <Col xs={{ span: 2 }} sm={{ span: 2 }} lg={{ span: 4 }}></Col>
@@ -310,6 +338,10 @@ const About = () => {
         ></Col>
       </Row>
       <Footer />
+        </>
+      )}
+   
+      
     </>
   );
 };

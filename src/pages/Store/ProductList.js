@@ -1,38 +1,57 @@
 import "./Store.css";
 import { Modal, Button, Space, Row, Col } from "antd";
 import { useState, useRef, useEffect } from "react";
-import cruze1 from "../../assests/images/Filter/cruze/cruze1.png";
-import cruze2 from "../../assests/images/Filter/cruze/cruze2.png";
-import cruze3 from "../../assests/images/Filter/cruze/cruze3.png";
+import cruze from "../../assests/images/Filter/cruze/cruze.png";
+import cruze1 from "../../assests/images/Filter/cruze/cruze.jpg";
+import cruze2 from "../../assests/images/Filter/cruze/cruze2.jpg";
+import cruze3 from "../../assests/images/Filter/cruze/cruze3.jpg";
 
-import aqua from "../../assests/images/Filter/Aqua/aqua.png";
-import aqua1 from "../../assests/images/Filter/Aqua/aqua1.png";
-import aqua2 from "../../assests/images/Filter/Aqua/aqua2.png";
+import aqua from "../../assests/images/Filter/Aqua/aqua.jpg";
+import aqua1 from "../../assests/images/Filter/Aqua/aqua1.jpg";
+import aqua2 from "../../assests/images/Filter/Aqua/aqua2.jpg";
 
-import smartRO from "../../assests/images/Filter/smartRO/smartRO.png";
+import smartRO1 from "../../assests/images/Filter/smartRO/1.png";
+import smartRO2 from "../../assests/images/Filter/smartRO/2.png";
+import smartRO3 from "../../assests/images/Filter/smartRO/3.png";
+import smartRO4 from "../../assests/images/Filter/smartRO/4.png";
 
-
-import stage1 from "../../assests/images/Filter/3stage/3stage4.png";
-import stage2 from "../../assests/images/Filter/3stage/3stage5.png";
-import stage3 from "../../assests/images/Filter/3stage/3stage11.png";
+import stage1 from "../../assests/images/Filter/3stage/3stage4.jpg";
+import stage2 from "../../assests/images/Filter/3stage/3stage5.jpg";
+import stage3 from "../../assests/images/Filter/3stage/3stage11.jpg";
 import stage from "../../assests/images/Filter/domestic.png";
 
-
-import com2 from "../../assests/images/Filter/Commercial/com.jpg";
-import indu1 from "../../assests/images/Filter/Commercial/1.png";
-import indu2 from "../../assests/images/Filter/Commercial/2.png";
-import indu3 from "../../assests/images/Filter/Commercial/3.png";
+import com2 from "../../assests/images/Filter/Commercial/com.png";
+import indu1 from "../../assests/images/Filter/Commercial/1.jpg";
+import indu2 from "../../assests/images/Filter/Commercial/2.jpg";
+import indu3 from "../../assests/images/Filter/Commercial/3.jpg";
 import indu4 from "../../assests/images/Filter/Commercial/4.png";
 
-import hot1 from "../../assests/images/Filter/heron/1.png";
+import industrial from "../../assests/images/Filter/industrial/1.png";
+import industrial1 from "../../assests/images/Filter/industrial/1.jpg";
+import industrial2 from "../../assests/images/Filter/industrial/2.jpg";
+import industrial3 from "../../assests/images/Filter/industrial/3.jpg";
+import industrial4 from "../../assests/images/Filter/industrial/4.jpg";
+import industri from "../../assests/images/Filter/industrial/industrial.png";
+
+import hot1 from "../../assests/images/Filter/heron/1.jpg";
+import hot5 from "../../assests/images/Filter/heron/11.jpg";
 import hot2 from "../../assests/images/Filter/heron/2.jpg";
-import hot3 from "../../assests/images/Filter/heron/3.png";
+import hot3 from "../../assests/images/Filter/heron/3.jpg";
 import hot4 from "../../assests/images/Filter/heron/4.jpg";
 
-import spare1 from "../../assests/images/spare/spare1.jpg";
-import spare2 from "../../assests/images/spare/spare2.jpg";
-import spare3 from "../../assests/images/spare/spare3.jpg";
-import spare4 from "../../assests/images/spare/spare4.jpg";
+import spare1 from "../../assests/images/spare/1.png";
+import spare2 from "../../assests/images/spare/2.png";
+import spare3 from "../../assests/images/spare/3.png";
+import spare4 from "../../assests/images/spare/4.png";
+import spare5 from "../../assests/images/spare/5.png";
+import spare6 from "../../assests/images/spare/6.png";
+import spare7 from "../../assests/images/spare/7.png";
+import spare8 from "../../assests/images/spare/8.png";
+import spare9 from "../../assests/images/spare/9.png";
+import spare10 from "../../assests/images/spare/10.png";
+import spare11 from "../../assests/images/spare/11.png";
+
+import ionizer from "../../assests/images/Filter/ionizer/1.png";
 
 import emailjs from "emailjs-com";
 import ScrollReveal from "scrollreveal";
@@ -54,7 +73,6 @@ function ProductList(props) {
   // Example array of books
 
   const imageClick = (product) => {
-    console.log(product);
     setDisplay({
       id: product.id,
       title: product.title,
@@ -154,7 +172,7 @@ function ProductList(props) {
         () => {
           setLoading(false);
           alert(
-            "Thank you. I will get back to you as soon as possible. බොහොම ස්තූතියි . ඔබගේ පණිවිඩය අපට ලැබුණා. අප ආයතනයෙන් හැකි ඉක්මනින් ඔබට ඇමතුමක් ලබා දෙනු ඇත."
+            "Thank you. we will get back to you as soon as possible. බොහොම ස්තූතියි . ඔබගේ පණිවිඩය අපට ලැබුණා. අප ආයතනයෙන් හැකි ඉක්මනින් ඔබට ඇමතුමක් ලබා දෙනු ඇත."
           );
           handleCancel1();
 
@@ -245,19 +263,32 @@ function ProductList(props) {
                   }`}
                   onClick={() => imageClick(product)}
                 >
-                  <h5 className="product-title ">
-                    {product.title}
-                  </h5>
+
+
+                  {product.id > 54 ? ( // Conditionally show the image
+                  <>
+                  <h5 className="product-title ">{product.title}</h5>
+                  
+                  <img
+                    className="product-image"
+                    src={product.image}
+                    alt={product.title}
+                  />
+                  </>
+                  
+                  ) : (
+                    <>
+                    <h5 className="product-title ">{product.title}</h5>
                   <div className="product-details ">
-                    <p className="product-price ">
-                      RS : {product.price}
-                    </p>
+                    <p className="product-price ">RS : {product.price}</p>
                   </div>
                   <img
                     className="product-image"
                     src={product.image}
                     alt={product.title}
                   />
+                    </>
+                  )}
                 </div>
               </Col>
             ))}
@@ -288,7 +319,7 @@ function ProductList(props) {
               sm={{ span: 22 }}
               lg={{ span: 22 }}
             >
-              <h1>{display.author}</h1>
+              <h1>{display.title}</h1>
             </Col>
             {/* <Col xs={{ span: 2 }} sm={{ span: 2 }} lg={{ span: 2 }}>
               <button className="close-button" onClick={handleCancel}>
@@ -301,91 +332,96 @@ function ProductList(props) {
                   &nbsp;&nbsp;
                   <b>
                     <img
-                      className="model_image "
+                      className="model_image zoomable-image"
                       src={selectedImage}
                       alt={display.title}
                     />
                   </b>
                 </div>
 
-                {display.id === 50 ? (
-                  <>
-                    
-                  </>
-                ) : null}
+                {display.id === 53 ? <></> : null}
+                {display.id === 50 ? <></> : null}
+                {display.id === 51 ? <></> : null}
 
                 {display.id < 50 ? (
                   <Row className="model_smallImageList">
-                  <Col xs={{ span: 2 }} sm={{ span: 2 }} lg={{ span: 2 }}></Col>
-                  <Col xs={{ span: 5 }} sm={{ span: 5 }} lg={{ span: 5 }}>
-                    <div
-                      className="model_Small_List "
-                      onClick={() => handleImageClick(display.image1)}
-                      key={0}
-                    >
-                      &nbsp;&nbsp;
-                      <b>
-                        <img
-                          className="model_image_small "
-                          src={display.image1}
-                          alt={display.title}
-                        />
-                      </b>
-                    </div>
-                  </Col>
-                  <Col xs={{ span: 5 }} sm={{ span: 5 }} lg={{ span: 5 }}>
-                    <div
-                      className="model_Small_List "
-                      onClick={() => handleImageClick(display.image2)}
-                      key={0}
-                    >
-                      &nbsp;&nbsp;
-                      <b>
-                        <img
-                          className="model_image_small "
-                          src={display.image2}
-                          alt={display.title}
-                        />
-                      </b>
-                    </div>
-                  </Col>
-                  <Col xs={{ span: 5 }} sm={{ span: 5 }} lg={{ span: 5 }}>
-                    <div
-                      className="model_Small_List "
-                      onClick={() => handleImageClick(display.image3)}
-                      key={0}
-                    >
-                      &nbsp;&nbsp;
-                      <b>
-                        <img
-                          className="model_image_small "
-                          src={display.image3}
-                          alt={display.title}
-                        />
-                      </b>
-                    </div>
-                  </Col>
-                  <Col xs={{ span: 5 }} sm={{ span: 5 }} lg={{ span: 5 }}>
-                    <div
-                      className="model_Small_List "
-                      key={0}
-                      onClick={() => handleImageClick(display.image4)}
-                    >
-                      &nbsp;&nbsp;
-                      <b>
-                        <img
-                          className="model_image_small "
-                          src={display.image4}
-                          alt={display.title}
-                        />
-                      </b>
-                    </div>
-                  </Col>
-                  <Col xs={{ span: 2 }} sm={{ span: 2 }} lg={{ span: 2 }}></Col>
-                </Row>
+                    <Col
+                      xs={{ span: 2 }}
+                      sm={{ span: 2 }}
+                      lg={{ span: 2 }}
+                    ></Col>
+                    <Col xs={{ span: 5 }} sm={{ span: 5 }} lg={{ span: 5 }}>
+                      <div
+                        className="model_Small_List "
+                        onClick={() => handleImageClick(display.image1)}
+                        key={0}
+                      >
+                        &nbsp;&nbsp;
+                        <b>
+                          <img
+                            className="model_image_small "
+                            src={display.image1}
+                            alt={display.title}
+                          />
+                        </b>
+                      </div>
+                    </Col>
+                    <Col xs={{ span: 5 }} sm={{ span: 5 }} lg={{ span: 5 }}>
+                      <div
+                        className="model_Small_List "
+                        onClick={() => handleImageClick(display.image2)}
+                        key={0}
+                      >
+                        &nbsp;&nbsp;
+                        <b>
+                          <img
+                            className="model_image_small "
+                            src={display.image2}
+                            alt={display.title}
+                          />
+                        </b>
+                      </div>
+                    </Col>
+                    <Col xs={{ span: 5 }} sm={{ span: 5 }} lg={{ span: 5 }}>
+                      <div
+                        className="model_Small_List "
+                        onClick={() => handleImageClick(display.image3)}
+                        key={0}
+                      >
+                        &nbsp;&nbsp;
+                        <b>
+                          <img
+                            className="model_image_small "
+                            src={display.image3}
+                            alt={display.title}
+                          />
+                        </b>
+                      </div>
+                    </Col>
+                    <Col xs={{ span: 5 }} sm={{ span: 5 }} lg={{ span: 5 }}>
+                      <div
+                        className="model_Small_List "
+                        key={0}
+                        onClick={() => handleImageClick(display.image4)}
+                      >
+                        &nbsp;&nbsp;
+                        <b>
+                          <img
+                            className="model_image_small "
+                            src={display.image4}
+                            alt={display.title}
+                          />
+                        </b>
+                      </div>
+                    </Col>
+                    <Col
+                      xs={{ span: 2 }}
+                      sm={{ span: 2 }}
+                      lg={{ span: 2 }}
+                    ></Col>
+                  </Row>
                 ) : null}
 
-                
                 <div className="model_about " key={1}>
                   {/* <h3>ABOUT</h3> */}
 
@@ -394,6 +430,33 @@ function ProductList(props) {
                       <h4>Brand : {display.brand}</h4>
                       <h4>Price : {display.price}</h4>
                     </>
+                  ) : null}
+
+                  {display.id >= 30 && display.id < 31 ? (
+                    <div className="product_details">
+                      <h4>Application : {display.application}</h4>
+                      <h4>Installation Type : {display.installation}</h4>
+                      <h4>Water Tank : {display.waterTank}</h4>
+                      <h4>Stages : {display.stages}</h4>
+                      <h4>Features : {display.technology}</h4>
+                      <h4>Warranty : {display.Warranty}</h4>
+                      <h4>
+                        Filtration Capacity : {display.FiltrationCapacity}
+                      </h4>
+                      <h6>Price : RS {display.price}</h6>
+                    </div>
+                  ) : null}
+
+                  {display.id > 50 && display.id < 52 ? <></> : null}
+
+                  {display.id === 53 ? (
+                    <div className="product_details">
+                      <h4>Application : {display.application}</h4>
+                      <h4>Installation Type : {display.installation}</h4>
+                      <h4>Water Tank : {display.waterTank}</h4>
+                      <h4>Features : {display.technology}</h4>
+                      <h6>Price : RS {display.price}</h6>
+                    </div>
                   ) : null}
 
                   {display.id < 28 ? (
@@ -411,14 +474,7 @@ function ProductList(props) {
                     </div>
                   ) : null}
 
-                  {display.id === 50 ? (
-                    <>
-                      <h4>300 GPD : RS : {display.price1}</h4>
-                      <h4>500 GPD : RS : {display.price2}</h4>
-                      <h4>600 GPD : RS : {display.price3}</h4>
-                      <h4>900 GPD : RS : {display.price4}</h4>
-                    </>
-                  ) : null}
+                  {display.id === 50 ? <></> : null}
 
                   <br />
                   {/* <span className="justify-text">{display.Sinhala_describe}</span> */}
@@ -466,7 +522,9 @@ function ProductList(props) {
               sm={{ span: 10 }}
               lg={{ span: 12 }}
             >
-              <h1>{display.title}</h1>
+              <Col>
+                <h1>{display.title}</h1>
+              </Col>
 
               <img src={selectedImage} alt="firstShowImage" />
               <h5>
@@ -483,15 +541,16 @@ function ProductList(props) {
                 your needs. We appreciate your cooperation.
               </h5>
             </Col>
-
+                    
             <Col
               className="Model_Form"
               xs={{ span: 24 }}
               sm={{ span: 12 }}
               lg={{ span: 12 }}
             >
+              <h2>Place Order</h2>
               <Space direction="vertical">
-                <h2>Place Order</h2>
+                
                 <form
                   ref={formRef}
                   onSubmit={handleSubmit}
@@ -525,7 +584,7 @@ function ProductList(props) {
                       type="text"
                       id="brand"
                       name="brand"
-                      value={display.author}
+                      value={display.title}
                       readOnly
                       placeholder="Selected One"
                     />
@@ -627,10 +686,10 @@ const Domestic = [
     waterTank: "12L",
     stages: "6 Stage Filter",
     technology: "UV + TDS",
-    Warranty: "1 year warranty ",
+    Warranty: "1 Year (Electronic parts only)",
     FiltrationCapacity: "100-150 litters per day",
     feature: "No",
-    image: cruze1,
+    image: cruze,
     image1: cruze1,
     image2: cruze2,
     image3: cruze3,
@@ -679,14 +738,11 @@ const Domestic = [
     Warranty: "1 Year (Electronic parts only)",
     FiltrationCapacity: "100-150 litters per day",
     feature: "No",
-    image: smartRO,
-    image1: smartRO,
-    image2:
-      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
-    image3:
-      "https://www.wawaterfilters.com.au/wp-content/uploads/2011/12/Autoclave-Zero-TDS-Reverse-Osmosis-180722-1428-max-min.jpg",
-    image4:
-      "https://naturerowater.com/wp-content/uploads/2020/01/0-kent-Excell-ro-water-filter-900x900-1.jpg",
+    image: smartRO1,
+    image1: smartRO1,
+    image2: smartRO2,
+    image3: smartRO3,
+    image4: smartRO4,
   },
   {
     id: 4,
@@ -722,7 +778,7 @@ const Domestic = [
     feature: "Hot water included",
     color: "Gold and Red",
     image: hot1,
-    image1: hot1,
+    image1: hot5,
     image2: hot2,
     image3: hot3,
     image4: hot4,
@@ -735,7 +791,7 @@ const Commercial = [
     title: "400 GPD RO PLANT",
     author: "400 GPD RO PLANT",
     price: "375 000",
-    application: "Business",
+    application: "Business / Factory ",
     installation: "Wall Mounted / Stranded",
     waterTank: "500 L",
     stages: "3 Stage Filter",
@@ -754,164 +810,130 @@ const Commercial = [
     id: 50,
     title: "Custormisble RO Filters",
     author: "Custormisble RO Filters [300,500,600,900 GPD RO PALNTS]",
-    price:"Custom",
-    price1: "25 000",
-    price2: "25 000",
-    price3: "25 000",
-    price4: "25 000",
-
+    price: "Custom",
+    price1: "325 000",
+    price2: "435 000",
+    price3: "450 000",
+    price4: "525 000",
     image: com2,
- 
   },
 ];
 
 const Ionizer = [
   {
-    id: 21,
-    title: "Ionizer 1",
-    author: "Douglas Adams",
-    price: 85000,
-    image:
-      "https://sc04.alicdn.com/kf/H2122d137337946e9a5bd403ddc9a97cdv/251009102/H2122d137337946e9a5bd403ddc9a97cdv.jpg",
-  },
-  {
-    id: 22,
-    title: "Ionizer 2",
-    author: "Harper Lee",
-    price: 85000,
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTziXyCe6M7AuhpZ4CEUk3n9RDXBIGRSDnLi2hiuyKONddba1QaOPbsddDLHHSxLVqoW8s&usqp=CAU",
-  },
-  {
-    id: 23,
-    title: "Ionizer 3",
-    author: "F. Scott Fitzgerald",
-    price: 85000,
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2shXuR1ZhPZgqjVTxI3F9JFoFZyOyhCGh9mpviIVSOcgOz7NGHk_x-ZpXtcfY3XJo1zE&usqp=CAU",
-  },
-  {
-    id: 24,
-    title: "Ionizer 4",
-    author: "F. Scott Fitzgerald",
-    price: 85000,
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9TM-Sy373RU5_BRlBm33btVfiuqGDg6Ze35Cj1_bSo9WFvH9-A1xzsJdNKuZ2xEmT9-k&usqp=CAU",
-  },
-  {
-    id: 25,
-    title: "Ionizer 1",
-    author: "Douglas Adams",
-    price: 85000,
-    image:
-      "https://sc04.alicdn.com/kf/H2122d137337946e9a5bd403ddc9a97cdv/251009102/H2122d137337946e9a5bd403ddc9a97cdv.jpg",
-  },
-  {
-    id: 26,
-    title: "Ionizer 2",
-    author: "Harper Lee",
-    price: 85000,
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTziXyCe6M7AuhpZ4CEUk3n9RDXBIGRSDnLi2hiuyKONddba1QaOPbsddDLHHSxLVqoW8s&usqp=CAU",
-  },
-  {
-    id: 27,
-    title: "Ionizer 3",
-    author: "F. Scott Fitzgerald",
-    price: 85000,
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2shXuR1ZhPZgqjVTxI3F9JFoFZyOyhCGh9mpviIVSOcgOz7NGHk_x-ZpXtcfY3XJo1zE&usqp=CAU",
-  },
-  {
-    id: 28,
-    title: "Ionizer 4",
-    author: "F. Scott Fitzgerald",
-    price: 85000,
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9TM-Sy373RU5_BRlBm33btVfiuqGDg6Ze35Cj1_bSo9WFvH9-A1xzsJdNKuZ2xEmT9-k&usqp=CAU",
+    id: 53,
+    title: "Ionizer",
+    author: "Ionizer",
+    application: "Household",
+    installation: "Strand",
+    waterTank: "At that time , The required amount is filtered",
+    stages: " - ",
+    technology: "TDS + pH",
+    Warranty: " - ",
+    FiltrationCapacity: " - ",
+    feature: "",
+    color: "Blue",
+    price: "475 000",
+    image: ionizer,
   },
 ];
 
 const Industrial = [
   {
     id: 30,
-    title: "Industrial 1",
-    author: "Douglas Adams",
-    price: 1099,
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhy-3G8I6RCqLIQOqv1NzSUbe4O2NxyPTZwQ&usqp=CAU",
+    title: "500LPH Plant",
+    author: "500LPH Plant With 1054 sand vessel  & 1054 Resin vessel.",
+    price: "825 000",
+    application: "Business",
+    installation: "Strand",
+    waterTank: "1000 L - 2000 L",
+    stages: "3/4 Stage Filter",
+    technology: "RO + TDS (UV + Mineral + Alkaline )",
+    Warranty: "1 Year (Electronic parts only)",
+    FiltrationCapacity: "10000 litters per day",
+    feature: "2..9 pressure pump - 5 year service Warranty",
+    color: "Blue",
+    image: industrial,
+    image1: industrial1,
+    image2: industrial2,
+    image3: industrial3,
+    image4: industrial4,
   },
   {
-    id: 31,
-    title: "Industrial 2",
-    author: "Harper Lee",
-    price: 7099,
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPcXCHl7VsM9ogGXSy9cFQKHgTCFY7bwqnVUB3fBiHchl1OkRMS8DDi9fu12lfbNXrWPM&usqp=CAU",
-  },
-  {
-    id: 32,
-    title: "Industrial 3",
-    author: "F. Scott Fitzgerald",
-    price: 12099,
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkA25k_qXXxSjY70j77YHjjCjKiZ88rcMtjrfg1gdjeHfnr06nTnJcq7QE-gyhqlCBUUU&usqp=CAU",
-  },
-  {
-    id: 33,
-    title: "Industrial 4",
-    author: "F. Scott Fitzgerald",
-    price: 12399,
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRcenTO2gmA-QsPMO6xJn4mznzVzfRsndQak9eGegYY_yp1sC15dxdB13kqBLPefhyz7g&usqp=CAU",
+    id: 51,
+    title: "Custormisble Industrial Filters",
+    author: "Custormisble Industrial Filter [250LPH , 750LPH , 1000LPH ]",
+    price: "Custom",
+    application: "Business",
+    installation: "Strand",
+    waterTank: "1000 L - 2000 L",
+    stages: "3/4 Stage Filter",
+    technology: "RO + TDS (UV + Mineral + Alkaline )",
+    Warranty: "1 Year (Electronic parts only)",
+    FiltrationCapacity: "10000 litters per day",
+    feature: "2..9 pressure pump - 5 year service Warranty",
+    color: "Blue",
+    image: industri,
   },
 ];
 
 const Spare = [
   {
-    id: 36,
-    title: "Sediment Filter",
-    brand: "Cruze Gold",
-    install: "Inside",
-    technology: "uv",
-    feature: "-",
-    warranty: "1 year warranty",
-    price: 1099,
-    image: spare1,
+    id: 55,
+    title: "Inline Sediment Filter",
+    image: spare3,
   },
 
   {
-    id: 37,
-    title: "Sediment Filter",
-    brand: "Cruze Gold",
-    install: "Inside",
-    technology: "uv",
-    feature: "-",
-    warranty: "1 year warranty",
-    price: 1099,
-    image: spare2,
+    id: 56,
+    title: "Inline Carbon Filter ",
+    image: spare7,
   },
   {
-    id: 38,
-    title: "Sediment Filter",
-    brand: "Cruze Gold",
-    install: "Inside",
-    technology: "uv",
-    feature: "-",
-    warranty: "1 year warranty",
-    price: 1099,
-    image: spare3,
+    id: 57,
+    title: "Biocera Filter (Alkaline Filter)",
+    image: spare11,
   },
   {
-    id: 39,
-    title: "Sediment Filter",
-    brand: "Cruze Gold",
-    install: "Inside",
-    technology: "uv",
-    feature: "-",
-    warranty: "1 year warranty",
-    price: 1099,
+    id: 58,
+    title: "4 in 1 Mineral Filter",
+    image: spare9,
+  },
+  {
+    id: 59,
+    title: "80 GPD RO Filter",
+    image:  spare2,
+  },
+  {
+    id: 60,
+    title: "Inline Sediment Filter",
     image: spare4,
+  },
+
+  {
+    id: 61,
+    title: "Gac Cartridge Filter",
+    image: spare5,
+  },
+  {
+    id: 62,
+    title: "PP Sediment Filter Cartridge",
+    image: spare6,
+  },
+  {
+    id: 63,
+    title: "UDF Filter",
+    image: spare8,
+  },
+  {
+    id: 64,
+    title: "Post Inline GAC Carbon Reverse",
+    image:  spare10,
+  },
+  {
+    id: 64,
+    title: "Filtration CTO",
+    image:  spare1,
   },
 ];
 

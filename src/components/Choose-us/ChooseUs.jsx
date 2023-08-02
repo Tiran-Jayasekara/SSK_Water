@@ -21,6 +21,7 @@ const ChooseUs = () => {
 
   return (
     <>
+    
       <Row className="whowe revealElement">
         <Col className="Choose_h1" xs={{ span: 24 }} sm={{span: 24}} lg={{ span: 24 }}>
           <h1>
@@ -78,6 +79,7 @@ const ChooseUs = () => {
         </Col>
         <Col xs={{ span: 2 }} sm={{ span: 2 }} lg={{ span: 2 }}></Col>
       </Row>
+      
     </>
   );
 };

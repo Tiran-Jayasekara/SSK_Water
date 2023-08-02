@@ -1,5 +1,5 @@
 import Home from "./pages/Home/Home";
-import { HashRouter , Routes , Route } from "react-router-dom";
+import {BrowserRouter, Routes, Route } from "react-router-dom";
 import Store from "./pages/Store/Store";
 import About from "./pages/About/About";
 import Blog from "./pages/Blog/Blog";
@@ -13,9 +13,10 @@ import BlogPost4 from "./pages/Blog/BlogPost4";
 import Policy from "./pages/policy/Policy";
 import Term from "./pages/Term/Term";
 
+
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <ScrollToTop />
       <div className="Header_container">
         <NavBar />
@@ -26,17 +27,16 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/BlogPost1" element={<BlogPost/>} />
-            <Route path="/BlogPost2" element={<BlogPost2/>} />
-            <Route path="/BlogPost3" element={<BlogPost3/>} />
-            <Route path="/BlogPost4" element={<BlogPost4/>} />
-            <Route path="/Policy" element={<Policy/>} />
-            <Route path="/Term" element={<Term/>} />
-            
+            <Route path="/BlogPost1" element={<BlogPost />} />
+            <Route path="/BlogPost2" element={<BlogPost2 />} />
+            <Route path="/BlogPost3" element={<BlogPost3 />} />
+            <Route path="/BlogPost4" element={<BlogPost4 />} />
+            <Route path="/Policy" element={<Policy />} />
+            <Route path="/Term" element={<Term />} />
           </Routes>
         </div>
       </div>
-      </HashRouter>
+    </BrowserRouter>
   );
 }
 

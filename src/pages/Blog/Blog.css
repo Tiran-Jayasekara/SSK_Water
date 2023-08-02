@@ -5,7 +5,10 @@
   /* Adjust the padding as needed */
 }
 .blogbanner{
-  margin-top: 30px
+  margin-top: 10px
+}
+.blogbanner img{
+  max-width: 100%;
 }
 .blog_header {
   margin: auto;
@@ -135,7 +138,7 @@
  
 } */
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
   .blog_container {
     border: 1px solid #ccc; /* Adjust the border styles as needed */
     margin: 20px;
@@ -204,6 +207,11 @@
   .blogbanner{
     margin-top: 30px
   }
+
+  .blogbanner img{
+    height: 140px;
+  }
+
   .blog_container {
     border: 1px solid #ccc; /* Adjust the border styles as needed */
     margin: 20px;

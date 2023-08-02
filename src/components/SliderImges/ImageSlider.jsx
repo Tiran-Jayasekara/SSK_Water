@@ -1,14 +1,15 @@
-import React, { useEffect, useState ,useRef} from 'react';
+import React, { useEffect, useState } from 'react';
 import './ImageSlider.css';
-import image1 from '../../assests/images/homeBanner/banner22.jpg';
-import image2 from '../../assests/images/homeBanner/banner77.jpg';
+import image1 from '../../assests/images/homeBanner/banner5.jpg';
+import image2 from '../../assests/images/homeBanner/banner22.jpg';
+import image3 from '../../assests/images/homeBanner/banner4.jpg';
 import { Col, Row } from 'antd';
 // import { Link } from 'react-router-dom';
 
 const ImageChanger = () => {
-  const images = [image1, image2];
+  const images = [image1, image2 , image3];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const textRef = useRef(null);
+  // const textRef = useRef(null);
 
   // useEffect(() => {
   //   const textElement = textRef.current;
@@ -45,7 +46,7 @@ const ImageChanger = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 6900);
+    }, 5000);
 
     return () => clearInterval(timer);
   }, [images.length]);

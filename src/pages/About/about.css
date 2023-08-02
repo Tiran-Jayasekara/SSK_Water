@@ -282,8 +282,18 @@
   margin-bottom: 100px;
 
 }
+.spline{
+  margin-top: 0px;
+  margin-bottom: -30px;
+  height: 80vh;
+}
 
 @media screen and (max-width: 1000px) {
+  .spline{
+    margin-top: -110px;
+    margin-bottom: 30px;
+    height: 40vh;
+  }
 
   .blog_container_about {
     /* border: 1px solid #ccc;  */
@@ -328,7 +338,11 @@
 
 
 @media screen and (max-width: 575px) {
-
+.spline{
+  margin-top: -110px;
+  margin-bottom: 30px;
+  height: 40vh;
+}
   .Main_Blog{
     margin-top: 20px;
     margin-bottom: 100px;

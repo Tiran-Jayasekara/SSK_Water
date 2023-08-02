@@ -228,10 +228,11 @@ input[type="checkbox"] {
 }
 
 .product-image {
-  max-width: 240px;
+  max-width: 100%;
   max-height: 240px;
   height: auto;
   margin-top: 20px;
+  
 }
 .image_store_contact {
   width: 30px;
@@ -254,10 +255,13 @@ input[type="checkbox"] {
   margin-bottom: 10px;
   margin-top: 0px;
   margin-left: 50px;
+  text-decoration: none;
 }
 
 .storeLink a {
   color: #1354a4;
+  text-decoration: none;
+  
 }
 .no-text-decoration {
   text-decoration: none;
@@ -285,8 +289,8 @@ input[type="checkbox"] {
   font-size: 20px;
   font-weight: 600;
   letter-spacing: 1px;
-  display: inline;
   color: #1354a4;
+  
 }
 .model_contact img {
   width: 200px;
@@ -308,6 +312,7 @@ input[type="checkbox"] {
   text-align: center;
   display: block;
   font-size: 20px;
+  margin-left: 50px;
 }
 .Model_Form {
   margin: auto;
@@ -321,7 +326,7 @@ input[type="checkbox"] {
   color: #1354a4;
   margin-bottom: 10;
   line-height: 1.5;
-  margin-top: 20px;
+  margin-top: 0px;
 }
 .model_checkbox h6 {
   font-family: "Poppins", sans-serif;
@@ -425,7 +430,7 @@ input[type="checkbox"] {
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 1px;
-  color: rgb(255, 0, 0);
+  color:#1354a4;
   margin: 20px;
 }
 .product_details h4 {
@@ -544,6 +549,12 @@ input[type="checkbox"] {
     font-size: 12px;
   }
 
+  .storeLink p {
+    color: #1354a4;
+    text-decoration: none;
+    font-size: 10px;
+  }
+
   .product-image {
     max-width: 150px;
     height: auto;
@@ -557,7 +568,7 @@ input[type="checkbox"] {
 
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
   .Store_Nav_Bar h3 {
     text-align: center;
     font-size: 8px;
@@ -612,7 +623,14 @@ input[type="checkbox"] {
     margin-top: -10px;
     margin-left: 40px;
     font-size: 8px;
+    
   }
+  .storeLink a {
+    color: #1354a4;
+    text-decoration: none;
+    
+  }
+
   .nav-bar-container {
     margin-top: 10px;
     margin-bottom: 0px;
@@ -636,7 +654,7 @@ input[type="checkbox"] {
   .product-title {
     margin-bottom: 10px;
     margin-top: 10px;
-    font-size: 20px;
+    font-size: 10px;
   }
   .product_details {
     margin-top: 20px;
@@ -646,13 +664,14 @@ input[type="checkbox"] {
     margin-right: auto;
     border-radius: 10px;
     margin-bottom: -60px;
+    padding: 10px;
   }
 
   .product_details h6 {
     font-family: "Poppins", sans-serif;
     font-size: 14px;
     font-weight: 400;
-    color: rgb(255, 0, 0);
+    color:#1354a4;
     margin-bottom: 20px;
     margin: 20px;
   }
@@ -666,7 +685,7 @@ input[type="checkbox"] {
     line-height: 1.5;
   }
   .product-image {
-    max-width: 150px;
+    max-width: 100%;
     height: 150px;
     margin-top: 0px;
     margin-bottom: 20px;
@@ -727,6 +746,12 @@ input[type="checkbox"] {
     font-size: 20px;
   }
 
+  .storeLink p {
+    color: #1354a4;
+    text-decoration: none;
+    font-size: 10px;
+  }
+
   .form_col {
     margin-left: 0px;
   }
@@ -735,6 +760,12 @@ input[type="checkbox"] {
   }
   .product-container {
     height: auto;
+  }
+
+  .product-container img{
+    width: auto;
+    margin-top: 0px;
+    height: 100px;
   }
 
   .product_main {
@@ -764,16 +795,20 @@ input[type="checkbox"] {
 
   .model_Small_List {
     border: 1px solid rgb(186, 208, 216);
-    height: 60px;
+    height: 55px;
+    width: auto;
     margin-top: 50px;
     margin: 10px;
     border-radius: 5px;
   }
   .model_Small_List img{
-    width: 40px;
+    width: auto;
     height: 50px;
+    padding: 5px;
     margin-left: 0px;
-    margin-top: -18px;
+    padding-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
 
   .model_image_small {
@@ -825,7 +860,7 @@ input[type="checkbox"] {
   
   .form-field-model input,
   .form-field-model textarea {
-    width: 280px;
+    width: 100%;
     padding: 10px;
     border-radius: 10px;
     border: 1px solid #fcf9f9;
@@ -833,5 +868,177 @@ input[type="checkbox"] {
   
   .form-field-model textarea {
     height: 150px; /* Adjust the height as desired */
+  }
+}
+
+@media screen and (max-width: 411px) {
+
+  
+
+  .model_Small_List {
+    border: 1px solid rgb(186, 208, 216);
+    height: 55px;
+    width: 50px;
+    margin-top: 50px;
+    margin: 10px;
+    border-radius: 5px;
+  }
+  .model_Small_List img{
+    width: auto;
+    height: 50px;
+    padding: 5px;
+    margin-left: 0px;
+    padding-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .store_header h2 {
+    color: rgb(0, 0, 0);
+    margin-left: 0px;
+    line-height: 1;
+    text-align: center;
+    
+    
+  }
+
+  .image-h6-container h6 {
+    margin-left: 10px;
+    margin-top: 0px;
+    font-size: 8px;
+    color: #000000;
+  }
+  .image-h6-container img{
+    margin-top: 0px;
+  }
+
+  .contact-form-model {
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+  }
+  
+  .form-field-model {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  .form-field-model label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    margin-left: 5px;
+  }
+  
+  .form-field-model input,
+  .form-field-model textarea {
+    max-width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #fcf9f9;
+    margin-left: 2px;
+  }
+  
+  .form-field-model textarea {
+    height: 150px; /* Adjust the height as desired */
+    
+  }
+  .storeLink p {
+    color: #1354a4;
+    text-decoration: none;
+    font-size: 10px;
+    margin-top: -25px;
+  }
+}
+
+
+@media screen and (max-width: 350px) {
+
+  .centered1 h3 {
+    font-size: 4px;
+    color: #000000;
+    font-weight: 600;
+  }
+ 
+  .store_header h2 {
+    color: rgb(0, 0, 0);
+    font-size: 6px;
+    margin-left: 0px;
+    line-height: 1;
+    text-align: end;
+    
+  }
+  .image-h6-container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .image-h6-container h6 {
+    margin-left: 10px;
+    margin-top: 5px;
+    font-size: 6px;
+    color: #000000;
+  }
+
+  .storeLink p {
+    color: #1354a4;
+    text-decoration: none;
+    font-size: 10px;
+  }
+
+
+  .model_Small_List {
+    border: 1px solid rgb(186, 208, 216);
+    height: 45px;
+    width: 40px;
+    margin-top: 50px;
+    margin: 10px;
+    border-radius: 5px;
+  }
+  .model_Small_List img{
+    width: auto;
+    height: 40px;
+    padding: 5px;
+    margin-left: 0px;
+    padding-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .contact-form-model {
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+  }
+  
+  .form-field-model {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  .form-field-model label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    margin-left: 5px;
+  }
+  
+  .form-field-model input,
+  .form-field-model textarea {
+    max-width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #fcf9f9;
+    margin-left: 5px;
+  }
+  
+  .form-field-model textarea {
+    height: 150px; /* Adjust the height as desired */
+    
   }
 }

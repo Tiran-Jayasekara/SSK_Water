@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 // import service1 from "../../assests/images/Service/service1.jpg";
 // import service2 from "../../assests/images/Service/service2.jpg";
-import service3 from "../../assests/images/Service/service3.jpg";
+import service3 from "../../assests/images/Service/service3.png";
 import service4 from "../../assests/images/Service/service4.jpg";
 import service5 from "../../assests/images/Service/service1.jpg";
 import ScrollReveal from "scrollreveal";
@@ -60,7 +60,7 @@ function Cards() {
                   component="img"
                   height="140"
                   image={service3}
-                  alt="green iguana"
+                  alt="Purchase"
                 />
                 <CardContent>
                   <Typography
@@ -102,7 +102,7 @@ function Cards() {
                   component="img"
                   height="140"
                   image={service4}
-                  alt="green iguana"
+                  alt="Maintain"
                 />
                 <CardContent>
                   <Typography
@@ -118,9 +118,9 @@ function Cards() {
                     color="text.secondary"
                     className="card-paragraph"
                   >
-                    Service-Within 72 hours of ordering the products, we will
-                    bring them and install them free of
-                    charge.
+                    Free maintenance services are provided during the
+                    warranty period.
+                    
                   </Typography>
                 </CardContent>
               </CardActionArea>
@@ -146,7 +146,7 @@ function Cards() {
                   component="img"
                   height="140"
                   image={service5}
-                  alt="green iguana"
+                  alt="Service"
                 />
                 <CardContent>
                   <Typography
@@ -162,8 +162,8 @@ function Cards() {
                     color="text.secondary"
                     className="card-paragraph"
                   >
-                    Maintain -Free maintenance services are provided during the
-                    warranty period.
+                    Within 72 hours of ordering the products, we will
+                    bring them and install them free of charge.
                   </Typography>
                 </CardContent>
               </CardActionArea>

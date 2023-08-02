@@ -1,11 +1,10 @@
 .service_header {
   margin-top: 200px;
   /* background-color: rgb(27, 26, 26); */
-  background-image: url('./back.jpg');
+  background-image: url("./back.jpg");
   padding-top: 60px;
   backdrop-filter: blur(20px);
   height: auto;
-  
 }
 .service_Header {
   margin-left: auto;
@@ -54,10 +53,9 @@
   color: rgb(255, 255, 255);
 }
 
-
 .cards_col_3 {
   margin-bottom: -10px;
-  color:  rgb(224, 217, 217);
+  color: rgb(224, 217, 217);
 }
 
 .Our_filters {
@@ -90,7 +88,6 @@
   }
   .course__title {
     font-size: 12px;
-   
   }
   .service_Header h1 {
     font-size: 25px;

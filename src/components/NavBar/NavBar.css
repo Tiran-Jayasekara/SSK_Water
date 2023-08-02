@@ -207,7 +207,7 @@
   }
 
   .nav-links-mobile:hover {
-    transition: 250ms;
+    transition: 150ms;
   }
   .contact-box {
     width: 170px;

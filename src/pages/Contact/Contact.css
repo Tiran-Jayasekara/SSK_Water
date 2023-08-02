@@ -390,28 +390,6 @@ button[type="submit"] {
     font-size: 14px;
   }
 
-  .form-field {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 20px;
-  }
-
-  .form-field label {
-    font-size: 10px;
-  }
-
-  .form-field input,
-  .form-field textarea {
-    width: 270px;
-    padding: 10px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-  }
-
-  .form-field textarea {
-    height: 150px; /* Adjust the height as desired */
-  }
 
   .contact-details h1 {
     font-size: 20px;
@@ -473,6 +451,51 @@ button[type="submit"] {
     font-size: 14px;
     text-align: justify;
   }
+  .card_main1 {
+    width: "80%";
+    height: 350px;
+    margin-bottom: 0px;
+  }
+
+  .card_main2 {
+    width: "80%";
+    height: 340px;
+    margin-bottom: 20px;
+  }
+  .Contact_us h1 {
+    margin-top: 40px;
+  }
+
+  .contact-form {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+  }
+  .form-field {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+
+  .form-field label {
+    font-size: 10px;
+  }
+
+  .form-field input,
+  .form-field textarea {
+    width: 500px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+  }
+
+  
+  .centered {
+    margin-bottom: 200px;
+  }
+  .banner-container img{
+    margin-top: 20px;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -505,10 +528,11 @@ button[type="submit"] {
 
   .contsct_para h1 {
     font-size: 20px;
-    margin-top: 30px;
+    margin-top: 80px;
     margin-left: 0px;
   }
   .contsct_para {
+    
     margin: auto;
   }
   .contsct_para p {
@@ -518,33 +542,22 @@ button[type="submit"] {
     margin-top: 20px;
     margin-left: 0px;
   }
-}
-
-@media screen and (max-width: 565px) {
-  .card_main1 {
-    width: "80%";
-    height: 350px;
-    margin-bottom: 0px;
-  }
-
-  .card_main2 {
-    width: "80%";
-    height: 340px;
-    margin-bottom: 20px;
-  }
-  .Contact_us h1 {
-    margin-top: 40px;
-  }
-
-  .contact-form {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 50px;
-  }
-  .centered {
-    margin-bottom: 200px;
-  }
-  .banner-container img{
-    margin-top: 20px;
+  .form-field input,
+  .form-field textarea {
+    width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
   }
 }
+@media screen and (max-width: 360px) {
+  .form-field input,
+  .form-field textarea {
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+  }
+}
+
+

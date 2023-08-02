@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-
 const CourseCard = (props) => {
   const { imgUrl, title } = props.item;
 
@@ -17,22 +16,21 @@ const CourseCard = (props) => {
   return (
     <>
       <div
-      className="course-card"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
-      <img
-        src={imgUrl}
-        alt={title}
-        style={{ transform: `rotateY(${rotation}deg)` }}
-      />
-      <div className="course__details">
-        <h6 className="course__title">{title}</h6>
+        className="course-card"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+        <img
+          src={imgUrl}
+          alt={title}
+          style={{ transform: `rotateY(${rotation}deg)` }}
+        />
+        <div className="course__details">
+          <h6 className="course__title">{title}</h6>
 
-        <div className="d-flex price">
+          <div className="d-flex price"></div>
         </div>
       </div>
-    </div>
     </>
   );
 };

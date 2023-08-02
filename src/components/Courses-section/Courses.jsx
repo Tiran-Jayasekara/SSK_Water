@@ -31,7 +31,7 @@ const coursesData = [
   {
     id: 3,
     title:
-      "Vikas Pollution is highly acclaimed in the industry for manufacturing",
+      "Factory 500Lph Reverse Osmosis Treatment Plant",
     Price: 200000,
     customer: 40,
     rating: 38,
