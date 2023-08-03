@@ -152,14 +152,14 @@ const Contact = () => {
                   />
                 }
                 actions={[
-                  <a href="tel:0741690051">
+                  <a href="tel:0775217705">
                     <PhoneOutlined style={{ fontSize: "34px" }} />
                   </a>,
                   <a href="mailto:sskwaterfilters96@gmail.com">
                     <MailOutlined style={{ fontSize: "34px" }} />
                   </a>,
                   <a
-                    href=" https://wa.me/message/BMM4L7HCBMJLE1"
+                    href="https://wa.me/message/BBBU4T5NQD6ZM1"
                     target="_blank"
                     rel="noopener noreferrer"
                   >

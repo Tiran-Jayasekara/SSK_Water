@@ -163,7 +163,7 @@ function Cards() {
                     className="card-paragraph"
                   >
                     Within 72 hours of ordering the products, we will
-                    bring them and install them free of charge.
+                    install them free of charge.
                   </Typography>
                 </CardContent>
               </CardActionArea>

@@ -304,7 +304,7 @@ function ProductList(props) {
         }}
         footer={[
           <Button key="order" onClick={() => setIsModalVisible1(true)}>
-            Order
+            Next
           </Button>,
           <Button key="back" onClick={handleCancel}>
             Cancel
