@@ -63,12 +63,12 @@ const Blog = () => {
                 <img src={phi} alt="" />
                 <p>
                   <a
-                    href="https://medicine.kln.ac.lk/depts/publichealth/Fixed_Learning/PHI%20manual/PHI%20New%20Documents%20Including%20full%20PHI%20Manual%20$%20Office%20Documents/PHI%20Manual%20Full/04%20Chapter%202%20-%20Env%20Health%20-(79-131).pdf"
+                    href="https://srilanka.un.org/en/224274-water-gamechanger-sustainable-recovery-sri-lanka#:~:text=Further%2C%20only%2060%20percent%20of,amid%20prolonged%20bouts%20of%20drought."
                     target="_blank"
                     rel="noreferrer"
                     className="keyword_link"
                   >
-                    #GoodWater #PHI #measurement
+                    #GoodWater #pH #measurement
                   </a>
                 </p>
               </Col>
@@ -113,12 +113,12 @@ const Blog = () => {
 
                 <p>
                   <a
-                    href="https://medicine.kln.ac.lk/depts/publichealth/Fixed_Learning/PHI%20manual/PHI%20New%20Documents%20Including%20full%20PHI%20Manual%20$%20Office%20Documents/PHI%20Manual%20Full/04%20Chapter%202%20-%20Env%20Health%20-(79-131).pdf"
+                    href="https://srilanka.un.org/en/224274-water-gamechanger-sustainable-recovery-sri-lanka#:~:text=Further%2C%20only%2060%20percent%20of,amid%20prolonged%20bouts%20of%20drought."
                     target="_blank"
                     rel="noreferrer"
                     className="keyword_link"
                   >
-                    #situation #lanka
+                    #Healthy #lanka
                   </a>
                 </p>
               </Col>
@@ -169,12 +169,12 @@ const Blog = () => {
 
                 <p>
                   <a
-                    href="https://medicine.kln.ac.lk/depts/publichealth/Fixed_Learning/PHI%20manual/PHI%20New%20Documents%20Including%20full%20PHI%20Manual%20$%20Office%20Documents/PHI%20Manual%20Full/04%20Chapter%202%20-%20Env%20Health%20-(79-131).pdf"
+                  href="https://www.worldbank.org/en/news/feature/2021/08/31/sri-lanka-needs-new-water-and-sanitation-policies-to-unlock-investment-barriers"
                     target="_blank"
                     rel="noreferrer"
                     className="keyword_link"
                   >
-                    #disease #lanka
+                    #current situation #lanka
                   </a>
                 </p>
               </Col>
@@ -223,7 +223,7 @@ const Blog = () => {
 
                 <p>
                   <a
-                    href="https://medicine.kln.ac.lk/depts/publichealth/Fixed_Learning/PHI%20manual/PHI%20New%20Documents%20Including%20full%20PHI%20Manual%20$%20Office%20Documents/PHI%20Manual%20Full/04%20Chapter%202%20-%20Env%20Health%20-(79-131).pdf"
+                   href="https://solarimpulse.com/water-pollution-solutions?utm_term=water%20pollution%20problems&utm_campaign=Solutions&utm_source=adwords&utm_medium=ppc&hsa_acc=1409680977&hsa_cam=11451944566&hsa_grp=117528790208&hsa_ad=474951698874&hsa_src=g&hsa_tgt=kwd-867199065&hsa_kw=water%20pollution%20problems&hsa_mt=b&hsa_net=adwords&hsa_ver=3&gclid=CjwKCAjww7KmBhAyEiwA5-PUSpEE4eyApTuL0zHRFi194IZwTLvpi7UgDLBckQYR3zKkKYSaywlqlhoCWIEQAvD_BwE"
                     target="_blank"
                     rel="noreferrer"
                     className="keyword_link"

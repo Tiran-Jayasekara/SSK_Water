@@ -752,7 +752,7 @@ const Domestic = [
     application: "Household",
     installation: "Wall Mounted",
     waterTank: "10L",
-    stages: "4 Stage Filter",
+    stages: "3 Stage Filter",
     technology: "RO + UV + TDS",
     Warranty: " 1 Year (Electronic parts only) ",
     FiltrationCapacity: "100-150 litters per day",
@@ -912,17 +912,17 @@ const Spare = [
 
   {
     id: 61,
-    title: "Gac Cartridge Filter",
+    title: "GAC Carbon Filter",
     image: spare5,
   },
   {
     id: 62,
-    title: "PP Sediment Filter Cartridge",
+    title: "PP Sediment Filter",
     image: spare6,
   },
   {
     id: 63,
-    title: "UDF Filter",
+    title: "UDF Carbon Filter",
     image: spare8,
   },
   {
@@ -932,7 +932,7 @@ const Spare = [
   },
   {
     id: 64,
-    title: "Filtration CTO",
+    title: "CTO Carbon Filter",
     image:  spare1,
   },
 ];
