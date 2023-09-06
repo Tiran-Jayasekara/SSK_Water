@@ -1,4 +1,7 @@
 [![MasterHead](https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/335863097/original/c40e218cd582bc0de8b0d01f5e6357613df77129/do-frontend-and-backend-web-development.jpg)](https://rishavchanda.io)
+![Screenshot (22)](https://github.com/Tiran-Jayasekara/SSK_Water/assets/70306643/e821a1c8-db73-4805-b86e-6b428635b5b5)
+![Screenshot (23)](https://github.com/Tiran-Jayasekara/SSK_Water/assets/70306643/8ad78f95-0dc9-4528-9ea7-4966e2b42d65)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
