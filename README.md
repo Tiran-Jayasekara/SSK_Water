@@ -1,5 +1,4 @@
-![Screenshot (22)](https://github.com/Tiran-Jayasekara/SSK_Water/assets/70306643/e821a1c8-db73-4805-b86e-6b428635b5b5)
-![Screenshot (23)](https://github.com/Tiran-Jayasekara/SSK_Water/assets/70306643/8ad78f95-0dc9-4528-9ea7-4966e2b42d65)
+
 
 # Getting Started with Create React App
 
