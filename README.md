@@ -1,5 +1,6 @@
-Video Link
 https://github.com/Tiran-Jayasekara/SSK_Water/assets/70306643/817a286f-7b32-4065-9710-c7067c328ab6
+
+React + antd Design + CSS 
 
 <br/><br/>
 ![Screenshot (24)](https://github.com/Tiran-Jayasekara/SSK_Water/assets/70306643/2f4b72f4-40f1-483c-b9e5-93dbe6bce36b) <br/><br/>
